@@ -1,0 +1,7393 @@
+[
+  {
+    "@id": "https://w3id.org/nen2660/term#RealizedEntity",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity that exists or has existed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Realized entity"
+      },
+      {
+        "@language": "nl",
+        "@value": "Gerealiseerde entiteit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#HeterogeneousMixture",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#HeterogeneousMixture"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Mixture"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A mixture that is separated into different regions or phases that have different compositions or properties"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Heterogeneous mixture"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#abbreviation",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#altLabel"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Acronym or initial word as special case of an external name"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "abbreviation"
+      },
+      {
+        "@language": "nl",
+        "@value": "afkorting"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Activity",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An activity is something possibly or actually happening in space and time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Activity"
+      },
+      {
+        "@language": "nl",
+        "@value": "Aktiviteit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#PlannedEntity",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity that does not yet exist or does not yet exist in the desired form"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Planned entity"
+      },
+      {
+        "@language": "nl",
+        "@value": "Geplande entiteit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#connectsPort",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The ports (as part of physical objects) connected by a connection or interface"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "connects port"
+      },
+      {
+        "@language": "nl",
+        "@value": "verbindt poort"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#participatesIn",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Interaction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#participatesIn"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The interaction a physical object participates in"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "participates in"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasSolution",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#FunctionalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TechnicalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasSolution"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A potential technical entity that is a solution for a functional entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has solution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#HeterogeneousMixture",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Mixture"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A mixture that is separated into different regions or phases that have different compositions or properties"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Heterogeneous mixture"
+      },
+      {
+        "@language": "nl",
+        "@value": "Heterogeneen mengsel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Plasma",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#AggregationStateType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "One of the four fundamental states of matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Plasma"
+      },
+      {
+        "@language": "nl",
+        "@value": "Plasma"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#verificationMethodType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a verification method type by a requirement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "verification method type"
+      },
+      {
+        "@language": "nl",
+        "@value": "verificatie methode type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#FunctionalEntity",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#FunctionalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b7"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Functional entity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb21"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb22"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb21",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#FunctionalPart"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasFunctionalPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb22",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TechnicalEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasSolution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#DiscreteObject",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#RealObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity, electromagnetic force)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Discrete object"
+      },
+      {
+        "@language": "nl",
+        "@value": "Discreet object"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#abbreviation",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TopConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#abbreviation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#altLabel"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Acronym or initial word as special case of an external name"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "abbreviation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasUnitShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "http://qudt.org/schema/qudt/Unit"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#overConnection",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The connection over which an interaction between physical objects takes place"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "over connection"
+      },
+      {
+        "@language": "nl",
+        "@value": "over verbinding"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasUnit",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://qudt.org/schema/qudt/Unit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasUnit"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a unit as defined by QUDT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has unit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Unit",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A scale of measurement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Unit"
+      },
+      {
+        "@language": "nl",
+        "@value": "Eenheid"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#AbstractConcept",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TopConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An objectification or type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Abstract concept"
+      },
+      {
+        "@language": "nl",
+        "@value": "Abstract concept"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/shacl/def",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://qudt.org/schema/qudt"
+      },
+      {
+        "@id": "http://qudt.org/vocab/quantitykind"
+      },
+      {
+        "@id": "http://qudt.org/vocab/unit"
+      },
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core"
+      },
+      {
+        "@id": "http://www.w3.org/2006/time"
+      },
+      {
+        "@id": "http://www.w3.org/ns/shacl"
+      },
+      {
+        "@id": "https://w3id.org/nen2660/rdfs/def"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#TemporalEntity",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Representation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A temporal representation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Temporal entity"
+      },
+      {
+        "@language": "nl",
+        "@value": "Temporele entiteit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Interaction",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Interaction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Activity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The activity in which two or more objects act upon one another to produce a new effect"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Interaction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb24"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb25"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb26"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb24",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Connection"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#overConnection"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb25",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Interface"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#overInterface"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb26",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TransferType"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#transferType"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#AllDisjointClasses_4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#PlannedEntity"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#RealizedEntity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#requirementTopicType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Requirement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RequirementTopicType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#requirementTopicType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a topic type by a requirement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "requirement topic type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#requirementTopicType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a topic type by a requirement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "requirement topic type"
+      },
+      {
+        "@language": "nl",
+        "@value": "eis onderwerp type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#isConnectedTo",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The topological relationship between physical objects"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is connected to"
+      },
+      {
+        "@language": "nl",
+        "@value": "is verbonden met"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#ends",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#State"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#ends"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The state that is ended by an event"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "ends"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#connectsPort",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b40"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Port"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#connectsPort"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The ports (as part of physical objects) connected by a connection or interface"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "connects port"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b40",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#Connection"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Interface"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#MatterPortion",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#RelationReference"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An objectified relation reference for the 'consists of' relation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Matter portion"
+      },
+      {
+        "@language": "nl",
+        "@value": "Matter aandeel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Objectification",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#AbstractConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An attribute (quality or quantity) or relation represented as an individual defined by a concept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Objectification"
+      },
+      {
+        "@language": "nl",
+        "@value": "Objectificatie"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#isPlanFor",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A potentially realized entity according to this planed entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is plan for"
+      },
+      {
+        "@language": "nl",
+        "@value": "is plan voor"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#isConnectedTo",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#isConnectedTo"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The topological relationship between physical objects"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is connected to"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#isPlanFor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Type",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#AbstractConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A meta-concept which instances are concepts (not individuals)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#isBoundBy",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The physical object that bounds a spatial region"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is bound by"
+      },
+      {
+        "@language": "nl",
+        "@value": "is begrensd door"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasPart",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A decomposition relationship between physical objects themselves, between information objects themselves or between activities themselves"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has part"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft deel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#AmountOfBulkMatter",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#AmountOfBulkMatter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RealObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A real object consisting of a continuous amount of non-rigid (bulk) matter, held together primarily by external forces like gravity or confinement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Amount of bulk matter"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/skos/term",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://qudt.org/schema/qudt"
+      },
+      {
+        "@id": "http://qudt.org/vocab/quantitykind"
+      },
+      {
+        "@id": "http://qudt.org/vocab/unit"
+      },
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core"
+      },
+      {
+        "@id": "http://www.w3.org/2006/time"
+      },
+      {
+        "@id": "http://www.w3.org/ns/shacl"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TopConcept"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#PureSubstance",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PureSubstance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Pure substance"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Port",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Port"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Explicit part of an entity where interaction with other entities can take place via a connection or interface"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Port"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Solid",
+    "@type": [
+      "https://w3id.org/nen2660/def#AggregationStateType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Solid"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Solid"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#begins",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#State"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#begins"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The state that is started by an event"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "begins"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#overInterface",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The interface over which an interaction between physical objects takes place"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "over interface"
+      },
+      {
+        "@language": "nl",
+        "@value": "over raakvlak"
+      }
+    ]
+  },
+  {
+    "@id": "http://qudt.org/schema/qudt/Unit",
+    "@type": [
+      "https://w3id.org/nen2660/def#EnumerationType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Unit"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A scale of measurement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Unit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#chemicalFormula",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Matter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#chemicalFormula"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of information about the chemical proportions of atoms that constitute a particular chemical bonding"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "chemical formula"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasTemporalEntity",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2006/time#TemporalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasTemporalEntity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The temporal entity representing a concrete concept in time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has temporal entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Event",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ConcreteConcept"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b6"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A thing that happens or takes place and marks the beginning or ending of a state"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Event"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb18"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb19"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb20"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Event"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb18",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#State"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#begins"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb19",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#State"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ends"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb20",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Event"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#portion",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The actual relative portion of a matter portion"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "portion"
+      },
+      {
+        "@language": "nl",
+        "@value": "aandeel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Fluid",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#AggregationStateType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "One of the four fundamental states of matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Fluid"
+      },
+      {
+        "@language": "nl",
+        "@value": "Vloeistof"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#consistsOf",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b43"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Matter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#consistsOf"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The matter a real object, mixture or matter portion is made of"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "consists of"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b43",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#RealObject"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Mixture"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#MatterPortion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#isImplementedBy",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasSolution"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The technical entity that implements a functional entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is implemented by"
+      },
+      {
+        "@language": "nl",
+        "@value": "is geimplementeerd door"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#performs",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Activity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#performs"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The activity performed by a physical object"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "performs"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#EnumerationType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A metaconcept having concepts as instances having no further attributes or relations (annotations only)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Enumeration type"
+      },
+      {
+        "@language": "nl",
+        "@value": "Enumeratie type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasQuantityKind",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://qudt.org/schema/qudt/QuantityKind"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasQuantityKind"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a quantity kind as defined by QUDT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has quantity kind"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasUnit",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a unit as defined by QUDT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has unit"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft eenheid"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#RequirementSourceType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#EnumerationType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Requirement source type"
+      },
+      {
+        "@language": "nl",
+        "@value": "Eis bron type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#SpatialRegion",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#SpatialRegion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b27"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A physical object that encloses a certain area such as rooms, roads and rivers that is bound by real objects, other spacetial regions or based on use or convention and that is empty or contains discrete or liquid or gaseous matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Spatial region"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb62"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb63"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb67"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b27",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b28"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b28",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#SpatialRegion"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Port"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb62",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RealObject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#contains"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb63",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb64"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb64",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#SpatialRegion"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Port"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb67",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#isBoundBy"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#ConcreteConcept",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TopConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity, event or state"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Concrete concept"
+      },
+      {
+        "@language": "nl",
+        "@value": "Concreet concept"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#connectsObject",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b37"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#connectsObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The physical objects connected by a connection or interface"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "connects object"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b37",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#Connection"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Interface"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Force",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TransferType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A physical quantity that denotes ability to push, pull, twist or accelerate a body"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Force"
+      },
+      {
+        "@language": "nl",
+        "@value": "Kracht"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#begins",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The state that is started by an event"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "begins"
+      },
+      {
+        "@language": "nl",
+        "@value": "begint"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#TopConcept",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The most generic root concept of nen2660"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Top concept"
+      },
+      {
+        "@language": "nl",
+        "@value": "Top concept"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#contains",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#SpatialRegion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RealObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#contains"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "contains"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Interaction",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Activity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The activity in which two or more objects act upon one another to produce a new effect"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Interaction"
+      },
+      {
+        "@language": "nl",
+        "@value": "Interactie"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Activity",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Activity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b1"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An activity is something possibly or actually happening in space and time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Activity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb1"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb2"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb3"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb4"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb5"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Activity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb1",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#GeometricEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasBoundary"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb2",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#GeometricEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasInterior"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb3",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Activity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb4",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TemporalEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPeriod"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb5",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Object"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#transforms"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#PhysicalObject",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Object"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Something that possibly or actually exists in space and time, perceivable through the senses"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Physical object"
+      },
+      {
+        "@language": "nl",
+        "@value": "Fysiek object"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#MaterialFlow",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TransferType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The movement of an amount of matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Material flow"
+      },
+      {
+        "@language": "nl",
+        "@value": "Materie stroom"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#requirementSeverityType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Requirement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RequirementSeverityType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#requirementSeverityType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a severity type by a requirement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "requirement severity type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#ConceptType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A metaconcept having concepts as instances that can have attributes or relations"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Concept type"
+      },
+      {
+        "@language": "nl",
+        "@value": "Concept type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasBoundary",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The geometric entity representing the boundary of a concrete concept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has boundary"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft begrenzing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#AllDisjointClasses_3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#FunctionalEntity"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#TechnicalEntity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#requirementSeverityType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a severity type by a requirement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "requirement severity type"
+      },
+      {
+        "@language": "nl",
+        "@value": "eis ernst type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#DiscreteObject",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#DiscreteObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RealObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity, electromagnetic force)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Discrete object"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#aggregationStateType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of an aggregation state type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "aggregation state type"
+      },
+      {
+        "@language": "nl",
+        "@value": "aggregatie toestand type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Event",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A thing that happens or takes place and marks the beginning or ending of a state"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Event"
+      },
+      {
+        "@language": "nl",
+        "@value": "Gebeurtenis"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#QuantityValue",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Objectification"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The objectification of a value of a quantity (involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Quantity value"
+      },
+      {
+        "@language": "nl",
+        "@value": "Kwantiteitsoort"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#RealObject",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Amount of matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A physical object that can be tangible and visible in reality such as artifacts including bridges, tanks and devices, and natural objects including terrains, banks, water bottoms and trees"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Real object"
+      },
+      {
+        "@language": "nl",
+        "@value": "Reeel object"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Interface",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Interface"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#SpatialRegion"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The spatial region being a point of interaction between entities"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Interface"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb27"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb28"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb27",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#connectsObject"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb28",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Port"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#connectsPort"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Objectification",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Objectification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#AbstractConcept"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b11"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An attribute (quality or quantity) or relation represented as an individual defined by a concept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Objectification"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb39"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b11",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb39",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#InformationFlow",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TransferType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The movement of information represented in some medium"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Information flow"
+      },
+      {
+        "@language": "nl",
+        "@value": "Informatie stroom"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#ChemicalBonding",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PureSubstance"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical bonding, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Chemical bonding"
+      },
+      {
+        "@language": "nl",
+        "@value": "Chemische verbinding"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#AllDisjointClasses_2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#RealObject"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#SpatialRegion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#transforms",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Activity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#transforms"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The object transformed by an activity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "transforms"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasBoundary",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#GeometricEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasBoundary"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The geometric entity representing the boundary of a concrete concept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has boundary"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#verificationMethodType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Requirement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#VerificationMethodType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#verificationMethodType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a verification method type by a requirement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "verification method type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasRequirement",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The(unstructured) requirement for something"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has requirement"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft eis"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#consistsOf",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The matter a real object, mixture or matter portion is made of"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "consists of"
+      },
+      {
+        "@language": "nl",
+        "@value": "bestaat uit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#TopConcept",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TopConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The most generic root concept of nen2660"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Top concept"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb73"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb74"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb75"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb73",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#abbreviation"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb74",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Requirement"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasRequirement"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb75",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Requirement"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#isDescribedBy"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Gas",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#AggregationStateType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Gas"
+      },
+      {
+        "@language": "nl",
+        "@value": "Gas"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#EnumerationType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#EnumerationType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Container"
+      },
+      {
+        "@id": "https://w3id.org/nen2660/def#Type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A metaconcept having concepts as instances having no further attributes or relations (annotations only)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Enumeration type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#State",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A temporal part of an entity during a period between events. A state is characterized by the attributes and relationships of the entity. ”"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "State"
+      },
+      {
+        "@language": "nl",
+        "@value": "Toestand"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#isRealizedBy",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#isPlanFor"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The realized entity that realizes a planned entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is realized by"
+      },
+      {
+        "@language": "nl",
+        "@value": "is gerealiseerd door"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#SpatialRegion",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A physical object that encloses a certain area such as rooms, roads and rivers that is bound by real objects, other spacetial regions or based on use or convention and that is empty or contains discrete or liquid or gaseous matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Spatial region"
+      },
+      {
+        "@language": "nl",
+        "@value": "Ruimtelijk gebied"
+      }
+    ]
+  },
+  {
+    "@id": "http://qudt.org/schema/qudt/QuantityKind",
+    "@type": [
+      "https://w3id.org/nen2660/def#EnumerationType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#QuantityKind"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Base or derived kind of quantity like length or time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Quantity kind"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Gas",
+    "@type": [
+      "https://w3id.org/nen2660/def#AggregationStateType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Gas"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Gas"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#ChemicalElement",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#ChemicalElement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PureSubstance"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Chemical element"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Representation",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Representation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#InformationObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "That which represents something else"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Representation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#RelationReference",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Objectification"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relationships)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Relation reference"
+      },
+      {
+        "@language": "nl",
+        "@value": "Relatie referentie"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#participatesIn",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The interaction a physical object participates in"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "participates in"
+      },
+      {
+        "@language": "nl",
+        "@value": "participeert in"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#AllDisjointClassesShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb80"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb90"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb97"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb104"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb80",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+          },
+          {
+            "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb81"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMaxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb84"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb81",
+    "http://www.w3.org/ns/shacl#zeroOrMorePath": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb84",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#InformationObject"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#State"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Event"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Activity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb90",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+          },
+          {
+            "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb91"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMaxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb94"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb91",
+    "http://www.w3.org/ns/shacl#zeroOrMorePath": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb94",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#RealObject"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#SpatialRegion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb97",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+          },
+          {
+            "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb98"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMaxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb101"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb98",
+    "http://www.w3.org/ns/shacl#zeroOrMorePath": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb101",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#FunctionalEntity"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#TechnicalEntity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb104",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+          },
+          {
+            "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb105"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedMaxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#qualifiedValueShape": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb108"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb105",
+    "http://www.w3.org/ns/shacl#zeroOrMorePath": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb108",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#PlannedEntity"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#RealizedEntity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Requirement",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#InformationObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "A rule that should hold for something, defined w.r.t. to its attributes or relations"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Requirement"
+      },
+      {
+        "@language": "nl",
+        "@value": "Eis"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasInterior",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#GeometricEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasInterior"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The geometric entity representing the interior of a concrete concept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has interior"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Interface",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#SpatialRegion"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The spatial region being a point of interaction between entities"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Interface"
+      },
+      {
+        "@language": "nl",
+        "@value": "Raakvlak"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Port",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Explicit part of an entity where interaction with other entities can take place via a connection or interface"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Port"
+      },
+      {
+        "@language": "nl",
+        "@value": "Poort"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#TransferType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/nen2660/def#EnumerationType",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TransferType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#MaterialFlow"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#EnergyFlow"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#InformationFlow"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Force"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The type of thing being transferred, here: material, information, energy or force"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Transfer type"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#MaterialFlow"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#EnergyFlow"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#InformationFlow"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Force"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#numberOfIndividuals",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a number of individuals by a container modelling an implicit group"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "number of individuals"
+      },
+      {
+        "@language": "nl",
+        "@value": "aantal individuen"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#AbstractConcept",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#AbstractConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TopConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An objectification or type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Abstract concept"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Matter",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Matter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A pure chemical substance, chemical bonding or mixture from which real objects are made"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Matter"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb29"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb30"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb29",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#AggregationStateType"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#aggregationStateType"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb30",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#chemicalFormula"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#ChemicalBonding",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#ChemicalBonding"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PureSubstance"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical bonding, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Chemical bonding"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#transferType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Interaction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TransferType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#transferType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a transfer type by an interaction"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "transfer type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#numberOfIndividuals",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TopConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#numberOfIndividuals"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a number of individuals by a container modelling an implicit group, 0 meaning all, 1 meaning the rest"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "number of individuals"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Mixture",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Mixture"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Matter that consists of multiple forms of pure matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Mixture"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb33"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb33",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Matter"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#consistsOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2006/time#TemporalEntity",
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TemporalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Representation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A temporal representation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Temporal entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasQuantityKindShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "http://qudt.org/schema/qudt/QuantityKind"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasQuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#RequirementTopicType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Connection",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Connection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The thing at which two or more things are connected"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Connection"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb14"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb15"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb14",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#connectsObject"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb15",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Port"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#connectsPort"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#TechnicalEntity",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TechnicalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b32"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity having technical properties and relations (what it is) that implements/plays functional entities"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Technical entity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb72"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b32",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb72",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TechnicalEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasTechnicalPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Object",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A physical object or an information object"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Object"
+      },
+      {
+        "@language": "nl",
+        "@value": "Object"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#contains",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "contains"
+      },
+      {
+        "@language": "nl",
+        "@value": "bevat"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasFunctionalPart",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The hasPart relation of a functional nature"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has functional part"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft functioneel deel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#PureSubstance",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Pure substance"
+      },
+      {
+        "@language": "nl",
+        "@value": "Zuivere stof"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#RealObject",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#RealObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b20"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A physical object that can be tangible and visible in reality such as artifacts including bridges, tanks and devices, and natural objects including terrains, banks, water bottoms and trees"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Real object"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb50"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb51"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b20",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b21"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b21",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#RealObject"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Port"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb50",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Matter"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#consistsOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb51",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb52"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb52",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#RealObject"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Port"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasPart",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A decomposition relationship between physical objects themselves, between information objects themselves or between activities themselves"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has part"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/owl/def",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://qudt.org/schema/qudt"
+      },
+      {
+        "@id": "http://qudt.org/vocab/quantitykind"
+      },
+      {
+        "@id": "http://qudt.org/vocab/unit"
+      },
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core"
+      },
+      {
+        "@id": "http://www.w3.org/2006/time"
+      },
+      {
+        "@id": "http://www.w3.org/ns/shacl"
+      },
+      {
+        "@id": "https://w3id.org/nen2660/rdfs/def"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Force",
+    "@type": [
+      "https://w3id.org/nen2660/def#TransferType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Force"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A physical quantity that denotes ability to push, pull, twist or accelerate a body"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Force"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#RelationReference",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#RelationReference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Objectification"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b25"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relationships)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Relation reference"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb56"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b25",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb56",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#InformationFlow",
+    "@type": [
+      "https://w3id.org/nen2660/def#TransferType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#InformationFlow"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The movement of information represented in some medium"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Information flow"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#PlannedEntity",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PlannedEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b13"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity that does not yet exist or does not yet exist in the desired form"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Planned entity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb40"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb41"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b13",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PlannedEntity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb40",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PlannedEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb41",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RealizedEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#isPlanFor"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#RequirementTopicType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#EnumerationType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The entity aspect a requirement applies to"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Requirement topic type"
+      },
+      {
+        "@language": "nl",
+        "@value": "Eis onderwerp type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#performs",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The activity performed by a physical object"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "performs"
+      },
+      {
+        "@language": "nl",
+        "@value": "voert uit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#QuantityKind",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Base or derived kind of quantity like length or time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Quantity kind"
+      },
+      {
+        "@language": "nl",
+        "@value": "Kwantiteitsoort"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#isDescribedBy",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The information object that describes something"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is described by"
+      },
+      {
+        "@language": "nl",
+        "@value": "is beschreven door"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#isRealizedBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PlannedEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RealizedEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#isRealizedBy"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The realized entity that realizes a planned entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is realized by"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Entity",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An object or an activity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Entity"
+      },
+      {
+        "@language": "nl",
+        "@value": "Entiteit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#requirementSourceType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a source type by a requirement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "requirement source type"
+      },
+      {
+        "@language": "nl",
+        "@value": "eis bron type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasInterior",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The geometric entity representing the interior of a concrete concept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has interior"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft inwendige"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#triggers",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#triggers"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The event triggert by an entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "triggers"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#QualityValue",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#QualityValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Objectification"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b14"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Quality value"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb42"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b14",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb42",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#InformationObject",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#InformationObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Object"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b8"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Thing that is a whole of information on itself and has an own identity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Information object"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb23"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/nen2660/def#InformationObject"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb23",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#InformationObject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#QualityValue",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Objectification"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Quality value"
+      },
+      {
+        "@language": "nl",
+        "@value": "Kwaliteitwaarde"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#transforms",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The object transformed by an activity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "transforms"
+      },
+      {
+        "@language": "nl",
+        "@value": "transformeert"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#TechnicalEntity",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity having technical properties and relations (what it is) that implements/plays functional entities"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Technical entity"
+      },
+      {
+        "@language": "nl",
+        "@value": "Technische entiteit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Representation",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#InformationObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "That which represents something else"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Representation"
+      },
+      {
+        "@language": "nl",
+        "@value": "Representatie"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Object",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A physical object or an information object"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Object"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasState",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#State"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasState"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The state of an entity in a certain point or period of time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has state"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Connection",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The thing at which two or more things are connected"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Connection"
+      },
+      {
+        "@language": "nl",
+        "@value": "Verbinding"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#HomogeneousMixture",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Mixture"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A mixture that is uniform throughout, and has only one phase"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Homogeneous mixture"
+      },
+      {
+        "@language": "nl",
+        "@value": "Homogeen mengsel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#FunctionalEntity",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Functional entity"
+      },
+      {
+        "@language": "nl",
+        "@value": "Functional entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#MatterPortion",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#MatterPortion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RelationReference"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b9"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b10"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An objectified relation reference for the 'consists of' relation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Matter portion"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb31"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb32"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#portion"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b10",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Matter"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb31",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Matter"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#consistsOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb32",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#QuantityValue"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#portion"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#AggregationStateType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#EnumerationType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "One of the four fundamental states of matter being solid, liquid, gas or plasma"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Aggregation state type"
+      },
+      {
+        "@language": "nl",
+        "@value": "Aggregatietoestand type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#VerificationMethodType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#EnumerationType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The method by which a requirement is verified like monitoring, analysis, observation etc."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Verification method type"
+      },
+      {
+        "@language": "nl",
+        "@value": "Verificatie methode type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#PhysicalObject",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Object"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b12"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Something that possibly or actually exists in space and time, perceivable through the senses"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Physical object"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb34"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb35"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb36"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb37"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb38"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b12",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb34",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb35",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#isConnectedTo"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb36",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#InformationObject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#isDescribedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb37",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Interaction"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#participatesIn"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb38",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Activity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#performs"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#triggers",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The event triggert by an entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "triggers"
+      },
+      {
+        "@language": "nl",
+        "@value": "triggert"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Matter",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Chemical substance"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A pure chemical substance, chemical bonding or mixture from which real objects are made"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Matter"
+      },
+      {
+        "@language": "nl",
+        "@value": "Materie"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#GeometricEntity",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Representation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A spatial representation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Geometric entity"
+      },
+      {
+        "@language": "nl",
+        "@value": "Geometrische entiteit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Fluid",
+    "@type": [
+      "https://w3id.org/nen2660/def#AggregationStateType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Fluid"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "One of the four fundamental states of matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Fluid"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasTemporalEntity",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The temporal entity representing a concrete concept in time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has temporal entity"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft temporele entiteit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#RequirementSourceType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/nen2660/def#EnumerationType",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#RequirementSourceType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Requirement source type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasSolution",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A potential technical entity that is a solution for a functional entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has solution"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft oplossing"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#RealizedEntity",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#RealizedEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Entity"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b24"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity that exists or has existed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Realized entity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb55"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b24",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RealizedEntity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb55",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RealizedEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#ConceptType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#ConceptType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A metaconcept having concepts as instances that can have attributes or relations"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Concept type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasFunctionalPart",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#FunctionalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#FunctionalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasFunctionalPart"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The hasPart relation of a functional nature"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has functional part"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#RequirementSeverityType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#EnumerationType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The seriousness of a requirement like demanded or wished"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Requirement severity type"
+      },
+      {
+        "@language": "nl",
+        "@value": "Eis ernst type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Mixture",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Matter that consists of multiple forms of pure matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Mixture"
+      },
+      {
+        "@language": "nl",
+        "@value": "Mengsel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Entity",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An object or an activity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Entity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb16"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb17"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb16",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#State"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasState"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb17",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Event"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#triggers"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#chemicalFormula",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of information about the chemical proportions of atoms that constitute a particular chemical bonding"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "chemical formula"
+      },
+      {
+        "@language": "nl",
+        "@value": "chemische formule"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Solid",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#AggregationStateType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Solid"
+      },
+      {
+        "@language": "nl",
+        "@value": "Vaste stof"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasTechnicalPart",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TechnicalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TechnicalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasTechnicalPart"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A hasPart relation of a technical nature"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has technical part"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#portion",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#MatterPortion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#QuantityValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#portion"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The actual relative portion of a matter portion"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "portion"
+      }
+    ],
+    "https://w3id.org/nen2660/def#hasQuantityKind": [
+      {
+        "@id": "http://qudt.org/vocab/quantitykind/DimensionlessRatio"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#State",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#State"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ConcreteConcept"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b31"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A temporal part of an entity during a period between events. A state is characterized by the attributes and relationships of the entity. ”"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "State"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb68"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb69"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb70"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb71"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b31",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/nen2660/def#State"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb68",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#GeometricEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasBoundary"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb69",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#GeometricEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasInterior"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb70",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#State"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb71",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TemporalEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPeriod"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#ends",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The state that is ended by an event"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "ends"
+      },
+      {
+        "@language": "nl",
+        "@value": "beeindigt"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#ConcreteConcept",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TopConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An entity, event or state"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Concrete concept"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb10"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb11"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb12"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb13"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb10",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#GeometricEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasBoundary"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb11",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#GeometricEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasInterior"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb12",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TemporalEntity"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasTemporalEntity"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb13",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#ConcreteConcept"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#AllDisjointClasses_1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#InformationObject"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Activity"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Event"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#State"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#requirementSourceType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Requirement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RequirementSourceType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#requirementSourceType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a source type by a requirement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "requirement source type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#GeometricEntity",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#GeometricEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Representation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A spatial representation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Geometric entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasState",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The state of an entity in a certain point or period of time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has state"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft toestand"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#EnergyFlow",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#TransferType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The movement of an amount of energy (as capacity to do work)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Energy flow"
+      },
+      {
+        "@language": "nl",
+        "@value": "Energie stroom"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasQuantityKind",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a quantity kind as defined by QUDT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has quantity kind"
+      },
+      {
+        "@language": "nl",
+        "@value": "heeft kwantiteitsoort"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#HomogeneousMixture",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#HomogeneousMixture"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Mixture"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A mixture that is uniform throughout, and has only one phase"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Homogeneous mixture"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#ChemicalElement",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#PureSubstance"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Chemical element"
+      },
+      {
+        "@language": "nl",
+        "@value": "Chemisch element"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#EnergyFlow",
+    "@type": [
+      "https://w3id.org/nen2660/def#TransferType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#EnergyFlow"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The movement of an amount of energy (as capacity to do work)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Energy flow"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/rdfs/def",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://qudt.org/schema/qudt"
+      },
+      {
+        "@id": "http://qudt.org/vocab/quantitykind"
+      },
+      {
+        "@id": "http://qudt.org/vocab/unit"
+      },
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core"
+      },
+      {
+        "@id": "http://www.w3.org/2006/time"
+      },
+      {
+        "@id": "http://www.w3.org/ns/shacl"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#TransferType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#EnumerationType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The type of thing being transferred, here: material, information, energy or force"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Transfer type"
+      },
+      {
+        "@language": "nl",
+        "@value": "Overdrachts type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#RequirementSeverityType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/nen2660/def#EnumerationType",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#RequirementSeverityType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The seriousness of a requirement like demanded or wished"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Requirement severity type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#connectsObject",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The physical objects connected by a connection or interface"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "connects object"
+      },
+      {
+        "@language": "nl",
+        "@value": "verbindt object"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#isImplementedBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#FunctionalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TechnicalEntity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#isImplementedBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#2660:hasSolution"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The technical entity that implements a functional entity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is implemented by"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#hasRequirement",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TopConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Requirement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasRequirement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The (unstructured) requirement for something"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has requirement"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#MaterialFlow",
+    "@type": [
+      "https://w3id.org/nen2660/def#TransferType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#MaterialFlow"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The movement of an amount of matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Material flow"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#AmountOfBulkMatter",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#RealObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A real object consisting of a continuous amount of non-rigid (bulk) matter, held together primarily by external forces like gravity or confinement"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Amount of bulk matter"
+      },
+      {
+        "@language": "nl",
+        "@value": "Hoeveelheid bulkmaterie"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Requirement",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Requirement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#InformationObject"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b26"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "A rule that should hold for something, defined w.r.t. to its attributes or relations"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Requirement"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb57"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb58"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb59"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb60"
+      },
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb61"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b26",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb57",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb58",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RequirementSeverityType"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#requirementSeverityType"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb59",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RequirementSourceType"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#requirementSourceType"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb60",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#RequirementTopicType"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#requirementTopicType"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb61",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "https://w3id.org/nen2660/def#VerificationMethodType"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "https://w3id.org/nen2660/def#verificationMethodType"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#InformationObject",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Object"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Thing that is a whole of information on itself and has an own identity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Information object"
+      },
+      {
+        "@language": "nl",
+        "@value": "Informatie object"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#transferType",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of a transfer type by an interaction"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "transfer type"
+      },
+      {
+        "@language": "nl",
+        "@value": "overdrachts type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#VerificationMethodType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/nen2660/def#EnumerationType",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#VerificationMethodType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The method by which a requirement is verified like monitoring, analysis, observation etc."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Verification method type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#QuantityValue",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#QuantityValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Objectification"
+      },
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b15"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The objectification of a value of a quantity (involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Quantity value"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb43"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b15",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:nc6dbf475efae4728abb19805ba72ca18b16"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc6dbf475efae4728abb19805ba72ca18b16",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+          },
+          {
+            "@id": "http://www.w3.org/2001/XMLSchema#float"
+          },
+          {
+            "@id": "http://www.w3.org/2001/XMLSchema#double"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb43",
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb44"
+          },
+          {
+            "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb45"
+          },
+          {
+            "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb46"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb44",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb45",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ]
+  },
+  {
+    "@id": "_:nc479303e65d14d92bcdba0fbda7d92efb46",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#Type",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#AbstractConcept"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A meta-concept which instances are concepts (not individuals)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Type"
+      },
+      {
+        "@language": "nl",
+        "@value": "Type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#aggregationStateType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Matter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#AggregationStateType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#aggregationStateType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The possession of an aggregation state type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "aggregation state type"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/term#hasTechnicalPart",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#broader": [
+      {
+        "@id": "https://w3id.org/nen2660/term#hasPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A hasPart relation of a technical nature"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has technical part"
+      },
+      {
+        "@language": "en",
+        "@value": "heeft technisch deel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#overInterface",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Interaction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Interface"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#overInterface"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The interface over which an interaction between physical objects takes place"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "over interface"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#isDescribedBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#TopConcept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#InformationObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#isDescribedBy"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The information object that describes something"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is described by"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#isBoundBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#SpatialRegion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#PhysicalObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#isBoundBy"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The physical object that bounds a spatial region"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is bound by"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#AggregationStateType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "https://w3id.org/nen2660/def#EnumerationType",
+      "http://www.w3.org/ns/shacl#NodeShape",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#AggregationStateType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#Solid"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Fluid"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Gas"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Plasma"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "One of the four fundamental states of matter being solid, liquid, gas or plasma"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Aggregation state type"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/nen2660/def#Solid"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Fluid"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Gas"
+          },
+          {
+            "@id": "https://w3id.org/nen2660/def#Plasma"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#Plasma",
+    "@type": [
+      "https://w3id.org/nen2660/def#AggregationStateType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#Plasma"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "One of the four fundamental states of matter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Plasma"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/nen2660/def#overConnection",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Interaction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/nen2660/def#Connection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/nen2660/term#overConnection"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The connection over which an interaction between physical objects takes place"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "over connection"
+      }
+    ]
+  }
+]

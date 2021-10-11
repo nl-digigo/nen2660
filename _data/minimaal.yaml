@@ -1,0 +1,16 @@
+links1:
+  - label: Norm (in publicatie)
+    url: https://www.nen.nl/elasticsearch/?search=2660-2%3A2021
+  - label: 'NEN'
+    url: https://nen.nl
+links2:
+  - label: 'BIM Loket'
+    url: https://bimloket.nl
+  - label: 'CROW'
+    url: https://crow.nl
+  
+copyright_statement: "NEN 2660-2:2021"
+
+sosumi:
+  - label: See source on GitHub
+    url: https://github.com/bimloket/nen2660/

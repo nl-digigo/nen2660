@@ -1,0 +1,29 @@
+url: "https://w3id.org"
+baseurl: /nen2660
+remote_theme: redmer/minimaal
+title: NEN 2660
+description: NEN 2660 – Rules for information modelling of the built environment
+lang: en
+timezone: Europe/Amsterdam
+repo: https://github.com/bimloket/nen2660
+
+minimaal:
+  nested_links: false
+  disable_seo: true
+
+staticld_ghpages:
+  input_files:
+    - data/nen2660-skos.ttl
+    - data/nen2660-owl.ttl
+    - data/nen2660-shacl.ttl
+    - data/nen2660-rdfs.ttl
+  onto_base: "https://w3id.org/nen2660/def#"
+  vocab_base: "https://w3id.org/nen2660/term#"
+  linked_ns:
+    - "nen2660"
+    - "nen2660-term"
+  graph_order:
+    - "data/nen2660-skos.ttl"
+    - "data/nen2660-rdfs.ttl"
+    - "data/nen2660-owl.ttl"
+    - "data/nen2660-shacl.ttl"

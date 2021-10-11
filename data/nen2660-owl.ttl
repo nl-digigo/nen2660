@@ -1,0 +1,464 @@
+# baseURI: https://w3id.org/nen2660/owl/def
+# imports: http://qudt.org/schema/qudt
+# imports: http://qudt.org/vocab/quantitykind
+# imports: http://qudt.org/vocab/unit
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/ns/shacl
+# imports: https://w3id.org/nen2660/rdfs/def
+# prefix: nen2660
+
+@prefix nen2660: <https://w3id.org/nen2660/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/nen2660/owl/def>
+  a owl:Ontology ;
+  owl:imports <http://qudt.org/schema/qudt> ;
+  owl:imports <http://qudt.org/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/vocab/unit> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/ns/shacl> ;
+  owl:imports <https://w3id.org/nen2660/rdfs/def> ;
+.
+
+nen2660:AbstractConcept
+  a owl:Class ;
+.
+nen2660:Activity
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom nen2660:Activity ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:AggregationStateType
+  a owl:Class ;
+  owl:oneOf (
+      nen2660:Solid
+      nen2660:Fluid
+      nen2660:Gas
+      nen2660:Plasma
+    ) ;
+.
+nen2660:AmountOfBulkMatter
+  a owl:Class ;
+.
+nen2660:ChemicalBonding
+  a owl:Class ;
+.
+nen2660:ChemicalElement
+  a owl:Class ;
+.
+nen2660:ConceptType
+  a owl:Class ;
+.
+nen2660:ConcreteConcept
+  a owl:Class ;
+.
+nen2660:Connection
+  a owl:Class ;
+.
+nen2660:DiscreteObject
+  a owl:Class ;
+.
+nen2660:Entity
+  a owl:Class ;
+.
+nen2660:EnumerationType
+  a owl:Class ;
+.
+nen2660:Event
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom nen2660:Event ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:FunctionalEntity
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom nen2660:Entity ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:GeometricEntity
+  a owl:Class ;
+.
+nen2660:HeterogeneousMixture
+  a owl:Class ;
+.
+nen2660:HomogeneousMixture
+  a owl:Class ;
+.
+nen2660:InformationObject
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom nen2660:InformationObject ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:Interaction
+  a owl:Class ;
+.
+nen2660:Interface
+  a owl:Class ;
+.
+nen2660:Matter
+  a owl:Class ;
+.
+nen2660:MatterPortion
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nen2660:portion ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass nen2660:Matter ;
+      owl:onProperty rdf:value ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+nen2660:Mixture
+  a owl:Class ;
+.
+nen2660:Object
+  a owl:Class ;
+.
+nen2660:Objectification
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty rdf:value ;
+    ] ;
+.
+nen2660:PhysicalObject
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom nen2660:PhysicalObject ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:PlannedEntity
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom nen2660:PlannedEntity ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:Port
+  a owl:Class ;
+.
+nen2660:PureSubstance
+  a owl:Class ;
+.
+nen2660:QualityValue
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdf:value ;
+    ] ;
+.
+nen2660:QuantityValue
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+              xsd:decimal
+              xsd:float
+              xsd:double
+            ) ;
+        ] ;
+      owl:onProperty rdf:value ;
+    ] ;
+.
+nen2660:RealObject
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+              nen2660:RealObject
+              nen2660:Port
+            ) ;
+        ] ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:RealizedEntity
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom nen2660:RealizedEntity ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:RelationReference
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:anyURI ;
+      owl:onProperty rdf:value ;
+    ] ;
+.
+nen2660:Representation
+  a owl:Class ;
+.
+nen2660:Requirement
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass xsd:string ;
+      owl:onProperty rdf:value ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+nen2660:RequirementSeverityType
+  a owl:Class ;
+.
+nen2660:RequirementSourceType
+  a owl:Class ;
+.
+nen2660:RequirementTopicType
+  a owl:Class ;
+.
+nen2660:SpatialRegion
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+              nen2660:SpatialRegion
+              nen2660:Port
+            ) ;
+        ] ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:State
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom nen2660:State ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:TechnicalEntity
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom nen2660:Entity ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+nen2660:TopConcept
+  a owl:Class ;
+.
+nen2660:TransferType
+  a owl:Class ;
+  owl:oneOf (
+      nen2660:MaterialFlow
+      nen2660:EnergyFlow
+      nen2660:InformationFlow
+      nen2660:Force
+    ) ;
+.
+nen2660:Type
+  a owl:Class ;
+.
+nen2660:VerificationMethodType
+  a owl:Class ;
+.
+nen2660:abbreviation
+  a owl:AnnotationProperty ;
+.
+nen2660:aggregationStateType
+  a owl:ObjectProperty ;
+.
+nen2660:begins
+  a owl:ObjectProperty ;
+.
+nen2660:chemicalFormula
+  a owl:DatatypeProperty ;
+.
+nen2660:connectsObject
+  a owl:ObjectProperty ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          nen2660:Connection
+          nen2660:Interface
+        ) ;
+    ] ;
+.
+nen2660:connectsPort
+  a owl:ObjectProperty ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          nen2660:Connection
+          nen2660:Interface
+        ) ;
+    ] ;
+.
+nen2660:consistsOf
+  a owl:ObjectProperty ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          nen2660:RealObject
+          nen2660:Mixture
+          nen2660:MatterPortion
+        ) ;
+    ] ;
+.
+nen2660:contains
+  a owl:ObjectProperty ;
+.
+nen2660:ends
+  a owl:ObjectProperty ;
+.
+nen2660:hasBoundary
+  a owl:ObjectProperty ;
+.
+nen2660:hasFunctionalPart
+  a owl:ObjectProperty ;
+.
+nen2660:hasInterior
+  a owl:ObjectProperty ;
+.
+nen2660:hasPart
+  a owl:ObjectProperty ;
+.
+nen2660:hasQuantityKind
+  a owl:ObjectProperty ;
+.
+nen2660:hasRequirement
+  a owl:ObjectProperty ;
+.
+nen2660:hasSolution
+  a owl:ObjectProperty ;
+.
+nen2660:hasState
+  a owl:ObjectProperty ;
+.
+nen2660:hasTechnicalPart
+  a owl:ObjectProperty ;
+.
+nen2660:hasTemporalEntity
+  a owl:ObjectProperty ;
+.
+nen2660:hasUnit
+  a owl:ObjectProperty ;
+.
+nen2660:isBoundBy
+  a owl:ObjectProperty ;
+.
+nen2660:isConnectedTo
+  a owl:ObjectProperty ;
+.
+nen2660:isDescribedBy
+  a owl:ObjectProperty ;
+.
+nen2660:isImplementedBy
+  a owl:ObjectProperty ;
+.
+nen2660:isPlanFor
+  a owl:ObjectProperty ;
+.
+nen2660:isRealizedBy
+  a owl:ObjectProperty ;
+.
+nen2660:numberOfIndividuals
+  a owl:DatatypeProperty ;
+.
+nen2660:overConnection
+  a owl:ObjectProperty ;
+.
+nen2660:overInterface
+  a owl:ObjectProperty ;
+.
+nen2660:participatesIn
+  a owl:ObjectProperty ;
+.
+nen2660:performs
+  a owl:ObjectProperty ;
+.
+nen2660:portion
+  a owl:ObjectProperty ;
+.
+nen2660:requirementSeverityType
+  a owl:ObjectProperty ;
+.
+nen2660:requirementSourceType
+  a owl:ObjectProperty ;
+.
+nen2660:requirementTopicType
+  a owl:ObjectProperty ;
+.
+nen2660:transferType
+  a owl:ObjectProperty ;
+.
+nen2660:transforms
+  a owl:ObjectProperty ;
+.
+nen2660:triggers
+  a owl:ObjectProperty ;
+.
+nen2660:verificationMethodType
+  a owl:ObjectProperty ;
+.
+nen2660:AllDisjointClasses_1
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:PhysicalObject
+      nen2660:InformationObject
+      nen2660:Activity
+      nen2660:Event
+      nen2660:State
+    ) ;
+.
+nen2660:AllDisjointClasses_2
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:RealObject
+      nen2660:SpatialRegion
+    ) ;
+.
+nen2660:AllDisjointClasses_3
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:FunctionalEntity
+      nen2660:TechnicalEntity
+    ) ;
+.
+nen2660:AllDisjointClasses_4
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:PlannedEntity
+      nen2660:RealizedEntity
+    ) ;
+.
