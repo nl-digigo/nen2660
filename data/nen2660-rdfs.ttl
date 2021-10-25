@@ -513,6 +513,14 @@ nen2660:hasPart
   skos:definition "A decomposition relationship between physical objects themselves, between information objects themselves or between activities themselves"@en ;
   skos:prefLabel "has part"@en ;
 .
+nen2660:hasPartsGroup
+  a rdf:Property ;
+  rdfs:domain nen2660:ConcreteConcept ;
+  rdfs:range nen2660:ConcreteConcept ;
+  rdfs:seeAlso nen2660-term:hasPart ;
+  skos:definition "A relationship between any concrete concept and an implicit, often member-constrained, group of parts"@en ;
+  skos:prefLabel "has parts group"@en ;
+.
 nen2660:hasQuantityKind
   a rdf:Property ;
   rdfs:range qudt:QuantityKind ;
@@ -608,14 +616,6 @@ nen2660:isRealizedBy
   rdfs:seeAlso nen2660-term:isRealizedBy ;
   skos:definition "The realized entity that realizes a planned entity"@en ;
   skos:prefLabel "is realized by"@en ;
-.
-nen2660:numberOfIndividuals
-  a rdf:Property ;
-  rdfs:domain nen2660:TopConcept ;
-  rdfs:range xsd:integer ;
-  rdfs:seeAlso nen2660-term:numberOfIndividuals ;
-  skos:definition "The possession of a number of individuals by a container modelling an implicit group, 0 meaning all, 1 meaning the rest"@en ;
-  skos:prefLabel "number of individuals"@en ;
 .
 nen2660:overConnection
   a rdf:Property ;

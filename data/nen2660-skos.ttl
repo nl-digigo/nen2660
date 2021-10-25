@@ -507,6 +507,12 @@ nen2660-term:hasPart
   skos:prefLabel "has part"@en ;
   skos:prefLabel "heeft deel"@nl ;
 .
+nen2660-term:hasPartsGroup
+  a skos:Concept ;
+  skos:definition "A relationship between any concrete concept and an implicit, often member-constrained, group of parts"@en ;
+  skos:prefLabel "has parts group"@en ;
+  skos:prefLabel "heeft delen groep"@nl ;
+.
 nen2660-term:hasQuantityKind
   a skos:Concept ;
   skos:definition "The possession of a quantity kind as defined by QUDT"@en ;
@@ -587,12 +593,6 @@ nen2660-term:isRealizedBy
   skos:definition "The realized entity that realizes a planned entity"@en ;
   skos:prefLabel "is realized by"@en ;
   skos:prefLabel "is gerealiseerd door"@nl ;
-.
-nen2660-term:numberOfIndividuals
-  a skos:Concept ;
-  skos:definition "The possession of a number of individuals by a container modelling an implicit group"@en ;
-  skos:prefLabel "number of individuals"@en ;
-  skos:prefLabel "aantal individuen"@nl ;
 .
 nen2660-term:overConnection
   a skos:Concept ;

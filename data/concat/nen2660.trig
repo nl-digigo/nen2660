@@ -404,6 +404,13 @@
         skos:definition "The geometric entity representing the interior of a concrete concept"@en ;
         skos:prefLabel "has interior"@en .
 
+    nen2660:hasPartsGroup a rdf:Property ;
+        rdfs:domain nen2660:ConcreteConcept ;
+        rdfs:range nen2660:ConcreteConcept ;
+        rdfs:seeAlso nen2660-term:hasPart ;
+        skos:definition "A relationship between any concrete concept and an implicit, often member-constrained, group of parts"@en ;
+        skos:prefLabel "has parts group"@en .
+
     nen2660:hasQuantityKind a rdf:Property ;
         rdfs:range qudt:QuantityKind ;
         rdfs:seeAlso nen2660-term:hasQuantityKind ;
@@ -487,13 +494,6 @@
         rdfs:seeAlso nen2660-term:isRealizedBy ;
         skos:definition "The realized entity that realizes a planned entity"@en ;
         skos:prefLabel "is realized by"@en .
-
-    nen2660:numberOfIndividuals a rdf:Property ;
-        rdfs:domain nen2660:TopConcept ;
-        rdfs:range xsd:integer ;
-        rdfs:seeAlso nen2660-term:numberOfIndividuals ;
-        skos:definition "The possession of a number of individuals by a container modelling an implicit group, 0 meaning all, 1 meaning the rest"@en ;
-        skos:prefLabel "number of individuals"@en .
 
     nen2660:overConnection a rdf:Property ;
         rdfs:domain nen2660:Interaction ;
@@ -609,558 +609,6 @@
         rdfs:seeAlso nen2660-term:hasPart ;
         skos:definition "A decomposition relationship between physical objects themselves, between information objects themselves or between activities themselves"@en ;
         skos:prefLabel "has part"@en .
-}
-
-<https://w3id.org/nen2660/skos/term> {
-    <https://w3id.org/nen2660/skos/term> a skos:ConceptScheme ;
-        owl:imports <http://qudt.org/schema/qudt>,
-            <http://qudt.org/vocab/quantitykind>,
-            <http://qudt.org/vocab/unit>,
-            <http://www.w3.org/2004/02/skos/core>,
-            <http://www.w3.org/2006/time>,
-            <http://www.w3.org/ns/shacl> ;
-        skos:hasTopConcept nen2660-term:TopConcept .
-
-    nen2660-term:AmountOfBulkMatter a skos:Concept ;
-        skos:broader nen2660-term:RealObject ;
-        skos:definition "A real object consisting of a continuous amount of non-rigid (bulk) matter, held together primarily by external forces like gravity or confinement"@en ;
-        skos:prefLabel "Amount of bulk matter"@en,
-            "Hoeveelheid bulkmaterie"@nl .
-
-    nen2660-term:ChemicalBonding a skos:Concept ;
-        skos:broader nen2660-term:PureSubstance ;
-        skos:definition "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical bonding, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en ;
-        skos:prefLabel "Chemical bonding"@en,
-            "Chemische verbinding"@nl .
-
-    nen2660-term:ChemicalElement a skos:Concept ;
-        skos:broader nen2660-term:PureSubstance ;
-        skos:definition "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"@en ;
-        skos:prefLabel "Chemical element"@en,
-            "Chemisch element"@nl .
-
-    nen2660-term:ConceptType a skos:Concept ;
-        skos:broader nen2660-term:Type ;
-        skos:definition "A metaconcept having concepts as instances that can have attributes or relations"@en ;
-        skos:prefLabel "Concept type"@en,
-            "Concept type"@nl .
-
-    nen2660-term:Connection a skos:Concept ;
-        skos:broader nen2660-term:PhysicalObject ;
-        skos:definition "The thing at which two or more things are connected"@en ;
-        skos:prefLabel "Connection"@en,
-            "Verbinding"@nl .
-
-    nen2660-term:DiscreteObject a skos:Concept ;
-        skos:broader nen2660-term:RealObject ;
-        skos:definition "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity, electromagnetic force)"@en ;
-        skos:prefLabel "Discrete object"@en,
-            "Discreet object"@nl .
-
-    nen2660-term:EnergyFlow a skos:Concept ;
-        skos:broader nen2660-term:TransferType ;
-        skos:definition "The movement of an amount of energy (as capacity to do work)"@en ;
-        skos:prefLabel "Energy flow"@en,
-            "Energie stroom"@nl .
-
-    nen2660-term:Event a skos:Concept ;
-        skos:broader nen2660-term:ConcreteConcept ;
-        skos:definition "A thing that happens or takes place and marks the beginning or ending of a state"@en ;
-        skos:prefLabel "Event"@en,
-            "Gebeurtenis"@nl .
-
-    nen2660-term:Fluid a skos:Concept ;
-        skos:broader nen2660-term:AggregationStateType ;
-        skos:definition "One of the four fundamental states of matter"@en ;
-        skos:prefLabel "Fluid"@en,
-            "Vloeistof"@nl .
-
-    nen2660-term:Force a skos:Concept ;
-        skos:broader nen2660-term:TransferType ;
-        skos:definition "A physical quantity that denotes ability to push, pull, twist or accelerate a body"@en ;
-        skos:prefLabel "Force"@en,
-            "Kracht"@nl .
-
-    nen2660-term:FunctionalEntity a skos:Concept ;
-        skos:broader nen2660-term:Entity ;
-        skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"@en ;
-        skos:prefLabel "Functional entity"@en,
-            "Functional entity"@nl .
-
-    nen2660-term:Gas a skos:Concept ;
-        skos:broader nen2660-term:AggregationStateType ;
-        skos:definition "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"@en ;
-        skos:prefLabel "Gas"@en,
-            "Gas"@nl .
-
-    nen2660-term:GeometricEntity a skos:Concept ;
-        skos:broader nen2660-term:Representation ;
-        skos:definition "A spatial representation"@en ;
-        skos:prefLabel "Geometric entity"@en,
-            "Geometrische entiteit"@nl .
-
-    nen2660-term:HeterogeneousMixture a skos:Concept ;
-        skos:broader nen2660-term:Mixture ;
-        skos:definition "A mixture that is separated into different regions or phases that have different compositions or properties"@en ;
-        skos:prefLabel "Heterogeneous mixture"@en,
-            "Heterogeneen mengsel"@nl .
-
-    nen2660-term:HomogeneousMixture a skos:Concept ;
-        skos:broader nen2660-term:Mixture ;
-        skos:definition "A mixture that is uniform throughout, and has only one phase"@en ;
-        skos:prefLabel "Homogeneous mixture"@en,
-            "Homogeen mengsel"@nl .
-
-    nen2660-term:InformationFlow a skos:Concept ;
-        skos:broader nen2660-term:TransferType ;
-        skos:definition "The movement of information represented in some medium"@en ;
-        skos:prefLabel "Information flow"@en,
-            "Informatie stroom"@nl .
-
-    nen2660-term:Interaction a skos:Concept ;
-        skos:broader nen2660-term:Activity ;
-        skos:definition "The activity in which two or more objects act upon one another to produce a new effect"@en ;
-        skos:prefLabel "Interaction"@en,
-            "Interactie"@nl .
-
-    nen2660-term:Interface a skos:Concept ;
-        skos:broader nen2660-term:SpatialRegion ;
-        skos:definition "The spatial region being a point of interaction between entities"@en ;
-        skos:prefLabel "Interface"@en,
-            "Raakvlak"@nl .
-
-    nen2660-term:MaterialFlow a skos:Concept ;
-        skos:broader nen2660-term:TransferType ;
-        skos:definition "The movement of an amount of matter"@en ;
-        skos:prefLabel "Material flow"@en,
-            "Materie stroom"@nl .
-
-    nen2660-term:MatterPortion a skos:Concept ;
-        skos:broader nen2660-term:RelationReference ;
-        skos:definition "An objectified relation reference for the 'consists of' relation"@en ;
-        skos:prefLabel "Matter portion"@en,
-            "Matter aandeel"@nl .
-
-    nen2660-term:PlannedEntity a skos:Concept ;
-        skos:broader nen2660-term:Entity ;
-        skos:definition "An entity that does not yet exist or does not yet exist in the desired form"@en ;
-        skos:prefLabel "Planned entity"@en,
-            "Geplande entiteit"@nl .
-
-    nen2660-term:Plasma a skos:Concept ;
-        skos:broader nen2660-term:AggregationStateType ;
-        skos:definition "One of the four fundamental states of matter"@en ;
-        skos:prefLabel "Plasma"@en,
-            "Plasma"@nl .
-
-    nen2660-term:Port a skos:Concept ;
-        skos:broader nen2660-term:PhysicalObject ;
-        skos:definition "Explicit part of an entity where interaction with other entities can take place via a connection or interface"@en ;
-        skos:prefLabel "Port"@en,
-            "Poort"@nl .
-
-    nen2660-term:QualityValue a skos:Concept ;
-        skos:broader nen2660-term:Objectification ;
-        skos:definition "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
-        skos:prefLabel "Quality value"@en,
-            "Kwaliteitwaarde"@nl .
-
-    nen2660-term:QuantityKind a skos:Concept ;
-        skos:definition "Base or derived kind of quantity like length or time"@en ;
-        skos:prefLabel "Quantity kind"@en,
-            "Kwantiteitsoort"@nl .
-
-    nen2660-term:QuantityValue a skos:Concept ;
-        skos:broader nen2660-term:Objectification ;
-        skos:definition "The objectification of a value of a quantity (involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
-        skos:prefLabel "Quantity value"@en,
-            "Kwantiteitsoort"@nl .
-
-    nen2660-term:RealizedEntity a skos:Concept ;
-        skos:broader nen2660-term:Entity ;
-        skos:definition "An entity that exists or has existed"@en ;
-        skos:prefLabel "Realized entity"@en,
-            "Gerealiseerde entiteit"@nl .
-
-    nen2660-term:Requirement a skos:Concept ;
-        skos:broader nen2660-term:InformationObject ;
-        skos:definition "A rule that should hold for something, defined w.r.t. to its attributes or relations" ;
-        skos:prefLabel "Requirement"@en,
-            "Eis"@nl .
-
-    nen2660-term:RequirementSeverityType a skos:Concept ;
-        skos:broader nen2660-term:EnumerationType ;
-        skos:definition "The seriousness of a requirement like demanded or wished"@en ;
-        skos:prefLabel "Requirement severity type"@en,
-            "Eis ernst type"@nl .
-
-    nen2660-term:RequirementSourceType a skos:Concept ;
-        skos:broader nen2660-term:EnumerationType ;
-        skos:definition "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"@en ;
-        skos:prefLabel "Requirement source type"@en,
-            "Eis bron type"@nl .
-
-    nen2660-term:RequirementTopicType a skos:Concept ;
-        skos:broader nen2660-term:EnumerationType ;
-        skos:definition "The entity aspect a requirement applies to"@en ;
-        skos:prefLabel "Requirement topic type"@en,
-            "Eis onderwerp type"@nl .
-
-    nen2660-term:Solid a skos:Concept ;
-        skos:broader nen2660-term:AggregationStateType ;
-        skos:definition "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"@en ;
-        skos:prefLabel "Solid"@en,
-            "Vaste stof"@nl .
-
-    nen2660-term:State a skos:Concept ;
-        skos:broader nen2660-term:ConcreteConcept ;
-        skos:definition "A temporal part of an entity during a period between events. A state is characterized by the attributes and relationships of the entity. ”"@en ;
-        skos:prefLabel "State"@en,
-            "Toestand"@nl .
-
-    nen2660-term:TechnicalEntity a skos:Concept ;
-        skos:broader nen2660-term:Entity ;
-        skos:definition "An entity having technical properties and relations (what it is) that implements/plays functional entities"@en ;
-        skos:prefLabel "Technical entity"@en,
-            "Technische entiteit"@nl .
-
-    nen2660-term:TemporalEntity a skos:Concept ;
-        skos:broader nen2660-term:Representation ;
-        skos:definition "A temporal representation"@en ;
-        skos:prefLabel "Temporal entity"@en,
-            "Temporele entiteit"@nl .
-
-    nen2660-term:Unit a skos:Concept ;
-        skos:definition "A scale of measurement"@en ;
-        skos:prefLabel "Unit"@en,
-            "Eenheid"@nl .
-
-    nen2660-term:VerificationMethodType a skos:Concept ;
-        skos:broader nen2660-term:EnumerationType ;
-        skos:definition "The method by which a requirement is verified like monitoring, analysis, observation etc."@en ;
-        skos:prefLabel "Verification method type"@en,
-            "Verificatie methode type"@nl .
-
-    nen2660-term:abbreviation a skos:Concept ;
-        skos:broader skos:altLabel ;
-        skos:definition "Acronym or initial word as special case of an external name"@en ;
-        skos:prefLabel "abbreviation"@en,
-            "afkorting"@nl .
-
-    nen2660-term:aggregationStateType a skos:Concept ;
-        skos:definition "The possession of an aggregation state type"@en ;
-        skos:prefLabel "aggregation state type"@en,
-            "aggregatie toestand type"@nl .
-
-    nen2660-term:begins a skos:Concept ;
-        skos:definition "The state that is started by an event"@en ;
-        skos:prefLabel "begins"@en,
-            "begint"@nl .
-
-    nen2660-term:chemicalFormula a skos:Concept ;
-        skos:definition "The possession of information about the chemical proportions of atoms that constitute a particular chemical bonding"@en ;
-        skos:prefLabel "chemical formula"@en,
-            "chemische formule"@nl .
-
-    nen2660-term:connectsObject a skos:Concept ;
-        skos:definition "The physical objects connected by a connection or interface"@en ;
-        skos:prefLabel "connects object"@en,
-            "verbindt object"@nl .
-
-    nen2660-term:connectsPort a skos:Concept ;
-        skos:definition "The ports (as part of physical objects) connected by a connection or interface"@en ;
-        skos:prefLabel "connects port"@en,
-            "verbindt poort"@nl .
-
-    nen2660-term:consistsOf a skos:Concept ;
-        skos:definition "The matter a real object, mixture or matter portion is made of"@en ;
-        skos:prefLabel "consists of"@en,
-            "bestaat uit"@nl .
-
-    nen2660-term:contains a skos:Concept ;
-        skos:definition "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en ;
-        skos:prefLabel "contains"@en,
-            "bevat"@nl .
-
-    nen2660-term:ends a skos:Concept ;
-        skos:definition "The state that is ended by an event"@en ;
-        skos:prefLabel "ends"@en,
-            "beeindigt"@nl .
-
-    nen2660-term:hasBoundary a skos:Concept ;
-        skos:definition "The geometric entity representing the boundary of a concrete concept"@en ;
-        skos:prefLabel "has boundary"@en,
-            "heeft begrenzing"@nl .
-
-    nen2660-term:hasFunctionalPart a skos:Concept ;
-        skos:broader nen2660-term:hasPart ;
-        skos:definition "The hasPart relation of a functional nature"@en ;
-        skos:prefLabel "has functional part"@en,
-            "heeft functioneel deel"@nl .
-
-    nen2660-term:hasInterior a skos:Concept ;
-        skos:definition "The geometric entity representing the interior of a concrete concept"@en ;
-        skos:prefLabel "has interior"@en,
-            "heeft inwendige"@nl .
-
-    nen2660-term:hasQuantityKind a skos:Concept ;
-        skos:definition "The possession of a quantity kind as defined by QUDT"@en ;
-        skos:prefLabel "has quantity kind"@en,
-            "heeft kwantiteitsoort"@nl .
-
-    nen2660-term:hasRequirement a skos:Concept ;
-        skos:definition "The(unstructured) requirement for something"@en ;
-        skos:prefLabel "has requirement"@en,
-            "heeft eis"@nl .
-
-    nen2660-term:hasState a skos:Concept ;
-        skos:definition "The state of an entity in a certain point or period of time"@en ;
-        skos:prefLabel "has state"@en,
-            "heeft toestand"@nl .
-
-    nen2660-term:hasTechnicalPart a skos:Concept ;
-        skos:broader nen2660-term:hasPart ;
-        skos:definition "A hasPart relation of a technical nature"@en ;
-        skos:prefLabel "has technical part"@en,
-            "heeft technisch deel"@en .
-
-    nen2660-term:hasTemporalEntity a skos:Concept ;
-        skos:definition "The temporal entity representing a concrete concept in time"@en ;
-        skos:prefLabel "has temporal entity"@en,
-            "heeft temporele entiteit"@nl .
-
-    nen2660-term:hasUnit a skos:Concept ;
-        skos:definition "The possession of a unit as defined by QUDT"@en ;
-        skos:prefLabel "has unit"@en,
-            "heeft eenheid"@nl .
-
-    nen2660-term:isBoundBy a skos:Concept ;
-        skos:definition "The physical object that bounds a spatial region"@en ;
-        skos:prefLabel "is bound by"@en,
-            "is begrensd door"@nl .
-
-    nen2660-term:isConnectedTo a skos:Concept ;
-        skos:definition "The topological relationship between physical objects"@en ;
-        skos:prefLabel "is connected to"@en,
-            "is verbonden met"@nl .
-
-    nen2660-term:isDescribedBy a skos:Concept ;
-        skos:definition "The information object that describes something"@en ;
-        skos:prefLabel "is described by"@en,
-            "is beschreven door"@nl .
-
-    nen2660-term:isImplementedBy a skos:Concept ;
-        skos:broader nen2660-term:hasSolution ;
-        skos:definition "The technical entity that implements a functional entity"@en ;
-        skos:prefLabel "is implemented by"@en,
-            "is geimplementeerd door"@nl .
-
-    nen2660-term:isRealizedBy a skos:Concept ;
-        skos:broader nen2660-term:isPlanFor ;
-        skos:definition "The realized entity that realizes a planned entity"@en ;
-        skos:prefLabel "is realized by"@en,
-            "is gerealiseerd door"@nl .
-
-    nen2660-term:numberOfIndividuals a skos:Concept ;
-        skos:definition "The possession of a number of individuals by a container modelling an implicit group"@en ;
-        skos:prefLabel "number of individuals"@en,
-            "aantal individuen"@nl .
-
-    nen2660-term:overConnection a skos:Concept ;
-        skos:definition "The connection over which an interaction between physical objects takes place"@en ;
-        skos:prefLabel "over connection"@en,
-            "over verbinding"@nl .
-
-    nen2660-term:overInterface a skos:Concept ;
-        skos:definition "The interface over which an interaction between physical objects takes place"@en ;
-        skos:prefLabel "over interface"@en,
-            "over raakvlak"@nl .
-
-    nen2660-term:participatesIn a skos:Concept ;
-        skos:definition "The interaction a physical object participates in"@en ;
-        skos:prefLabel "participates in"@en,
-            "participeert in"@nl .
-
-    nen2660-term:performs a skos:Concept ;
-        skos:definition "The activity performed by a physical object"@en ;
-        skos:prefLabel "performs"@en,
-            "voert uit"@nl .
-
-    nen2660-term:portion a skos:Concept ;
-        skos:definition "The actual relative portion of a matter portion"@en ;
-        skos:prefLabel "portion"@en,
-            "aandeel"@nl .
-
-    nen2660-term:requirementSeverityType a skos:Concept ;
-        skos:definition "The possession of a severity type by a requirement"@en ;
-        skos:prefLabel "requirement severity type"@en,
-            "eis ernst type"@nl .
-
-    nen2660-term:requirementSourceType a skos:Concept ;
-        skos:definition "The possession of a source type by a requirement"@en ;
-        skos:prefLabel "requirement source type"@en,
-            "eis bron type"@nl .
-
-    nen2660-term:requirementTopicType a skos:Concept ;
-        skos:definition "The possession of a topic type by a requirement"@en ;
-        skos:prefLabel "requirement topic type"@en,
-            "eis onderwerp type"@nl .
-
-    nen2660-term:transferType a skos:Concept ;
-        skos:definition "The possession of a transfer type by an interaction"@en ;
-        skos:prefLabel "transfer type"@en,
-            "overdrachts type"@nl .
-
-    nen2660-term:transforms a skos:Concept ;
-        skos:definition "The object transformed by an activity"@en ;
-        skos:prefLabel "transforms"@en,
-            "transformeert"@nl .
-
-    nen2660-term:triggers a skos:Concept ;
-        skos:definition "The event triggert by an entity"@en ;
-        skos:prefLabel "triggers"@en,
-            "triggert"@nl .
-
-    nen2660-term:verificationMethodType a skos:Concept ;
-        skos:definition "The possession of a verification method type by a requirement"@en ;
-        skos:prefLabel "verification method type"@en,
-            "verificatie methode type"@nl .
-
-    nen2660-term:Activity a skos:Concept ;
-        skos:broader nen2660-term:Entity ;
-        skos:definition "An activity is something possibly or actually happening in space and time"@en ;
-        skos:prefLabel "Activity"@en,
-            "Aktiviteit"@nl .
-
-    nen2660-term:RelationReference a skos:Concept ;
-        skos:broader nen2660-term:Objectification ;
-        skos:definition "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relationships)"@en ;
-        skos:prefLabel "Relation reference"@en,
-            "Relatie referentie"@nl .
-
-    nen2660-term:SpatialRegion a skos:Concept ;
-        skos:broader nen2660-term:PhysicalObject ;
-        skos:definition "A physical object that encloses a certain area such as rooms, roads and rivers that is bound by real objects, other spacetial regions or based on use or convention and that is empty or contains discrete or liquid or gaseous matter"@en ;
-        skos:prefLabel "Spatial region"@en,
-            "Ruimtelijk gebied"@nl .
-
-    nen2660-term:hasSolution a skos:Concept ;
-        skos:definition "A potential technical entity that is a solution for a functional entity"@en ;
-        skos:prefLabel "has solution"@en,
-            "heeft oplossing"@nl .
-
-    nen2660-term:isPlanFor a skos:Concept ;
-        skos:definition "A potentially realized entity according to this planed entity"@en ;
-        skos:prefLabel "is plan for"@en,
-            "is plan voor"@nl .
-
-    nen2660-term:AbstractConcept a skos:Concept ;
-        skos:broader nen2660-term:TopConcept ;
-        skos:definition "An objectification or type"@en ;
-        skos:prefLabel "Abstract concept"@en,
-            "Abstract concept"@nl .
-
-    nen2660-term:InformationObject a skos:Concept ;
-        skos:broader nen2660-term:Object ;
-        skos:definition "Thing that is a whole of information on itself and has an own identity"@en ;
-        skos:prefLabel "Information object"@en,
-            "Informatie object"@nl .
-
-    nen2660-term:Matter a skos:Concept ;
-        skos:altLabel "Chemical substance"@en ;
-        skos:broader nen2660-term:PhysicalObject ;
-        skos:definition "A pure chemical substance, chemical bonding or mixture from which real objects are made"@en ;
-        skos:prefLabel "Matter"@en,
-            "Materie"@nl .
-
-    nen2660-term:Mixture a skos:Concept ;
-        skos:broader nen2660-term:Matter ;
-        skos:definition "Matter that consists of multiple forms of pure matter"@en ;
-        skos:prefLabel "Mixture"@en,
-            "Mengsel"@nl .
-
-    nen2660-term:Object a skos:Concept ;
-        skos:broader nen2660-term:Entity ;
-        skos:definition "A physical object or an information object"@en ;
-        skos:prefLabel "Object"@en,
-            "Object"@nl .
-
-    nen2660-term:PureSubstance a skos:Concept ;
-        skos:broader nen2660-term:Matter ;
-        skos:definition "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
-        skos:prefLabel "Pure substance"@en,
-            "Zuivere stof"@nl .
-
-    nen2660-term:RealObject a skos:Concept ;
-        skos:altLabel "Amount of matter"@en ;
-        skos:broader nen2660-term:PhysicalObject ;
-        skos:definition "A physical object that can be tangible and visible in reality such as artifacts including bridges, tanks and devices, and natural objects including terrains, banks, water bottoms and trees"@en ;
-        skos:prefLabel "Real object"@en,
-            "Reeel object"@nl .
-
-    nen2660-term:Representation a skos:Concept ;
-        skos:broader nen2660-term:InformationObject ;
-        skos:definition "That which represents something else"@en ;
-        skos:prefLabel "Representation"@en,
-            "Representatie"@nl .
-
-    nen2660-term:Type a skos:Concept ;
-        skos:broader nen2660-term:AbstractConcept ;
-        skos:definition "A meta-concept which instances are concepts (not individuals)"@en ;
-        skos:prefLabel "Type"@en,
-            "Type"@nl .
-
-    nen2660-term:hasPart a skos:Concept ;
-        skos:definition "A decomposition relationship between physical objects themselves, between information objects themselves or between activities themselves"@en ;
-        skos:prefLabel "has part"@en,
-            "heeft deel"@nl .
-
-    nen2660-term:ConcreteConcept a skos:Concept ;
-        skos:broader nen2660-term:TopConcept ;
-        skos:definition "An entity, event or state"@en ;
-        skos:prefLabel "Concrete concept"@en,
-            "Concreet concept"@nl .
-
-    nen2660-term:Objectification a skos:Concept ;
-        skos:broader nen2660-term:AbstractConcept ;
-        skos:definition "An attribute (quality or quantity) or relation represented as an individual defined by a concept"@en ;
-        skos:prefLabel "Objectification"@en,
-            "Objectificatie"@nl .
-
-    nen2660-term:TopConcept a skos:Concept ;
-        skos:definition "The most generic root concept of nen2660"@en ;
-        skos:prefLabel "Top concept"@en,
-            "Top concept"@nl .
-
-    nen2660-term:AggregationStateType a skos:Concept ;
-        skos:broader nen2660-term:EnumerationType ;
-        skos:definition "One of the four fundamental states of matter being solid, liquid, gas or plasma"@en ;
-        skos:prefLabel "Aggregation state type"@en,
-            "Aggregatietoestand type"@nl .
-
-    nen2660-term:TransferType a skos:Concept ;
-        skos:broader nen2660-term:EnumerationType ;
-        skos:definition "The type of thing being transferred, here: material, information, energy or force"@en ;
-        skos:prefLabel "Transfer type"@en,
-            "Overdrachts type"@nl .
-
-    nen2660-term:PhysicalObject a skos:Concept ;
-        skos:broader nen2660-term:Object ;
-        skos:definition "Something that possibly or actually exists in space and time, perceivable through the senses"@en ;
-        skos:prefLabel "Physical object"@en,
-            "Fysiek object"@nl .
-
-    nen2660-term:Entity a skos:Concept ;
-        skos:broader nen2660-term:ConcreteConcept ;
-        skos:definition "An object or an activity"@en ;
-        skos:prefLabel "Entity"@en,
-            "Entiteit"@nl .
-
-    nen2660-term:EnumerationType a skos:Concept ;
-        skos:broader nen2660-term:Type ;
-        skos:definition "A metaconcept having concepts as instances having no further attributes or relations (annotations only)"@en ;
-        skos:prefLabel "Enumeration type"@en,
-            "Enumeratie type"@nl .
 }
 
 <https://w3id.org/nen2660/shacl/def> {
@@ -1497,6 +945,8 @@
 
     nen2660:hasInterior a owl:ObjectProperty .
 
+    nen2660:hasPartsGroup a owl:ObjectProperty .
+
     nen2660:hasQuantityKind a owl:ObjectProperty .
 
     nen2660:hasRequirement a owl:ObjectProperty .
@@ -1522,8 +972,6 @@
     nen2660:isPlanFor a owl:ObjectProperty .
 
     nen2660:isRealizedBy a owl:ObjectProperty .
-
-    nen2660:numberOfIndividuals a owl:DatatypeProperty .
 
     nen2660:overConnection a owl:ObjectProperty .
 
@@ -1637,5 +1085,557 @@
                 owl:onProperty nen2660:hasPart ] .
 
     nen2660:hasPart a owl:ObjectProperty .
+}
+
+<https://w3id.org/nen2660/skos/term> {
+    <https://w3id.org/nen2660/skos/term> a skos:ConceptScheme ;
+        owl:imports <http://qudt.org/schema/qudt>,
+            <http://qudt.org/vocab/quantitykind>,
+            <http://qudt.org/vocab/unit>,
+            <http://www.w3.org/2004/02/skos/core>,
+            <http://www.w3.org/2006/time>,
+            <http://www.w3.org/ns/shacl> ;
+        skos:hasTopConcept nen2660-term:TopConcept .
+
+    nen2660-term:AmountOfBulkMatter a skos:Concept ;
+        skos:broader nen2660-term:RealObject ;
+        skos:definition "A real object consisting of a continuous amount of non-rigid (bulk) matter, held together primarily by external forces like gravity or confinement"@en ;
+        skos:prefLabel "Amount of bulk matter"@en,
+            "Hoeveelheid bulkmaterie"@nl .
+
+    nen2660-term:ChemicalBonding a skos:Concept ;
+        skos:broader nen2660-term:PureSubstance ;
+        skos:definition "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical bonding, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en ;
+        skos:prefLabel "Chemical bonding"@en,
+            "Chemische verbinding"@nl .
+
+    nen2660-term:ChemicalElement a skos:Concept ;
+        skos:broader nen2660-term:PureSubstance ;
+        skos:definition "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"@en ;
+        skos:prefLabel "Chemical element"@en,
+            "Chemisch element"@nl .
+
+    nen2660-term:ConceptType a skos:Concept ;
+        skos:broader nen2660-term:Type ;
+        skos:definition "A metaconcept having concepts as instances that can have attributes or relations"@en ;
+        skos:prefLabel "Concept type"@en,
+            "Concept type"@nl .
+
+    nen2660-term:Connection a skos:Concept ;
+        skos:broader nen2660-term:PhysicalObject ;
+        skos:definition "The thing at which two or more things are connected"@en ;
+        skos:prefLabel "Connection"@en,
+            "Verbinding"@nl .
+
+    nen2660-term:DiscreteObject a skos:Concept ;
+        skos:broader nen2660-term:RealObject ;
+        skos:definition "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity, electromagnetic force)"@en ;
+        skos:prefLabel "Discrete object"@en,
+            "Discreet object"@nl .
+
+    nen2660-term:EnergyFlow a skos:Concept ;
+        skos:broader nen2660-term:TransferType ;
+        skos:definition "The movement of an amount of energy (as capacity to do work)"@en ;
+        skos:prefLabel "Energy flow"@en,
+            "Energie stroom"@nl .
+
+    nen2660-term:Event a skos:Concept ;
+        skos:broader nen2660-term:ConcreteConcept ;
+        skos:definition "A thing that happens or takes place and marks the beginning or ending of a state"@en ;
+        skos:prefLabel "Event"@en,
+            "Gebeurtenis"@nl .
+
+    nen2660-term:Fluid a skos:Concept ;
+        skos:broader nen2660-term:AggregationStateType ;
+        skos:definition "One of the four fundamental states of matter"@en ;
+        skos:prefLabel "Fluid"@en,
+            "Vloeistof"@nl .
+
+    nen2660-term:Force a skos:Concept ;
+        skos:broader nen2660-term:TransferType ;
+        skos:definition "A physical quantity that denotes ability to push, pull, twist or accelerate a body"@en ;
+        skos:prefLabel "Force"@en,
+            "Kracht"@nl .
+
+    nen2660-term:FunctionalEntity a skos:Concept ;
+        skos:broader nen2660-term:Entity ;
+        skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"@en ;
+        skos:prefLabel "Functional entity"@en,
+            "Functional entity"@nl .
+
+    nen2660-term:Gas a skos:Concept ;
+        skos:broader nen2660-term:AggregationStateType ;
+        skos:definition "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"@en ;
+        skos:prefLabel "Gas"@en,
+            "Gas"@nl .
+
+    nen2660-term:GeometricEntity a skos:Concept ;
+        skos:broader nen2660-term:Representation ;
+        skos:definition "A spatial representation"@en ;
+        skos:prefLabel "Geometric entity"@en,
+            "Geometrische entiteit"@nl .
+
+    nen2660-term:HeterogeneousMixture a skos:Concept ;
+        skos:broader nen2660-term:Mixture ;
+        skos:definition "A mixture that is separated into different regions or phases that have different compositions or properties"@en ;
+        skos:prefLabel "Heterogeneous mixture"@en,
+            "Heterogeneen mengsel"@nl .
+
+    nen2660-term:HomogeneousMixture a skos:Concept ;
+        skos:broader nen2660-term:Mixture ;
+        skos:definition "A mixture that is uniform throughout, and has only one phase"@en ;
+        skos:prefLabel "Homogeneous mixture"@en,
+            "Homogeen mengsel"@nl .
+
+    nen2660-term:InformationFlow a skos:Concept ;
+        skos:broader nen2660-term:TransferType ;
+        skos:definition "The movement of information represented in some medium"@en ;
+        skos:prefLabel "Information flow"@en,
+            "Informatie stroom"@nl .
+
+    nen2660-term:Interaction a skos:Concept ;
+        skos:broader nen2660-term:Activity ;
+        skos:definition "The activity in which two or more objects act upon one another to produce a new effect"@en ;
+        skos:prefLabel "Interaction"@en,
+            "Interactie"@nl .
+
+    nen2660-term:Interface a skos:Concept ;
+        skos:broader nen2660-term:SpatialRegion ;
+        skos:definition "The spatial region being a point of interaction between entities"@en ;
+        skos:prefLabel "Interface"@en,
+            "Raakvlak"@nl .
+
+    nen2660-term:MaterialFlow a skos:Concept ;
+        skos:broader nen2660-term:TransferType ;
+        skos:definition "The movement of an amount of matter"@en ;
+        skos:prefLabel "Material flow"@en,
+            "Materie stroom"@nl .
+
+    nen2660-term:MatterPortion a skos:Concept ;
+        skos:broader nen2660-term:RelationReference ;
+        skos:definition "An objectified relation reference for the 'consists of' relation"@en ;
+        skos:prefLabel "Matter portion"@en,
+            "Matter aandeel"@nl .
+
+    nen2660-term:PlannedEntity a skos:Concept ;
+        skos:broader nen2660-term:Entity ;
+        skos:definition "An entity that does not yet exist or does not yet exist in the desired form"@en ;
+        skos:prefLabel "Planned entity"@en,
+            "Geplande entiteit"@nl .
+
+    nen2660-term:Plasma a skos:Concept ;
+        skos:broader nen2660-term:AggregationStateType ;
+        skos:definition "One of the four fundamental states of matter"@en ;
+        skos:prefLabel "Plasma"@en,
+            "Plasma"@nl .
+
+    nen2660-term:Port a skos:Concept ;
+        skos:broader nen2660-term:PhysicalObject ;
+        skos:definition "Explicit part of an entity where interaction with other entities can take place via a connection or interface"@en ;
+        skos:prefLabel "Port"@en,
+            "Poort"@nl .
+
+    nen2660-term:QualityValue a skos:Concept ;
+        skos:broader nen2660-term:Objectification ;
+        skos:definition "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+        skos:prefLabel "Quality value"@en,
+            "Kwaliteitwaarde"@nl .
+
+    nen2660-term:QuantityKind a skos:Concept ;
+        skos:definition "Base or derived kind of quantity like length or time"@en ;
+        skos:prefLabel "Quantity kind"@en,
+            "Kwantiteitsoort"@nl .
+
+    nen2660-term:QuantityValue a skos:Concept ;
+        skos:broader nen2660-term:Objectification ;
+        skos:definition "The objectification of a value of a quantity (involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+        skos:prefLabel "Quantity value"@en,
+            "Kwantiteitsoort"@nl .
+
+    nen2660-term:RealizedEntity a skos:Concept ;
+        skos:broader nen2660-term:Entity ;
+        skos:definition "An entity that exists or has existed"@en ;
+        skos:prefLabel "Realized entity"@en,
+            "Gerealiseerde entiteit"@nl .
+
+    nen2660-term:Requirement a skos:Concept ;
+        skos:broader nen2660-term:InformationObject ;
+        skos:definition "A rule that should hold for something, defined w.r.t. to its attributes or relations" ;
+        skos:prefLabel "Requirement"@en,
+            "Eis"@nl .
+
+    nen2660-term:RequirementSeverityType a skos:Concept ;
+        skos:broader nen2660-term:EnumerationType ;
+        skos:definition "The seriousness of a requirement like demanded or wished"@en ;
+        skos:prefLabel "Requirement severity type"@en,
+            "Eis ernst type"@nl .
+
+    nen2660-term:RequirementSourceType a skos:Concept ;
+        skos:broader nen2660-term:EnumerationType ;
+        skos:definition "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"@en ;
+        skos:prefLabel "Requirement source type"@en,
+            "Eis bron type"@nl .
+
+    nen2660-term:RequirementTopicType a skos:Concept ;
+        skos:broader nen2660-term:EnumerationType ;
+        skos:definition "The entity aspect a requirement applies to"@en ;
+        skos:prefLabel "Requirement topic type"@en,
+            "Eis onderwerp type"@nl .
+
+    nen2660-term:Solid a skos:Concept ;
+        skos:broader nen2660-term:AggregationStateType ;
+        skos:definition "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"@en ;
+        skos:prefLabel "Solid"@en,
+            "Vaste stof"@nl .
+
+    nen2660-term:State a skos:Concept ;
+        skos:broader nen2660-term:ConcreteConcept ;
+        skos:definition "A temporal part of an entity during a period between events. A state is characterized by the attributes and relationships of the entity. ”"@en ;
+        skos:prefLabel "State"@en,
+            "Toestand"@nl .
+
+    nen2660-term:TechnicalEntity a skos:Concept ;
+        skos:broader nen2660-term:Entity ;
+        skos:definition "An entity having technical properties and relations (what it is) that implements/plays functional entities"@en ;
+        skos:prefLabel "Technical entity"@en,
+            "Technische entiteit"@nl .
+
+    nen2660-term:TemporalEntity a skos:Concept ;
+        skos:broader nen2660-term:Representation ;
+        skos:definition "A temporal representation"@en ;
+        skos:prefLabel "Temporal entity"@en,
+            "Temporele entiteit"@nl .
+
+    nen2660-term:Unit a skos:Concept ;
+        skos:definition "A scale of measurement"@en ;
+        skos:prefLabel "Unit"@en,
+            "Eenheid"@nl .
+
+    nen2660-term:VerificationMethodType a skos:Concept ;
+        skos:broader nen2660-term:EnumerationType ;
+        skos:definition "The method by which a requirement is verified like monitoring, analysis, observation etc."@en ;
+        skos:prefLabel "Verification method type"@en,
+            "Verificatie methode type"@nl .
+
+    nen2660-term:abbreviation a skos:Concept ;
+        skos:broader skos:altLabel ;
+        skos:definition "Acronym or initial word as special case of an external name"@en ;
+        skos:prefLabel "abbreviation"@en,
+            "afkorting"@nl .
+
+    nen2660-term:aggregationStateType a skos:Concept ;
+        skos:definition "The possession of an aggregation state type"@en ;
+        skos:prefLabel "aggregation state type"@en,
+            "aggregatie toestand type"@nl .
+
+    nen2660-term:begins a skos:Concept ;
+        skos:definition "The state that is started by an event"@en ;
+        skos:prefLabel "begins"@en,
+            "begint"@nl .
+
+    nen2660-term:chemicalFormula a skos:Concept ;
+        skos:definition "The possession of information about the chemical proportions of atoms that constitute a particular chemical bonding"@en ;
+        skos:prefLabel "chemical formula"@en,
+            "chemische formule"@nl .
+
+    nen2660-term:connectsObject a skos:Concept ;
+        skos:definition "The physical objects connected by a connection or interface"@en ;
+        skos:prefLabel "connects object"@en,
+            "verbindt object"@nl .
+
+    nen2660-term:connectsPort a skos:Concept ;
+        skos:definition "The ports (as part of physical objects) connected by a connection or interface"@en ;
+        skos:prefLabel "connects port"@en,
+            "verbindt poort"@nl .
+
+    nen2660-term:consistsOf a skos:Concept ;
+        skos:definition "The matter a real object, mixture or matter portion is made of"@en ;
+        skos:prefLabel "consists of"@en,
+            "bestaat uit"@nl .
+
+    nen2660-term:contains a skos:Concept ;
+        skos:definition "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en ;
+        skos:prefLabel "contains"@en,
+            "bevat"@nl .
+
+    nen2660-term:ends a skos:Concept ;
+        skos:definition "The state that is ended by an event"@en ;
+        skos:prefLabel "ends"@en,
+            "beeindigt"@nl .
+
+    nen2660-term:hasBoundary a skos:Concept ;
+        skos:definition "The geometric entity representing the boundary of a concrete concept"@en ;
+        skos:prefLabel "has boundary"@en,
+            "heeft begrenzing"@nl .
+
+    nen2660-term:hasFunctionalPart a skos:Concept ;
+        skos:broader nen2660-term:hasPart ;
+        skos:definition "The hasPart relation of a functional nature"@en ;
+        skos:prefLabel "has functional part"@en,
+            "heeft functioneel deel"@nl .
+
+    nen2660-term:hasInterior a skos:Concept ;
+        skos:definition "The geometric entity representing the interior of a concrete concept"@en ;
+        skos:prefLabel "has interior"@en,
+            "heeft inwendige"@nl .
+
+    nen2660-term:hasPartsGroup a skos:Concept ;
+        skos:definition "A relationship between any concrete concept and an implicit, often member-constrained, group of parts"@en ;
+        skos:prefLabel "has parts group"@en,
+            "heeft delen groep"@nl .
+
+    nen2660-term:hasQuantityKind a skos:Concept ;
+        skos:definition "The possession of a quantity kind as defined by QUDT"@en ;
+        skos:prefLabel "has quantity kind"@en,
+            "heeft kwantiteitsoort"@nl .
+
+    nen2660-term:hasRequirement a skos:Concept ;
+        skos:definition "The(unstructured) requirement for something"@en ;
+        skos:prefLabel "has requirement"@en,
+            "heeft eis"@nl .
+
+    nen2660-term:hasState a skos:Concept ;
+        skos:definition "The state of an entity in a certain point or period of time"@en ;
+        skos:prefLabel "has state"@en,
+            "heeft toestand"@nl .
+
+    nen2660-term:hasTechnicalPart a skos:Concept ;
+        skos:broader nen2660-term:hasPart ;
+        skos:definition "A hasPart relation of a technical nature"@en ;
+        skos:prefLabel "has technical part"@en,
+            "heeft technisch deel"@en .
+
+    nen2660-term:hasTemporalEntity a skos:Concept ;
+        skos:definition "The temporal entity representing a concrete concept in time"@en ;
+        skos:prefLabel "has temporal entity"@en,
+            "heeft temporele entiteit"@nl .
+
+    nen2660-term:hasUnit a skos:Concept ;
+        skos:definition "The possession of a unit as defined by QUDT"@en ;
+        skos:prefLabel "has unit"@en,
+            "heeft eenheid"@nl .
+
+    nen2660-term:isBoundBy a skos:Concept ;
+        skos:definition "The physical object that bounds a spatial region"@en ;
+        skos:prefLabel "is bound by"@en,
+            "is begrensd door"@nl .
+
+    nen2660-term:isConnectedTo a skos:Concept ;
+        skos:definition "The topological relationship between physical objects"@en ;
+        skos:prefLabel "is connected to"@en,
+            "is verbonden met"@nl .
+
+    nen2660-term:isDescribedBy a skos:Concept ;
+        skos:definition "The information object that describes something"@en ;
+        skos:prefLabel "is described by"@en,
+            "is beschreven door"@nl .
+
+    nen2660-term:isImplementedBy a skos:Concept ;
+        skos:broader nen2660-term:hasSolution ;
+        skos:definition "The technical entity that implements a functional entity"@en ;
+        skos:prefLabel "is implemented by"@en,
+            "is geimplementeerd door"@nl .
+
+    nen2660-term:isRealizedBy a skos:Concept ;
+        skos:broader nen2660-term:isPlanFor ;
+        skos:definition "The realized entity that realizes a planned entity"@en ;
+        skos:prefLabel "is realized by"@en,
+            "is gerealiseerd door"@nl .
+
+    nen2660-term:overConnection a skos:Concept ;
+        skos:definition "The connection over which an interaction between physical objects takes place"@en ;
+        skos:prefLabel "over connection"@en,
+            "over verbinding"@nl .
+
+    nen2660-term:overInterface a skos:Concept ;
+        skos:definition "The interface over which an interaction between physical objects takes place"@en ;
+        skos:prefLabel "over interface"@en,
+            "over raakvlak"@nl .
+
+    nen2660-term:participatesIn a skos:Concept ;
+        skos:definition "The interaction a physical object participates in"@en ;
+        skos:prefLabel "participates in"@en,
+            "participeert in"@nl .
+
+    nen2660-term:performs a skos:Concept ;
+        skos:definition "The activity performed by a physical object"@en ;
+        skos:prefLabel "performs"@en,
+            "voert uit"@nl .
+
+    nen2660-term:portion a skos:Concept ;
+        skos:definition "The actual relative portion of a matter portion"@en ;
+        skos:prefLabel "portion"@en,
+            "aandeel"@nl .
+
+    nen2660-term:requirementSeverityType a skos:Concept ;
+        skos:definition "The possession of a severity type by a requirement"@en ;
+        skos:prefLabel "requirement severity type"@en,
+            "eis ernst type"@nl .
+
+    nen2660-term:requirementSourceType a skos:Concept ;
+        skos:definition "The possession of a source type by a requirement"@en ;
+        skos:prefLabel "requirement source type"@en,
+            "eis bron type"@nl .
+
+    nen2660-term:requirementTopicType a skos:Concept ;
+        skos:definition "The possession of a topic type by a requirement"@en ;
+        skos:prefLabel "requirement topic type"@en,
+            "eis onderwerp type"@nl .
+
+    nen2660-term:transferType a skos:Concept ;
+        skos:definition "The possession of a transfer type by an interaction"@en ;
+        skos:prefLabel "transfer type"@en,
+            "overdrachts type"@nl .
+
+    nen2660-term:transforms a skos:Concept ;
+        skos:definition "The object transformed by an activity"@en ;
+        skos:prefLabel "transforms"@en,
+            "transformeert"@nl .
+
+    nen2660-term:triggers a skos:Concept ;
+        skos:definition "The event triggert by an entity"@en ;
+        skos:prefLabel "triggers"@en,
+            "triggert"@nl .
+
+    nen2660-term:verificationMethodType a skos:Concept ;
+        skos:definition "The possession of a verification method type by a requirement"@en ;
+        skos:prefLabel "verification method type"@en,
+            "verificatie methode type"@nl .
+
+    nen2660-term:Activity a skos:Concept ;
+        skos:broader nen2660-term:Entity ;
+        skos:definition "An activity is something possibly or actually happening in space and time"@en ;
+        skos:prefLabel "Activity"@en,
+            "Aktiviteit"@nl .
+
+    nen2660-term:RelationReference a skos:Concept ;
+        skos:broader nen2660-term:Objectification ;
+        skos:definition "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relationships)"@en ;
+        skos:prefLabel "Relation reference"@en,
+            "Relatie referentie"@nl .
+
+    nen2660-term:SpatialRegion a skos:Concept ;
+        skos:broader nen2660-term:PhysicalObject ;
+        skos:definition "A physical object that encloses a certain area such as rooms, roads and rivers that is bound by real objects, other spacetial regions or based on use or convention and that is empty or contains discrete or liquid or gaseous matter"@en ;
+        skos:prefLabel "Spatial region"@en,
+            "Ruimtelijk gebied"@nl .
+
+    nen2660-term:hasSolution a skos:Concept ;
+        skos:definition "A potential technical entity that is a solution for a functional entity"@en ;
+        skos:prefLabel "has solution"@en,
+            "heeft oplossing"@nl .
+
+    nen2660-term:isPlanFor a skos:Concept ;
+        skos:definition "A potentially realized entity according to this planed entity"@en ;
+        skos:prefLabel "is plan for"@en,
+            "is plan voor"@nl .
+
+    nen2660-term:AbstractConcept a skos:Concept ;
+        skos:broader nen2660-term:TopConcept ;
+        skos:definition "An objectification or type"@en ;
+        skos:prefLabel "Abstract concept"@en,
+            "Abstract concept"@nl .
+
+    nen2660-term:InformationObject a skos:Concept ;
+        skos:broader nen2660-term:Object ;
+        skos:definition "Thing that is a whole of information on itself and has an own identity"@en ;
+        skos:prefLabel "Information object"@en,
+            "Informatie object"@nl .
+
+    nen2660-term:Matter a skos:Concept ;
+        skos:altLabel "Chemical substance"@en ;
+        skos:broader nen2660-term:PhysicalObject ;
+        skos:definition "A pure chemical substance, chemical bonding or mixture from which real objects are made"@en ;
+        skos:prefLabel "Matter"@en,
+            "Materie"@nl .
+
+    nen2660-term:Mixture a skos:Concept ;
+        skos:broader nen2660-term:Matter ;
+        skos:definition "Matter that consists of multiple forms of pure matter"@en ;
+        skos:prefLabel "Mixture"@en,
+            "Mengsel"@nl .
+
+    nen2660-term:Object a skos:Concept ;
+        skos:broader nen2660-term:Entity ;
+        skos:definition "A physical object or an information object"@en ;
+        skos:prefLabel "Object"@en,
+            "Object"@nl .
+
+    nen2660-term:PureSubstance a skos:Concept ;
+        skos:broader nen2660-term:Matter ;
+        skos:definition "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
+        skos:prefLabel "Pure substance"@en,
+            "Zuivere stof"@nl .
+
+    nen2660-term:RealObject a skos:Concept ;
+        skos:altLabel "Amount of matter"@en ;
+        skos:broader nen2660-term:PhysicalObject ;
+        skos:definition "A physical object that can be tangible and visible in reality such as artifacts including bridges, tanks and devices, and natural objects including terrains, banks, water bottoms and trees"@en ;
+        skos:prefLabel "Real object"@en,
+            "Reeel object"@nl .
+
+    nen2660-term:Representation a skos:Concept ;
+        skos:broader nen2660-term:InformationObject ;
+        skos:definition "That which represents something else"@en ;
+        skos:prefLabel "Representation"@en,
+            "Representatie"@nl .
+
+    nen2660-term:Type a skos:Concept ;
+        skos:broader nen2660-term:AbstractConcept ;
+        skos:definition "A meta-concept which instances are concepts (not individuals)"@en ;
+        skos:prefLabel "Type"@en,
+            "Type"@nl .
+
+    nen2660-term:hasPart a skos:Concept ;
+        skos:definition "A decomposition relationship between physical objects themselves, between information objects themselves or between activities themselves"@en ;
+        skos:prefLabel "has part"@en,
+            "heeft deel"@nl .
+
+    nen2660-term:ConcreteConcept a skos:Concept ;
+        skos:broader nen2660-term:TopConcept ;
+        skos:definition "An entity, event or state"@en ;
+        skos:prefLabel "Concrete concept"@en,
+            "Concreet concept"@nl .
+
+    nen2660-term:Objectification a skos:Concept ;
+        skos:broader nen2660-term:AbstractConcept ;
+        skos:definition "An attribute (quality or quantity) or relation represented as an individual defined by a concept"@en ;
+        skos:prefLabel "Objectification"@en,
+            "Objectificatie"@nl .
+
+    nen2660-term:TopConcept a skos:Concept ;
+        skos:definition "The most generic root concept of nen2660"@en ;
+        skos:prefLabel "Top concept"@en,
+            "Top concept"@nl .
+
+    nen2660-term:AggregationStateType a skos:Concept ;
+        skos:broader nen2660-term:EnumerationType ;
+        skos:definition "One of the four fundamental states of matter being solid, liquid, gas or plasma"@en ;
+        skos:prefLabel "Aggregation state type"@en,
+            "Aggregatietoestand type"@nl .
+
+    nen2660-term:TransferType a skos:Concept ;
+        skos:broader nen2660-term:EnumerationType ;
+        skos:definition "The type of thing being transferred, here: material, information, energy or force"@en ;
+        skos:prefLabel "Transfer type"@en,
+            "Overdrachts type"@nl .
+
+    nen2660-term:PhysicalObject a skos:Concept ;
+        skos:broader nen2660-term:Object ;
+        skos:definition "Something that possibly or actually exists in space and time, perceivable through the senses"@en ;
+        skos:prefLabel "Physical object"@en,
+            "Fysiek object"@nl .
+
+    nen2660-term:Entity a skos:Concept ;
+        skos:broader nen2660-term:ConcreteConcept ;
+        skos:definition "An object or an activity"@en ;
+        skos:prefLabel "Entity"@en,
+            "Entiteit"@nl .
+
+    nen2660-term:EnumerationType a skos:Concept ;
+        skos:broader nen2660-term:Type ;
+        skos:definition "A metaconcept having concepts as instances having no further attributes or relations (annotations only)"@en ;
+        skos:prefLabel "Enumeration type"@en,
+            "Enumeratie type"@nl .
 }
 

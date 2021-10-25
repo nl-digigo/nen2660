@@ -353,6 +353,9 @@ nen2660:hasInterior
 nen2660:hasPart
   a owl:ObjectProperty ;
 .
+nen2660:hasPartsGroup
+  a owl:ObjectProperty ;
+.
 nen2660:hasQuantityKind
   a owl:ObjectProperty ;
 .
@@ -391,9 +394,6 @@ nen2660:isPlanFor
 .
 nen2660:isRealizedBy
   a owl:ObjectProperty ;
-.
-nen2660:numberOfIndividuals
-  a owl:DatatypeProperty ;
 .
 nen2660:overConnection
   a owl:ObjectProperty ;
