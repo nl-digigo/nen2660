@@ -1,0 +1,307 @@
+# baseURI: https://w3id.org/ijsselbrug/id
+# imports: https://w3id.org/liggerbrug/owl/def
+# prefix: ib
+
+@prefix ib: <https://w3id.org/ijsselbrug/id#> .
+@prefix lb: <https://w3id.org/liggerbrug/def#> .
+@prefix nen2660: <https://w3id.org/nen2660/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ijsselbrug/id>
+  a owl:Ontology ;
+  owl:imports <https://w3id.org/liggerbrug/owl/def> ;
+.
+ib:A12-IJsselCrossing
+  a lb:CarBridge ;
+  nen2660:isImplementedBy ib:IJsselbridge ;
+.
+ib:A12-towardsWestervoort
+  a lb:Carriageway ;
+.
+ib:AllSameCrossBeams
+  a lb:CrossBeam ;
+  nen2660:numberOfIndividuals 120 ;
+.
+ib:AllSameLongitudinalBulbStiffeners
+  a lb:LongitudinalBulkStiffener ;
+  nen2660:numberOfIndividuals -1 ;
+.
+ib:AllSameNonReinforcedK-trusses
+  a nen2660:K-Truss ;
+  nen2660:numberOfIndividuals 30 ;
+.
+ib:AllSameReinforcedK-trusses
+  a nen2660:K-Truss ;
+  nen2660:numberOfIndividuals 6 ;
+  nen2660:hasPart ib:BottomEdgeProfile_1 ;
+  nen2660:hasPart ib:CompositeBar_1 ;
+  nen2660:hasPart ib:CompositeBar_2 ;
+  nen2660:hasPart ib:TrussReinforcement_1 ;
+  nen2660:hasPart ib:VerticalProfile_1 ;
+  nen2660:hasPart ib:VerticalProfile_2 ;
+.
+ib:AllSameVerticalStiffeners
+  a nen2660:VerticalStiffener ;
+  nen2660:numberOfIndividuals -1 ;
+.
+ib:AngleProfile-L90-90-9_1
+  a lb:AngleProfile-L90-90-9 ;
+.
+ib:AngleProfile-L90-90-9_2
+  a lb:AngleProfile-L90-90-9 ;
+.
+ib:AngleProfile-L90-90-9_3
+  a lb:AngleProfile-L90-90-9 ;
+.
+ib:AngleProfile-L90-90-9_4
+  a lb:AngleProfile-L90-90-9 ;
+.
+ib:BottomEdgeProfile_1
+  a lb:BottomEdgeProfile ;
+.
+ib:BridgeDeck_1
+  a lb:BridgeDeck ;
+  nen2660:hasPart ib:AllSameLongitudinalBulbStiffeners ;
+  nen2660:hasPart ib:SteelPlate_deck ;
+.
+ib:CompositeBar_1
+  a lb:DiagonalCompositeBar ;
+.
+ib:CompositeBar_2
+  a lb:DiagonalCompositeBar ;
+.
+ib:FixedBearing_pillar-L-east
+  a lb:FixedBearing ;
+.
+ib:FixedBearing_pillar-L-west
+  a lb:FixedBearing ;
+.
+ib:FoundationSystem_1_notdetailed
+  a lb:FoundationSystem ;
+.
+ib:GirderBottomFlange_east
+  a lb:GirderBottomFlange ;
+.
+ib:GirderBottomFlange_west
+  a lb:GirderBottomFlange ;
+.
+ib:GirderTopFlange_east
+  a lb:GirderTopFlange ;
+.
+ib:GirderTopFlange_west
+  a lb:GirderTopFlange ;
+.
+ib:Half-DIN30-Profile_eb
+  a lb:Half-DIN30-Profile ;
+.
+ib:Half-DIN30-Profile_et
+  a lb:Half-DIN30-Profile ;
+.
+ib:Half-DIN30-Profile_wb
+  a lb:Half-DIN30-Profile ;
+.
+ib:Half-INP-Profile_girder_e1
+  a lb:Half-INP24-Profile ;
+.
+ib:Half-INP-Profile_girder_w1
+  a lb:Half-INP24-Profile ;
+.
+ib:HingedBearing_pillar-H-east
+  a lb:HingedBearing ;
+.
+ib:HingedBearing_pillar-H-west
+  a lb:HingedBearing ;
+.
+ib:HorizontalStiffener_e1
+  a lb:HorizontalStiffener ;
+.
+ib:HorizontalStiffener_w1
+  a lb:HorizontalStiffener ;
+.
+ib:IJsselbridge
+  a lb:Complex ;
+  nen2660:hasPart ib:IJsselbridge_1-main_detailed ;
+  nen2660:hasPart ib:IJsselbridge_2-main_notdetailed ;
+  nen2660:hasPart ib:IJsselbridge_3_notdetailed ;
+  nen2660:isDescribedBy ib:TNO-BasicReport ;
+.
+ib:IJsselbridge_1-main_detailed
+  a lb:SteelGirderBridge ;
+  lb:amountOfSpans 5 ;
+  lb:constructionMethod lb:WithGirders ;
+  lb:designLifespan [
+      a nen2660:QuantityValue ;
+      rdf:value 80.0 ;
+      nen2660:hasUnit unit:YR ;
+    ] ;
+  lb:length [
+      rdf:value "295.0"^^xsd:float ;
+      nen2660:hasUnit unit:M ;
+    ] ;
+  lb:materialType lb:Steel ;
+  lb:residualLifespan [
+      rdf:value "20.0"^^xsd:float ;
+      nen2660:hasUnit unit:YR ;
+    ] ;
+  nen2660:hasPart ib:MainLoadbearingStructureOfIJsselBridge ;
+.
+ib:IJsselbridge_2-main_notdetailed
+  a lb:SteelGirderBridge ;
+.
+ib:IJsselbridge_3_notdetailed
+  a lb:ConcreteGirderBridge ;
+.
+ib:L-Profile_girder_e
+  a lb:L-Profile ;
+.
+ib:L-Profile_girder_w
+  a lb:L-Profile ;
+.
+ib:MainGirder_east
+  a lb:MainGirder ;
+  lb:maxHeight [
+      rdf:value "5.3"^^xsd:float ;
+      nen2660:hasUnit unit:M ;
+    ] ;
+  lb:minHeight [
+      rdf:value "2.4"^^xsd:float ;
+      nen2660:hasUnit unit:M ;
+    ] ;
+  nen2660:hasPart ib:GirderBottomFlange_east ;
+  nen2660:hasPart ib:GirderTopFlange_east ;
+  nen2660:hasPart ib:HorizontalStiffener_e1 ;
+  nen2660:hasPart ib:WebPlate_east ;
+.
+ib:MainGirder_west
+  a lb:MainGirder ;
+  lb:maxHeight [
+      rdf:value "5.3"^^xsd:float ;
+      nen2660:hasUnit unit:M ;
+    ] ;
+  lb:minHeight [
+      rdf:value "2.4"^^xsd:float ;
+      nen2660:hasUnit unit:M ;
+    ] ;
+  nen2660:hasPart ib:GirderBottomFlange_west ;
+  nen2660:hasPart ib:GirderTopFlange_west ;
+  nen2660:hasPart ib:HorizontalStiffener_w1 ;
+  nen2660:hasPart ib:WebPlate_west ;
+.
+ib:MainLoadbearingStructureOfIJsselBridge
+  a lb:MainLoadbearingStructureOfSteelGirderBridge ;
+  nen2660:hasPart ib:AllSameCrossBeams ;
+  nen2660:hasPart ib:AllSameNonReinforcedK-trusses ;
+  nen2660:hasPart ib:AllSameReinforcedK-trusses ;
+  nen2660:hasPart ib:AllSameVerticalStiffeners ;
+  nen2660:hasPart ib:BridgeDeck_1 ;
+  nen2660:hasPart ib:FixedBearing_pillar-L-east ;
+  nen2660:hasPart ib:FixedBearing_pillar-L-west ;
+  nen2660:hasPart ib:HingedBearing_pillar-H-east ;
+  nen2660:hasPart ib:HingedBearing_pillar-H-west ;
+  nen2660:hasPart ib:MainGirder_east ;
+  nen2660:hasPart ib:MainGirder_west ;
+  nen2660:hasPart ib:Pillar_F ;
+  nen2660:hasPart ib:Pillar_G ;
+  nen2660:hasPart ib:Pillar_H ;
+  nen2660:hasPart ib:Pillar_J ;
+  nen2660:hasPart ib:Pillar_K ;
+  nen2660:hasPart ib:Pillar_L ;
+  nen2660:hasPart ib:RollerBearing_pillar-F-east ;
+  nen2660:hasPart ib:RollerBearing_pillar-F-west ;
+  nen2660:hasPart ib:RollerBearing_pillar-G-east ;
+  nen2660:hasPart ib:RollerBearing_pillar-G-west ;
+  nen2660:hasPart ib:RollerBearing_pillar-J-east ;
+  nen2660:hasPart ib:RollerBearing_pillar-J-west ;
+  nen2660:hasPart ib:RollerBearing_pillar-K-east ;
+  nen2660:hasPart ib:RollerBearing_pillar-K-west ;
+.
+ib:Pillar_F
+  a lb:Pillar ;
+.
+ib:Pillar_G
+  a lb:Pillar ;
+.
+ib:Pillar_H
+  a lb:Pillar ;
+.
+ib:Pillar_J
+  a lb:Pillar ;
+.
+ib:Pillar_K
+  a lb:Pillar ;
+.
+ib:Pillar_L
+  a lb:Pillar ;
+.
+ib:RollerBearing_pillar-F-east
+  a lb:RollerBearing ;
+.
+ib:RollerBearing_pillar-F-west
+  a lb:RollerBearing ;
+.
+ib:RollerBearing_pillar-G-east
+  a lb:RollerBearing ;
+.
+ib:RollerBearing_pillar-G-west
+  a lb:RollerBearing ;
+.
+ib:RollerBearing_pillar-J-east
+  a lb:RollerBearing ;
+.
+ib:RollerBearing_pillar-J-west
+  a lb:RollerBearing ;
+.
+ib:RollerBearing_pillar-K-east
+  a lb:RollerBearing ;
+.
+ib:RollerBearing_pillar-K-west
+  a lb:RollerBearing ;
+.
+ib:SteelPlate_deck
+  a lb:SteelPlate ;
+.
+ib:TNO-BasicReport
+  a lb:ReferenceDocument ;
+  rdfs:seeAlso <https://github.com/MichelBohms/dataserver/blob/master/ERP-SI%20IJsselbridge%20Documentation/Reports/main%20report/REPORT%20Basic%20report%20recalculation%20IJssel%20bridge%20A12%20page100.pdf> ;
+.
+ib:TrussReinforcement_1
+  a lb:TrussReinforcement ;
+.
+ib:VerticalProfile_1
+  a lb:VerticalProfile ;
+.
+ib:VerticalProfile_2
+  a lb:VerticalProfile ;
+.
+ib:WebPlate_east
+  a lb:WebPlate ;
+  ib:thickness [
+      a nen2660:QuantityValue ;
+      rdf:value "29"^^xsd:float ;
+      nen2660:hasUnit unit:MilliM ;
+    ] ;
+.
+ib:WebPlate_w500t10_1
+  a lb:WebPlate_w500t10 ;
+.
+ib:WebPlate_w500t10_2
+  a lb:WebPlate_w500t10 ;
+.
+ib:WebPlate_w500t10_3
+  a lb:WebPlate_w500t10 ;
+.
+ib:WebPlate_w500t10_4
+  a lb:WebPlate_w500t10 ;
+.
+ib:WebPlate_west
+  a lb:WebPlate ;
+  ib:thickness [
+      a nen2660:QuantityValue ;
+      rdf:value "29"^^xsd:float ;
+      nen2660:hasUnit unit:MilliM ;
+    ] ;
+.

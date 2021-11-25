@@ -1,0 +1,414 @@
+# baseURI: https://w3id.org/wegennetwerk/owl/def
+# imports: https://w3id.org/nen2660/owl/def
+
+@prefix nen2660: <https://w3id.org/nen2660/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix wn: <https://w3id.org/wegennetwerk/def#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/wegennetwerk/owl/def>
+  a owl:Ontology ;
+  owl:imports <https://w3id.org/nen2660/owl/def> ;
+.
+
+wn:Fabrieksvulstof_1
+  a wn:Fabrieksvulstof ;
+.
+wn:PenetratieBitumen_1
+  a wn:PenetratieBitumen ;
+.
+wn:Steenslag_5-8_1
+  a wn:Steenslag_5-8 ;
+.
+wn:ART10034_63-2_procent
+  a nen2660:MatterPortion ;
+  rdf:value "wn:Steenslag_5-8_1"^^xsd:anyURI ;
+  nen2660:portion [
+      a nen2660:QuantityValue ;
+      rdf:value "63.2"^^xsd:float ;
+      nen2660:hasUnit unit:Percentage ;
+    ] ;
+.
+wn:ARTxxx_7-2_procent
+  a nen2660:MatterPortion ;
+  rdf:value "wn:Fabrieksvulstof_1"^^xsd:anyURI ;
+  nen2660:portion [
+      a nen2660:QuantityValue ;
+      rdf:value "7.2"^^xsd:float ;
+      nen2660:hasUnit unit:Percentage ;
+    ] ;
+.
+wn:ARTyyy_5-3_procent
+  a nen2660:MatterPortion ;
+  rdf:value "wn:Penetratiebitumen_1"^^xsd:anyURI ;
+  nen2660:portion [
+      a nen2660:QuantityValue ;
+      rdf:value "5.3"^^xsd:float ;
+      nen2660:hasUnit unit:Percentage ;
+    ] ;
+.
+wn:Asfalt
+  a owl:Class ;
+  rdfs:subClassOf nen2660:HeterogeneousMixture ;
+.
+wn:Asfaltconstructie-WCba-xx
+  a wn:VerhardingConstructie ;
+  nen2660:hasPart wn:Deklaag-WCbad-xx ;
+.
+wn:BebordingBebakening
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+.
+wn:Bewegwijzering
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+.
+wn:Bitumen
+  a owl:Class ;
+  rdfs:subClassOf nen2660:HeterogeneousMixture ;
+.
+wn:Bovenbouw-WCb-xx
+  a wn:VerhardingElement ;
+  nen2660:hasPart wn:Asfaltconstructie-WCba-xx ;
+.
+wn:Constructierealisatie-WC-xx
+  a wn:VerhardingWegconstructie ;
+  nen2660:hasPart wn:Bovenbouw-WCb-xx ;
+.
+wn:Deklaag-WCbad-xx
+  a wn:VerhardingConstructielaag ;
+  nen2660:hasPart wn:Uitvoeringseenheid-WCbadu-xx ;
+.
+wn:Fabrieksvulstof
+  a owl:Class ;
+  rdfs:subClassOf wn:MineraalaggregaatFijn ;
+.
+wn:GeometricEntity_1
+  a nen2660:GeometricEntity ;
+.
+wn:GeometricEntity_2
+  a nen2660:GeometricEntity ;
+.
+wn:GeometricEntity_3
+  a nen2660:GeometricEntity ;
+.
+wn:Mengsel_75300400
+  a wn:_2L-ZOAB_8_dl ;
+  nen2660:consistsOf wn:ART10034_63-2_procent ;
+.
+wn:MineraalaggregaatFijn
+  a owl:Class ;
+  rdfs:subClassOf nen2660:HeterogeneousMixture ;
+.
+wn:MineraalaggregaatGrof
+  a owl:Class ;
+  rdfs:subClassOf nen2660:HeterogeneousMixture ;
+.
+wn:NWB-12345678
+  a wn:Wegvak ;
+  nen2660:hasPart wn:_3R-L ;
+.
+wn:PA
+  a owl:Class ;
+  rdfs:subClassOf wn:Asfalt ;
+.
+wn:PenetratieBitumen
+  a owl:Class ;
+  rdfs:subClassOf wn:Bitumen ;
+.
+wn:Raakvlak_1
+  a nen2660:Interface ;
+  nen2660:connectsObject wn:km7700-7800 ;
+  nen2660:connectsPort wn:Wegoppervlak_1 ;
+.
+wn:RijkswegA13
+  a wn:Weg ;
+  nen2660:hasPart wn:Ypenburg-Kleinpolderplein ;
+.
+wn:Rijkswegennet
+  a wn:Wegennetwerk ;
+  nen2660:hasPart wn:RijkswegA13 ;
+.
+wn:Steenslag_5-8
+  a owl:Class ;
+  rdfs:subClassOf wn:MineraalaggregaatGrof ;
+.
+wn:Strookvak
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+.
+wn:Uitvoeringseenheid-WCbadu-xx
+  a wn:VerhardingUitvoeringseenheid ;
+  nen2660:consistsOf wn:Mengsel_75300400 ;
+  nen2660:hasPart wn:Wegoppervlak_1 ;
+.
+wn:VerhardingConstructie
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:VerhardingConstructielaag ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:VerhardingConstructielaag ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:VerhardingConstructielaag
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:VerhardingUitvoeringseenheid ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:VerhardingUitvoeringseenheid ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:VerhardingElement
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:VerhardingConstructie ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:VerhardingConstructie ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:VerhardingUitvoeringseenheid
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+.
+wn:VerhardingWegconstructie
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:VerhardingElement ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:VerhardingElement ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:Verlichting
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+.
+wn:WC-1234
+  a wn:WegReeel ;
+.
+wn:Weg
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:Wegment ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:Wegment ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:WegReeel
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass wn:BebordingBebakening ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass wn:Bewegwijzering ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass wn:VerhardingWegconstructie ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass wn:Verlichting ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass wn:Wegkantsysteem ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass wn:Wegmarkering ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass wn:Wegsignalering ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+wn:Wegbaan
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:Wegvak ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:Wegbaan ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:Wegennetwerk
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:Weg ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:Weg ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:Wegkantsysteem
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+.
+wn:Wegmarkering
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+.
+wn:Wegment
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:Wegbaan ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:Wegbaan ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:Wegoppervlak
+  a owl:Class ;
+  rdfs:subClassOf nen2660:Port ;
+.
+wn:Wegoppervlak_1
+  a wn:Wegoppervlak ;
+  wn:stroefheid [
+      a nen2660:QuantityValue ;
+      rdf:value "0.6"^^xsd:float ;
+      nen2660:hasUnit unit:UNITLESS ;
+    ] ;
+.
+wn:Wegsignalering
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+.
+wn:Wegstrook
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:Strookvak ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:Strookvak ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:Wegvak
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom wn:Wegstrook ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass wn:Wegstrook ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+wn:Ypenburg-Kleinpolderplein
+  a wn:Wegment ;
+  nen2660:hasPart wn:_1HRL ;
+.
+wn:_1HRL
+  a wn:Wegbaan ;
+  nen2660:hasPart wn:NWB-12345678 ;
+.
+wn:_2L-PA
+  a owl:Class ;
+  rdfs:subClassOf wn:PA ;
+.
+wn:_2L-ZOAB_8_dl
+  a owl:Class ;
+  rdfs:subClassOf wn:_2L-ZOAB_dl ;
+.
+wn:_2L-ZOAB_dl
+  a owl:Class ;
+  rdfs:subClassOf wn:_2L-PA ;
+.
+wn:_3R-L
+  a wn:Wegstrook ;
+  nen2660:hasPart wn:km7700-7800 ;
+.
+wn:km7700-7800
+  a wn:Strookvak ;
+.
+wn:stroefheid
+  a owl:ObjectProperty ;
+  rdfs:domain wn:Wegoppervlak ;
+  rdfs:range nen2660:QuantityValue ;
+  nen2660:hasQuantityKind quantitykind:DynamicFriction ;
+.

@@ -1,0 +1,495 @@
+# baseURI: https://w3id.org/ziekenhuis/owl/def
+# imports: https://w3id.org/nen2660/owl/def
+
+@prefix nen2660: <https://w3id.org/nen2660/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zh: <https://w3id.org/ziekenhuis/def#> .
+
+<https://w3id.org/ziekenhuis/owl/def>
+  a owl:Ontology ;
+  owl:imports <https://w3id.org/nen2660/owl/def> ;
+.
+
+zh:AlleVerhuurbareOppervlakken
+  a rdfs:Container ;
+  a [
+      a owl:Restriction ;
+      owl:allValuesFrom [
+          a owl:Class ;
+          rdfs:subClassOf zh:VerhuurbaarOppervlak ;
+          rdfs:subClassOf [
+              a owl:Restriction ;
+              owl:hasValue [rdf:value 80.0; nen2660:heeftUnit unit:M2 ] ;
+              owl:onProperty zh:heeftOppervlak ;
+            ] ;
+        ] ;
+      owl:onProperty rdfs:member ;
+    ] ;
+  zh:heeftOppervlak [rdf:value 1600.0 ; nen2660:hasUnit unit:M2 ] ;
+  rdfs:member zh:VerhuurbaarOppervlak_1 ;
+  rdfs:member zh:VerhuurbaarOppervlak_2 ;
+.
+zh:AlleVerhuurbareRuimten
+  a rdfs:Container ;
+  a [
+      a owl:Restriction ;
+      owl:allValuesFrom zh:VerhuurbareRuimte ;
+      owl:onProperty rdfs:member ;
+    ] ;
+.
+zh:AlleVloeren
+  a rdfs:Container ;
+  a [
+      a owl:Restriction ;
+      owl:allValuesFrom zh:Vloer ;
+      owl:onProperty rdfs:member ;
+    ] ;
+.
+zh:AlleWanden
+  a rdfs:Container ;
+  a [
+      a owl:Restriction ;
+      owl:allValuesFrom zh:Wand ;
+      owl:onProperty rdfs:member ;
+    ] ;
+  rdfs:member zh:Betonwand_1 ;
+.
+zh:Beton
+  a nen2660:Matter ;
+.
+zh:Betonlaag
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue zh:Beton ;
+      owl:onProperty nen2660:consistsOf ;
+    ] ;
+.
+zh:Betonwand
+  a owl:Class ;
+  rdfs:subClassOf zh:Wand ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Betonlaag;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+zh:Betonwand_1
+  a zh:Betonwand ;
+  nen2660:hasPart zh:Betonwand_1-1 ;
+  nen2660:hasPart zh:Betonwand_1-2 ;
+.
+zh:Betonwand_1-1
+  a zh:Betonwand ;
+  nen2660:hasPart zh:Betonlaag_1-1 ;
+  nen2660:hasPart zh:Stuclaag_1-1 ;
+.
+zh:Betonwand_1-2
+  a zh:Betonwand ;
+.
+zh:Betonlaag_1-1
+  a zh:Betonlaag ;
+  nen2660:isConnectedTo zh:Stuclaag_1-1 ;
+  nen2660:participatesIn zh:Hechten_1 ;
+.
+zh:DraagkrachtBieden
+  a owl:Class ;
+  rdfs:subClassOf nen2660:Interaction ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue nen2660:Force ;
+      owl:onProperty nen2660:transferType ;
+    ] ;
+.
+zh:DraagkrachtBieden_1
+  a zh:DraagkrachtBieden ;
+  a nen2660:FunctioneleEntiteit ;
+.
+zh:Fundering
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom zh:Funderingsconstructie ;
+      owl:onProperty nen2660:isImplementedBy ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Funderingswand ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+zh:Fundering_1
+  a zh:Fundering ;
+  nen2660:hasPart zh:Funderingswand_1 ;
+  nen2660:isImplementedBy zh:Funderingsconstructie_1 ;
+.
+zh:Funderingsconstructie
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Wand ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+zh:Funderingsconstructie_1
+  a zh:Funderingsconstructie ;
+  nen2660:hasPart zh:Betonwand_1 ;
+  nen2660:hasPart zh:Betonwand_2 ;
+.
+zh:Funderingswand
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom zh:Wand ;
+      owl:onProperty nen2660:isImplementedBy ;
+    ] ;
+.
+zh:Funderingswand_1
+  a zh:Funderingswand ;
+  nen2660:isImplementedBy zh:Betonwand_1 ;
+.
+zh:Gebouw
+  a owl:Class ;
+  rdfs:subClassOf nen2660:PhysicalObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass zh:Gebouwconstructie ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass zh:InpandigRuimtelijkNetwerk ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+zh:Gebouw_1
+  a nen2660:PlannedEntity ;
+  a zh:Gebouw ;
+  nen2660:hasInterior zh:GeometricEntity_1 ;
+  nen2660:hasPart zh:Gebouwconstructie_1 ;
+  nen2660:hasPart zh:InpandigRuimtelijkNetwerk_1 ;
+  nen2660:hasPartsGroup zh:AlleVerhuurbareOppervlakken ;
+.
+zh:Gebouwconstructie
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Vloer ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Wand ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass zh:Fundering ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+zh:Gebouwconstructie_1
+  a zh:Gebouwconstructie ;
+  nen2660:hasPart zh:Fundering_1 ;
+  nen2660:hasPart zh:Vloer_1 ;
+  nen2660:hasPart zh:Vloer_2 ;
+  nen2660:hasPart zh:Betonwand_1 ;
+  nen2660:hasPartsGroup zh:AlleVloeren ;
+  nen2660:hasPartsGroup zh:AlleWanden ;
+  nen2660:hasPartsGroup zh:StukwerkVertrek_1 ;
+.
+zh:GeluidDempen
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:Interaction ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue nen2660:EnergyFlow ;
+      owl:onProperty nen2660:transferType ;
+    ] ;
+.
+zh:GeluidDempen_1
+  a zh:GeluidDempen ;
+.
+zh:GeometricEntity_1
+  a nen2660:GeometricEntity ;
+.
+zh:Gips
+  a nen2660:Matter ;
+.
+zh:Hechten
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:Interaction ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue nen2660:Force ;
+      owl:onProperty nen2660:transferType ;
+    ] ;
+.
+zh:Hechten_1
+  a zh:Hechten ;
+  zh:hechtingskracht [
+      a nen2660:QuantityValue ;
+      rdf:value "300"^^xsd:float ;
+      nen2660:hasUnit unit:N-PER-MilliM2 ;
+    ] ;
+.
+zh:InpandigRuimtelijkNetwerk
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Vertrek ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+zh:InpandigRuimtelijkNetwerk_1
+  a zh:InpandigRuimtelijkNetwerk ;
+  nen2660:hasPart zh:Vertrek_1 ;
+  nen2660:hasPart zh:Vertrek_2 ;
+  nen2660:hasPartsGroup zh:AlleVerhuurbareRuimten ;
+.
+zh:Installatieruimte
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom zh:Vertrek ;
+      owl:onProperty nen2660:isImplementedBy ;
+    ] ;
+.
+zh:Installatieruimte_1
+  a zh:Installatieruimte ;
+  nen2660:isImplementedBy zh:Vertrek_2 ;
+  nen2660:participatesIn zh:GeluidDempen_1 ;
+  nen2660:participatesIn zh:Scheiden_1 ;
+.
+zh:LichtReflecteren
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:Interaction ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue nen2660:EnergyFlow ;
+      owl:onProperty nen2660:transferType ;
+    ] ;
+.
+zh:LichtReflecteren_1
+  a zh:LichtReflecteren ;
+.
+zh:Operatiekamer
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom zh:Vertrek ;
+      owl:onProperty nen2660:isImplementedBy ;
+    ] ;
+  nen2660:hasPart zh:Wandafwerking_1 ;
+  nen2660:hasPartsGroup zh:Wandafwerking_OK ;
+.
+zh:Operatiekamer_1
+  a zh:Operatiekamer ;
+  nen2660:isImplementedBy zh:Vertrek_1 ;
+  nen2660:participatesIn zh:GeluidDempen_1 ;
+  nen2660:participatesIn zh:LichtReflecteren_1 ;
+  nen2660:participatesIn zh:Scheiden_1 ;
+.
+zh:Scheiden
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:Interaction ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue nen2660:MaterialFlow ;
+      owl:onProperty nen2660:transferType ;
+    ] ;
+.
+zh:Scheiden_1
+  a zh:Scheiden ;
+.
+zh:Scheidingswand
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+.
+zh:Scheidingswand_1-1
+  a nen2660:Connection ;
+  a zh:Scheidingswand ;
+  nen2660:isConnectedTo zh:Installatieruimte_1 ;
+  nen2660:isConnectedTo zh:Operatiekamer_1 ;
+  nen2660:participatesIn zh:LichtReflecteren_1 ;
+  nen2660:isImplementedBy zh:Betonwand_1-1 ;
+.
+zh:Stuclaag
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+.
+zh:Stuclaag_1-1
+  a zh:Stuclaag ;
+  nen2660:consistsOf zh:Gips ;
+  nen2660:participatesIn zh:Hechten_1 ;
+.
+zh:StucwerkVertrek_1
+  a rdfs:Container ;
+  rdfs:member zh:Stuclaag_1-1 ;
+.
+zh:VerhuurbaarOppervlak
+  a owl:Class ;
+  rdfs:subClassOf zh:Vloeroppervlak ;
+.
+zh:Verhuurbaaroppervlak_1
+  a zh:VerhuurbaarOppervlak ;
+  nen2660:connectsObject zh:Vertrek_1 ;
+  nen2660:connectsObject zh:Vloer_1 ;
+.
+zh:Verhuurbaaroppervlak_2
+  a zh:VerhuurbaarOppervlak ;
+  nen2660:connectsObject zh:Vertrek_2 ;
+  nen2660:connectsObject zh:Vloer_2 ;
+.
+zh:Vertrek
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+.
+zh:Vertrek_1
+  a zh:Vertrek ;
+  nen2660:participatesIn zh:Draagkrachtbieden_1 ;
+.
+zh:Vertrek_2
+  a zh:Vertrek ;
+.
+zh:Vloer
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+.
+zh:Vloer_1
+  a zh:Vloer ;
+  nen2660:participatesIn zh:Draagkrachtbieden_1 ;
+.
+zh:Vloer_2
+  a zh:Vloer ;
+.
+zh:Vloeroppervlak
+  a owl:Class ;
+  rdfs:subClassOf nen2660:Interface ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Vertrek ;
+      owl:onProperty nen2660:connectsObject ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Vloer ;
+      owl:onProperty nen2660:connectsObject ;
+    ] ;
+.
+zh:Vloeroppervlak_1
+  a zh:Vloeroppervlak ;
+  nen2660:connectsObject zh:Vetrek_1 ;
+  nen2660:connectsObject zh:Vloer_1 ;
+.
+zh:Vloeroppervlak_2
+  a zh:Vloeroppervlak ;
+  nen2660:connectsObject zh:Vetrek_2 ;
+  nen2660:connectsObject zh:Vloer_2 ;
+.
+zh:Wand
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+.
+zh:Wandafwerking
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+.
+zh:Wandafwerking_OK
+  a rdfs:Container ;
+  rdfs:member zh:Wandafwerking_1-1 ;
+.
+zh:Wandafwerking_1-1
+  a zh:Wandafwerking ;
+  nen2660:isImplementedBy zh:Stuclaag_1-1 ;
+.
+zh:Wandoppervlak_1-1
+  a nen2660:Interface ;
+  nen2660:connectsObject zh:Operatiekamer_1 ;
+  nen2660:connectsObject zh:Scheidingswand_1 ;
+.
+zh:Ziekenhuis
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:PhysicalObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom zh:Gebouw ;
+      owl:onProperty nen2660:isImplementedBy ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Installatieruimte ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass zh:Operatiekamer ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+.
+zh:Ziekenhuis_1
+  a nen2660:PlannedEntity ;
+  a zh:Ziekenhuis ;
+  nen2660:hasPart zh:Operatiekamer_1 ;
+  nen2660:hasPart zh:Installatieruimte_1 ;
+  nen2660:isImplementedBy zh:Gebouw_1 ;
+.
+zh:hechtingskracht
+  a owl:ObjectProperty ;
+  rdfs:domain zh:Hechten ;
+  rdfs:range nen2660:QuantityValue ;
+.
+zh:heeftOppervlak
+  a owl:ObjectProperty ;
+  rdfs:range nen2660:QuantityValue ;
+.

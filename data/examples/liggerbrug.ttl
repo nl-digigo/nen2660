@@ -1,0 +1,715 @@
+# baseURI: https://w3id.org/liggerbrug/owl/def
+# imports: https://w3id.org/nen2660/owl/def
+# prefix: lb
+
+@prefix lb: <https://w3id.org/liggerbrug/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix nen2660: <https://w3id.org/nen2660/def#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/liggerbrug/owl/def>
+  a owl:Ontology ;
+  owl:imports <https://w3id.org/nen2660/owl/def> ;
+.
+lb:ArcBridge
+  a owl:Class ;
+  rdfs:subClassOf lb:Bridge ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:WithArcs ;
+      owl:onProperty lb:constructionMethod ;
+    ] ;
+  skos:prefLabel "ArcBridge"@en ;
+  skos:prefLabel "Boogbrug"@nl ;
+.
+lb:Area
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechicalEntity ;
+  skos:prefLabel "Area"@en ;
+  skos:prefLabel "Gebied"@nl ;
+.
+lb:Bearing
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Bearing"@en ;
+  skos:prefLabel "Oplegging"@nl ;
+.
+lb:BicycleBridge
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom lb:Bridge ;
+      owl:onProperty nen2660:isImplementedBy ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:BicycleTraffic ;
+      owl:onProperty lb:TrafficKind ;
+    ] ;
+  skos:prefLabel "BicycleBridge"@en ;
+  skos:prefLabel "FietsBrug"@nl ;
+.
+lb:BicycleTraffic
+  a lb:TrafficType ;
+  skos:prefLabel "BicycleTraffic"@en ;
+  skos:prefLabel "Fietsverkeer"@nl ;
+.
+lb:BottomEdgeProfile
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "BottomEdgeProfiel"@en ;
+  skos:prefLabel "OnderkantProfiel"@nl ;
+.
+lb:Bridge
+  a owl:Class ;
+  rdfs:subClassOf lb:CivilStructure ;
+  skos:prefLabel "Bridge"@en ;
+  skos:prefLabel "Brug"@nl ;
+.
+lb:BridgeDeck
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:LongitudinalBulbStiffener ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass lb:SteelPlate ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "BridgeDeck"@en ;
+  skos:prefLabel "Rijdek"@nl ;
+.
+lb:CableBridge
+  a owl:Class ;
+  rdfs:subClassOf lb:Bridge ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:WithCables ;
+      owl:onProperty lb:constructionMethod ;
+    ] ;
+  skos:prefLabel "CableBridge"@en ;
+  skos:prefLabel "Tuibrug"@nl ;
+.
+lb:CarBridge
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom lb:Bridge ;
+      owl:onProperty nen2660:isImplementedBy ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:CarTraffic ;
+      owl:onProperty lb:TrafficKind ;
+    ] ;
+  skos:prefLabel "AutoBrug"@nl ;
+  skos:prefLabel "CarBridge"@en ;
+.
+lb:CarTraffic
+  a lb:TrafficType ;
+  skos:prefLabel "Autoverkeer"@nl ;
+  skos:prefLabel "CarTraffic"@en ;
+.
+lb:Carriageway
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Carriageway"@en ;
+  skos:prefLabel "Wegbaan"@nl ;
+.
+lb:CivilStructure
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "CivilStructure"@en ;
+  skos:prefLabel "Kunstwerk"@nl ;
+.
+lb:Complex
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Complex"@en ;
+  skos:prefLabel "Complex"@nl ;
+.
+lb:Concrete
+  a lb:MaterialType ;
+  skos:prefLabel "Beton"@nl ;
+  skos:prefLabel "Concrete"@en ;
+.
+lb:ConcreteGirderBridge
+  a owl:Class ;
+  rdfs:subClassOf lb:GirderBridge ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:Concrete ;
+      owl:onProperty lb:materialType ;
+    ] ;
+  skos:prefLabel "BetonnenLiggerbrug"@nl ;
+  skos:prefLabel "ConcreteGirderBridge"@en ;
+.
+lb:Connection
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Connection"@en ;
+  skos:prefLabel "Verbinding"@nl ;
+.
+lb:ConstructionType
+  a owl:Class ;
+  a nen2660:EnumerationType ;
+  skos:prefLabel "Constructietype"@nl ;
+  skos:prefLabel "ConstructionType"@en ;
+.
+lb:CrossBeam
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "CrossBeam"@en ;
+  skos:prefLabel "Langsligger"@nl ;
+.
+lb:DiagonalCompositeBar
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "DiagonaalSamensgesteldeStaaf"@nl ;
+  skos:prefLabel "DiagonalCompositeBar"@en ;
+.
+lb:ExpansionJoint
+  a owl:Class ;
+  rdfs:subClassOf lb:Joint ;
+  skos:prefLabel "DilatatieVoeg"@nl ;
+  skos:prefLabel "ExpansionJoint"@en ;
+.
+lb:FixedBearing
+  a owl:Class ;
+  rdfs:subClassOf lb:Bearing ;
+  skos:prefLabel "FixedBearing"@en ;
+  skos:prefLabel "VasteOplegging"@nl ;
+.
+lb:Flange
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Flange"@en ;
+  skos:prefLabel "Flens"@nl ;
+.
+lb:GirderBottomFlange
+  a owl:Class ;
+  rdfs:subClassOf lb:Flange ;
+  skos:prefLabel "GirderBottomFlange"@en ;
+  skos:prefLabel "LiggerOnderflens"@nl ;
+.
+lb:GirderBridge
+  a owl:Class ;
+  rdfs:subClassOf lb:Bridge ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:WithGirders ;
+      owl:onProperty lb:constructionMethod ;
+    ] ;
+  skos:prefLabel "GirderBrdige"@en ;
+  skos:prefLabel "Liggerbrug"@nl ;
+.
+lb:GirderTopFlange
+  a owl:Class ;
+  rdfs:subClassOf lb:Flange ;
+  skos:prefLabel "GirderTopFlange"@en ;
+  skos:prefLabel "LiggerBovenflens"@nl ;
+.
+lb:HingedBearing
+  a owl:Class ;
+  rdfs:subClassOf lb:MoveableBearing ;
+  skos:prefLabel "HingedBearing"@en ;
+  skos:prefLabel "Scharnieroplegging"@nl ;
+.
+lb:HorizontalStiffener
+  a owl:Class ;
+  rdfs:subClassOf lb:Stiffener ;
+  skos:prefLabel "HorizontalStiffener"@en ;
+  skos:prefLabel "HorizontaleVerstijver"@nl ;
+.
+lb:ImmersionJoint
+  a owl:Class ;
+  rdfs:subClassOf lb:Joint ;
+  skos:prefLabel "ImmersionJoint@en" ;
+  skos:prefLabel "ZinkVoegovergang"@nl ;
+.
+lb:Joint
+  a owl:Class ;
+  rdfs:subClassOf lb:Connection ;
+  skos:prefLabel "Joint"@en ;
+  skos:prefLabel "Voegovergang"@nl ;
+.
+lb:K-Truss
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:TrussReinforcement ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass lb:BottomEdgeProfile ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass lb:DiagonalCompositeBar ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass lb:VerticalProfile ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "K-Spant"@nl ;
+  skos:prefLabel "K-Truss"@en ;
+.
+lb:Lane
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Lane"@en ;
+  skos:prefLabel "Strook"@nl ;
+.
+lb:LaneSection
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "LaneSection"@en ;
+  skos:prefLabel "Strookvak"@nl ;
+.
+lb:LineInfrastructure
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Lijninfrastructuur"@nl ;
+  skos:prefLabel "LineInfrastructure"@en ;
+.
+lb:LongitudinalBulbStiffener
+  a owl:Class ;
+  rdfs:subClassOf lb:Stiffener ;
+  skos:prefLabel "LangsBulbVerstijver"@nl ;
+  skos:prefLabel "LongitudinalBulbStiffener"@en ;
+.
+lb:MainGirder
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:GirderBottomFlange ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:GirderTopFlange ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:HorizontalStiffener ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass lb:WebPlate ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:altLabel "Hoofdligger"@nl ;
+  skos:prefLabel "Langsligger"@nl ;
+  skos:prefLabel "MainGirder"@en ;
+.
+lb:MainLoadbearingStructure
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Hoofdraagconstructie"@nl ;
+  skos:prefLabel "MainLoadbearingStructure"@en ;
+.
+lb:MainLoadbearingStructureOfSteelGirderBridge
+  a owl:Class ;
+  rdfs:subClassOf lb:MainLoadbearingStructure ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:Joint ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:Bearing ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:CrossBeam ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:K-Truss ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:Pillar ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass lb:VerticalStiffener ;
+      owl:onProperty nen2660:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass lb:BridgeDeck ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass lb:MainGirder ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "HoofddraagconstructieVoorStalenLiggerBrug"@nl ;
+  skos:prefLabel "MainLoadbearingStructureOfSteelGirderBridge"@en ;
+.
+lb:MaterialType
+  a owl:Class ;
+  a nen2660:EnumerationType ;
+  skos:prefLabel "Materiaaltype"@nl ;
+  skos:prefLabel "MaterialType"@en ;
+.
+lb:MoveableBearing
+  a owl:Class ;
+  rdfs:subClassOf lb:Bearing ;
+  skos:prefLabel "BeweegbareOplegging"@nl ;
+  skos:prefLabel "MoveableBearing"@en ;
+.
+lb:Network
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Netwerk"@nl ;
+  skos:prefLabel "Network"@en ;
+.
+lb:PedestrianBridge
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom lb:Bridge ;
+      owl:onProperty nen2660:isImplementedBy ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:PedestrianTraffic ;
+      owl:onProperty lb:TrafficKind ;
+    ] ;
+  skos:prefLabel "PedestrianBridge"@en ;
+  skos:prefLabel "VoetgangersBrug"@nl ;
+.
+lb:PedestrianTraffic
+  a lb:TrafficType ;
+  skos:prefLabel "PedestrianTraffic"@en ;
+  skos:prefLabel "Voetgangersverkeer"@nl ;
+.
+lb:Pillar
+  a owl:Class ;
+  rdfs:subClassOf lb:Support ;
+  skos:prefLabel "Pijler"@nl ;
+  skos:prefLabel "Pillar"@en ;
+.
+lb:RailwayBridge
+  a owl:Class ;
+  rdfs:subClassOf nen2660:FunctionalEntity ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom lb:Bridge ;
+      owl:onProperty nen2660:isImplementedBy ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:TrainTraffic ;
+      owl:onProperty lb:TrafficKind ;
+    ] ;
+  skos:prefLabel "RailwayBridge"@en ;
+  skos:prefLabel "SpoorBrug"@nl ;
+.
+lb:RoadSection
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "RoadSection"@en ;
+  skos:prefLabel "Wegvak"@nl ;
+.
+lb:RoadSegment
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "RoadSegment"@en ;
+  skos:prefLabel "Wegment"@nl ;
+.
+lb:RollerBearing
+  a owl:Class ;
+  rdfs:subClassOf lb:MoveableBearing ;
+  skos:prefLabel "RollerBearing"@en ;
+  skos:prefLabel "Roloplegging"@nl ;
+.
+lb:Steel
+  a lb:MaterialType ;
+  skos:prefLabel "Staal"@nl ;
+  skos:prefLabel "Steel"@en ;
+.
+lb:SteelGirderBridge
+  a owl:Class ;
+  rdfs:subClassOf lb:GirderBridge ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:Steel ;
+      owl:onProperty lb:materialType ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass lb:MainLoadbearingStructureOfSteelGirderBridge ;
+      owl:onProperty nen2660:hasPart ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "StaleLiggerbrug"@nl ;
+  skos:prefLabel "SteelGirderBridge"@en ;
+.
+lb:SteelPlate
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Staalplaat"@nl ;
+  skos:prefLabel "SteelPlate"@en ;
+.
+lb:Stiffener
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Stiffener"@en ;
+  skos:prefLabel "Verstijver"@nl ;
+.
+lb:Support
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Ondersteuning"@nl ;
+  skos:prefLabel "Support"@en ;
+.
+lb:SuspensionBridge
+  a owl:Class ;
+  rdfs:subClassOf lb:Bridge ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:WithSuspenders ;
+      owl:onProperty lb:constructionMethod ;
+    ] ;
+  skos:prefLabel "Hangbrug"@nl ;
+  skos:prefLabel "SuspensionBridge"@en ;
+.
+lb:Track
+  a owl:Class ;
+  rdfs:subClassOf nen2660:SpatialRegion ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Spoor"@nl ;
+  skos:prefLabel "Track"@en ;
+.
+lb:TrafficType
+  a owl:Class ;
+  a nen2660:EnumerationType ;
+  skos:prefLabel "TrafficType"@en ;
+  skos:prefLabel "Verkeerstype"@nl ;
+.
+lb:TrainTraffic
+  a lb:TrafficType ;
+  skos:prefLabel "TrainTraffic"@en ;
+  skos:prefLabel "Treinverkeer"@nl ;
+.
+lb:TrussBridge
+  a owl:Class ;
+  rdfs:subClassOf lb:Bridge ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue lb:WithTrusses ;
+      owl:onProperty lb:constructionMethod ;
+    ] ;
+  skos:prefLabel "Spantbrug"@nl ;
+  skos:prefLabel "TrussBridge"@en ;
+.
+lb:TrussReinforcement
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "Spantversterking"@nl ;
+  skos:prefLabel "TrussReinforcement"@en ;
+.
+lb:VerticalProfile
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "VerticalProfile"@en ;
+  skos:prefLabel "VertikaalProfiel"@nl ;
+.
+lb:VerticalStiffener
+  a owl:Class ;
+  rdfs:subClassOf lb:Stiffener ;
+  skos:prefLabel "VerticalStiffener"@en ;
+  skos:prefLabel "VerticaleVerstijver"@nl ;
+.
+lb:WebPlate
+  a owl:Class ;
+  rdfs:subClassOf nen2660:DiscreteObject ;
+  rdfs:subClassOf nen2660:TechnicalEntity ;
+  skos:prefLabel "WebPlate"@en ;
+  skos:prefLabel "Webplaat"@nl ;
+.
+lb:WithArcs
+  a lb:ConstructionType ;
+  skos:prefLabel "MetBogen"@nl ;
+  skos:prefLabel "WithArcs"@en ;
+.
+lb:WithCables
+  a lb:ConstructionType ;
+  skos:prefLabel "MetKabels"@nl ;
+  skos:prefLabel "WithCables"@en ;
+.
+lb:WithGirders
+  a lb:ConstructionType ;
+  skos:prefLabel "MetLiggers"@nl ;
+  skos:prefLabel "WithGirders"@en ;
+.
+lb:WithSuspenders
+  a lb:ConstructionType ;
+  skos:prefLabel "MetTuien"@nl ;
+  skos:prefLabel "WithSuspenders"@en ;
+.
+lb:WithTrusses
+  a lb:ConstructionType ;
+  skos:prefLabel "MetSpanten"@nl ;
+  skos:prefLabel "WithTrusses"@en ;
+.
+lb:amountOfSpans
+  a owl:DatatypeProperty ;
+  rdfs:domain lb:Bridge ;
+  rdfs:range xsd:integer ;
+.
+lb:constructionMethod
+  a owl:ObjectProperty ;
+  rdfs:domain lb:Bridge ;
+  rdfs:range lb:ConstructionType ;
+.
+lb:designLifespan
+  a owl:ObjectProperty ;
+  rdfs:range nen2660:QuantityValue ;
+  nen2660:hasQuantityKind quantitykind:Time ;
+  nen2660:hasUnit unit:YR ;
+.
+lb:length
+  a owl:ObjectProperty ;
+  rdfs:range nen2660:QuantityValue ;
+  nen2660:hasQuantityKind quantitykind:Length ;
+.
+lb:materialType
+  a owl:ObjectProperty ;
+  rdfs:domain lb:Bridge ;
+  rdfs:range lb:MaterialType ;
+.
+lb:maxHeight
+  a owl:ObjectProperty ;
+  rdfs:domain lb:MainGirder ;
+  rdfs:range nen2660:QuantityValue ;
+  nen2660:hasQuantityKind quantitykind:Length ;
+.
+lb:minHeight
+  a owl:ObjectProperty ;
+  rdfs:domain lb:MainGirder ;
+  rdfs:range nen2660:QuantityValue ;
+  nen2660:hasQuantityKind quantitykind:Length ;
+.
+lb:residualLifespan
+  a owl:ObjectProperty ;
+  rdfs:range nen2660:QuantityValue ;
+  nen2660:hasQuantityKind quantitykind:Time ;
+  nen2660:hasUnit unit:YR ;
+.
+lb:thicknessOfBottomFlange
+  a owl:ObjectProperty ;
+  rdfs:domain lb:GirderBottomFlange ;
+  rdfs:range nen2660:QuantityValue ;
+  nen2660:hasQuantityKind quantitykind:Length ;
+.
+lb:trafficKind
+  a owl:ObjectProperty ;
+  rdfs:domain lb:Bridge ;
+  rdfs:range lb:TrafficType ;
+.
+lb:typicalHasPart
+  a owl:ObjectProperty ;
+  rdfs:domain owl:Class ;
+  rdfs:range owl:Class ;
+.
+lb:width
+  a owl:ObjectProperty ;
+  rdfs:range nen2660:QuantityValue ;
+  nen2660:hasQuantityKind quantitykind:Length ;
+.
+[
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:CableBridge
+      nen2660:SteelGirderBridge
+      nen2660:ConcreteGirderBridge
+      nen2660:SuspensionBridge
+      nen2660:TrussBridge
+      nen2660:ArcBridge
+    ) ;
+].
+[
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:CarBridge
+      nen2660:PedestrianBridge
+      nen2660:BicycleBridge
+      nen2660:RailwayBridge
+    ) ;
+].
