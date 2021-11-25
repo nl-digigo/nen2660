@@ -10,18 +10,24 @@ sortkey: 999
 
 {% assign norm1 = site.data.downloads | where: "norminform", "normative" | sort: "sortkey" | first %}
 {% assign info1 = site.data.downloads | where: "norminform", "informative" | sort: "sortkey" | first %}
+{% assign ex1 = site.data.downloads | where: "norminform", "example" | sort: "sortkey" | first %}
 
 The usage of different files and ontologies is described in
 <a href='#norm' class='link dim underline-hover blue'>
 NEN 2660-2:2021</a>.
-This page provides
-<a href="{{ '#' | append: norm1.anchorid }}" class='link dim underline-hover blue b'>
+This page provides:
+
+- <a href="{{ '#' | append: norm1.anchorid }}" class='link dim underline-hover blue b'>
 {{ site.data.downloads | where: "norminform", "normative" | size }}
-normative files
-</a>, as well as
-<a href="{{ '#' | append: info1.anchorid }}" class='link dim underline-hover blue b'>
+normative files</a>, that form the base of the NEN 2660-2:2021.
+
+- <a href="{{ '#' | append: info1.anchorid }}" class='link dim underline-hover blue b'>
 {{ site.data.downloads | where: "norminform", "informative" | size }}
 informative files</a>, that combine the normative files for convenience.
+
+- <a href="{{ '#' | append: ex1.anchorid }}" class='link dim underline-hover blue b'>
+{{ site.data.downloads | where: "norminform", "informative" | size }}
+example files</a>, that demonstrate usage.
 
 <div class='flex-ns justify-around flex-wrap'>
 
@@ -36,7 +42,7 @@ informative files</a>, that combine the normative files for convenience.
 }
 </style>
 
-{% assign files = site.data.downloads | sort: "sortkey" %}
+{% assign files = site.data.downloads | sort_natural: "sortkey" %}
 {% for download in files %}
 
 <div
@@ -49,12 +55,18 @@ informative files</a>, that combine the normative files for convenience.
 <p class='f5'>
   {{ download.desc }}
   <dl class='f6'>
+{% if download.namespace %}
   <dd class="b pt1 ma0">Defines in Namespace</dd>
     <dt class='pt1 pl2'><code>{{ download.namespace }}</code></dt>
+{% endif %}
+{% if download.ontology %}
   <dd class="b pt1 ma0">Get at URL</dd>
     <dt class='pt1 pl2'><code>{{ download.ontology }}</code></dt>
+{% endif %}
+{% if download.type %}
   <dd class="b pt1 ma0">Ontology Type</dd>
     <dt class='pt1 pl2'><code>{{ download.type }}</code></dt>
+{% endif %}
   </dl>
 </p>
 
