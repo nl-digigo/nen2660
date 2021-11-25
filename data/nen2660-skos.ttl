@@ -144,7 +144,7 @@ nen2660-term:Force
 nen2660-term:FunctionalEntity
   a skos:Concept ;
   skos:broader nen2660-term:Entity ;
-  skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"@en ;
+  skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by technical entities"@en ;
   skos:prefLabel "Functional entity"@en ;
   skos:prefLabel "Functional entity"@nl ;
 .
@@ -466,7 +466,7 @@ nen2660-term:connectsPort
 .
 nen2660-term:consistsOf
   a skos:Concept ;
-  skos:definition "The matter a real object, mixture or matter portion is made of"@en ;
+  skos:definition "The matter a real object or mixture is made of"@en ;
   skos:prefLabel "consists of"@en ;
   skos:prefLabel "bestaat uit"@nl ;
 .

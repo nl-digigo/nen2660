@@ -501,6 +501,18 @@ nen2660-shacl.ttl
   ]</span> ) ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedMaxCount'>sh:qualifiedMaxCount</a> &quot;1&quot;^^xsd:integer ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedValueShape'>sh:qualifiedValueShape</a> <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#in'>sh:in</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#FunctionalEntity'>nen2660:FunctionalEntity</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#TechnicalEntity'>nen2660:TechnicalEntity</a> ) ;
+  ]</span> ;
+]</span></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
+<td class='w-two-thirds overflow-auto'><span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> ( <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#zeroOrMorePath'>sh:zeroOrMorePath</a> <a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a> ;
+  ]</span> ) ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedMaxCount'>sh:qualifiedMaxCount</a> &quot;1&quot;^^xsd:integer ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedValueShape'>sh:qualifiedValueShape</a> <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#in'>sh:in</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#PlannedEntity'>nen2660:PlannedEntity</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#RealizedEntity'>nen2660:RealizedEntity</a> ) ;
   ]</span> ;
 ]</span></td>
@@ -526,18 +538,6 @@ nen2660-shacl.ttl
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedMaxCount'>sh:qualifiedMaxCount</a> &quot;1&quot;^^xsd:integer ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedValueShape'>sh:qualifiedValueShape</a> <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#in'>sh:in</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#RealObject'>nen2660:RealObject</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#SpatialRegion'>nen2660:SpatialRegion</a> ) ;
-  ]</span> ;
-]</span></td>
-</tr>
-<tr>
-<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
-<td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> ( <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <span class='pre'>[
-    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#zeroOrMorePath'>sh:zeroOrMorePath</a> <a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a> ;
-  ]</span> ) ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedMaxCount'>sh:qualifiedMaxCount</a> &quot;1&quot;^^xsd:integer ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedValueShape'>sh:qualifiedValueShape</a> <span class='pre'>[
-    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#in'>sh:in</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#FunctionalEntity'>nen2660:FunctionalEntity</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#TechnicalEntity'>nen2660:TechnicalEntity</a> ) ;
   ]</span> ;
 ]</span></td>
 </tr>
@@ -1217,16 +1217,12 @@ nen2660-rdfs.ttl
 <td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>rdf:Property</a></td>
 </tr>
 <tr>
-<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#range'>rdfs:range</a></td>
-<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a></td>
-</tr>
-<tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#seeAlso'>rdfs:seeAlso</a></td>
 <td class='w-two-thirds overflow-auto'><a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/term#consistsOf'>nen2660-term:consistsOf</a></td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a></td>
-<td class='w-two-thirds overflow-auto'>&quot;The matter a real object, mixture or matter portion is made of&quot;@en</td>
+<td class='w-two-thirds overflow-auto'>&quot;The matter a real object or mixture is made of&quot;@en</td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a></td>
@@ -1254,7 +1250,14 @@ nen2660-owl.ttl
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#domain'>rdfs:domain</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
   <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Class'>owl:Class</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#unionOf'>owl:unionOf</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#RealObject'>nen2660:RealObject</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Mixture'>nen2660:Mixture</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#MatterPortion'>nen2660:MatterPortion</a> ) ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#unionOf'>owl:unionOf</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#RealObject'>nen2660:RealObject</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Mixture'>nen2660:Mixture</a> ) ;
+]</span></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#range'>rdfs:range</a></td>
+<td class='w-two-thirds overflow-auto'><span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Class'>owl:Class</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#unionOf'>owl:unionOf</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#MatterPortion'>nen2660:MatterPortion</a> ) ;
 ]</span></td>
 </tr>
 </table></div><div id='contains' class='mv5'>
@@ -1808,7 +1811,7 @@ nen2660-rdfs.ttl
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a></td>
-<td class='w-two-thirds overflow-auto'>&quot;An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities&quot;@en</td>
+<td class='w-two-thirds overflow-auto'>&quot;An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by technical entities&quot;@en</td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a></td>
@@ -3350,7 +3353,7 @@ nen2660-rdfs.ttl
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subPropertyOf'>rdfs:subPropertyOf</a></td>
-<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='https://w3id.org/nen2660/def#2660:hasSolution'>ns2:hasSolution</a></td>
+<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasSolution'>nen2660:hasSolution</a></td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a></td>
@@ -3382,6 +3385,44 @@ nen2660-owl.ttl
         <h2 class='f3'><a class='link dim underline-hover brand-dark-color ' href='https://w3id.org/nen2660/def#isPlanFor'>isPlanFor</a>
         <span class='f6'>&lt;https://w3id.org/nen2660/def#isPlanFor&gt;</span></h2>
 
+<table class='w-100 mv4 f6 dt--fixed'>
+<colgroup>
+                                <col width="33%">
+                                <col width="67%">
+                            </colgroup>
+<thead>
+<tr class='w-100'>
+<th colspan='2' class='bg-brand-light-color brand-dark-color tl'>
+From file
+<a class='link dim underline-hover blue' href='/nen2660/data/nen2660-rdfs.ttl'>
+nen2660-rdfs.ttl
+</a>
+</th></tr></thead>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a></td>
+<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property'>rdf:Property</a></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#domain'>rdfs:domain</a></td>
+<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#PlannedEntity'>nen2660:PlannedEntity</a></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#range'>rdfs:range</a></td>
+<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#RealizedEntity'>nen2660:RealizedEntity</a></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#seeAlso'>rdfs:seeAlso</a></td>
+<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/term#isPlanFor'>nen2660-term:isPlanFor</a></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a></td>
+<td class='w-two-thirds overflow-auto'>&quot;A potentially realized entity according to this planed entity&quot;@en</td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a></td>
+<td class='w-two-thirds overflow-auto'>&quot;is plan for&quot;@en</td>
+</tr>
+</table>
 <table class='w-100 mv4 f6 dt--fixed'>
 <colgroup>
                                 <col width="33%">
@@ -3431,6 +3472,10 @@ nen2660-rdfs.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#seeAlso'>rdfs:seeAlso</a></td>
 <td class='w-two-thirds overflow-auto'><a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/term#isRealizedBy'>nen2660-term:isRealizedBy</a></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subPropertyOf'>rdfs:subPropertyOf</a></td>
+<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#isPlanFor'>nen2660:isPlanFor</a></td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a></td>
@@ -3671,15 +3716,6 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#maxCount'>sh:maxCount</a> &quot;1&quot;^^xsd:integer ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#minCount'>sh:minCount</a> &quot;1&quot;^^xsd:integer ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#consistsOf'>nen2660:consistsOf</a> ;
-]</span></td>
-</tr>
-<tr>
-<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
-<td class='w-two-thirds overflow-auto'><span class='pre'>[
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#QuantityValue'>nen2660:QuantityValue</a> ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#maxCount'>sh:maxCount</a> &quot;1&quot;^^xsd:integer ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#minCount'>sh:minCount</a> &quot;1&quot;^^xsd:integer ;
@@ -3762,7 +3798,11 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#or'>sh:or</a> ( <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> ;
+  ]</span> <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#MatterPortion'>nen2660:MatterPortion</a> ;
+  ]</span> ) ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#consistsOf'>nen2660:consistsOf</a> ;
 ]</span></td>
 </tr>
@@ -4922,7 +4962,11 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#or'>sh:or</a> ( <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> ;
+  ]</span> <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#MatterPortion'>nen2660:MatterPortion</a> ;
+  ]</span> ) ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#consistsOf'>nen2660:consistsOf</a> ;
 ]</span></td>
 </tr>

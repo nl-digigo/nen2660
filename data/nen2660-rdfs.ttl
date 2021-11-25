@@ -161,7 +161,7 @@ nen2660:FunctionalEntity
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:FunctionalEntity ;
   rdfs:subClassOf nen2660:Entity ;
-  skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"@en ;
+  skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by technical entities"@en ;
   skos:prefLabel "Functional entity"@en ;
 .
 nen2660:Gas
@@ -459,9 +459,8 @@ nen2660:connectsPort
 .
 nen2660:consistsOf
   a rdf:Property ;
-  rdfs:range nen2660:Matter ;
   rdfs:seeAlso nen2660-term:consistsOf ;
-  skos:definition "The matter a real object, mixture or matter portion is made of"@en ;
+  skos:definition "The matter a real object or mixture is made of"@en ;
   skos:prefLabel "consists of"@en ;
 .
 nen2660:contains
@@ -605,9 +604,17 @@ nen2660:isImplementedBy
   rdfs:domain nen2660:FunctionalEntity ;
   rdfs:range nen2660:TechnicalEntity ;
   rdfs:seeAlso nen2660-term:isImplementedBy ;
-  rdfs:subPropertyOf <https://w3id.org/nen2660/def#2660:hasSolution> ;
+  rdfs:subPropertyOf nen2660:hasSolution ;
   skos:definition "The technical entity that implements a functional entity"@en ;
   skos:prefLabel "is implemented by"@en ;
+.
+nen2660:isPlanFor
+  a rdf:Property ;
+  rdfs:domain nen2660:PlannedEntity ;
+  rdfs:range nen2660:RealizedEntity ;
+  rdfs:seeAlso nen2660-term:isPlanFor ;
+  skos:definition "A potentially realized entity according to this planed entity"@en ;
+  skos:prefLabel "is plan for"@en ;
 .
 nen2660:isRealizedBy
   a rdf:Property ;
@@ -615,6 +622,7 @@ nen2660:isRealizedBy
   rdfs:range nen2660:RealizedEntity ;
   rdfs:seeAlso nen2660-term:isRealizedBy ;
   skos:definition "The realized entity that realizes a planned entity"@en ;
+  rdfs:subPropertyOf nen2660:isPlanFor ;
   skos:prefLabel "is realized by"@en ;
 .
 nen2660:overConnection

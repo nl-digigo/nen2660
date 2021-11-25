@@ -177,12 +177,6 @@ nen2660:Matter
 nen2660:MatterPortion
   a sh:NodeShape ;
   sh:property [
-      sh:path nen2660:consistsOf ;
-      sh:class nen2660:Matter ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-    ] ;
-  sh:property [
       sh:path nen2660:portion ;
       sh:class nen2660:QuantityValue ;
       sh:maxCount 1 ;
@@ -193,7 +187,7 @@ nen2660:Mixture
   a sh:NodeShape ;
   sh:property [
       sh:path nen2660:consistsOf ;
-      sh:class nen2660:Matter ;
+      sh:or ( [ sh:class nen2660:Matter] [sh:class nen2660:MatterPortion ] ) ;
     ] ;
 .
 nen2660:PhysicalObject
@@ -255,7 +249,7 @@ nen2660:RealObject
   a sh:NodeShape ;
   sh:property [
       sh:path nen2660:consistsOf ;
-      sh:class nen2660:Matter ;
+      sh:or ( [ sh:class nen2660:Matter] [sh:class nen2660:MatterPortion ] ) ;
     ] ;
   sh:property [
       sh:path nen2660:hasPart ;

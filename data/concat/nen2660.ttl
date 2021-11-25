@@ -156,7 +156,7 @@ nen2660:FunctionalEntity a rdfs:Class,
             owl:allValuesFrom nen2660:Entity ;
             owl:onProperty nen2660:hasPart ],
         nen2660:Entity ;
-    skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"@en ;
+    skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by technical entities"@en ;
     skos:prefLabel "Functional entity"@en ;
     sh:property [ sh:class nen2660:FunctionalPart ;
             sh:path nen2660:hasFunctionalPart ],
@@ -249,11 +249,7 @@ nen2660:MatterPortion a rdfs:Class,
         nen2660:RelationReference ;
     skos:definition "An objectified relation reference for the 'consists of' relation"@en ;
     skos:prefLabel "Matter portion"@en ;
-    sh:property [ sh:class nen2660:Matter ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path nen2660:consistsOf ],
-        [ sh:class nen2660:QuantityValue ;
+    sh:property [ sh:class nen2660:QuantityValue ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path nen2660:portion ] .
@@ -265,7 +261,7 @@ nen2660:Mixture a rdfs:Class,
     rdfs:subClassOf nen2660:Matter ;
     skos:definition "Matter that consists of multiple forms of pure matter"@en ;
     skos:prefLabel "Mixture"@en ;
-    sh:property [ sh:class nen2660:Matter ;
+    sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
             sh:path nen2660:consistsOf ] .
 
 nen2660:Object a rdfs:Class,
@@ -376,7 +372,7 @@ nen2660:RealObject a rdfs:Class,
         nen2660:PhysicalObject ;
     skos:definition "A physical object that can be tangible and visible in reality such as artifacts including bridges, tanks and devices, and natural objects including terrains, banks, water bottoms and trees"@en ;
     skos:prefLabel "Real object"@en ;
-    sh:property [ sh:class nen2660:Matter ;
+    sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
             sh:path nen2660:consistsOf ],
         [ sh:class [ a owl:Class ;
                     owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
@@ -544,16 +540,16 @@ nen2660:VerificationMethodType a rdfs:Class,
 nen2660:AllDisjointClassesShape a sh:NodeShape ;
     sh:property [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
             sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [ sh:in ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) ] ],
+        [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [ sh:in ( nen2660:PlannedEntity nen2660:RealizedEntity ) ] ],
         [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [ sh:in ( nen2660:PhysicalObject nen2660:InformationObject nen2660:State nen2660:Event nen2660:Activity ) ] ],
         [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
             sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [ sh:in ( nen2660:RealObject nen2660:SpatialRegion ) ] ],
-        [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [ sh:in ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) ] ] ;
+            sh:qualifiedValueShape [ sh:in ( nen2660:RealObject nen2660:SpatialRegion ) ] ] ;
     sh:targetSubjectsOf rdf:type .
 
 nen2660:AllDisjointClasses_1 a owl:AllDisjointClasses ;
@@ -589,7 +585,7 @@ nen2660:isImplementedBy a rdf:Property,
     rdfs:domain nen2660:FunctionalEntity ;
     rdfs:range nen2660:TechnicalEntity ;
     rdfs:seeAlso nen2660-term:isImplementedBy ;
-    rdfs:subPropertyOf <https://w3id.org/nen2660/def#2660:hasSolution> ;
+    rdfs:subPropertyOf nen2660:hasSolution ;
     skos:definition "The technical entity that implements a functional entity"@en ;
     skos:prefLabel "is implemented by"@en .
 
@@ -598,6 +594,7 @@ nen2660:isRealizedBy a rdf:Property,
     rdfs:domain nen2660:PlannedEntity ;
     rdfs:range nen2660:RealizedEntity ;
     rdfs:seeAlso nen2660-term:isRealizedBy ;
+    rdfs:subPropertyOf nen2660:isPlanFor ;
     skos:definition "The realized entity that realizes a planned entity"@en ;
     skos:prefLabel "is realized by"@en .
 
@@ -717,14 +714,6 @@ nen2660:hasRequirement a rdf:Property,
     skos:definition "The (unstructured) requirement for something"@en ;
     skos:prefLabel "has requirement"@en .
 
-nen2660:hasSolution a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:domain nen2660:FunctionalEntity ;
-    rdfs:range nen2660:TechnicalEntity ;
-    rdfs:seeAlso nen2660-term:hasSolution ;
-    skos:definition "A potential technical entity that is a solution for a functional entity"@en ;
-    skos:prefLabel "has solution"@en .
-
 nen2660:hasState a rdf:Property,
         owl:ObjectProperty ;
     rdfs:domain nen2660:Entity ;
@@ -772,8 +761,6 @@ nen2660:isConnectedTo a rdf:Property,
     rdfs:seeAlso nen2660-term:isConnectedTo ;
     skos:definition "The topological relationship between physical objects"@en ;
     skos:prefLabel "is connected to"@en .
-
-nen2660:isPlanFor a owl:ObjectProperty .
 
 nen2660:overConnection a rdf:Property,
         owl:ObjectProperty ;
@@ -925,7 +912,7 @@ nen2660-term:Force a skos:Concept ;
 
 nen2660-term:FunctionalEntity a skos:Concept ;
     skos:broader nen2660-term:Entity ;
-    skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"@en ;
+    skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by technical entities"@en ;
     skos:prefLabel "Functional entity"@en,
         "Functional entity"@nl .
 
@@ -1109,7 +1096,7 @@ nen2660-term:connectsPort a skos:Concept ;
         "verbindt poort"@nl .
 
 nen2660-term:consistsOf a skos:Concept ;
-    skos:definition "The matter a real object, mixture or matter portion is made of"@en ;
+    skos:definition "The matter a real object or mixture is made of"@en ;
     skos:prefLabel "consists of"@en,
         "bestaat uit"@nl .
 
@@ -1190,11 +1177,6 @@ nen2660-term:isImplementedBy a skos:Concept ;
     skos:definition "The technical entity that implements a functional entity"@en ;
     skos:prefLabel "is implemented by"@en,
         "is geimplementeerd door"@nl .
-
-nen2660-term:isPlanFor a skos:Concept ;
-    skos:definition "A potentially realized entity according to this planed entity"@en ;
-    skos:prefLabel "is plan for"@en,
-        "is plan voor"@nl .
 
 nen2660-term:isRealizedBy a skos:Concept ;
     skos:broader nen2660-term:isPlanFor ;
@@ -1332,6 +1314,24 @@ nen2660:connectsPort a rdf:Property,
     skos:definition "The ports (as part of physical objects) connected by a connection or interface"@en ;
     skos:prefLabel "connects port"@en .
 
+nen2660:consistsOf a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( nen2660:RealObject nen2660:Mixture ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( nen2660:Matter nen2660:MatterPortion ) ] ;
+    rdfs:seeAlso nen2660-term:consistsOf ;
+    skos:definition "The matter a real object or mixture is made of"@en ;
+    skos:prefLabel "consists of"@en .
+
+nen2660:hasSolution a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:domain nen2660:FunctionalEntity ;
+    rdfs:range nen2660:TechnicalEntity ;
+    rdfs:seeAlso nen2660-term:hasSolution ;
+    skos:definition "A potential technical entity that is a solution for a functional entity"@en ;
+    skos:prefLabel "has solution"@en .
+
 nen2660:isDescribedBy a rdf:Property,
         owl:ObjectProperty ;
     rdfs:domain nen2660:TopConcept ;
@@ -1339,6 +1339,14 @@ nen2660:isDescribedBy a rdf:Property,
     rdfs:seeAlso nen2660-term:isDescribedBy ;
     skos:definition "The information object that describes something"@en ;
     skos:prefLabel "is described by"@en .
+
+nen2660:isPlanFor a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:domain nen2660:PlannedEntity ;
+    rdfs:range nen2660:RealizedEntity ;
+    rdfs:seeAlso nen2660-term:isPlanFor ;
+    skos:definition "A potentially realized entity according to this planed entity"@en ;
+    skos:prefLabel "is plan for"@en .
 
 nen2660:portion a rdf:Property,
         owl:ObjectProperty ;
@@ -1380,14 +1388,10 @@ nen2660-term:hasSolution a skos:Concept ;
     skos:prefLabel "has solution"@en,
         "heeft oplossing"@nl .
 
-nen2660:consistsOf a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:domain [ a owl:Class ;
-            owl:unionOf ( nen2660:RealObject nen2660:Mixture nen2660:MatterPortion ) ] ;
-    rdfs:range nen2660:Matter ;
-    rdfs:seeAlso nen2660-term:consistsOf ;
-    skos:definition "The matter a real object, mixture or matter portion is made of"@en ;
-    skos:prefLabel "consists of"@en .
+nen2660-term:isPlanFor a skos:Concept ;
+    skos:definition "A potentially realized entity according to this planed entity"@en ;
+    skos:prefLabel "is plan for"@en,
+        "is plan voor"@nl .
 
 nen2660:hasBoundary a rdf:Property,
         owl:ObjectProperty ;

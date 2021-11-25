@@ -331,6 +331,12 @@ nen2660:consistsOf
       owl:unionOf (
           nen2660:RealObject
           nen2660:Mixture
+        ) ;
+    ] ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          nen2660:Matter
           nen2660:MatterPortion
         ) ;
     ] ;

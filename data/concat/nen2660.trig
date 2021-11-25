@@ -10,1083 +10,6 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/nen2660/rdfs/def> {
-    nen2660:AbstractConcept a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:AbstractConcept ;
-        rdfs:subClassOf nen2660:TopConcept ;
-        skos:definition "An objectification or type"@en ;
-        skos:prefLabel "Abstract concept"@en .
-
-    nen2660:Activity a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Activity ;
-        rdfs:subClassOf nen2660:Entity ;
-        skos:definition "An activity is something possibly or actually happening in space and time"@en ;
-        skos:prefLabel "Activity"@en .
-
-    nen2660:AggregationStateType a rdfs:Class,
-            nen2660:EnumerationType ;
-        rdfs:seeAlso nen2660-term:AggregationStateType ;
-        skos:definition "One of the four fundamental states of matter being solid, liquid, gas or plasma"@en ;
-        skos:prefLabel "Aggregation state type"@en .
-
-    nen2660:AmountOfBulkMatter a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:AmountOfBulkMatter ;
-        rdfs:subClassOf nen2660:RealObject ;
-        skos:definition "A real object consisting of a continuous amount of non-rigid (bulk) matter, held together primarily by external forces like gravity or confinement"@en ;
-        skos:prefLabel "Amount of bulk matter"@en .
-
-    nen2660:ChemicalBonding a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:ChemicalBonding ;
-        rdfs:subClassOf nen2660:PureSubstance ;
-        skos:definition "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical bonding, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en ;
-        skos:prefLabel "Chemical bonding"@en .
-
-    nen2660:ChemicalElement a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:ChemicalElement ;
-        rdfs:subClassOf nen2660:PureSubstance ;
-        skos:definition "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"@en ;
-        skos:prefLabel "Chemical element"@en .
-
-    nen2660:ConceptType a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:ConceptType ;
-        rdfs:subClassOf nen2660:Type ;
-        skos:definition "A metaconcept having concepts as instances that can have attributes or relations"@en ;
-        skos:prefLabel "Concept type"@en .
-
-    nen2660:ConcreteConcept a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:ConcreteConcept ;
-        rdfs:subClassOf nen2660:TopConcept ;
-        skos:definition "An entity, event or state"@en ;
-        skos:prefLabel "Concrete concept"@en .
-
-    nen2660:Connection a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Connection ;
-        rdfs:subClassOf nen2660:PhysicalObject ;
-        skos:definition "The thing at which two or more things are connected"@en ;
-        skos:prefLabel "Connection"@en .
-
-    nen2660:DiscreteObject a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:DiscreteObject ;
-        rdfs:subClassOf nen2660:RealObject ;
-        skos:definition "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity, electromagnetic force)"@en ;
-        skos:prefLabel "Discrete object"@en .
-
-    nen2660:Entity a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Entity ;
-        rdfs:subClassOf nen2660:ConcreteConcept ;
-        skos:definition "An object or an activity"@en ;
-        skos:prefLabel "Entity"@en .
-
-    nen2660:EnumerationType a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:EnumerationType ;
-        rdfs:subClassOf rdfs:Container,
-            nen2660:Type ;
-        skos:definition "A metaconcept having concepts as instances having no further attributes or relations (annotations only)"@en ;
-        skos:prefLabel "Enumeration type"@en .
-
-    nen2660:Event a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Event ;
-        rdfs:subClassOf nen2660:ConcreteConcept ;
-        skos:definition "A thing that happens or takes place and marks the beginning or ending of a state"@en ;
-        skos:prefLabel "Event"@en .
-
-    nen2660:FunctionalEntity a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:FunctionalEntity ;
-        rdfs:subClassOf nen2660:Entity ;
-        skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"@en ;
-        skos:prefLabel "Functional entity"@en .
-
-    nen2660:GeometricEntity a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:GeometricEntity ;
-        rdfs:subClassOf nen2660:Representation ;
-        skos:definition "A spatial representation"@en ;
-        skos:prefLabel "Geometric entity"@en .
-
-    nen2660:HeterogeneousMixture a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:HeterogeneousMixture ;
-        rdfs:subClassOf nen2660:Mixture ;
-        skos:definition "A mixture that is separated into different regions or phases that have different compositions or properties"@en ;
-        skos:prefLabel "Heterogeneous mixture"@en .
-
-    nen2660:HomogeneousMixture a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:HomogeneousMixture ;
-        rdfs:subClassOf nen2660:Mixture ;
-        skos:definition "A mixture that is uniform throughout, and has only one phase"@en ;
-        skos:prefLabel "Homogeneous mixture"@en .
-
-    nen2660:InformationObject a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:InformationObject ;
-        rdfs:subClassOf nen2660:Object ;
-        skos:definition "Thing that is a whole of information on itself and has an own identity"@en ;
-        skos:prefLabel "Information object"@en .
-
-    nen2660:Interaction a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Interaction ;
-        rdfs:subClassOf nen2660:Activity ;
-        skos:definition "The activity in which two or more objects act upon one another to produce a new effect"@en ;
-        skos:prefLabel "Interaction"@en .
-
-    nen2660:Interface a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Interface ;
-        rdfs:subClassOf nen2660:SpatialRegion ;
-        skos:definition "The spatial region being a point of interaction between entities"@en ;
-        skos:prefLabel "Interface"@en .
-
-    nen2660:Matter a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Matter ;
-        rdfs:subClassOf nen2660:PhysicalObject ;
-        skos:definition "A pure chemical substance, chemical bonding or mixture from which real objects are made"@en ;
-        skos:prefLabel "Matter"@en .
-
-    nen2660:MatterPortion a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:MatterPortion ;
-        rdfs:subClassOf nen2660:RelationReference ;
-        skos:definition "An objectified relation reference for the 'consists of' relation"@en ;
-        skos:prefLabel "Matter portion"@en .
-
-    nen2660:Mixture a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Mixture ;
-        rdfs:subClassOf nen2660:Matter ;
-        skos:definition "Matter that consists of multiple forms of pure matter"@en ;
-        skos:prefLabel "Mixture"@en .
-
-    nen2660:Object a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Object ;
-        rdfs:subClassOf nen2660:Entity ;
-        skos:definition "A physical object or an information object"@en ;
-        skos:prefLabel "Object"@en .
-
-    nen2660:Objectification a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Objectification ;
-        rdfs:subClassOf nen2660:AbstractConcept ;
-        skos:definition "An attribute (quality or quantity) or relation represented as an individual defined by a concept"@en ;
-        skos:prefLabel "Objectification"@en .
-
-    nen2660:PhysicalObject a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:PhysicalObject ;
-        rdfs:subClassOf nen2660:Object ;
-        skos:definition "Something that possibly or actually exists in space and time, perceivable through the senses"@en ;
-        skos:prefLabel "Physical object"@en .
-
-    nen2660:PlannedEntity a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:PlannedEntity ;
-        rdfs:subClassOf nen2660:Entity ;
-        skos:definition "An entity that does not yet exist or does not yet exist in the desired form"@en ;
-        skos:prefLabel "Planned entity"@en .
-
-    nen2660:Port a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Port ;
-        rdfs:subClassOf nen2660:PhysicalObject ;
-        skos:definition "Explicit part of an entity where interaction with other entities can take place via a connection or interface"@en ;
-        skos:prefLabel "Port"@en .
-
-    nen2660:PureSubstance a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:PureSubstance ;
-        rdfs:subClassOf nen2660:Matter ;
-        skos:definition "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
-        skos:prefLabel "Pure substance"@en .
-
-    nen2660:QualityValue a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:QualityValue ;
-        rdfs:subClassOf nen2660:Objectification ;
-        skos:definition "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
-        skos:prefLabel "Quality value"@en .
-
-    nen2660:QuantityValue a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:QuantityValue ;
-        rdfs:subClassOf nen2660:Objectification ;
-        skos:definition "The objectification of a value of a quantity (involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
-        skos:prefLabel "Quantity value"@en .
-
-    nen2660:RealObject a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:RealObject ;
-        rdfs:subClassOf nen2660:PhysicalObject ;
-        skos:definition "A physical object that can be tangible and visible in reality such as artifacts including bridges, tanks and devices, and natural objects including terrains, banks, water bottoms and trees"@en ;
-        skos:prefLabel "Real object"@en .
-
-    nen2660:RealizedEntity a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:RealizedEntity ;
-        rdfs:subClassOf nen2660:Entity ;
-        skos:definition "An entity that exists or has existed"@en ;
-        skos:prefLabel "Realized entity"@en .
-
-    nen2660:RelationReference a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:RelationReference ;
-        rdfs:subClassOf nen2660:Objectification ;
-        skos:definition "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relationships)"@en ;
-        skos:prefLabel "Relation reference"@en .
-
-    nen2660:Representation a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Representation ;
-        rdfs:subClassOf nen2660:InformationObject ;
-        skos:definition "That which represents something else"@en ;
-        skos:prefLabel "Representation"@en .
-
-    nen2660:Requirement a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Requirement ;
-        rdfs:subClassOf nen2660:InformationObject ;
-        skos:definition "A rule that should hold for something, defined w.r.t. to its attributes or relations" ;
-        skos:prefLabel "Requirement"@en .
-
-    nen2660:RequirementSeverityType a rdfs:Class,
-            nen2660:EnumerationType ;
-        rdfs:seeAlso nen2660-term:RequirementSeverityType ;
-        skos:definition "The seriousness of a requirement like demanded or wished"@en ;
-        skos:prefLabel "Requirement severity type"@en .
-
-    nen2660:RequirementSourceType a rdfs:Class,
-            nen2660:EnumerationType ;
-        rdfs:seeAlso nen2660-term:RequirementSourceType ;
-        skos:definition "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"@en ;
-        skos:prefLabel "Requirement source type"@en .
-
-    nen2660:SpatialRegion a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:SpatialRegion ;
-        rdfs:subClassOf nen2660:PhysicalObject ;
-        skos:definition "A physical object that encloses a certain area such as rooms, roads and rivers that is bound by real objects, other spacetial regions or based on use or convention and that is empty or contains discrete or liquid or gaseous matter"@en ;
-        skos:prefLabel "Spatial region"@en .
-
-    nen2660:State a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:State ;
-        rdfs:subClassOf nen2660:ConcreteConcept ;
-        skos:definition "A temporal part of an entity during a period between events. A state is characterized by the attributes and relationships of the entity. ”"@en ;
-        skos:prefLabel "State"@en .
-
-    nen2660:TechnicalEntity a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:TechnicalEntity ;
-        rdfs:subClassOf nen2660:Entity ;
-        skos:definition "An entity having technical properties and relations (what it is) that implements/plays functional entities"@en ;
-        skos:prefLabel "Technical entity"@en .
-
-    nen2660:TopConcept a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:TopConcept ;
-        skos:definition "The most generic root concept of nen2660"@en ;
-        skos:prefLabel "Top concept"@en .
-
-    nen2660:TransferType a rdfs:Class,
-            nen2660:EnumerationType ;
-        rdfs:seeAlso nen2660-term:TransferType ;
-        skos:definition "The type of thing being transferred, here: material, information, energy or force"@en ;
-        skos:prefLabel "Transfer type"@en .
-
-    nen2660:Type a rdfs:Class ;
-        rdfs:seeAlso nen2660-term:Type ;
-        rdfs:subClassOf nen2660:AbstractConcept ;
-        skos:definition "A meta-concept which instances are concepts (not individuals)"@en ;
-        skos:prefLabel "Type"@en .
-
-    nen2660:VerificationMethodType a rdfs:Class,
-            nen2660:EnumerationType ;
-        rdfs:seeAlso nen2660-term:VerificationMethodType ;
-        skos:definition "The method by which a requirement is verified like monitoring, analysis, observation etc."@en ;
-        skos:prefLabel "Verification method type"@en .
-
-    nen2660:EnergyFlow a nen2660:TransferType ;
-        rdfs:seeAlso nen2660-term:EnergyFlow ;
-        skos:definition "The movement of an amount of energy (as capacity to do work)"@en ;
-        skos:prefLabel "Energy flow"@en .
-
-    nen2660:Fluid a nen2660:AggregationStateType ;
-        rdfs:seeAlso nen2660-term:Fluid ;
-        skos:definition "One of the four fundamental states of matter"@en ;
-        skos:prefLabel "Fluid"@en .
-
-    nen2660:Force a nen2660:TransferType ;
-        rdfs:seeAlso nen2660-term:Force ;
-        skos:definition "A physical quantity that denotes ability to push, pull, twist or accelerate a body"@en ;
-        skos:prefLabel "Force"@en .
-
-    nen2660:Gas a nen2660:AggregationStateType ;
-        rdfs:seeAlso nen2660-term:Gas ;
-        skos:definition "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"@en ;
-        skos:prefLabel "Gas"@en .
-
-    nen2660:InformationFlow a nen2660:TransferType ;
-        rdfs:seeAlso nen2660-term:InformationFlow ;
-        skos:definition "The movement of information represented in some medium"@en ;
-        skos:prefLabel "Information flow"@en .
-
-    nen2660:MaterialFlow a nen2660:TransferType ;
-        rdfs:seeAlso nen2660-term:MaterialFlow ;
-        skos:definition "The movement of an amount of matter"@en ;
-        skos:prefLabel "Material flow"@en .
-
-    nen2660:Plasma a nen2660:AggregationStateType ;
-        rdfs:seeAlso nen2660-term:Plasma ;
-        skos:definition "One of the four fundamental states of matter"@en ;
-        skos:prefLabel "Plasma"@en .
-
-    nen2660:Solid a nen2660:AggregationStateType ;
-        rdfs:seeAlso nen2660-term:Solid ;
-        skos:definition "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"@en ;
-        skos:prefLabel "Solid"@en .
-
-    nen2660:abbreviation a rdf:Property ;
-        rdfs:domain nen2660:TopConcept ;
-        rdfs:range xsd:string ;
-        rdfs:seeAlso nen2660-term:abbreviation ;
-        rdfs:subPropertyOf skos:altLabel ;
-        skos:definition "Acronym or initial word as special case of an external name"@en ;
-        skos:prefLabel "abbreviation"@en .
-
-    nen2660:aggregationStateType a rdf:Property ;
-        rdfs:domain nen2660:Matter ;
-        rdfs:range nen2660:AggregationStateType ;
-        rdfs:seeAlso nen2660-term:aggregationStateType ;
-        skos:definition "The possession of an aggregation state type"@en ;
-        skos:prefLabel "aggregation state type"@en .
-
-    nen2660:begins a rdf:Property ;
-        rdfs:domain nen2660:Event ;
-        rdfs:range nen2660:State ;
-        rdfs:seeAlso nen2660-term:begins ;
-        skos:definition "The state that is started by an event"@en ;
-        skos:prefLabel "begins"@en .
-
-    nen2660:chemicalFormula a rdf:Property ;
-        rdfs:domain nen2660:Matter ;
-        rdfs:range xsd:string ;
-        rdfs:seeAlso nen2660-term:chemicalFormula ;
-        skos:definition "The possession of information about the chemical proportions of atoms that constitute a particular chemical bonding"@en ;
-        skos:prefLabel "chemical formula"@en .
-
-    nen2660:connectsObject a rdf:Property ;
-        rdfs:range nen2660:PhysicalObject ;
-        rdfs:seeAlso nen2660-term:connectsObject ;
-        skos:definition "The physical objects connected by a connection or interface"@en ;
-        skos:prefLabel "connects object"@en .
-
-    nen2660:connectsPort a rdf:Property ;
-        rdfs:range nen2660:Port ;
-        rdfs:seeAlso nen2660-term:connectsPort ;
-        skos:definition "The ports (as part of physical objects) connected by a connection or interface"@en ;
-        skos:prefLabel "connects port"@en .
-
-    nen2660:consistsOf a rdf:Property ;
-        rdfs:range nen2660:Matter ;
-        rdfs:seeAlso nen2660-term:consistsOf ;
-        skos:definition "The matter a real object, mixture or matter portion is made of"@en ;
-        skos:prefLabel "consists of"@en .
-
-    nen2660:contains a rdf:Property ;
-        rdfs:domain nen2660:SpatialRegion ;
-        rdfs:range nen2660:RealObject ;
-        rdfs:seeAlso nen2660-term:contains ;
-        skos:definition "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en ;
-        skos:prefLabel "contains"@en .
-
-    nen2660:ends a rdf:Property ;
-        rdfs:domain nen2660:Event ;
-        rdfs:range nen2660:State ;
-        rdfs:seeAlso nen2660-term:ends ;
-        skos:definition "The state that is ended by an event"@en ;
-        skos:prefLabel "ends"@en .
-
-    nen2660:hasBoundary a rdf:Property ;
-        rdfs:domain nen2660:ConcreteConcept ;
-        rdfs:range nen2660:GeometricEntity ;
-        rdfs:seeAlso nen2660-term:hasBoundary ;
-        skos:definition "The geometric entity representing the boundary of a concrete concept"@en ;
-        skos:prefLabel "has boundary"@en .
-
-    nen2660:hasFunctionalPart a rdf:Property ;
-        rdfs:domain nen2660:FunctionalEntity ;
-        rdfs:range nen2660:FunctionalEntity ;
-        rdfs:seeAlso nen2660-term:hasFunctionalPart ;
-        rdfs:subPropertyOf nen2660:hasPart ;
-        skos:definition "The hasPart relation of a functional nature"@en ;
-        skos:prefLabel "has functional part"@en .
-
-    nen2660:hasInterior a rdf:Property ;
-        rdfs:domain nen2660:ConcreteConcept ;
-        rdfs:range nen2660:GeometricEntity ;
-        rdfs:seeAlso nen2660-term:hasInterior ;
-        skos:definition "The geometric entity representing the interior of a concrete concept"@en ;
-        skos:prefLabel "has interior"@en .
-
-    nen2660:hasPartsGroup a rdf:Property ;
-        rdfs:domain nen2660:ConcreteConcept ;
-        rdfs:range nen2660:ConcreteConcept ;
-        rdfs:seeAlso nen2660-term:hasPart ;
-        skos:definition "A relationship between any concrete concept and an implicit, often member-constrained, group of parts"@en ;
-        skos:prefLabel "has parts group"@en .
-
-    nen2660:hasQuantityKind a rdf:Property ;
-        rdfs:range qudt:QuantityKind ;
-        rdfs:seeAlso nen2660-term:hasQuantityKind ;
-        skos:definition "The possession of a quantity kind as defined by QUDT"@en ;
-        skos:prefLabel "has quantity kind"@en .
-
-    nen2660:hasRequirement a rdf:Property ;
-        rdfs:domain nen2660:TopConcept ;
-        rdfs:range nen2660:Requirement ;
-        rdfs:seeAlso nen2660-term:hasRequirement ;
-        skos:definition "The (unstructured) requirement for something"@en ;
-        skos:prefLabel "has requirement"@en .
-
-    nen2660:hasSolution a rdf:Property ;
-        rdfs:domain nen2660:FunctionalEntity ;
-        rdfs:range nen2660:TechnicalEntity ;
-        rdfs:seeAlso nen2660-term:hasSolution ;
-        skos:definition "A potential technical entity that is a solution for a functional entity"@en ;
-        skos:prefLabel "has solution"@en .
-
-    nen2660:hasState a rdf:Property ;
-        rdfs:domain nen2660:Entity ;
-        rdfs:range nen2660:State ;
-        rdfs:seeAlso nen2660-term:hasState ;
-        skos:definition "The state of an entity in a certain point or period of time"@en ;
-        skos:prefLabel "has state"@en .
-
-    nen2660:hasTechnicalPart a rdf:Property ;
-        rdfs:domain nen2660:TechnicalEntity ;
-        rdfs:range nen2660:TechnicalEntity ;
-        rdfs:seeAlso nen2660-term:hasTechnicalPart ;
-        rdfs:subPropertyOf nen2660:hasPart ;
-        skos:definition "A hasPart relation of a technical nature"@en ;
-        skos:prefLabel "has technical part"@en .
-
-    nen2660:hasTemporalEntity a rdf:Property ;
-        rdfs:domain nen2660:ConcreteConcept ;
-        rdfs:range time:TemporalEntity ;
-        rdfs:seeAlso nen2660-term:hasTemporalEntity ;
-        skos:definition "The temporal entity representing a concrete concept in time"@en ;
-        skos:prefLabel "has temporal entity"@en .
-
-    nen2660:hasUnit a rdf:Property ;
-        rdfs:range qudt:Unit ;
-        rdfs:seeAlso nen2660-term:hasUnit ;
-        skos:definition "The possession of a unit as defined by QUDT"@en ;
-        skos:prefLabel "has unit"@en .
-
-    nen2660:isBoundBy a rdf:Property ;
-        rdfs:domain nen2660:SpatialRegion ;
-        rdfs:range nen2660:PhysicalObject ;
-        rdfs:seeAlso nen2660-term:isBoundBy ;
-        skos:definition "The physical object that bounds a spatial region"@en ;
-        skos:prefLabel "is bound by"@en .
-
-    nen2660:isConnectedTo a rdf:Property ;
-        rdfs:domain nen2660:PhysicalObject ;
-        rdfs:range nen2660:PhysicalObject ;
-        rdfs:seeAlso nen2660-term:isConnectedTo ;
-        skos:definition "The topological relationship between physical objects"@en ;
-        skos:prefLabel "is connected to"@en .
-
-    nen2660:isDescribedBy a rdf:Property ;
-        rdfs:domain nen2660:TopConcept ;
-        rdfs:range nen2660:InformationObject ;
-        rdfs:seeAlso nen2660-term:isDescribedBy ;
-        skos:definition "The information object that describes something"@en ;
-        skos:prefLabel "is described by"@en .
-
-    nen2660:isImplementedBy a rdf:Property ;
-        rdfs:domain nen2660:FunctionalEntity ;
-        rdfs:range nen2660:TechnicalEntity ;
-        rdfs:seeAlso nen2660-term:isImplementedBy ;
-        rdfs:subPropertyOf <https://w3id.org/nen2660/def#2660:hasSolution> ;
-        skos:definition "The technical entity that implements a functional entity"@en ;
-        skos:prefLabel "is implemented by"@en .
-
-    nen2660:isRealizedBy a rdf:Property ;
-        rdfs:domain nen2660:PlannedEntity ;
-        rdfs:range nen2660:RealizedEntity ;
-        rdfs:seeAlso nen2660-term:isRealizedBy ;
-        skos:definition "The realized entity that realizes a planned entity"@en ;
-        skos:prefLabel "is realized by"@en .
-
-    nen2660:overConnection a rdf:Property ;
-        rdfs:domain nen2660:Interaction ;
-        rdfs:range nen2660:Connection ;
-        rdfs:seeAlso nen2660-term:overConnection ;
-        skos:definition "The connection over which an interaction between physical objects takes place"@en ;
-        skos:prefLabel "over connection"@en .
-
-    nen2660:overInterface a rdf:Property ;
-        rdfs:domain nen2660:Interaction ;
-        rdfs:range nen2660:Interface ;
-        rdfs:seeAlso nen2660-term:overInterface ;
-        skos:definition "The interface over which an interaction between physical objects takes place"@en ;
-        skos:prefLabel "over interface"@en .
-
-    nen2660:participatesIn a rdf:Property ;
-        rdfs:domain nen2660:PhysicalObject ;
-        rdfs:range nen2660:Interaction ;
-        rdfs:seeAlso nen2660-term:participatesIn ;
-        skos:definition "The interaction a physical object participates in"@en ;
-        skos:prefLabel "participates in"@en .
-
-    nen2660:performs a rdf:Property ;
-        rdfs:domain nen2660:PhysicalObject ;
-        rdfs:range nen2660:Activity ;
-        rdfs:seeAlso nen2660-term:performs ;
-        skos:definition "The activity performed by a physical object"@en ;
-        skos:prefLabel "performs"@en .
-
-    nen2660:portion a rdf:Property ;
-        rdfs:domain nen2660:MatterPortion ;
-        rdfs:range nen2660:QuantityValue ;
-        rdfs:seeAlso nen2660-term:portion ;
-        skos:definition "The actual relative portion of a matter portion"@en ;
-        skos:prefLabel "portion"@en ;
-        nen2660:hasQuantityKind quantitykind:DimensionlessRatio .
-
-    nen2660:requirementSeverityType a rdf:Property ;
-        rdfs:domain nen2660:Requirement ;
-        rdfs:range nen2660:RequirementSeverityType ;
-        rdfs:seeAlso nen2660-term:requirementSeverityType ;
-        skos:definition "The possession of a severity type by a requirement"@en ;
-        skos:prefLabel "requirement severity type"@en .
-
-    nen2660:requirementSourceType a rdf:Property ;
-        rdfs:domain nen2660:Requirement ;
-        rdfs:range nen2660:RequirementSourceType ;
-        rdfs:seeAlso nen2660-term:requirementSourceType ;
-        skos:definition "The possession of a source type by a requirement"@en ;
-        skos:prefLabel "requirement source type"@en .
-
-    nen2660:requirementTopicType a rdf:Property ;
-        rdfs:domain nen2660:Requirement ;
-        rdfs:range nen2660:RequirementTopicType ;
-        rdfs:seeAlso nen2660-term:requirementTopicType ;
-        skos:definition "The possession of a topic type by a requirement"@en ;
-        skos:prefLabel "requirement topic type"@en .
-
-    nen2660:transferType a rdf:Property ;
-        rdfs:domain nen2660:Interaction ;
-        rdfs:range nen2660:TransferType ;
-        rdfs:seeAlso nen2660-term:transferType ;
-        skos:definition "The possession of a transfer type by an interaction"@en ;
-        skos:prefLabel "transfer type"@en .
-
-    nen2660:transforms a rdf:Property ;
-        rdfs:domain nen2660:Activity ;
-        rdfs:range nen2660:Object ;
-        rdfs:seeAlso nen2660-term:transforms ;
-        skos:definition "The object transformed by an activity"@en ;
-        skos:prefLabel "transforms"@en .
-
-    nen2660:triggers a rdf:Property ;
-        rdfs:domain nen2660:Entity ;
-        rdfs:range nen2660:Event ;
-        rdfs:seeAlso nen2660-term:triggers ;
-        skos:definition "The event triggert by an entity"@en ;
-        skos:prefLabel "triggers"@en .
-
-    nen2660:verificationMethodType a rdf:Property ;
-        rdfs:domain nen2660:Requirement ;
-        rdfs:range nen2660:VerificationMethodType ;
-        rdfs:seeAlso nen2660-term:verificationMethodType ;
-        skos:definition "The possession of a verification method type by a requirement"@en ;
-        skos:prefLabel "verification method type"@en .
-
-    <https://w3id.org/nen2660/rdfs/def> a owl:Ontology ;
-        owl:imports <http://qudt.org/schema/qudt>,
-            <http://qudt.org/vocab/quantitykind>,
-            <http://qudt.org/vocab/unit>,
-            <http://www.w3.org/2004/02/skos/core>,
-            <http://www.w3.org/2006/time>,
-            <http://www.w3.org/ns/shacl> .
-
-    qudt:QuantityKind a nen2660:EnumerationType ;
-        rdfs:seeAlso nen2660-term:QuantityKind ;
-        skos:definition "Base or derived kind of quantity like length or time"@en ;
-        skos:prefLabel "Quantity kind"@en .
-
-    qudt:Unit a nen2660:EnumerationType ;
-        rdfs:seeAlso nen2660-term:Unit ;
-        skos:definition "A scale of measurement"@en ;
-        skos:prefLabel "Unit"@en .
-
-    time:TemporalEntity rdfs:seeAlso nen2660-term:TemporalEntity ;
-        rdfs:subClassOf nen2660:Representation ;
-        skos:definition "A temporal representation"@en ;
-        skos:prefLabel "Temporal entity"@en .
-
-    nen2660:hasPart a rdf:Property ;
-        rdfs:domain nen2660:ConcreteConcept ;
-        rdfs:range nen2660:ConcreteConcept ;
-        rdfs:seeAlso nen2660-term:hasPart ;
-        skos:definition "A decomposition relationship between physical objects themselves, between information objects themselves or between activities themselves"@en ;
-        skos:prefLabel "has part"@en .
-}
-
-<https://w3id.org/nen2660/shacl/def> {
-    nen2660:AllDisjointClassesShape a sh:NodeShape ;
-        sh:property [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-                sh:qualifiedMaxCount 1 ;
-                sh:qualifiedValueShape [ sh:in ( nen2660:PlannedEntity nen2660:RealizedEntity ) ] ],
-            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-                sh:qualifiedMaxCount 1 ;
-                sh:qualifiedValueShape [ sh:in ( nen2660:PhysicalObject nen2660:InformationObject nen2660:State nen2660:Event nen2660:Activity ) ] ],
-            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-                sh:qualifiedMaxCount 1 ;
-                sh:qualifiedValueShape [ sh:in ( nen2660:RealObject nen2660:SpatialRegion ) ] ],
-            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-                sh:qualifiedMaxCount 1 ;
-                sh:qualifiedValueShape [ sh:in ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) ] ] ;
-        sh:targetSubjectsOf rdf:type .
-
-    nen2660:Entity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:State ;
-                sh:path nen2660:hasState ],
-            [ sh:class nen2660:Event ;
-                sh:path nen2660:triggers ] .
-
-    nen2660:MatterPortion a sh:NodeShape ;
-        sh:property [ sh:class nen2660:Matter ;
-                sh:maxCount 1 ;
-                sh:minCount 1 ;
-                sh:path nen2660:consistsOf ],
-            [ sh:class nen2660:QuantityValue ;
-                sh:maxCount 1 ;
-                sh:minCount 1 ;
-                sh:path nen2660:portion ] .
-
-    nen2660:Mixture a sh:NodeShape ;
-        sh:property [ sh:class nen2660:Matter ;
-                sh:path nen2660:consistsOf ] .
-
-    nen2660:Objectification a sh:NodeShape ;
-        sh:property [ sh:maxCount 1 ;
-                sh:path rdf:value ] .
-
-    nen2660:QualityValue a sh:NodeShape ;
-        sh:property [ sh:datatype xsd:string ;
-                sh:path rdf:value ] .
-
-    nen2660:RelationReference a sh:NodeShape ;
-        sh:property [ sh:datatype xsd:anyURI ;
-                sh:path rdf:value ] .
-
-    nen2660:TopConcept a sh:NodeShape ;
-        sh:property [ sh:datatype xsd:string ;
-                sh:path nen2660:abbreviation ],
-            [ sh:class nen2660:Requirement ;
-                sh:path nen2660:hasRequirement ],
-            [ sh:class nen2660:Requirement ;
-                sh:path nen2660:isDescribedBy ] .
-
-    nen2660:hasQuantityKindShape a sh:NodeShape ;
-        sh:class qudt:QuantityKind ;
-        sh:targetObjectsOf nen2660:hasQuantityKind .
-
-    nen2660:hasUnitShape a sh:NodeShape ;
-        sh:class qudt:Unit ;
-        sh:targetObjectsOf nen2660:hasUnit .
-
-    <https://w3id.org/nen2660/shacl/def> a owl:Ontology ;
-        owl:imports <http://qudt.org/schema/qudt>,
-            <http://qudt.org/vocab/quantitykind>,
-            <http://qudt.org/vocab/unit>,
-            <http://www.w3.org/2004/02/skos/core>,
-            <http://www.w3.org/2006/time>,
-            <http://www.w3.org/ns/shacl>,
-            <https://w3id.org/nen2660/rdfs/def> .
-
-    nen2660:AggregationStateType a sh:NodeShape ;
-        sh:in ( nen2660:Solid nen2660:Fluid nen2660:Gas nen2660:Plasma ) .
-
-    nen2660:ConcreteConcept a sh:NodeShape ;
-        sh:property [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasBoundary ],
-            [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasInterior ],
-            [ sh:class nen2660:TemporalEntity ;
-                sh:path nen2660:hasTemporalEntity ],
-            [ sh:class nen2660:ConcreteConcept ;
-                sh:path nen2660:hasPart ] .
-
-    nen2660:Connection a sh:NodeShape ;
-        sh:property [ sh:class nen2660:PhysicalObject ;
-                sh:path nen2660:connectsObject ],
-            [ sh:class nen2660:Port ;
-                sh:path nen2660:connectsPort ] .
-
-    nen2660:FunctionalEntity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:FunctionalPart ;
-                sh:path nen2660:hasFunctionalPart ],
-            [ sh:class nen2660:TechnicalEntity ;
-                sh:path nen2660:hasSolution ] .
-
-    nen2660:Interaction a sh:NodeShape ;
-        sh:property [ sh:class nen2660:Connection ;
-                sh:path nen2660:overConnection ],
-            [ sh:class nen2660:Interface ;
-                sh:path nen2660:overInterface ],
-            [ sh:class nen2660:TransferType ;
-                sh:path nen2660:transferType ] .
-
-    nen2660:Interface a sh:NodeShape ;
-        sh:property [ sh:class nen2660:PhysicalObject ;
-                sh:path nen2660:connectsObject ],
-            [ sh:class nen2660:Port ;
-                sh:path nen2660:connectsPort ] .
-
-    nen2660:QuantityValue a sh:NodeShape ;
-        sh:property [ sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:float ] [ sh:datatype xsd:double ] ) ;
-                sh:path rdf:value ] .
-
-    nen2660:TransferType a sh:NodeShape ;
-        sh:in ( nen2660:MaterialFlow nen2660:EnergyFlow nen2660:InformationFlow nen2660:Force ) .
-
-    nen2660:PlannedEntity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:PlannedEntity ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:RealizedEntity ;
-                sh:path nen2660:isPlanFor ] .
-
-    nen2660:Requirement a sh:NodeShape ;
-        sh:property [ sh:datatype xsd:string ;
-                sh:maxCount 1 ;
-                sh:minCount 1 ;
-                sh:path rdf:value ],
-            [ sh:class nen2660:RequirementSeverityType ;
-                sh:path nen2660:requirementSeverityType ],
-            [ sh:class nen2660:RequirementSourceType ;
-                sh:path nen2660:requirementSourceType ],
-            [ sh:class nen2660:RequirementTopicType ;
-                sh:path nen2660:requirementTopicType ],
-            [ sh:class nen2660:VerificationMethodType ;
-                sh:path nen2660:verificationMethodType ] .
-
-    nen2660:SpatialRegion a sh:NodeShape ;
-        sh:property [ sh:class nen2660:RealObject ;
-                sh:path nen2660:contains ],
-            [ sh:class [ a owl:Class ;
-                        owl:unionOf ( nen2660:SpatialRegion nen2660:Port ) ] ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:PhysicalObject ;
-                sh:path nen2660:isBoundBy ] .
-
-    nen2660:Activity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasBoundary ],
-            [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasInterior ],
-            [ sh:class nen2660:Activity ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:TemporalEntity ;
-                sh:path nen2660:hasPeriod ],
-            [ sh:class nen2660:Object ;
-                sh:path nen2660:transforms ] .
-
-    nen2660:Event a sh:NodeShape ;
-        sh:property [ sh:class nen2660:State ;
-                sh:path nen2660:begins ],
-            [ sh:class nen2660:State ;
-                sh:path nen2660:ends ],
-            [ sh:class nen2660:Event ;
-                sh:path nen2660:hasPart ] .
-
-    nen2660:InformationObject a sh:NodeShape ;
-        sh:property [ sh:class nen2660:InformationObject ;
-                sh:path nen2660:hasPart ] .
-
-    nen2660:Matter a sh:NodeShape ;
-        sh:property [ sh:class nen2660:AggregationStateType ;
-                sh:path nen2660:aggregationStateType ],
-            [ sh:datatype xsd:string ;
-                sh:path nen2660:chemicalFormula ] .
-
-    nen2660:RealObject a sh:NodeShape ;
-        sh:property [ sh:class nen2660:Matter ;
-                sh:path nen2660:consistsOf ],
-            [ sh:class [ a owl:Class ;
-                        owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
-                sh:path nen2660:hasPart ] .
-
-    nen2660:RealizedEntity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:RealizedEntity ;
-                sh:path nen2660:hasPart ] .
-
-    nen2660:TechnicalEntity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:TechnicalEntity ;
-                sh:path nen2660:hasTechnicalPart ] .
-
-    nen2660:State a sh:NodeShape ;
-        sh:property [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasBoundary ],
-            [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasInterior ],
-            [ sh:class nen2660:State ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:TemporalEntity ;
-                sh:path nen2660:hasPeriod ] .
-
-    nen2660:PhysicalObject a sh:NodeShape ;
-        sh:property [ sh:class nen2660:PhysicalObject ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:PhysicalObject ;
-                sh:path nen2660:isConnectedTo ],
-            [ sh:class nen2660:InformationObject ;
-                sh:path nen2660:isDescribedBy ],
-            [ sh:class nen2660:Interaction ;
-                sh:path nen2660:participatesIn ],
-            [ sh:class nen2660:Activity ;
-                sh:path nen2660:performs ] .
-}
-
-<https://w3id.org/nen2660/owl/def> {
-    nen2660:AbstractConcept a owl:Class .
-
-    nen2660:AggregationStateType a owl:Class ;
-        owl:oneOf ( nen2660:Solid nen2660:Fluid nen2660:Gas nen2660:Plasma ) .
-
-    nen2660:AllDisjointClasses_1 a owl:AllDisjointClasses ;
-        owl:members ( nen2660:PhysicalObject nen2660:InformationObject nen2660:Activity nen2660:Event nen2660:State ) .
-
-    nen2660:AllDisjointClasses_2 a owl:AllDisjointClasses ;
-        owl:members ( nen2660:RealObject nen2660:SpatialRegion ) .
-
-    nen2660:AllDisjointClasses_3 a owl:AllDisjointClasses ;
-        owl:members ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) .
-
-    nen2660:AllDisjointClasses_4 a owl:AllDisjointClasses ;
-        owl:members ( nen2660:PlannedEntity nen2660:RealizedEntity ) .
-
-    nen2660:AmountOfBulkMatter a owl:Class .
-
-    nen2660:ChemicalBonding a owl:Class .
-
-    nen2660:ChemicalElement a owl:Class .
-
-    nen2660:ConceptType a owl:Class .
-
-    nen2660:ConcreteConcept a owl:Class .
-
-    nen2660:DiscreteObject a owl:Class .
-
-    nen2660:EnumerationType a owl:Class .
-
-    nen2660:GeometricEntity a owl:Class .
-
-    nen2660:HeterogeneousMixture a owl:Class .
-
-    nen2660:HomogeneousMixture a owl:Class .
-
-    nen2660:Interaction a owl:Class .
-
-    nen2660:Object a owl:Class .
-
-    nen2660:Objectification a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty rdf:value ] .
-
-    nen2660:PureSubstance a owl:Class .
-
-    nen2660:QualityValue a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty rdf:value ] .
-
-    nen2660:QuantityValue a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom [ a owl:Class ;
-                        owl:unionOf ( xsd:decimal xsd:float xsd:double ) ] ;
-                owl:onProperty rdf:value ] .
-
-    nen2660:RelationReference a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom xsd:anyURI ;
-                owl:onProperty rdf:value ] .
-
-    nen2660:Representation a owl:Class .
-
-    nen2660:Requirement a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:onClass xsd:string ;
-                owl:onProperty rdf:value ;
-                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
-    nen2660:RequirementSeverityType a owl:Class .
-
-    nen2660:RequirementSourceType a owl:Class .
-
-    nen2660:RequirementTopicType a owl:Class .
-
-    nen2660:TopConcept a owl:Class .
-
-    nen2660:TransferType a owl:Class ;
-        owl:oneOf ( nen2660:MaterialFlow nen2660:EnergyFlow nen2660:InformationFlow nen2660:Force ) .
-
-    nen2660:Type a owl:Class .
-
-    nen2660:VerificationMethodType a owl:Class .
-
-    nen2660:abbreviation a owl:AnnotationProperty .
-
-    nen2660:aggregationStateType a owl:ObjectProperty .
-
-    nen2660:begins a owl:ObjectProperty .
-
-    nen2660:chemicalFormula a owl:DatatypeProperty .
-
-    nen2660:connectsObject a owl:ObjectProperty ;
-        rdfs:domain [ a owl:Class ;
-                owl:unionOf ( nen2660:Connection nen2660:Interface ) ] .
-
-    nen2660:connectsPort a owl:ObjectProperty ;
-        rdfs:domain [ a owl:Class ;
-                owl:unionOf ( nen2660:Connection nen2660:Interface ) ] .
-
-    nen2660:consistsOf a owl:ObjectProperty ;
-        rdfs:domain [ a owl:Class ;
-                owl:unionOf ( nen2660:RealObject nen2660:Mixture nen2660:MatterPortion ) ] .
-
-    nen2660:contains a owl:ObjectProperty .
-
-    nen2660:ends a owl:ObjectProperty .
-
-    nen2660:hasBoundary a owl:ObjectProperty .
-
-    nen2660:hasFunctionalPart a owl:ObjectProperty .
-
-    nen2660:hasInterior a owl:ObjectProperty .
-
-    nen2660:hasPartsGroup a owl:ObjectProperty .
-
-    nen2660:hasQuantityKind a owl:ObjectProperty .
-
-    nen2660:hasRequirement a owl:ObjectProperty .
-
-    nen2660:hasSolution a owl:ObjectProperty .
-
-    nen2660:hasState a owl:ObjectProperty .
-
-    nen2660:hasTechnicalPart a owl:ObjectProperty .
-
-    nen2660:hasTemporalEntity a owl:ObjectProperty .
-
-    nen2660:hasUnit a owl:ObjectProperty .
-
-    nen2660:isBoundBy a owl:ObjectProperty .
-
-    nen2660:isConnectedTo a owl:ObjectProperty .
-
-    nen2660:isDescribedBy a owl:ObjectProperty .
-
-    nen2660:isImplementedBy a owl:ObjectProperty .
-
-    nen2660:isPlanFor a owl:ObjectProperty .
-
-    nen2660:isRealizedBy a owl:ObjectProperty .
-
-    nen2660:overConnection a owl:ObjectProperty .
-
-    nen2660:overInterface a owl:ObjectProperty .
-
-    nen2660:participatesIn a owl:ObjectProperty .
-
-    nen2660:performs a owl:ObjectProperty .
-
-    nen2660:requirementSeverityType a owl:ObjectProperty .
-
-    nen2660:requirementSourceType a owl:ObjectProperty .
-
-    nen2660:requirementTopicType a owl:ObjectProperty .
-
-    nen2660:transferType a owl:ObjectProperty .
-
-    nen2660:transforms a owl:ObjectProperty .
-
-    nen2660:triggers a owl:ObjectProperty .
-
-    nen2660:verificationMethodType a owl:ObjectProperty .
-
-    <https://w3id.org/nen2660/owl/def> a owl:Ontology ;
-        owl:imports <http://qudt.org/schema/qudt>,
-            <http://qudt.org/vocab/quantitykind>,
-            <http://qudt.org/vocab/unit>,
-            <http://www.w3.org/2004/02/skos/core>,
-            <http://www.w3.org/2006/time>,
-            <http://www.w3.org/ns/shacl>,
-            <https://w3id.org/nen2660/rdfs/def> .
-
-    nen2660:FunctionalEntity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:Entity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:Matter a owl:Class .
-
-    nen2660:MatterPortion a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:onClass nen2660:Matter ;
-                owl:onProperty rdf:value ;
-                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-            [ a owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nen2660:portion ] .
-
-    nen2660:Mixture a owl:Class .
-
-    nen2660:TechnicalEntity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:Entity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:portion a owl:ObjectProperty .
-
-    nen2660:Activity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:Activity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:Connection a owl:Class .
-
-    nen2660:Entity a owl:Class .
-
-    nen2660:Event a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:Event ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:InformationObject a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:InformationObject ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:Interface a owl:Class .
-
-    nen2660:PhysicalObject a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:PhysicalObject ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:PlannedEntity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:PlannedEntity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:Port a owl:Class .
-
-    nen2660:RealizedEntity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:RealizedEntity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:SpatialRegion a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom [ a owl:Class ;
-                        owl:unionOf ( nen2660:SpatialRegion nen2660:Port ) ] ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:State a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:State ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:RealObject a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom [ a owl:Class ;
-                        owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:hasPart a owl:ObjectProperty .
-}
-
 <https://w3id.org/nen2660/skos/term> {
     <https://w3id.org/nen2660/skos/term> a skos:ConceptScheme ;
         owl:imports <http://qudt.org/schema/qudt>,
@@ -1159,7 +82,7 @@
 
     nen2660-term:FunctionalEntity a skos:Concept ;
         skos:broader nen2660-term:Entity ;
-        skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by a technical entities"@en ;
+        skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by technical entities"@en ;
         skos:prefLabel "Functional entity"@en,
             "Functional entity"@nl .
 
@@ -1349,7 +272,7 @@
             "verbindt poort"@nl .
 
     nen2660-term:consistsOf a skos:Concept ;
-        skos:definition "The matter a real object, mixture or matter portion is made of"@en ;
+        skos:definition "The matter a real object or mixture is made of"@en ;
         skos:prefLabel "consists of"@en,
             "bestaat uit"@nl .
 
@@ -1637,5 +560,1087 @@
         skos:definition "A metaconcept having concepts as instances having no further attributes or relations (annotations only)"@en ;
         skos:prefLabel "Enumeration type"@en,
             "Enumeratie type"@nl .
+}
+
+<https://w3id.org/nen2660/owl/def> {
+    nen2660:AbstractConcept a owl:Class .
+
+    nen2660:AggregationStateType a owl:Class ;
+        owl:oneOf ( nen2660:Solid nen2660:Fluid nen2660:Gas nen2660:Plasma ) .
+
+    nen2660:AllDisjointClasses_1 a owl:AllDisjointClasses ;
+        owl:members ( nen2660:PhysicalObject nen2660:InformationObject nen2660:Activity nen2660:Event nen2660:State ) .
+
+    nen2660:AllDisjointClasses_2 a owl:AllDisjointClasses ;
+        owl:members ( nen2660:RealObject nen2660:SpatialRegion ) .
+
+    nen2660:AllDisjointClasses_3 a owl:AllDisjointClasses ;
+        owl:members ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) .
+
+    nen2660:AllDisjointClasses_4 a owl:AllDisjointClasses ;
+        owl:members ( nen2660:PlannedEntity nen2660:RealizedEntity ) .
+
+    nen2660:AmountOfBulkMatter a owl:Class .
+
+    nen2660:ChemicalBonding a owl:Class .
+
+    nen2660:ChemicalElement a owl:Class .
+
+    nen2660:ConceptType a owl:Class .
+
+    nen2660:ConcreteConcept a owl:Class .
+
+    nen2660:DiscreteObject a owl:Class .
+
+    nen2660:EnumerationType a owl:Class .
+
+    nen2660:GeometricEntity a owl:Class .
+
+    nen2660:HeterogeneousMixture a owl:Class .
+
+    nen2660:HomogeneousMixture a owl:Class .
+
+    nen2660:Interaction a owl:Class .
+
+    nen2660:Object a owl:Class .
+
+    nen2660:Objectification a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty rdf:value ] .
+
+    nen2660:PureSubstance a owl:Class .
+
+    nen2660:QualityValue a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty rdf:value ] .
+
+    nen2660:QuantityValue a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom [ a owl:Class ;
+                        owl:unionOf ( xsd:decimal xsd:float xsd:double ) ] ;
+                owl:onProperty rdf:value ] .
+
+    nen2660:RelationReference a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom xsd:anyURI ;
+                owl:onProperty rdf:value ] .
+
+    nen2660:Representation a owl:Class .
+
+    nen2660:Requirement a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onClass xsd:string ;
+                owl:onProperty rdf:value ;
+                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+    nen2660:RequirementSeverityType a owl:Class .
+
+    nen2660:RequirementSourceType a owl:Class .
+
+    nen2660:RequirementTopicType a owl:Class .
+
+    nen2660:TopConcept a owl:Class .
+
+    nen2660:TransferType a owl:Class ;
+        owl:oneOf ( nen2660:MaterialFlow nen2660:EnergyFlow nen2660:InformationFlow nen2660:Force ) .
+
+    nen2660:Type a owl:Class .
+
+    nen2660:VerificationMethodType a owl:Class .
+
+    nen2660:abbreviation a owl:AnnotationProperty .
+
+    nen2660:aggregationStateType a owl:ObjectProperty .
+
+    nen2660:begins a owl:ObjectProperty .
+
+    nen2660:chemicalFormula a owl:DatatypeProperty .
+
+    nen2660:connectsObject a owl:ObjectProperty ;
+        rdfs:domain [ a owl:Class ;
+                owl:unionOf ( nen2660:Connection nen2660:Interface ) ] .
+
+    nen2660:connectsPort a owl:ObjectProperty ;
+        rdfs:domain [ a owl:Class ;
+                owl:unionOf ( nen2660:Connection nen2660:Interface ) ] .
+
+    nen2660:consistsOf a owl:ObjectProperty ;
+        rdfs:domain [ a owl:Class ;
+                owl:unionOf ( nen2660:RealObject nen2660:Mixture ) ] ;
+        rdfs:range [ a owl:Class ;
+                owl:unionOf ( nen2660:Matter nen2660:MatterPortion ) ] .
+
+    nen2660:contains a owl:ObjectProperty .
+
+    nen2660:ends a owl:ObjectProperty .
+
+    nen2660:hasBoundary a owl:ObjectProperty .
+
+    nen2660:hasFunctionalPart a owl:ObjectProperty .
+
+    nen2660:hasInterior a owl:ObjectProperty .
+
+    nen2660:hasPartsGroup a owl:ObjectProperty .
+
+    nen2660:hasQuantityKind a owl:ObjectProperty .
+
+    nen2660:hasRequirement a owl:ObjectProperty .
+
+    nen2660:hasSolution a owl:ObjectProperty .
+
+    nen2660:hasState a owl:ObjectProperty .
+
+    nen2660:hasTechnicalPart a owl:ObjectProperty .
+
+    nen2660:hasTemporalEntity a owl:ObjectProperty .
+
+    nen2660:hasUnit a owl:ObjectProperty .
+
+    nen2660:isBoundBy a owl:ObjectProperty .
+
+    nen2660:isConnectedTo a owl:ObjectProperty .
+
+    nen2660:isDescribedBy a owl:ObjectProperty .
+
+    nen2660:isImplementedBy a owl:ObjectProperty .
+
+    nen2660:isPlanFor a owl:ObjectProperty .
+
+    nen2660:isRealizedBy a owl:ObjectProperty .
+
+    nen2660:overConnection a owl:ObjectProperty .
+
+    nen2660:overInterface a owl:ObjectProperty .
+
+    nen2660:participatesIn a owl:ObjectProperty .
+
+    nen2660:performs a owl:ObjectProperty .
+
+    nen2660:requirementSeverityType a owl:ObjectProperty .
+
+    nen2660:requirementSourceType a owl:ObjectProperty .
+
+    nen2660:requirementTopicType a owl:ObjectProperty .
+
+    nen2660:transferType a owl:ObjectProperty .
+
+    nen2660:transforms a owl:ObjectProperty .
+
+    nen2660:triggers a owl:ObjectProperty .
+
+    nen2660:verificationMethodType a owl:ObjectProperty .
+
+    <https://w3id.org/nen2660/owl/def> a owl:Ontology ;
+        owl:imports <http://qudt.org/schema/qudt>,
+            <http://qudt.org/vocab/quantitykind>,
+            <http://qudt.org/vocab/unit>,
+            <http://www.w3.org/2004/02/skos/core>,
+            <http://www.w3.org/2006/time>,
+            <http://www.w3.org/ns/shacl>,
+            <https://w3id.org/nen2660/rdfs/def> .
+
+    nen2660:FunctionalEntity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:Entity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:MatterPortion a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onClass nen2660:Matter ;
+                owl:onProperty rdf:value ;
+                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+            [ a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty nen2660:portion ] .
+
+    nen2660:Mixture a owl:Class .
+
+    nen2660:TechnicalEntity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:Entity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:portion a owl:ObjectProperty .
+
+    nen2660:Activity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:Activity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:Connection a owl:Class .
+
+    nen2660:Entity a owl:Class .
+
+    nen2660:Event a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:Event ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:InformationObject a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:InformationObject ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:Interface a owl:Class .
+
+    nen2660:Matter a owl:Class .
+
+    nen2660:PhysicalObject a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:PhysicalObject ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:PlannedEntity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:PlannedEntity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:Port a owl:Class .
+
+    nen2660:RealizedEntity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:RealizedEntity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:SpatialRegion a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom [ a owl:Class ;
+                        owl:unionOf ( nen2660:SpatialRegion nen2660:Port ) ] ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:State a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:State ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:RealObject a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom [ a owl:Class ;
+                        owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:hasPart a owl:ObjectProperty .
+}
+
+<https://w3id.org/nen2660/shacl/def> {
+    nen2660:AllDisjointClassesShape a sh:NodeShape ;
+        sh:property [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+                sh:qualifiedMaxCount 1 ;
+                sh:qualifiedValueShape [ sh:in ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) ] ],
+            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+                sh:qualifiedMaxCount 1 ;
+                sh:qualifiedValueShape [ sh:in ( nen2660:PlannedEntity nen2660:RealizedEntity ) ] ],
+            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+                sh:qualifiedMaxCount 1 ;
+                sh:qualifiedValueShape [ sh:in ( nen2660:PhysicalObject nen2660:InformationObject nen2660:State nen2660:Event nen2660:Activity ) ] ],
+            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+                sh:qualifiedMaxCount 1 ;
+                sh:qualifiedValueShape [ sh:in ( nen2660:RealObject nen2660:SpatialRegion ) ] ] ;
+        sh:targetSubjectsOf rdf:type .
+
+    nen2660:Entity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:State ;
+                sh:path nen2660:hasState ],
+            [ sh:class nen2660:Event ;
+                sh:path nen2660:triggers ] .
+
+    nen2660:Mixture a sh:NodeShape ;
+        sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
+                sh:path nen2660:consistsOf ] .
+
+    nen2660:Objectification a sh:NodeShape ;
+        sh:property [ sh:maxCount 1 ;
+                sh:path rdf:value ] .
+
+    nen2660:QualityValue a sh:NodeShape ;
+        sh:property [ sh:datatype xsd:string ;
+                sh:path rdf:value ] .
+
+    nen2660:RelationReference a sh:NodeShape ;
+        sh:property [ sh:datatype xsd:anyURI ;
+                sh:path rdf:value ] .
+
+    nen2660:TopConcept a sh:NodeShape ;
+        sh:property [ sh:datatype xsd:string ;
+                sh:path nen2660:abbreviation ],
+            [ sh:class nen2660:Requirement ;
+                sh:path nen2660:hasRequirement ],
+            [ sh:class nen2660:Requirement ;
+                sh:path nen2660:isDescribedBy ] .
+
+    nen2660:hasQuantityKindShape a sh:NodeShape ;
+        sh:class qudt:QuantityKind ;
+        sh:targetObjectsOf nen2660:hasQuantityKind .
+
+    nen2660:hasUnitShape a sh:NodeShape ;
+        sh:class qudt:Unit ;
+        sh:targetObjectsOf nen2660:hasUnit .
+
+    <https://w3id.org/nen2660/shacl/def> a owl:Ontology ;
+        owl:imports <http://qudt.org/schema/qudt>,
+            <http://qudt.org/vocab/quantitykind>,
+            <http://qudt.org/vocab/unit>,
+            <http://www.w3.org/2004/02/skos/core>,
+            <http://www.w3.org/2006/time>,
+            <http://www.w3.org/ns/shacl>,
+            <https://w3id.org/nen2660/rdfs/def> .
+
+    nen2660:AggregationStateType a sh:NodeShape ;
+        sh:in ( nen2660:Solid nen2660:Fluid nen2660:Gas nen2660:Plasma ) .
+
+    nen2660:ConcreteConcept a sh:NodeShape ;
+        sh:property [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasBoundary ],
+            [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasInterior ],
+            [ sh:class nen2660:TemporalEntity ;
+                sh:path nen2660:hasTemporalEntity ],
+            [ sh:class nen2660:ConcreteConcept ;
+                sh:path nen2660:hasPart ] .
+
+    nen2660:Connection a sh:NodeShape ;
+        sh:property [ sh:class nen2660:PhysicalObject ;
+                sh:path nen2660:connectsObject ],
+            [ sh:class nen2660:Port ;
+                sh:path nen2660:connectsPort ] .
+
+    nen2660:FunctionalEntity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:FunctionalPart ;
+                sh:path nen2660:hasFunctionalPart ],
+            [ sh:class nen2660:TechnicalEntity ;
+                sh:path nen2660:hasSolution ] .
+
+    nen2660:Interaction a sh:NodeShape ;
+        sh:property [ sh:class nen2660:Connection ;
+                sh:path nen2660:overConnection ],
+            [ sh:class nen2660:Interface ;
+                sh:path nen2660:overInterface ],
+            [ sh:class nen2660:TransferType ;
+                sh:path nen2660:transferType ] .
+
+    nen2660:Interface a sh:NodeShape ;
+        sh:property [ sh:class nen2660:PhysicalObject ;
+                sh:path nen2660:connectsObject ],
+            [ sh:class nen2660:Port ;
+                sh:path nen2660:connectsPort ] .
+
+    nen2660:QuantityValue a sh:NodeShape ;
+        sh:property [ sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:float ] [ sh:datatype xsd:double ] ) ;
+                sh:path rdf:value ] .
+
+    nen2660:TransferType a sh:NodeShape ;
+        sh:in ( nen2660:MaterialFlow nen2660:EnergyFlow nen2660:InformationFlow nen2660:Force ) .
+
+    nen2660:Matter a sh:NodeShape ;
+        sh:property [ sh:class nen2660:AggregationStateType ;
+                sh:path nen2660:aggregationStateType ],
+            [ sh:datatype xsd:string ;
+                sh:path nen2660:chemicalFormula ] .
+
+    nen2660:MatterPortion a sh:NodeShape ;
+        sh:property [ sh:class nen2660:QuantityValue ;
+                sh:maxCount 1 ;
+                sh:minCount 1 ;
+                sh:path nen2660:portion ] .
+
+    nen2660:PlannedEntity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:PlannedEntity ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:RealizedEntity ;
+                sh:path nen2660:isPlanFor ] .
+
+    nen2660:Requirement a sh:NodeShape ;
+        sh:property [ sh:datatype xsd:string ;
+                sh:maxCount 1 ;
+                sh:minCount 1 ;
+                sh:path rdf:value ],
+            [ sh:class nen2660:RequirementSeverityType ;
+                sh:path nen2660:requirementSeverityType ],
+            [ sh:class nen2660:RequirementSourceType ;
+                sh:path nen2660:requirementSourceType ],
+            [ sh:class nen2660:RequirementTopicType ;
+                sh:path nen2660:requirementTopicType ],
+            [ sh:class nen2660:VerificationMethodType ;
+                sh:path nen2660:verificationMethodType ] .
+
+    nen2660:SpatialRegion a sh:NodeShape ;
+        sh:property [ sh:class nen2660:RealObject ;
+                sh:path nen2660:contains ],
+            [ sh:class [ a owl:Class ;
+                        owl:unionOf ( nen2660:SpatialRegion nen2660:Port ) ] ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:PhysicalObject ;
+                sh:path nen2660:isBoundBy ] .
+
+    nen2660:Activity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasBoundary ],
+            [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasInterior ],
+            [ sh:class nen2660:Activity ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:TemporalEntity ;
+                sh:path nen2660:hasPeriod ],
+            [ sh:class nen2660:Object ;
+                sh:path nen2660:transforms ] .
+
+    nen2660:Event a sh:NodeShape ;
+        sh:property [ sh:class nen2660:State ;
+                sh:path nen2660:begins ],
+            [ sh:class nen2660:State ;
+                sh:path nen2660:ends ],
+            [ sh:class nen2660:Event ;
+                sh:path nen2660:hasPart ] .
+
+    nen2660:InformationObject a sh:NodeShape ;
+        sh:property [ sh:class nen2660:InformationObject ;
+                sh:path nen2660:hasPart ] .
+
+    nen2660:RealObject a sh:NodeShape ;
+        sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
+                sh:path nen2660:consistsOf ],
+            [ sh:class [ a owl:Class ;
+                        owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
+                sh:path nen2660:hasPart ] .
+
+    nen2660:RealizedEntity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:RealizedEntity ;
+                sh:path nen2660:hasPart ] .
+
+    nen2660:TechnicalEntity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:TechnicalEntity ;
+                sh:path nen2660:hasTechnicalPart ] .
+
+    nen2660:State a sh:NodeShape ;
+        sh:property [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasBoundary ],
+            [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasInterior ],
+            [ sh:class nen2660:State ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:TemporalEntity ;
+                sh:path nen2660:hasPeriod ] .
+
+    nen2660:PhysicalObject a sh:NodeShape ;
+        sh:property [ sh:class nen2660:PhysicalObject ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:PhysicalObject ;
+                sh:path nen2660:isConnectedTo ],
+            [ sh:class nen2660:InformationObject ;
+                sh:path nen2660:isDescribedBy ],
+            [ sh:class nen2660:Interaction ;
+                sh:path nen2660:participatesIn ],
+            [ sh:class nen2660:Activity ;
+                sh:path nen2660:performs ] .
+}
+
+<https://w3id.org/nen2660/rdfs/def> {
+    nen2660:AbstractConcept a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:AbstractConcept ;
+        rdfs:subClassOf nen2660:TopConcept ;
+        skos:definition "An objectification or type"@en ;
+        skos:prefLabel "Abstract concept"@en .
+
+    nen2660:Activity a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Activity ;
+        rdfs:subClassOf nen2660:Entity ;
+        skos:definition "An activity is something possibly or actually happening in space and time"@en ;
+        skos:prefLabel "Activity"@en .
+
+    nen2660:AggregationStateType a rdfs:Class,
+            nen2660:EnumerationType ;
+        rdfs:seeAlso nen2660-term:AggregationStateType ;
+        skos:definition "One of the four fundamental states of matter being solid, liquid, gas or plasma"@en ;
+        skos:prefLabel "Aggregation state type"@en .
+
+    nen2660:AmountOfBulkMatter a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:AmountOfBulkMatter ;
+        rdfs:subClassOf nen2660:RealObject ;
+        skos:definition "A real object consisting of a continuous amount of non-rigid (bulk) matter, held together primarily by external forces like gravity or confinement"@en ;
+        skos:prefLabel "Amount of bulk matter"@en .
+
+    nen2660:ChemicalBonding a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:ChemicalBonding ;
+        rdfs:subClassOf nen2660:PureSubstance ;
+        skos:definition "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical bonding, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en ;
+        skos:prefLabel "Chemical bonding"@en .
+
+    nen2660:ChemicalElement a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:ChemicalElement ;
+        rdfs:subClassOf nen2660:PureSubstance ;
+        skos:definition "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"@en ;
+        skos:prefLabel "Chemical element"@en .
+
+    nen2660:ConceptType a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:ConceptType ;
+        rdfs:subClassOf nen2660:Type ;
+        skos:definition "A metaconcept having concepts as instances that can have attributes or relations"@en ;
+        skos:prefLabel "Concept type"@en .
+
+    nen2660:ConcreteConcept a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:ConcreteConcept ;
+        rdfs:subClassOf nen2660:TopConcept ;
+        skos:definition "An entity, event or state"@en ;
+        skos:prefLabel "Concrete concept"@en .
+
+    nen2660:Connection a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Connection ;
+        rdfs:subClassOf nen2660:PhysicalObject ;
+        skos:definition "The thing at which two or more things are connected"@en ;
+        skos:prefLabel "Connection"@en .
+
+    nen2660:DiscreteObject a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:DiscreteObject ;
+        rdfs:subClassOf nen2660:RealObject ;
+        skos:definition "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity, electromagnetic force)"@en ;
+        skos:prefLabel "Discrete object"@en .
+
+    nen2660:Entity a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Entity ;
+        rdfs:subClassOf nen2660:ConcreteConcept ;
+        skos:definition "An object or an activity"@en ;
+        skos:prefLabel "Entity"@en .
+
+    nen2660:EnumerationType a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:EnumerationType ;
+        rdfs:subClassOf rdfs:Container,
+            nen2660:Type ;
+        skos:definition "A metaconcept having concepts as instances having no further attributes or relations (annotations only)"@en ;
+        skos:prefLabel "Enumeration type"@en .
+
+    nen2660:Event a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Event ;
+        rdfs:subClassOf nen2660:ConcreteConcept ;
+        skos:definition "A thing that happens or takes place and marks the beginning or ending of a state"@en ;
+        skos:prefLabel "Event"@en .
+
+    nen2660:FunctionalEntity a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:FunctionalEntity ;
+        rdfs:subClassOf nen2660:Entity ;
+        skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by technical entities"@en ;
+        skos:prefLabel "Functional entity"@en .
+
+    nen2660:GeometricEntity a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:GeometricEntity ;
+        rdfs:subClassOf nen2660:Representation ;
+        skos:definition "A spatial representation"@en ;
+        skos:prefLabel "Geometric entity"@en .
+
+    nen2660:HeterogeneousMixture a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:HeterogeneousMixture ;
+        rdfs:subClassOf nen2660:Mixture ;
+        skos:definition "A mixture that is separated into different regions or phases that have different compositions or properties"@en ;
+        skos:prefLabel "Heterogeneous mixture"@en .
+
+    nen2660:HomogeneousMixture a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:HomogeneousMixture ;
+        rdfs:subClassOf nen2660:Mixture ;
+        skos:definition "A mixture that is uniform throughout, and has only one phase"@en ;
+        skos:prefLabel "Homogeneous mixture"@en .
+
+    nen2660:InformationObject a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:InformationObject ;
+        rdfs:subClassOf nen2660:Object ;
+        skos:definition "Thing that is a whole of information on itself and has an own identity"@en ;
+        skos:prefLabel "Information object"@en .
+
+    nen2660:Interaction a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Interaction ;
+        rdfs:subClassOf nen2660:Activity ;
+        skos:definition "The activity in which two or more objects act upon one another to produce a new effect"@en ;
+        skos:prefLabel "Interaction"@en .
+
+    nen2660:Interface a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Interface ;
+        rdfs:subClassOf nen2660:SpatialRegion ;
+        skos:definition "The spatial region being a point of interaction between entities"@en ;
+        skos:prefLabel "Interface"@en .
+
+    nen2660:Matter a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Matter ;
+        rdfs:subClassOf nen2660:PhysicalObject ;
+        skos:definition "A pure chemical substance, chemical bonding or mixture from which real objects are made"@en ;
+        skos:prefLabel "Matter"@en .
+
+    nen2660:MatterPortion a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:MatterPortion ;
+        rdfs:subClassOf nen2660:RelationReference ;
+        skos:definition "An objectified relation reference for the 'consists of' relation"@en ;
+        skos:prefLabel "Matter portion"@en .
+
+    nen2660:Mixture a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Mixture ;
+        rdfs:subClassOf nen2660:Matter ;
+        skos:definition "Matter that consists of multiple forms of pure matter"@en ;
+        skos:prefLabel "Mixture"@en .
+
+    nen2660:Object a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Object ;
+        rdfs:subClassOf nen2660:Entity ;
+        skos:definition "A physical object or an information object"@en ;
+        skos:prefLabel "Object"@en .
+
+    nen2660:Objectification a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Objectification ;
+        rdfs:subClassOf nen2660:AbstractConcept ;
+        skos:definition "An attribute (quality or quantity) or relation represented as an individual defined by a concept"@en ;
+        skos:prefLabel "Objectification"@en .
+
+    nen2660:PhysicalObject a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:PhysicalObject ;
+        rdfs:subClassOf nen2660:Object ;
+        skos:definition "Something that possibly or actually exists in space and time, perceivable through the senses"@en ;
+        skos:prefLabel "Physical object"@en .
+
+    nen2660:PlannedEntity a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:PlannedEntity ;
+        rdfs:subClassOf nen2660:Entity ;
+        skos:definition "An entity that does not yet exist or does not yet exist in the desired form"@en ;
+        skos:prefLabel "Planned entity"@en .
+
+    nen2660:Port a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Port ;
+        rdfs:subClassOf nen2660:PhysicalObject ;
+        skos:definition "Explicit part of an entity where interaction with other entities can take place via a connection or interface"@en ;
+        skos:prefLabel "Port"@en .
+
+    nen2660:PureSubstance a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:PureSubstance ;
+        rdfs:subClassOf nen2660:Matter ;
+        skos:definition "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
+        skos:prefLabel "Pure substance"@en .
+
+    nen2660:QualityValue a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:QualityValue ;
+        rdfs:subClassOf nen2660:Objectification ;
+        skos:definition "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+        skos:prefLabel "Quality value"@en .
+
+    nen2660:QuantityValue a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:QuantityValue ;
+        rdfs:subClassOf nen2660:Objectification ;
+        skos:definition "The objectification of a value of a quantity (involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+        skos:prefLabel "Quantity value"@en .
+
+    nen2660:RealObject a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:RealObject ;
+        rdfs:subClassOf nen2660:PhysicalObject ;
+        skos:definition "A physical object that can be tangible and visible in reality such as artifacts including bridges, tanks and devices, and natural objects including terrains, banks, water bottoms and trees"@en ;
+        skos:prefLabel "Real object"@en .
+
+    nen2660:RealizedEntity a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:RealizedEntity ;
+        rdfs:subClassOf nen2660:Entity ;
+        skos:definition "An entity that exists or has existed"@en ;
+        skos:prefLabel "Realized entity"@en .
+
+    nen2660:RelationReference a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:RelationReference ;
+        rdfs:subClassOf nen2660:Objectification ;
+        skos:definition "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relationships)"@en ;
+        skos:prefLabel "Relation reference"@en .
+
+    nen2660:Representation a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Representation ;
+        rdfs:subClassOf nen2660:InformationObject ;
+        skos:definition "That which represents something else"@en ;
+        skos:prefLabel "Representation"@en .
+
+    nen2660:Requirement a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Requirement ;
+        rdfs:subClassOf nen2660:InformationObject ;
+        skos:definition "A rule that should hold for something, defined w.r.t. to its attributes or relations" ;
+        skos:prefLabel "Requirement"@en .
+
+    nen2660:RequirementSeverityType a rdfs:Class,
+            nen2660:EnumerationType ;
+        rdfs:seeAlso nen2660-term:RequirementSeverityType ;
+        skos:definition "The seriousness of a requirement like demanded or wished"@en ;
+        skos:prefLabel "Requirement severity type"@en .
+
+    nen2660:RequirementSourceType a rdfs:Class,
+            nen2660:EnumerationType ;
+        rdfs:seeAlso nen2660-term:RequirementSourceType ;
+        skos:definition "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"@en ;
+        skos:prefLabel "Requirement source type"@en .
+
+    nen2660:SpatialRegion a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:SpatialRegion ;
+        rdfs:subClassOf nen2660:PhysicalObject ;
+        skos:definition "A physical object that encloses a certain area such as rooms, roads and rivers that is bound by real objects, other spacetial regions or based on use or convention and that is empty or contains discrete or liquid or gaseous matter"@en ;
+        skos:prefLabel "Spatial region"@en .
+
+    nen2660:State a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:State ;
+        rdfs:subClassOf nen2660:ConcreteConcept ;
+        skos:definition "A temporal part of an entity during a period between events. A state is characterized by the attributes and relationships of the entity. ”"@en ;
+        skos:prefLabel "State"@en .
+
+    nen2660:TechnicalEntity a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:TechnicalEntity ;
+        rdfs:subClassOf nen2660:Entity ;
+        skos:definition "An entity having technical properties and relations (what it is) that implements/plays functional entities"@en ;
+        skos:prefLabel "Technical entity"@en .
+
+    nen2660:TopConcept a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:TopConcept ;
+        skos:definition "The most generic root concept of nen2660"@en ;
+        skos:prefLabel "Top concept"@en .
+
+    nen2660:TransferType a rdfs:Class,
+            nen2660:EnumerationType ;
+        rdfs:seeAlso nen2660-term:TransferType ;
+        skos:definition "The type of thing being transferred, here: material, information, energy or force"@en ;
+        skos:prefLabel "Transfer type"@en .
+
+    nen2660:Type a rdfs:Class ;
+        rdfs:seeAlso nen2660-term:Type ;
+        rdfs:subClassOf nen2660:AbstractConcept ;
+        skos:definition "A meta-concept which instances are concepts (not individuals)"@en ;
+        skos:prefLabel "Type"@en .
+
+    nen2660:VerificationMethodType a rdfs:Class,
+            nen2660:EnumerationType ;
+        rdfs:seeAlso nen2660-term:VerificationMethodType ;
+        skos:definition "The method by which a requirement is verified like monitoring, analysis, observation etc."@en ;
+        skos:prefLabel "Verification method type"@en .
+
+    nen2660:EnergyFlow a nen2660:TransferType ;
+        rdfs:seeAlso nen2660-term:EnergyFlow ;
+        skos:definition "The movement of an amount of energy (as capacity to do work)"@en ;
+        skos:prefLabel "Energy flow"@en .
+
+    nen2660:Fluid a nen2660:AggregationStateType ;
+        rdfs:seeAlso nen2660-term:Fluid ;
+        skos:definition "One of the four fundamental states of matter"@en ;
+        skos:prefLabel "Fluid"@en .
+
+    nen2660:Force a nen2660:TransferType ;
+        rdfs:seeAlso nen2660-term:Force ;
+        skos:definition "A physical quantity that denotes ability to push, pull, twist or accelerate a body"@en ;
+        skos:prefLabel "Force"@en .
+
+    nen2660:Gas a nen2660:AggregationStateType ;
+        rdfs:seeAlso nen2660-term:Gas ;
+        skos:definition "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"@en ;
+        skos:prefLabel "Gas"@en .
+
+    nen2660:InformationFlow a nen2660:TransferType ;
+        rdfs:seeAlso nen2660-term:InformationFlow ;
+        skos:definition "The movement of information represented in some medium"@en ;
+        skos:prefLabel "Information flow"@en .
+
+    nen2660:MaterialFlow a nen2660:TransferType ;
+        rdfs:seeAlso nen2660-term:MaterialFlow ;
+        skos:definition "The movement of an amount of matter"@en ;
+        skos:prefLabel "Material flow"@en .
+
+    nen2660:Plasma a nen2660:AggregationStateType ;
+        rdfs:seeAlso nen2660-term:Plasma ;
+        skos:definition "One of the four fundamental states of matter"@en ;
+        skos:prefLabel "Plasma"@en .
+
+    nen2660:Solid a nen2660:AggregationStateType ;
+        rdfs:seeAlso nen2660-term:Solid ;
+        skos:definition "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"@en ;
+        skos:prefLabel "Solid"@en .
+
+    nen2660:abbreviation a rdf:Property ;
+        rdfs:domain nen2660:TopConcept ;
+        rdfs:range xsd:string ;
+        rdfs:seeAlso nen2660-term:abbreviation ;
+        rdfs:subPropertyOf skos:altLabel ;
+        skos:definition "Acronym or initial word as special case of an external name"@en ;
+        skos:prefLabel "abbreviation"@en .
+
+    nen2660:aggregationStateType a rdf:Property ;
+        rdfs:domain nen2660:Matter ;
+        rdfs:range nen2660:AggregationStateType ;
+        rdfs:seeAlso nen2660-term:aggregationStateType ;
+        skos:definition "The possession of an aggregation state type"@en ;
+        skos:prefLabel "aggregation state type"@en .
+
+    nen2660:begins a rdf:Property ;
+        rdfs:domain nen2660:Event ;
+        rdfs:range nen2660:State ;
+        rdfs:seeAlso nen2660-term:begins ;
+        skos:definition "The state that is started by an event"@en ;
+        skos:prefLabel "begins"@en .
+
+    nen2660:chemicalFormula a rdf:Property ;
+        rdfs:domain nen2660:Matter ;
+        rdfs:range xsd:string ;
+        rdfs:seeAlso nen2660-term:chemicalFormula ;
+        skos:definition "The possession of information about the chemical proportions of atoms that constitute a particular chemical bonding"@en ;
+        skos:prefLabel "chemical formula"@en .
+
+    nen2660:connectsObject a rdf:Property ;
+        rdfs:range nen2660:PhysicalObject ;
+        rdfs:seeAlso nen2660-term:connectsObject ;
+        skos:definition "The physical objects connected by a connection or interface"@en ;
+        skos:prefLabel "connects object"@en .
+
+    nen2660:connectsPort a rdf:Property ;
+        rdfs:range nen2660:Port ;
+        rdfs:seeAlso nen2660-term:connectsPort ;
+        skos:definition "The ports (as part of physical objects) connected by a connection or interface"@en ;
+        skos:prefLabel "connects port"@en .
+
+    nen2660:consistsOf a rdf:Property ;
+        rdfs:seeAlso nen2660-term:consistsOf ;
+        skos:definition "The matter a real object or mixture is made of"@en ;
+        skos:prefLabel "consists of"@en .
+
+    nen2660:contains a rdf:Property ;
+        rdfs:domain nen2660:SpatialRegion ;
+        rdfs:range nen2660:RealObject ;
+        rdfs:seeAlso nen2660-term:contains ;
+        skos:definition "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en ;
+        skos:prefLabel "contains"@en .
+
+    nen2660:ends a rdf:Property ;
+        rdfs:domain nen2660:Event ;
+        rdfs:range nen2660:State ;
+        rdfs:seeAlso nen2660-term:ends ;
+        skos:definition "The state that is ended by an event"@en ;
+        skos:prefLabel "ends"@en .
+
+    nen2660:hasBoundary a rdf:Property ;
+        rdfs:domain nen2660:ConcreteConcept ;
+        rdfs:range nen2660:GeometricEntity ;
+        rdfs:seeAlso nen2660-term:hasBoundary ;
+        skos:definition "The geometric entity representing the boundary of a concrete concept"@en ;
+        skos:prefLabel "has boundary"@en .
+
+    nen2660:hasFunctionalPart a rdf:Property ;
+        rdfs:domain nen2660:FunctionalEntity ;
+        rdfs:range nen2660:FunctionalEntity ;
+        rdfs:seeAlso nen2660-term:hasFunctionalPart ;
+        rdfs:subPropertyOf nen2660:hasPart ;
+        skos:definition "The hasPart relation of a functional nature"@en ;
+        skos:prefLabel "has functional part"@en .
+
+    nen2660:hasInterior a rdf:Property ;
+        rdfs:domain nen2660:ConcreteConcept ;
+        rdfs:range nen2660:GeometricEntity ;
+        rdfs:seeAlso nen2660-term:hasInterior ;
+        skos:definition "The geometric entity representing the interior of a concrete concept"@en ;
+        skos:prefLabel "has interior"@en .
+
+    nen2660:hasPartsGroup a rdf:Property ;
+        rdfs:domain nen2660:ConcreteConcept ;
+        rdfs:range nen2660:ConcreteConcept ;
+        rdfs:seeAlso nen2660-term:hasPart ;
+        skos:definition "A relationship between any concrete concept and an implicit, often member-constrained, group of parts"@en ;
+        skos:prefLabel "has parts group"@en .
+
+    nen2660:hasQuantityKind a rdf:Property ;
+        rdfs:range qudt:QuantityKind ;
+        rdfs:seeAlso nen2660-term:hasQuantityKind ;
+        skos:definition "The possession of a quantity kind as defined by QUDT"@en ;
+        skos:prefLabel "has quantity kind"@en .
+
+    nen2660:hasRequirement a rdf:Property ;
+        rdfs:domain nen2660:TopConcept ;
+        rdfs:range nen2660:Requirement ;
+        rdfs:seeAlso nen2660-term:hasRequirement ;
+        skos:definition "The (unstructured) requirement for something"@en ;
+        skos:prefLabel "has requirement"@en .
+
+    nen2660:hasState a rdf:Property ;
+        rdfs:domain nen2660:Entity ;
+        rdfs:range nen2660:State ;
+        rdfs:seeAlso nen2660-term:hasState ;
+        skos:definition "The state of an entity in a certain point or period of time"@en ;
+        skos:prefLabel "has state"@en .
+
+    nen2660:hasTechnicalPart a rdf:Property ;
+        rdfs:domain nen2660:TechnicalEntity ;
+        rdfs:range nen2660:TechnicalEntity ;
+        rdfs:seeAlso nen2660-term:hasTechnicalPart ;
+        rdfs:subPropertyOf nen2660:hasPart ;
+        skos:definition "A hasPart relation of a technical nature"@en ;
+        skos:prefLabel "has technical part"@en .
+
+    nen2660:hasTemporalEntity a rdf:Property ;
+        rdfs:domain nen2660:ConcreteConcept ;
+        rdfs:range time:TemporalEntity ;
+        rdfs:seeAlso nen2660-term:hasTemporalEntity ;
+        skos:definition "The temporal entity representing a concrete concept in time"@en ;
+        skos:prefLabel "has temporal entity"@en .
+
+    nen2660:hasUnit a rdf:Property ;
+        rdfs:range qudt:Unit ;
+        rdfs:seeAlso nen2660-term:hasUnit ;
+        skos:definition "The possession of a unit as defined by QUDT"@en ;
+        skos:prefLabel "has unit"@en .
+
+    nen2660:isBoundBy a rdf:Property ;
+        rdfs:domain nen2660:SpatialRegion ;
+        rdfs:range nen2660:PhysicalObject ;
+        rdfs:seeAlso nen2660-term:isBoundBy ;
+        skos:definition "The physical object that bounds a spatial region"@en ;
+        skos:prefLabel "is bound by"@en .
+
+    nen2660:isConnectedTo a rdf:Property ;
+        rdfs:domain nen2660:PhysicalObject ;
+        rdfs:range nen2660:PhysicalObject ;
+        rdfs:seeAlso nen2660-term:isConnectedTo ;
+        skos:definition "The topological relationship between physical objects"@en ;
+        skos:prefLabel "is connected to"@en .
+
+    nen2660:isDescribedBy a rdf:Property ;
+        rdfs:domain nen2660:TopConcept ;
+        rdfs:range nen2660:InformationObject ;
+        rdfs:seeAlso nen2660-term:isDescribedBy ;
+        skos:definition "The information object that describes something"@en ;
+        skos:prefLabel "is described by"@en .
+
+    nen2660:isImplementedBy a rdf:Property ;
+        rdfs:domain nen2660:FunctionalEntity ;
+        rdfs:range nen2660:TechnicalEntity ;
+        rdfs:seeAlso nen2660-term:isImplementedBy ;
+        rdfs:subPropertyOf nen2660:hasSolution ;
+        skos:definition "The technical entity that implements a functional entity"@en ;
+        skos:prefLabel "is implemented by"@en .
+
+    nen2660:isRealizedBy a rdf:Property ;
+        rdfs:domain nen2660:PlannedEntity ;
+        rdfs:range nen2660:RealizedEntity ;
+        rdfs:seeAlso nen2660-term:isRealizedBy ;
+        rdfs:subPropertyOf nen2660:isPlanFor ;
+        skos:definition "The realized entity that realizes a planned entity"@en ;
+        skos:prefLabel "is realized by"@en .
+
+    nen2660:overConnection a rdf:Property ;
+        rdfs:domain nen2660:Interaction ;
+        rdfs:range nen2660:Connection ;
+        rdfs:seeAlso nen2660-term:overConnection ;
+        skos:definition "The connection over which an interaction between physical objects takes place"@en ;
+        skos:prefLabel "over connection"@en .
+
+    nen2660:overInterface a rdf:Property ;
+        rdfs:domain nen2660:Interaction ;
+        rdfs:range nen2660:Interface ;
+        rdfs:seeAlso nen2660-term:overInterface ;
+        skos:definition "The interface over which an interaction between physical objects takes place"@en ;
+        skos:prefLabel "over interface"@en .
+
+    nen2660:participatesIn a rdf:Property ;
+        rdfs:domain nen2660:PhysicalObject ;
+        rdfs:range nen2660:Interaction ;
+        rdfs:seeAlso nen2660-term:participatesIn ;
+        skos:definition "The interaction a physical object participates in"@en ;
+        skos:prefLabel "participates in"@en .
+
+    nen2660:performs a rdf:Property ;
+        rdfs:domain nen2660:PhysicalObject ;
+        rdfs:range nen2660:Activity ;
+        rdfs:seeAlso nen2660-term:performs ;
+        skos:definition "The activity performed by a physical object"@en ;
+        skos:prefLabel "performs"@en .
+
+    nen2660:portion a rdf:Property ;
+        rdfs:domain nen2660:MatterPortion ;
+        rdfs:range nen2660:QuantityValue ;
+        rdfs:seeAlso nen2660-term:portion ;
+        skos:definition "The actual relative portion of a matter portion"@en ;
+        skos:prefLabel "portion"@en ;
+        nen2660:hasQuantityKind quantitykind:DimensionlessRatio .
+
+    nen2660:requirementSeverityType a rdf:Property ;
+        rdfs:domain nen2660:Requirement ;
+        rdfs:range nen2660:RequirementSeverityType ;
+        rdfs:seeAlso nen2660-term:requirementSeverityType ;
+        skos:definition "The possession of a severity type by a requirement"@en ;
+        skos:prefLabel "requirement severity type"@en .
+
+    nen2660:requirementSourceType a rdf:Property ;
+        rdfs:domain nen2660:Requirement ;
+        rdfs:range nen2660:RequirementSourceType ;
+        rdfs:seeAlso nen2660-term:requirementSourceType ;
+        skos:definition "The possession of a source type by a requirement"@en ;
+        skos:prefLabel "requirement source type"@en .
+
+    nen2660:requirementTopicType a rdf:Property ;
+        rdfs:domain nen2660:Requirement ;
+        rdfs:range nen2660:RequirementTopicType ;
+        rdfs:seeAlso nen2660-term:requirementTopicType ;
+        skos:definition "The possession of a topic type by a requirement"@en ;
+        skos:prefLabel "requirement topic type"@en .
+
+    nen2660:transferType a rdf:Property ;
+        rdfs:domain nen2660:Interaction ;
+        rdfs:range nen2660:TransferType ;
+        rdfs:seeAlso nen2660-term:transferType ;
+        skos:definition "The possession of a transfer type by an interaction"@en ;
+        skos:prefLabel "transfer type"@en .
+
+    nen2660:transforms a rdf:Property ;
+        rdfs:domain nen2660:Activity ;
+        rdfs:range nen2660:Object ;
+        rdfs:seeAlso nen2660-term:transforms ;
+        skos:definition "The object transformed by an activity"@en ;
+        skos:prefLabel "transforms"@en .
+
+    nen2660:triggers a rdf:Property ;
+        rdfs:domain nen2660:Entity ;
+        rdfs:range nen2660:Event ;
+        rdfs:seeAlso nen2660-term:triggers ;
+        skos:definition "The event triggert by an entity"@en ;
+        skos:prefLabel "triggers"@en .
+
+    nen2660:verificationMethodType a rdf:Property ;
+        rdfs:domain nen2660:Requirement ;
+        rdfs:range nen2660:VerificationMethodType ;
+        rdfs:seeAlso nen2660-term:verificationMethodType ;
+        skos:definition "The possession of a verification method type by a requirement"@en ;
+        skos:prefLabel "verification method type"@en .
+
+    <https://w3id.org/nen2660/rdfs/def> a owl:Ontology ;
+        owl:imports <http://qudt.org/schema/qudt>,
+            <http://qudt.org/vocab/quantitykind>,
+            <http://qudt.org/vocab/unit>,
+            <http://www.w3.org/2004/02/skos/core>,
+            <http://www.w3.org/2006/time>,
+            <http://www.w3.org/ns/shacl> .
+
+    qudt:QuantityKind a nen2660:EnumerationType ;
+        rdfs:seeAlso nen2660-term:QuantityKind ;
+        skos:definition "Base or derived kind of quantity like length or time"@en ;
+        skos:prefLabel "Quantity kind"@en .
+
+    qudt:Unit a nen2660:EnumerationType ;
+        rdfs:seeAlso nen2660-term:Unit ;
+        skos:definition "A scale of measurement"@en ;
+        skos:prefLabel "Unit"@en .
+
+    time:TemporalEntity rdfs:seeAlso nen2660-term:TemporalEntity ;
+        rdfs:subClassOf nen2660:Representation ;
+        skos:definition "A temporal representation"@en ;
+        skos:prefLabel "Temporal entity"@en .
+
+    nen2660:hasSolution a rdf:Property ;
+        rdfs:domain nen2660:FunctionalEntity ;
+        rdfs:range nen2660:TechnicalEntity ;
+        rdfs:seeAlso nen2660-term:hasSolution ;
+        skos:definition "A potential technical entity that is a solution for a functional entity"@en ;
+        skos:prefLabel "has solution"@en .
+
+    nen2660:isPlanFor a rdf:Property ;
+        rdfs:domain nen2660:PlannedEntity ;
+        rdfs:range nen2660:RealizedEntity ;
+        rdfs:seeAlso nen2660-term:isPlanFor ;
+        skos:definition "A potentially realized entity according to this planed entity"@en ;
+        skos:prefLabel "is plan for"@en .
+
+    nen2660:hasPart a rdf:Property ;
+        rdfs:domain nen2660:ConcreteConcept ;
+        rdfs:range nen2660:ConcreteConcept ;
+        rdfs:seeAlso nen2660-term:hasPart ;
+        skos:definition "A decomposition relationship between physical objects themselves, between information objects themselves or between activities themselves"@en ;
+        skos:prefLabel "has part"@en .
 }
 
