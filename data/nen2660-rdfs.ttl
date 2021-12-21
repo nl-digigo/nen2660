@@ -23,19 +23,19 @@
 qudt:QuantityKind
   a nen2660:EnumerationType ;
   rdfs:seeAlso nen2660-term:QuantityKind ;
-  skos:definition "Base or derived kind of quantity like length or time"@en ;
+  skos:definition "Any observable property that can be measured and quantified numerically"@en ;
   skos:prefLabel "Quantity kind"@en ;
 .
 qudt:Unit
   a nen2660:EnumerationType ;
   rdfs:seeAlso nen2660-term:Unit ;
-  skos:definition "A scale of measurement"@en ;
+  skos:definition "A particular quantity value that has been chosen as a scale for measuring other quantities the same kind"@en ;
   skos:prefLabel "Unit"@en ;
 .
 time:TemporalEntity
   rdfs:seeAlso nen2660-term:TemporalEntity ;
   rdfs:subClassOf nen2660:Representation ;
-  skos:definition "A temporal representation"@en ;
+  skos:definition "A temporal interval or instant"@en ;
   skos:prefLabel "Temporal entity"@en ;
 .
 <https://w3id.org/nen2660/rdfs/def>
@@ -51,36 +51,36 @@ nen2660:AbstractConcept
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:AbstractConcept ;
   rdfs:subClassOf nen2660:TopConcept ;
-  skos:definition "An objectification or type"@en ;
+  skos:definition "Concept that forms a manifestation and demarcation in an abstract space. An abstract concept has no life cycle"@en ;
   skos:prefLabel "Abstract concept"@en ;
 .
 nen2660:Activity
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Activity ;
   rdfs:subClassOf nen2660:Entity ;
-  skos:definition "An activity is something possibly or actually happening in space and time"@en ;
+  skos:definition "Entity that takes place or can take place in a concrete space-time. An activity transforms objects, and is executed by an object"@en ;
   skos:prefLabel "Activity"@en ;
 .
 nen2660:AggregationStateType
   a rdfs:Class ;
   a nen2660:EnumerationType ;
   rdfs:seeAlso nen2660-term:AggregationStateType ;
-  skos:definition "One of the four fundamental states of matter being solid, liquid, gas or plasma"@en ;
+  skos:definition "One of the four fundamental states of matter being a solid, liquid, gas or plasma"@en ;
   skos:prefLabel "Aggregation state type"@en ;
 .
 nen2660:AmountOfBulkMatter
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:AmountOfBulkMatter ;
   rdfs:subClassOf nen2660:RealObject ;
-  skos:definition "A real object consisting of a continuous amount of non-rigid (bulk) matter, held together primarily by external forces like gravity or confinement"@en ;
+  skos:definition "A real object that consists of a continuous amount of non-rigid matter, held together primarily by external forces (gravity or confinement)"@en ;
   skos:prefLabel "Amount of bulk matter"@en ;
 .
-nen2660:ChemicalBonding
+nen2660:ChemicalCompound
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:ChemicalBonding ;
   rdfs:subClassOf nen2660:PureSubstance ;
-  skos:definition "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical bonding, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en ;
-  skos:prefLabel "Chemical bonding"@en ;
+  skos:definition "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical compound, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en ;
+  skos:prefLabel "Chemical compound"@en ;
 .
 nen2660:ChemicalElement
   a rdfs:Class ;
@@ -93,28 +93,28 @@ nen2660:ConceptType
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:ConceptType ;
   rdfs:subClassOf nen2660:Type ;
-  skos:definition "A metaconcept having concepts as instances that can have attributes or relations"@en ;
+  skos:definition "A meta-concept having concepts as instances that can have attributes or relations"@en ;
   skos:prefLabel "Concept type"@en ;
 .
 nen2660:ConcreteConcept
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:ConcreteConcept ;
   rdfs:subClassOf nen2660:TopConcept ;
-  skos:definition "An entity, event or state"@en ;
+  skos:definition "Concept that forms a manifestation and a demarcation in a concrete space-time. A concrete concept has a life cycle"@en ;
   skos:prefLabel "Concrete concept"@en ;
 .
 nen2660:Connection
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Connection ;
   rdfs:subClassOf nen2660:PhysicalObject ;
-  skos:definition "The thing at which two or more things are connected"@en ;
+  skos:definition "A physical object (real object or spatial area) that connects two other physical objects and over which interaction takes place, namely the transfer of matter, energy, information or forces"@en ;
   skos:prefLabel "Connection"@en ;
 .
 nen2660:DiscreteObject
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:DiscreteObject ;
   rdfs:subClassOf nen2660:RealObject ;
-  skos:definition "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity, electromagnetic force)"@en ;
+  skos:definition "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity or electromagnetic force)"@en ;
   skos:prefLabel "Discrete object"@en ;
 .
 nen2660:EnergyFlow
@@ -127,7 +127,7 @@ nen2660:Entity
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Entity ;
   rdfs:subClassOf nen2660:ConcreteConcept ;
-  skos:definition "An object or an activity"@en ;
+  skos:definition "Concept that forms a manifestation and a demarcation in a concrete space-time, and which has a certain state at any moment in time. An entity has a unique identity that remains constant throughout its life cycle. The life cycle of an entity is made up of the sequence of states of that entity, which follow each other in time. An entity is an object or an activity. An object exists, an activity takes place"@en ;
   skos:prefLabel "Entity"@en ;
 .
 nen2660:EnumerationType
@@ -135,33 +135,28 @@ nen2660:EnumerationType
   rdfs:seeAlso nen2660-term:EnumerationType ;
   rdfs:subClassOf rdfs:Container ;
   rdfs:subClassOf nen2660:Type ;
-  skos:definition "A metaconcept having concepts as instances having no further attributes or relations (annotations only)"@en ;
+  skos:definition "A meta-concept having concepts as instances having no further attributes or relations (annotations only)"@en ;
   skos:prefLabel "Enumeration type"@en ;
 .
 nen2660:Event
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Event ;
   rdfs:subClassOf nen2660:ConcreteConcept ;
-  skos:definition "A thing that happens or takes place and marks the beginning or ending of a state"@en ;
+  skos:definition "Transition between two successive states of an entity (object or activity). An event is triggered in a state"@en ;
   skos:prefLabel "Event"@en ;
-.
-nen2660:Fluid
-  a nen2660:AggregationStateType ;
-  rdfs:seeAlso nen2660-term:Fluid ;
-  skos:definition "One of the four fundamental states of matter"@en ;
-  skos:prefLabel "Fluid"@en ;
+  skos:prefLabel "Event"@en ;
 .
 nen2660:Force
   a nen2660:TransferType ;
   rdfs:seeAlso nen2660-term:Force ;
-  skos:definition "A physical quantity that denotes ability to push, pull, twist or accelerate a body"@en ;
+  skos:definition "Physical quantity which, when exerted on a body, causes tension or pressure to arise therein, or which causes the body to change motion, accelerate"@en ;
   skos:prefLabel "Force"@en ;
 .
 nen2660:FunctionalEntity
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:FunctionalEntity ;
   rdfs:subClassOf nen2660:Entity ;
-  skos:definition "An entity involving the external behavior (function) of the object where the output contributes to stakeholder objectives (what it does) implemented/played by technical entities"@en ;
+  skos:definition "An entity involving the external behavior where the output contributes to stakeholder objectives implemented/played by one or more technical entities"@en ;
   skos:prefLabel "Functional entity"@en ;
 .
 nen2660:Gas
@@ -174,7 +169,7 @@ nen2660:GeometricEntity
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:GeometricEntity ;
   rdfs:subClassOf nen2660:Representation ;
-  skos:definition "A spatial representation"@en ;
+  skos:definition "Named concept, which forms an actual or virtual demarcation in a concrete (physical, three-dimensional) space, which we experience in reality"@en ;
   skos:prefLabel "Geometric entity"@en ;
 .
 nen2660:HeterogeneousMixture
@@ -201,55 +196,60 @@ nen2660:InformationObject
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:InformationObject ;
   rdfs:subClassOf nen2660:Object ;
-  skos:definition "Thing that is a whole of information on itself and has an own identity"@en ;
+skos:definition "Object which describes a thing in reality"@en ;
   skos:prefLabel "Information object"@en ;
 .
 nen2660:Interaction
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Interaction ;
   rdfs:subClassOf nen2660:Activity ;
-  skos:definition "The activity in which two or more objects act upon one another to produce a new effect"@en ;
+  skos:definition "The activity being a combination of sub-activities performed by physical objects between which a transfer of matter, information, energy or force takes place, typically over a connection or interface (directly or through ports)"@en ;
   skos:prefLabel "Interaction"@en ;
 .
 nen2660:Interface
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Interface ;
   rdfs:subClassOf nen2660:SpatialRegion ;
-  skos:definition "The spatial region being a point of interaction between entities"@en ;
+  skos:definition "A spatial object, typically a thin 2D physical space (but also 0D or 1D) that connects two physical objects or ports of physical objects through which a static or dynamic interaction or interaction between those elements can take place"@en ;
   skos:prefLabel "Interface"@en ;
+.
+nen2660:Liquid
+  a nen2660:AggregationStateType ;
+  rdfs:seeAlso nen2660-term:Liquid ;
+  skos:definition "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure"@en ;
+  skos:prefLabel "Liquid"@en ;
 .
 nen2660:MaterialFlow
   a nen2660:TransferType ;
   rdfs:seeAlso nen2660-term:MaterialFlow ;
-  skos:definition "The movement of an amount of matter"@en ;
+  skos:definition "The movement of an amount of material"@en ;
   skos:prefLabel "Material flow"@en ;
 .
 nen2660:Matter
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Matter ;
   rdfs:subClassOf nen2660:PhysicalObject ;
-  skos:definition "A pure chemical substance, chemical bonding or mixture from which real objects are made"@en ;
+  skos:definition "A pure chemical substance, chemical compound or mixture from which real objects are made"@en ;
   skos:prefLabel "Matter"@en ;
 .
 nen2660:MatterPortion
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:MatterPortion ;
   rdfs:subClassOf nen2660:RelationReference ;
-  skos:definition "An objectified relation reference for the 'consists of' relation"@en ;
+  skos:definition "An objectified relation reference for the consists of relation"@en ;
   skos:prefLabel "Matter portion"@en ;
 .
 nen2660:Mixture
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Mixture ;
   rdfs:subClassOf nen2660:Matter ;
-  skos:definition "Matter that consists of multiple forms of pure matter"@en ;
-  skos:prefLabel "Mixture"@en ;
+  skos:definition "The combination of two or more different pure substances without the molecules losing their identity"@en ;  skos:prefLabel "Mixture"@en ;
 .
 nen2660:Object
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Object ;
   rdfs:subClassOf nen2660:Entity ;
-  skos:definition "A physical object or an information object"@en ;
+  skos:definition "Entity that exists or can exist within a concrete space-time. An object executes an activity, and is transformed by an activity"@en ;
   skos:prefLabel "Object"@en ;
 .
 nen2660:Objectification
@@ -263,27 +263,27 @@ nen2660:PhysicalObject
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:PhysicalObject ;
   rdfs:subClassOf nen2660:Object ;
-  skos:definition "Something that possibly or actually exists in space and time, perceivable through the senses"@en ;
+  skos:definition "Object that exists or may exist within physical 4D space-time. A physical object forms a manifestation and a demarcation of matter and/or energy, and is (in)directly perceptible by the senses"@en ;
   skos:prefLabel "Physical object"@en ;
 .
 nen2660:PlannedEntity
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:PlannedEntity ;
   rdfs:subClassOf nen2660:Entity ;
-  skos:definition "An entity that does not yet exist or does not yet exist in the desired form"@en ;
+  skos:definition "An entity that does not yet exist in physical reality, but which exists in mental or conceptual reality"@en ;
   skos:prefLabel "Planned entity"@en ;
 .
 nen2660:Plasma
   a nen2660:AggregationStateType ;
   rdfs:seeAlso nen2660-term:Plasma ;
-  skos:definition "One of the four fundamental states of matter"@en ;
+  skos:definition "A phase in which the particles of a gaseous substance are ionised"@en ;
   skos:prefLabel "Plasma"@en ;
 .
 nen2660:Port
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Port ;
   rdfs:subClassOf nen2660:PhysicalObject ;
-  skos:definition "Explicit part of an entity where interaction with other entities can take place via a connection or interface"@en ;
+  skos:definition "A physical or logical point of interaction as part of a physical object where, through a connection or interface, an interaction can take place"@en ;
   skos:prefLabel "Port"@en ;
 .
 nen2660:PureSubstance
@@ -304,28 +304,28 @@ nen2660:QuantityValue
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:QuantityValue ;
   rdfs:subClassOf nen2660:Objectification ;
-  skos:definition "The objectification of a value of a quantity (involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+  skos:definition "The objectification of a value of a quantity (typically involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
   skos:prefLabel "Quantity value"@en ;
 .
 nen2660:RealObject
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:RealObject ;
   rdfs:subClassOf nen2660:PhysicalObject ;
-  skos:definition "A physical object that can be tangible and visible in reality such as artifacts including bridges, tanks and devices, and natural objects including terrains, banks, water bottoms and trees"@en ;
+  skos:definition "physical object (rigid or non-rigid) that is (or can be) tangible and visible in reality, man-made or naturally occurring"@en ;
   skos:prefLabel "Real object"@en ;
 .
 nen2660:RealizedEntity
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:RealizedEntity ;
   rdfs:subClassOf nen2660:Entity ;
-  skos:definition "An entity that exists or has existed"@en ;
+  skos:definition "An entity that exists or has existed in the physical reality"@en ;
   skos:prefLabel "Realized entity"@en ;
 .
 nen2660:RelationReference
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:RelationReference ;
   rdfs:subClassOf nen2660:Objectification ;
-  skos:definition "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relationships)"@en ;
+  skos:definition "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relation)"@en ;
   skos:prefLabel "Relation reference"@en ;
 .
 nen2660:Representation
@@ -339,7 +339,7 @@ nen2660:Requirement
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:Requirement ;
   rdfs:subClassOf nen2660:InformationObject ;
-  skos:definition "A rule that should hold for something, defined w.r.t. to its attributes or relations" ;
+  skos:definition "A rule that should hold for something, defined via its attributes or relations" ;
   skos:prefLabel "Requirement"@en ;
 .
 nen2660:RequirementSeverityType
@@ -356,6 +356,13 @@ nen2660:RequirementSourceType
   skos:definition "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"@en ;
   skos:prefLabel "Requirement source type"@en ;
 .
+nen2660:RequirementTopicType
+  a rdfs:Class ;
+  a nen2660:EnumerationType ;
+  rdfs:seeAlso nen2660-term:RequirementTopicType ;
+  skos:definition "The entity aspect a requirement applies to"@en ;
+  skos:prefLabel "Requirement topic type"@en ;
+.
 nen2660:Solid
   a nen2660:AggregationStateType ;
   rdfs:seeAlso nen2660-term:Solid ;
@@ -366,27 +373,27 @@ nen2660:SpatialRegion
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:SpatialRegion ;
   rdfs:subClassOf nen2660:PhysicalObject ;
-  skos:definition "A physical object that encloses a certain area such as rooms, roads and rivers that is bound by real objects, other spacetial regions or based on use or convention and that is empty or contains discrete or liquid or gaseous matter"@en ;
+  skos:definition "A physical object that encloses a particular area such as a room, roadway and river, that is bounded by real objects or other spatial areas (e.g., by usage or convention) and that contains primarily liquid or gaseous amount of matter"@en ;   
   skos:prefLabel "Spatial region"@en ;
 .
 nen2660:State
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:State ;
   rdfs:subClassOf nen2660:ConcreteConcept ;
-  skos:definition "A temporal part of an entity during a period between events. A state is characterized by the attributes and relationships of the entity. ”"@en ;
+  skos:definition "Temporal part of an entity during a period between two events. A state is characterized by the properties and relations of the entity"@en ;
   skos:prefLabel "State"@en ;
 .
 nen2660:TechnicalEntity
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:TechnicalEntity ;
   rdfs:subClassOf nen2660:Entity ;
-  skos:definition "An entity having technical properties and relations (what it is) that implements/plays functional entities"@en ;
+  skos:definition "An entity concerned with technical properties and relations that implements or plays functional entities"@en ;
   skos:prefLabel "Technical entity"@en ;
 .
 nen2660:TopConcept
   a rdfs:Class ;
   rdfs:seeAlso nen2660-term:TopConcept ;
-  skos:definition "The most generic root concept of nen2660"@en ;
+  skos:definition "The most generic concept"@en ;
   skos:prefLabel "Top concept"@en ;
 .
 nen2660:TransferType
@@ -407,7 +414,7 @@ nen2660:VerificationMethodType
   a rdfs:Class ;
   a nen2660:EnumerationType ;
   rdfs:seeAlso nen2660-term:VerificationMethodType ;
-  skos:definition "The method by which a requirement is verified like monitoring, analysis, observation etc."@en ;
+  skos:definition "The method by which a requirement is verified"@en ;
   skos:prefLabel "Verification method type"@en ;
 .
 nen2660:abbreviation
@@ -440,7 +447,7 @@ nen2660:chemicalFormula
   rdfs:domain nen2660:Matter ;
   rdfs:range xsd:string ;
   rdfs:seeAlso nen2660-term:chemicalFormula ;
-  skos:definition "The possession of information about the chemical proportions of atoms that constitute a particular chemical bonding"@en ;
+  skos:definition "The possession of information about the chemical proportions of atoms that constitute a particular chemical compound"@en ;
   skos:prefLabel "chemical formula"@en ;
 .
 nen2660:connectsObject
@@ -479,6 +486,14 @@ nen2660:ends
   skos:definition "The state that is ended by an event"@en ;
   skos:prefLabel "ends"@en ;
 .
+nen2660:executes
+  a rdf:Property ;
+  rdfs:domain nen2660:PhysicalObject ;
+  rdfs:range nen2660:Activity ;
+  rdfs:seeAlso nen2660-term:executes ;
+  skos:definition "The activity executed by a physical object"@en ;
+  skos:prefLabel "executes"@en ;
+.
 nen2660:hasBoundary
   a rdf:Property ;
   rdfs:domain nen2660:ConcreteConcept ;
@@ -509,7 +524,7 @@ nen2660:hasPart
   rdfs:domain nen2660:ConcreteConcept ;
   rdfs:range nen2660:ConcreteConcept ;
   rdfs:seeAlso nen2660-term:hasPart ;
-  skos:definition "A decomposition relationship between physical objects themselves, between information objects themselves or between activities themselves"@en ;
+  skos:definition "A decomposition (hasPart) relation between physical objects themselves, between information objects themselves or between activities themselves"@en ;
   skos:prefLabel "has part"@en ;
 .
 nen2660:hasPartsGroup
@@ -517,14 +532,14 @@ nen2660:hasPartsGroup
   rdfs:domain nen2660:ConcreteConcept ;
   rdfs:range nen2660:ConcreteConcept ;
   rdfs:seeAlso nen2660-term:hasPart ;
-  skos:definition "A relationship between any concrete concept and an implicit, often member-constrained, group of parts"@en ;
+  skos:definition "The possesion of an group of, potentially implicit, parts"@en ;
   skos:prefLabel "has parts group"@en ;
 .
 nen2660:hasQuantityKind
   a rdf:Property ;
   rdfs:range qudt:QuantityKind ;
   rdfs:seeAlso nen2660-term:hasQuantityKind ;
-  skos:definition "The possession of a quantity kind as defined by QUDT"@en ;
+  skos:definition "The possession of a quantity kind"@en ;
   skos:prefLabel "has quantity kind"@en ;
 .
 nen2660:hasRequirement
@@ -540,7 +555,7 @@ nen2660:hasSolution
   rdfs:domain nen2660:FunctionalEntity ;
   rdfs:range nen2660:TechnicalEntity ;
   rdfs:seeAlso nen2660-term:hasSolution ;
-  skos:definition "A potential technical entity that is a solution for a functional entity"@en ;
+  skos:definition "A technical entity that is a potential solution for a functional entity"@en ;
   skos:prefLabel "has solution"@en ;
 .
 nen2660:hasState
@@ -565,14 +580,14 @@ nen2660:hasTemporalEntity
   rdfs:domain nen2660:ConcreteConcept ;
   rdfs:range time:TemporalEntity ;
   rdfs:seeAlso nen2660-term:hasTemporalEntity ;
-  skos:definition "The temporal entity representing a concrete concept in time"@en ;
+  skos:definition "The abstract temporal entity representing a concrete concept in time"@en ;
   skos:prefLabel "has temporal entity"@en ;
 .
 nen2660:hasUnit
   a rdf:Property ;
   rdfs:range qudt:Unit ;
   rdfs:seeAlso nen2660-term:hasUnit ;
-  skos:definition "The possession of a unit as defined by QUDT"@en ;
+  skos:definition "The possession of a unit"@en ;
   skos:prefLabel "has unit"@en ;
 .
 nen2660:isBoundBy
@@ -613,7 +628,7 @@ nen2660:isPlanFor
   rdfs:domain nen2660:PlannedEntity ;
   rdfs:range nen2660:RealizedEntity ;
   rdfs:seeAlso nen2660-term:isPlanFor ;
-  skos:definition "A potentially realized entity according to this planed entity"@en ;
+  skos:definition "A potentially realized entity according to this planned entity"@en ;
   skos:prefLabel "is plan for"@en ;
 .
 nen2660:isRealizedBy
@@ -649,20 +664,12 @@ nen2660:participatesIn
   skos:definition "The interaction a physical object participates in"@en ;
   skos:prefLabel "participates in"@en ;
 .
-nen2660:performs
-  a rdf:Property ;
-  rdfs:domain nen2660:PhysicalObject ;
-  rdfs:range nen2660:Activity ;
-  rdfs:seeAlso nen2660-term:performs ;
-  skos:definition "The activity performed by a physical object"@en ;
-  skos:prefLabel "performs"@en ;
-.
 nen2660:portion
   a rdf:Property ;
   rdfs:domain nen2660:MatterPortion ;
   rdfs:range nen2660:QuantityValue ;
   rdfs:seeAlso nen2660-term:portion ;
-  skos:definition "The actual relative portion of a matter portion"@en ;
+  skos:definition "The relative portion of a matter portion"@en ;
   skos:prefLabel "portion"@en ;
   nen2660:hasQuantityKind quantitykind:DimensionlessRatio ;
 .

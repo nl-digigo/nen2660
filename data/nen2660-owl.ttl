@@ -46,7 +46,7 @@ nen2660:AggregationStateType
   a owl:Class ;
   owl:oneOf (
       nen2660:Solid
-      nen2660:Fluid
+      nen2660:Liquid
       nen2660:Gas
       nen2660:Plasma
     ) ;
@@ -54,7 +54,7 @@ nen2660:AggregationStateType
 nen2660:AmountOfBulkMatter
   a owl:Class ;
 .
-nen2660:ChemicalBonding
+nen2660:ChemicalCompound
   a owl:Class ;
 .
 nen2660:ChemicalElement
@@ -410,7 +410,7 @@ nen2660:overInterface
 nen2660:participatesIn
   a owl:ObjectProperty ;
 .
-nen2660:performs
+nen2660:executes
   a owl:ObjectProperty ;
 .
 nen2660:portion

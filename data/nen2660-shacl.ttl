@@ -58,7 +58,7 @@ nen2660:AggregationStateType
   a sh:NodeShape ;
   sh:in (
       nen2660:Solid
-      nen2660:Fluid
+      nen2660:Liquid
       nen2660:Gas
       nen2660:Plasma
     ) ;
@@ -209,7 +209,7 @@ nen2660:PhysicalObject
       sh:class nen2660:Interaction ;
     ] ;
   sh:property [
-      sh:path nen2660:performs ;
+      sh:path nen2660:executes ;
       sh:class nen2660:Activity ;
     ] ;
 .
