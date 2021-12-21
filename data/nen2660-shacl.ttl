@@ -122,19 +122,16 @@ nen2660:Event
 nen2660:FunctionalEntity
   a sh:NodeShape ;
   sh:property [
+      sh:path nen2660:hasPart ;
+      sh:class nen2660:Entity ;
+    ] ;
+  sh:property [
       sh:path nen2660:hasFunctionalPart ;
-      sh:class nen2660:FunctionalPart ;
+      sh:class nen2660:FunctionalEntity ;
     ] ;
   sh:property [
       sh:path nen2660:hasSolution ;
       sh:class nen2660:TechnicalEntity ;
-    ] ;
-.
-nen2660:InformationObject
-  a sh:NodeShape ;
-  sh:property [
-      sh:path nen2660:hasPart ;
-      sh:class nen2660:InformationObject ;
     ] ;
 .
 nen2660:Interaction
@@ -190,12 +187,22 @@ nen2660:Mixture
       sh:or ( [ sh:class nen2660:Matter] [sh:class nen2660:MatterPortion ] ) ;
     ] ;
 .
-nen2660:PhysicalObject
+nen2660:Object
   a sh:NodeShape ;
   sh:property [
       sh:path nen2660:hasPart ;
-      sh:class nen2660:PhysicalObject ;
+      sh:class nen2660:Object ;
     ] ;
+.
+nen2660:Objectification
+  a sh:NodeShape ;
+  sh:property [
+      sh:path rdf:value;
+      sh:maxCount 1;
+    ] ;
+.
+nen2660:PhysicalObject
+  a sh:NodeShape ;
   sh:property [
       sh:path nen2660:isConnectedTo ;
       sh:class nen2660:PhysicalObject ;
@@ -211,13 +218,6 @@ nen2660:PhysicalObject
   sh:property [
       sh:path nen2660:executes ;
       sh:class nen2660:Activity ;
-    ] ;
-.
-nen2660:Objectification
-  a sh:NodeShape ;
-  sh:property [
-      sh:path rdf:value;
-      sh:maxCount 1;
     ] ;
 .
 nen2660:PlannedEntity
@@ -343,6 +343,10 @@ nen2660:State
 .
 nen2660:TechnicalEntity
   a sh:NodeShape ;
+  sh:property [
+      sh:path nen2660:hasPart ;
+      sh:class nen2660:Entity ;
+    ] ;
   sh:property [
       sh:path nen2660:hasTechnicalPart ;
       sh:class nen2660:TechnicalEntity ;

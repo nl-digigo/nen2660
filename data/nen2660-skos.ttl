@@ -579,8 +579,8 @@ nen2660-term:hasInterior
 .
 nen2660-term:hasPart
   a skos:Concept ;
-  skos:definition "A decomposition (hasPart) relation between physical objects themselves, between information objects themselves or between activities themselves"@en ;
-  skos:definition "Een decompositie (heeftDeel) relatie tussen fysieke objecten onderling, tussen informatieobjecten onderling of tussen activiteiten onderling"@nl ;
+  skos:definition "A decomposition (hasPart) relation between concrete concepts"@en ;
+  skos:definition "Een decompositie (heeftDeel) relatie tussen concrete concepten"@nl ;
   skos:prefLabel "has part"@en ;
   skos:prefLabel "heeft deel"@nl ;
 .

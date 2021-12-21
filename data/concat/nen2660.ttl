@@ -158,7 +158,9 @@ nen2660:FunctionalEntity a rdfs:Class,
         nen2660:Entity ;
     skos:definition "An entity involving the external behavior where the output contributes to stakeholder objectives implemented/played by one or more technical entities"@en ;
     skos:prefLabel "Functional entity"@en ;
-    sh:property [ sh:class nen2660:FunctionalPart ;
+    sh:property [ sh:class nen2660:Entity ;
+            sh:path nen2660:hasPart ],
+        [ sh:class nen2660:FunctionalEntity ;
             sh:path nen2660:hasFunctionalPart ],
         [ sh:class nen2660:TechnicalEntity ;
             sh:path nen2660:hasSolution ] .
@@ -185,17 +187,11 @@ nen2660:HomogeneousMixture a rdfs:Class,
     skos:prefLabel "Homogeneous mixture"@en .
 
 nen2660:InformationObject a rdfs:Class,
-        owl:Class,
-        sh:NodeShape ;
+        owl:Class ;
     rdfs:seeAlso nen2660-term:InformationObject ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom nen2660:InformationObject ;
-            owl:onProperty nen2660:hasPart ],
-        nen2660:Object ;
+    rdfs:subClassOf nen2660:Object ;
     skos:definition "Object which describes a thing in reality"@en ;
-    skos:prefLabel "Information object"@en ;
-    sh:property [ sh:class nen2660:InformationObject ;
-            sh:path nen2660:hasPart ] .
+    skos:prefLabel "Information object"@en .
 
 nen2660:Interaction a rdfs:Class,
         owl:Class,
@@ -240,12 +236,12 @@ nen2660:MatterPortion a rdfs:Class,
         sh:NodeShape ;
     rdfs:seeAlso nen2660-term:MatterPortion ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty nen2660:portion ],
+        [ a owl:Restriction ;
             owl:onClass nen2660:Matter ;
             owl:onProperty rdf:value ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty nen2660:portion ],
         nen2660:RelationReference ;
     skos:definition "An objectified relation reference for the consists of relation"@en ;
     skos:prefLabel "Matter portion"@en ;
@@ -265,11 +261,17 @@ nen2660:Mixture a rdfs:Class,
             sh:path nen2660:consistsOf ] .
 
 nen2660:Object a rdfs:Class,
-        owl:Class ;
+        owl:Class,
+        sh:NodeShape ;
     rdfs:seeAlso nen2660-term:Object ;
-    rdfs:subClassOf nen2660:Entity ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom nen2660:Object ;
+            owl:onProperty nen2660:hasPart ],
+        nen2660:Entity ;
     skos:definition "Entity that exists or can exist within a concrete space-time. An object executes an activity, and is transformed by an activity"@en ;
-    skos:prefLabel "Object"@en .
+    skos:prefLabel "Object"@en ;
+    sh:property [ sh:class nen2660:Object ;
+            sh:path nen2660:hasPart ] .
 
 nen2660:Objectification a rdfs:Class,
         owl:Class,
@@ -288,15 +290,10 @@ nen2660:PhysicalObject a rdfs:Class,
         owl:Class,
         sh:NodeShape ;
     rdfs:seeAlso nen2660-term:PhysicalObject ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom nen2660:PhysicalObject ;
-            owl:onProperty nen2660:hasPart ],
-        nen2660:Object ;
+    rdfs:subClassOf nen2660:Object ;
     skos:definition "Object that exists or may exist within physical 4D space-time. A physical object forms a manifestation and a demarcation of matter and/or energy, and is (in)directly perceptible by the senses"@en ;
     skos:prefLabel "Physical object"@en ;
     sh:property [ sh:class nen2660:PhysicalObject ;
-            sh:path nen2660:hasPart ],
-        [ sh:class nen2660:PhysicalObject ;
             sh:path nen2660:isConnectedTo ],
         [ sh:class nen2660:InformationObject ;
             sh:path nen2660:isDescribedBy ],
@@ -504,7 +501,9 @@ nen2660:TechnicalEntity a rdfs:Class,
         nen2660:Entity ;
     skos:definition "An entity concerned with technical properties and relations that implements or plays functional entities"@en ;
     skos:prefLabel "Technical entity"@en ;
-    sh:property [ sh:class nen2660:TechnicalEntity ;
+    sh:property [ sh:class nen2660:Entity ;
+            sh:path nen2660:hasPart ],
+        [ sh:class nen2660:TechnicalEntity ;
             sh:path nen2660:hasTechnicalPart ] .
 
 nen2660:TopConcept a rdfs:Class,
@@ -1578,8 +1577,8 @@ nen2660-term:TopConcept a skos:Concept ;
         "Top concept"@nl .
 
 nen2660-term:hasPart a skos:Concept ;
-    skos:definition "A decomposition (hasPart) relation between physical objects themselves, between information objects themselves or between activities themselves"@en,
-        "Een decompositie (heeftDeel) relatie tussen fysieke objecten onderling, tussen informatieobjecten onderling of tussen activiteiten onderling"@nl ;
+    skos:definition "A decomposition (hasPart) relation between concrete concepts"@en,
+        "Een decompositie (heeftDeel) relatie tussen concrete concepten"@nl ;
     skos:prefLabel "has part"@en,
         "heeft deel"@nl .
 
@@ -1623,6 +1622,6 @@ nen2660:hasPart a rdf:Property,
     rdfs:domain nen2660:ConcreteConcept ;
     rdfs:range nen2660:ConcreteConcept ;
     rdfs:seeAlso nen2660-term:hasPart ;
-    skos:definition "A decomposition (hasPart) relation between physical objects themselves, between information objects themselves or between activities themselves"@en ;
+    skos:definition "A decomposition (hasPart) relation between concrete concepts"@en ;
     skos:prefLabel "has part"@en .
 

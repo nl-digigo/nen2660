@@ -1890,7 +1890,14 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#FunctionalPart'>nen2660:FunctionalPart</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Entity'>nen2660:Entity</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
+]</span></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
+<td class='w-two-thirds overflow-auto'><span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#FunctionalEntity'>nen2660:FunctionalEntity</a> ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasFunctionalPart'>nen2660:hasFunctionalPart</a> ;
 ]</span></td>
 </tr>
@@ -2205,7 +2212,7 @@ nen2660-rdfs.ttl
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#definition'>skos:definition</a></td>
-<td class='w-two-thirds overflow-auto'>&quot;A decomposition (hasPart) relation between physical objects themselves, between information objects themselves or between activities themselves&quot;@en</td>
+<td class='w-two-thirds overflow-auto'>&quot;A decomposition (hasPart) relation between concrete concepts&quot;@en</td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2004/02/skos/core#prefLabel'>skos:prefLabel</a></td>
@@ -2952,39 +2959,6 @@ nen2660-owl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a></td>
 <td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Class'>owl:Class</a></td>
-</tr>
-<tr>
-<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a></td>
-<td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Restriction'>owl:Restriction</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#allValuesFrom'>owl:allValuesFrom</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#InformationObject'>nen2660:InformationObject</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onProperty'>owl:onProperty</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
-]</span></td>
-</tr>
-</table>
-<table class='w-100 mv4 f6 dt--fixed'>
-<colgroup>
-                                <col width="33%">
-                                <col width="67%">
-                            </colgroup>
-<thead>
-<tr class='w-100'>
-<th colspan='2' class='bg-brand-light-color brand-dark-color tl'>
-From file
-<a class='link dim underline-hover blue' href='/nen2660/data/nen2660-shacl.ttl'>
-nen2660-shacl.ttl
-</a>
-</th></tr></thead>
-<tr>
-<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a></td>
-<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#NodeShape'>sh:NodeShape</a></td>
-</tr>
-<tr>
-<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
-<td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#InformationObject'>nen2660:InformationObject</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
-]</span></td>
 </tr>
 </table></div><div id='Interaction' class='mv5'>
         <h2 class='f3'><a class='link dim underline-hover brand-dark-color ' href='https://w3id.org/nen2660/def#Interaction'>Interaction</a>
@@ -3741,17 +3715,17 @@ nen2660-owl.ttl
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
   <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Restriction'>owl:Restriction</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onClass'>owl:onClass</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onProperty'>owl:onProperty</a> <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#value'>rdf:value</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#qualifiedCardinality'>owl:qualifiedCardinality</a> &quot;1&quot;^^xsd:nonNegativeInteger ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#cardinality'>owl:cardinality</a> &quot;1&quot;^^xsd:nonNegativeInteger ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onProperty'>owl:onProperty</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#portion'>nen2660:portion</a> ;
 ]</span></td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
   <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Restriction'>owl:Restriction</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#cardinality'>owl:cardinality</a> &quot;1&quot;^^xsd:nonNegativeInteger ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onProperty'>owl:onProperty</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#portion'>nen2660:portion</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onClass'>owl:onClass</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onProperty'>owl:onProperty</a> <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#value'>rdf:value</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#qualifiedCardinality'>owl:qualifiedCardinality</a> &quot;1&quot;^^xsd:nonNegativeInteger ;
 ]</span></td>
 </tr>
 </table>
@@ -3919,6 +3893,39 @@ nen2660-owl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a></td>
 <td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Class'>owl:Class</a></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a></td>
+<td class='w-two-thirds overflow-auto'><span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Restriction'>owl:Restriction</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#allValuesFrom'>owl:allValuesFrom</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Object'>nen2660:Object</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onProperty'>owl:onProperty</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
+]</span></td>
+</tr>
+</table>
+<table class='w-100 mv4 f6 dt--fixed'>
+<colgroup>
+                                <col width="33%">
+                                <col width="67%">
+                            </colgroup>
+<thead>
+<tr class='w-100'>
+<th colspan='2' class='bg-brand-light-color brand-dark-color tl'>
+From file
+<a class='link dim underline-hover blue' href='/nen2660/data/nen2660-shacl.ttl'>
+nen2660-shacl.ttl
+</a>
+</th></tr></thead>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a></td>
+<td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#NodeShape'>sh:NodeShape</a></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
+<td class='w-two-thirds overflow-auto'><span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Object'>nen2660:Object</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
+]</span></td>
 </tr>
 </table></div><div id='Objectification' class='mv5'>
         <h2 class='f3'><a class='link dim underline-hover brand-dark-color ' href='https://w3id.org/nen2660/def#Objectification'>Objectification</a>
@@ -4240,14 +4247,6 @@ nen2660-owl.ttl
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a></td>
 <td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Class'>owl:Class</a></td>
 </tr>
-<tr>
-<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a></td>
-<td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Restriction'>owl:Restriction</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#allValuesFrom'>owl:allValuesFrom</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#PhysicalObject'>nen2660:PhysicalObject</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onProperty'>owl:onProperty</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
-]</span></td>
-</tr>
 </table>
 <table class='w-100 mv4 f6 dt--fixed'>
 <colgroup>
@@ -4265,13 +4264,6 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a></td>
 <td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#NodeShape'>sh:NodeShape</a></td>
-</tr>
-<tr>
-<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
-<td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#PhysicalObject'>nen2660:PhysicalObject</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
-]</span></td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
@@ -5914,6 +5906,13 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a></td>
 <td class='w-two-thirds overflow-auto'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#NodeShape'>sh:NodeShape</a></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
+<td class='w-two-thirds overflow-auto'><span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Entity'>nen2660:Entity</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
+]</span></td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
