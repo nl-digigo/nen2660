@@ -81,6 +81,10 @@ nen2660:ConcreteConcept
       sh:path nen2660:hasPart ;
       sh:class nen2660:ConcreteConcept ;
     ] ;
+  sh:property [
+      sh:path nen2660:hasPartsGroup ;
+      sh:class rdfs:Container ;
+    ] ;
 .
 nen2660:Connection
   a sh:NodeShape ;
@@ -364,7 +368,7 @@ nen2660:TopConcept
     ] ;
   sh:property [
       sh:path nen2660:isDescribedBy ;
-      sh:class nen2660:Requirement ;
+      sh:class nen2660:InformationObject ;
     ] ;
 .
 nen2660:TransferType

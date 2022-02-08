@@ -587,7 +587,7 @@ nen2660-term:hasPart
 nen2660-term:hasPartsGroup
   a skos:Concept ;
   skos:definition "Het hebben van een groep, eventueel impliciete, onderdelen"@nl ;
-  skos:definition "The possesion of an group of, potentially implicit, parts"@en ;
+  skos:definition "The possession of an group of, potentially implicit, parts"@en ;
   skos:prefLabel "has parts group"@en ;
   skos:prefLabel "heeft delen groep"@nl ;
 .

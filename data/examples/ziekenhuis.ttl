@@ -26,7 +26,7 @@ zh:AlleVerhuurbareOppervlakken
           rdfs:subClassOf zh:VerhuurbaarOppervlak ;
           rdfs:subClassOf [
               a owl:Restriction ;
-              owl:hasValue [rdf:value 80.0; nen2660:heeftUnit unit:M2 ] ;
+              owl:hasValue [rdf:value 80.0; nen2660:hasUnit unit:M2 ] ;
               owl:onProperty zh:heeftOppervlak ;
             ] ;
         ] ;
@@ -114,7 +114,7 @@ zh:DraagkrachtBieden
 .
 zh:DraagkrachtBieden_1
   a zh:DraagkrachtBieden ;
-  a nen2660:FunctioneleEntiteit ;
+  a nen2660:FunctionalEntity ;
 .
 zh:Fundering
   a owl:Class ;
@@ -424,12 +424,12 @@ zh:Vloeroppervlak
 .
 zh:Vloeroppervlak_1
   a zh:Vloeroppervlak ;
-  nen2660:connectsObject zh:Vetrek_1 ;
+  nen2660:connectsObject zh:Vertrek_1 ;
   nen2660:connectsObject zh:Vloer_1 ;
 .
 zh:Vloeroppervlak_2
   a zh:Vloeroppervlak ;
-  nen2660:connectsObject zh:Vetrek_2 ;
+  nen2660:connectsObject zh:Vertrek_2 ;
   nen2660:connectsObject zh:Vloer_2 ;
 .
 zh:Wand

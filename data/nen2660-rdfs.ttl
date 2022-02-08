@@ -530,9 +530,9 @@ nen2660:hasPart
 nen2660:hasPartsGroup
   a rdf:Property ;
   rdfs:domain nen2660:ConcreteConcept ;
-  rdfs:range nen2660:ConcreteConcept ;
+  rdfs:range rdfs:Container ;
   rdfs:seeAlso nen2660-term:hasPart ;
-  skos:definition "The possesion of an group of, potentially implicit, parts"@en ;
+  skos:definition "The possession of an group of, potentially implicit, parts"@en ;
   skos:prefLabel "has parts group"@en ;
 .
 nen2660:hasQuantityKind

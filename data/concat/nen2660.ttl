@@ -90,7 +90,9 @@ nen2660:ConcreteConcept a rdfs:Class,
         [ sh:class nen2660:TemporalEntity ;
             sh:path nen2660:hasTemporalEntity ],
         [ sh:class nen2660:ConcreteConcept ;
-            sh:path nen2660:hasPart ] .
+            sh:path nen2660:hasPart ],
+        [ sh:class rdfs:Container ;
+            sh:path nen2660:hasPartsGroup ] .
 
 nen2660:Connection a rdfs:Class,
         owl:Class,
@@ -516,7 +518,7 @@ nen2660:TopConcept a rdfs:Class,
             sh:path nen2660:abbreviation ],
         [ sh:class nen2660:Requirement ;
             sh:path nen2660:hasRequirement ],
-        [ sh:class nen2660:Requirement ;
+        [ sh:class nen2660:InformationObject ;
             sh:path nen2660:isDescribedBy ] .
 
 nen2660:TransferType a rdfs:Class,
@@ -569,14 +571,6 @@ nen2660:AllDisjointClasses_3 a owl:AllDisjointClasses ;
 
 nen2660:AllDisjointClasses_4 a owl:AllDisjointClasses ;
     owl:members ( nen2660:PlannedEntity nen2660:RealizedEntity ) .
-
-nen2660:hasPartsGroup a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:domain nen2660:ConcreteConcept ;
-    rdfs:range nen2660:ConcreteConcept ;
-    rdfs:seeAlso nen2660-term:hasPart ;
-    skos:definition "The possesion of an group of, potentially implicit, parts"@en ;
-    skos:prefLabel "has parts group"@en .
 
 nen2660:hasQuantityKindShape a sh:NodeShape ;
     sh:class qudt:QuantityKind ;
@@ -639,7 +633,7 @@ nen2660-term:ChemicalCompound a skos:Concept ;
         "Chemische verbinding"@nl .
 
 nen2660-term:hasPartsGroup a skos:Concept ;
-    skos:definition "The possesion of an group of, potentially implicit, parts"@en,
+    skos:definition "The possession of an group of, potentially implicit, parts"@en,
         "Het hebben van een groep, eventueel impliciete, onderdelen"@nl ;
     skos:prefLabel "has parts group"@en,
         "heeft delen groep"@nl .
@@ -714,6 +708,14 @@ nen2660:hasFunctionalPart a rdf:Property,
     rdfs:subPropertyOf nen2660:hasPart ;
     skos:definition "The hasPart relation of a functional nature"@en ;
     skos:prefLabel "has functional part"@en .
+
+nen2660:hasPartsGroup a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:domain nen2660:ConcreteConcept ;
+    rdfs:range rdfs:Container ;
+    rdfs:seeAlso nen2660-term:hasPart ;
+    skos:definition "The possession of an group of, potentially implicit, parts"@en ;
+    skos:prefLabel "has parts group"@en .
 
 nen2660:hasQuantityKind a rdf:Property,
         owl:ObjectProperty ;
