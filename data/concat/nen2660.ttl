@@ -1155,7 +1155,7 @@ nen2660-term:consistsOf a skos:Concept ;
 
 nen2660-term:contains a skos:Concept ;
     skos:definition "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en,
-        "De reële objecten die zich in een ruimtelijk gebied bevinden, meestal de gasvormige hoeveelheid bulkmateriaal die in dat gebied aanwezig is"@nl ;
+        "De reële objecten die zich in een ruimtelijk gebied bevinden, meestal de gasvormige hoeveelheid bulkmaterie die in dat gebied aanwezig is"@nl ;
     skos:prefLabel "contains"@en,
         "bevat"@nl .
 
