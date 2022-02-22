@@ -330,7 +330,7 @@ nen2660:PureSubstance a rdfs:Class,
         owl:Class ;
     rdfs:seeAlso nen2660-term:PureSubstance ;
     rdfs:subClassOf nen2660:Matter ;
-    skos:definition "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
+    skos:definition "Chemical matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
     skos:prefLabel "Pure substance"@en .
 
 nen2660:QualityValue a rdfs:Class,
@@ -355,7 +355,7 @@ nen2660:QuantityValue a rdfs:Class,
                     owl:unionOf ( xsd:decimal xsd:float xsd:double ) ] ;
             owl:onProperty rdf:value ],
         nen2660:Objectification ;
-    skos:definition "The objectification of a value of a quantity (typically involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+    skos:definition "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
     skos:prefLabel "Quantity value"@en ;
     sh:property [ sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:float ] [ sh:datatype xsd:double ] ) ;
             sh:path rdf:value ] .
@@ -1029,7 +1029,7 @@ nen2660-term:QuantityKind a skos:Concept ;
 
 nen2660-term:QuantityValue a skos:Concept ;
     skos:broader nen2660-term:Objectification ;
-    skos:definition "The objectification of a value of a quantity (typically involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en,
+    skos:definition "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en,
         "De objectivering van een waarde van een hoeveelheid (typisch met een grootheid en een eenheid) met een complexe waarde zoals een eenvoudige waarde sec gecombineerd met andere metadata of alleen een combinatie van eenvoudige waarden"@nl ;
     skos:prefLabel "Quantity value"@en,
         "Kwantiteitsoort"@nl .
@@ -1531,7 +1531,7 @@ nen2660-term:Object a skos:Concept ;
 
 nen2660-term:PureSubstance a skos:Concept ;
     skos:broader nen2660-term:Matter ;
-    skos:definition "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en,
+    skos:definition "Chemical matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en,
         "Een chemische stof die een gelijke chemische samenstelling en herkenbare uniforme en isotrope eigenschappen heeft"@nl ;
     skos:prefLabel "Pure substance"@en,
         "Zuivere stof"@nl .

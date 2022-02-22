@@ -10,6 +10,265 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://w3id.org/nen2660/owl/def> {
+    nen2660:AbstractConcept a owl:Class .
+
+    nen2660:AggregationStateType a owl:Class ;
+        owl:oneOf ( nen2660:Solid nen2660:Liquid nen2660:Gas nen2660:Plasma ) .
+
+    nen2660:AllDisjointClasses_1 a owl:AllDisjointClasses ;
+        owl:members ( nen2660:PhysicalObject nen2660:InformationObject nen2660:Activity nen2660:Event nen2660:State ) .
+
+    nen2660:AllDisjointClasses_2 a owl:AllDisjointClasses ;
+        owl:members ( nen2660:RealObject nen2660:SpatialRegion ) .
+
+    nen2660:AllDisjointClasses_3 a owl:AllDisjointClasses ;
+        owl:members ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) .
+
+    nen2660:AllDisjointClasses_4 a owl:AllDisjointClasses ;
+        owl:members ( nen2660:PlannedEntity nen2660:RealizedEntity ) .
+
+    nen2660:AmountOfBulkMatter a owl:Class .
+
+    nen2660:ChemicalCompound a owl:Class .
+
+    nen2660:ChemicalElement a owl:Class .
+
+    nen2660:ConceptType a owl:Class .
+
+    nen2660:ConcreteConcept a owl:Class .
+
+    nen2660:DiscreteObject a owl:Class .
+
+    nen2660:EnumerationType a owl:Class .
+
+    nen2660:GeometricEntity a owl:Class .
+
+    nen2660:HeterogeneousMixture a owl:Class .
+
+    nen2660:HomogeneousMixture a owl:Class .
+
+    nen2660:Interaction a owl:Class .
+
+    nen2660:Objectification a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty rdf:value ] .
+
+    nen2660:PureSubstance a owl:Class .
+
+    nen2660:QualityValue a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty rdf:value ] .
+
+    nen2660:QuantityValue a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom [ a owl:Class ;
+                        owl:unionOf ( xsd:decimal xsd:float xsd:double ) ] ;
+                owl:onProperty rdf:value ] .
+
+    nen2660:RelationReference a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom xsd:anyURI ;
+                owl:onProperty rdf:value ] .
+
+    nen2660:Representation a owl:Class .
+
+    nen2660:Requirement a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onClass xsd:string ;
+                owl:onProperty rdf:value ;
+                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+    nen2660:RequirementSeverityType a owl:Class .
+
+    nen2660:RequirementSourceType a owl:Class .
+
+    nen2660:RequirementTopicType a owl:Class .
+
+    nen2660:TopConcept a owl:Class .
+
+    nen2660:TransferType a owl:Class ;
+        owl:oneOf ( nen2660:MaterialFlow nen2660:EnergyFlow nen2660:InformationFlow nen2660:Force ) .
+
+    nen2660:Type a owl:Class .
+
+    nen2660:VerificationMethodType a owl:Class .
+
+    nen2660:abbreviation a owl:AnnotationProperty .
+
+    nen2660:aggregationStateType a owl:ObjectProperty .
+
+    nen2660:begins a owl:ObjectProperty .
+
+    nen2660:chemicalFormula a owl:DatatypeProperty .
+
+    nen2660:connectsObject a owl:ObjectProperty ;
+        rdfs:domain [ a owl:Class ;
+                owl:unionOf ( nen2660:Connection nen2660:Interface ) ] .
+
+    nen2660:connectsPort a owl:ObjectProperty ;
+        rdfs:domain [ a owl:Class ;
+                owl:unionOf ( nen2660:Connection nen2660:Interface ) ] .
+
+    nen2660:consistsOf a owl:ObjectProperty ;
+        rdfs:domain [ a owl:Class ;
+                owl:unionOf ( nen2660:RealObject nen2660:Mixture ) ] ;
+        rdfs:range [ a owl:Class ;
+                owl:unionOf ( nen2660:Matter nen2660:MatterPortion ) ] .
+
+    nen2660:contains a owl:ObjectProperty .
+
+    nen2660:ends a owl:ObjectProperty .
+
+    nen2660:executes a owl:ObjectProperty .
+
+    nen2660:hasBoundary a owl:ObjectProperty .
+
+    nen2660:hasFunctionalPart a owl:ObjectProperty .
+
+    nen2660:hasInterior a owl:ObjectProperty .
+
+    nen2660:hasPartsGroup a owl:ObjectProperty .
+
+    nen2660:hasQuantityKind a owl:ObjectProperty .
+
+    nen2660:hasRequirement a owl:ObjectProperty .
+
+    nen2660:hasSolution a owl:ObjectProperty .
+
+    nen2660:hasState a owl:ObjectProperty .
+
+    nen2660:hasTechnicalPart a owl:ObjectProperty .
+
+    nen2660:hasTemporalEntity a owl:ObjectProperty .
+
+    nen2660:hasUnit a owl:ObjectProperty .
+
+    nen2660:isBoundBy a owl:ObjectProperty .
+
+    nen2660:isConnectedTo a owl:ObjectProperty .
+
+    nen2660:isDescribedBy a owl:ObjectProperty .
+
+    nen2660:isImplementedBy a owl:ObjectProperty .
+
+    nen2660:isPlanFor a owl:ObjectProperty .
+
+    nen2660:isRealizedBy a owl:ObjectProperty .
+
+    nen2660:overConnection a owl:ObjectProperty .
+
+    nen2660:overInterface a owl:ObjectProperty .
+
+    nen2660:participatesIn a owl:ObjectProperty .
+
+    nen2660:requirementSeverityType a owl:ObjectProperty .
+
+    nen2660:requirementSourceType a owl:ObjectProperty .
+
+    nen2660:requirementTopicType a owl:ObjectProperty .
+
+    nen2660:transferType a owl:ObjectProperty .
+
+    nen2660:transforms a owl:ObjectProperty .
+
+    nen2660:triggers a owl:ObjectProperty .
+
+    nen2660:verificationMethodType a owl:ObjectProperty .
+
+    <https://w3id.org/nen2660/owl/def> a owl:Ontology ;
+        owl:imports <http://qudt.org/schema/qudt>,
+            <http://qudt.org/vocab/quantitykind>,
+            <http://qudt.org/vocab/unit>,
+            <http://www.w3.org/2004/02/skos/core>,
+            <http://www.w3.org/2006/time>,
+            <http://www.w3.org/ns/shacl>,
+            <https://w3id.org/nen2660/rdfs/def> .
+
+    nen2660:FunctionalEntity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:Entity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:InformationObject a owl:Class .
+
+    nen2660:MatterPortion a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty nen2660:portion ],
+            [ a owl:Restriction ;
+                owl:onClass nen2660:Matter ;
+                owl:onProperty rdf:value ;
+                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+    nen2660:Mixture a owl:Class .
+
+    nen2660:Object a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:Object ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:PhysicalObject a owl:Class .
+
+    nen2660:TechnicalEntity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:Entity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:portion a owl:ObjectProperty .
+
+    nen2660:Activity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:Activity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:Connection a owl:Class .
+
+    nen2660:Entity a owl:Class .
+
+    nen2660:Event a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:Event ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:Interface a owl:Class .
+
+    nen2660:Matter a owl:Class .
+
+    nen2660:PlannedEntity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:PlannedEntity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:Port a owl:Class .
+
+    nen2660:RealizedEntity a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:RealizedEntity ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:SpatialRegion a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom [ a owl:Class ;
+                        owl:unionOf ( nen2660:SpatialRegion nen2660:Port ) ] ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:State a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom nen2660:State ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:RealObject a owl:Class ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:allValuesFrom [ a owl:Class ;
+                        owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
+                owl:onProperty nen2660:hasPart ] .
+
+    nen2660:hasPart a owl:ObjectProperty .
+}
+
 <https://w3id.org/nen2660/rdfs/def> {
     nen2660:AbstractConcept a rdfs:Class ;
         rdfs:seeAlso nen2660-term:AbstractConcept ;
@@ -183,7 +442,7 @@
     nen2660:PureSubstance a rdfs:Class ;
         rdfs:seeAlso nen2660-term:PureSubstance ;
         rdfs:subClassOf nen2660:Matter ;
-        skos:definition "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
+        skos:definition "Chemical matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
         skos:prefLabel "Pure substance"@en .
 
     nen2660:QualityValue a rdfs:Class ;
@@ -195,7 +454,7 @@
     nen2660:QuantityValue a rdfs:Class ;
         rdfs:seeAlso nen2660-term:QuantityValue ;
         rdfs:subClassOf nen2660:Objectification ;
-        skos:definition "The objectification of a value of a quantity (typically involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+        skos:definition "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
         skos:prefLabel "Quantity value"@en .
 
     nen2660:RealObject a rdfs:Class ;
@@ -624,6 +883,222 @@
         skos:prefLabel "has part"@en .
 }
 
+<https://w3id.org/nen2660/shacl/def> {
+    nen2660:AllDisjointClassesShape a sh:NodeShape ;
+        sh:property [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+                sh:qualifiedMaxCount 1 ;
+                sh:qualifiedValueShape [ sh:in ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) ] ],
+            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+                sh:qualifiedMaxCount 1 ;
+                sh:qualifiedValueShape [ sh:in ( nen2660:PlannedEntity nen2660:RealizedEntity ) ] ],
+            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+                sh:qualifiedMaxCount 1 ;
+                sh:qualifiedValueShape [ sh:in ( nen2660:PhysicalObject nen2660:InformationObject nen2660:State nen2660:Event nen2660:Activity ) ] ],
+            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+                sh:qualifiedMaxCount 1 ;
+                sh:qualifiedValueShape [ sh:in ( nen2660:RealObject nen2660:SpatialRegion ) ] ] ;
+        sh:targetSubjectsOf rdf:type .
+
+    nen2660:Mixture a sh:NodeShape ;
+        sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
+                sh:path nen2660:consistsOf ] .
+
+    nen2660:Objectification a sh:NodeShape ;
+        sh:property [ sh:maxCount 1 ;
+                sh:path rdf:value ] .
+
+    nen2660:QualityValue a sh:NodeShape ;
+        sh:property [ sh:datatype xsd:string ;
+                sh:path rdf:value ] .
+
+    nen2660:RelationReference a sh:NodeShape ;
+        sh:property [ sh:datatype xsd:anyURI ;
+                sh:path rdf:value ] .
+
+    nen2660:TopConcept a sh:NodeShape ;
+        sh:property [ sh:datatype xsd:string ;
+                sh:path nen2660:abbreviation ],
+            [ sh:class nen2660:Requirement ;
+                sh:path nen2660:hasRequirement ],
+            [ sh:class nen2660:InformationObject ;
+                sh:path nen2660:isDescribedBy ] .
+
+    nen2660:hasQuantityKindShape a sh:NodeShape ;
+        sh:class qudt:QuantityKind ;
+        sh:targetObjectsOf nen2660:hasQuantityKind .
+
+    nen2660:hasUnitShape a sh:NodeShape ;
+        sh:class qudt:Unit ;
+        sh:targetObjectsOf nen2660:hasUnit .
+
+    <https://w3id.org/nen2660/shacl/def> a owl:Ontology ;
+        owl:imports <http://qudt.org/schema/qudt>,
+            <http://qudt.org/vocab/quantitykind>,
+            <http://qudt.org/vocab/unit>,
+            <http://www.w3.org/2004/02/skos/core>,
+            <http://www.w3.org/2006/time>,
+            <http://www.w3.org/ns/shacl>,
+            <https://w3id.org/nen2660/rdfs/def> .
+
+    nen2660:AggregationStateType a sh:NodeShape ;
+        sh:in ( nen2660:Solid nen2660:Liquid nen2660:Gas nen2660:Plasma ) .
+
+    nen2660:ConcreteConcept a sh:NodeShape ;
+        sh:property [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasBoundary ],
+            [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasInterior ],
+            [ sh:class nen2660:TemporalEntity ;
+                sh:path nen2660:hasTemporalEntity ],
+            [ sh:class nen2660:ConcreteConcept ;
+                sh:path nen2660:hasPart ],
+            [ sh:class rdfs:Container ;
+                sh:path nen2660:hasPartsGroup ] .
+
+    nen2660:Connection a sh:NodeShape ;
+        sh:property [ sh:class nen2660:PhysicalObject ;
+                sh:path nen2660:connectsObject ],
+            [ sh:class nen2660:Port ;
+                sh:path nen2660:connectsPort ] .
+
+    nen2660:Interaction a sh:NodeShape ;
+        sh:property [ sh:class nen2660:Connection ;
+                sh:path nen2660:overConnection ],
+            [ sh:class nen2660:Interface ;
+                sh:path nen2660:overInterface ],
+            [ sh:class nen2660:TransferType ;
+                sh:path nen2660:transferType ] .
+
+    nen2660:Interface a sh:NodeShape ;
+        sh:property [ sh:class nen2660:PhysicalObject ;
+                sh:path nen2660:connectsObject ],
+            [ sh:class nen2660:Port ;
+                sh:path nen2660:connectsPort ] .
+
+    nen2660:QuantityValue a sh:NodeShape ;
+        sh:property [ sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:float ] [ sh:datatype xsd:double ] ) ;
+                sh:path rdf:value ] .
+
+    nen2660:Requirement a sh:NodeShape ;
+        sh:property [ sh:datatype xsd:string ;
+                sh:maxCount 1 ;
+                sh:minCount 1 ;
+                sh:path rdf:value ],
+            [ sh:class nen2660:RequirementSeverityType ;
+                sh:path nen2660:requirementSeverityType ],
+            [ sh:class nen2660:RequirementSourceType ;
+                sh:path nen2660:requirementSourceType ],
+            [ sh:class nen2660:RequirementTopicType ;
+                sh:path nen2660:requirementTopicType ],
+            [ sh:class nen2660:VerificationMethodType ;
+                sh:path nen2660:verificationMethodType ] .
+
+    nen2660:TransferType a sh:NodeShape ;
+        sh:in ( nen2660:MaterialFlow nen2660:EnergyFlow nen2660:InformationFlow nen2660:Force ) .
+
+    nen2660:Entity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:State ;
+                sh:path nen2660:hasState ],
+            [ sh:class nen2660:Event ;
+                sh:path nen2660:triggers ] .
+
+    nen2660:FunctionalEntity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:Entity ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:FunctionalEntity ;
+                sh:path nen2660:hasFunctionalPart ],
+            [ sh:class nen2660:TechnicalEntity ;
+                sh:path nen2660:hasSolution ] .
+
+    nen2660:Matter a sh:NodeShape ;
+        sh:property [ sh:class nen2660:AggregationStateType ;
+                sh:path nen2660:aggregationStateType ],
+            [ sh:datatype xsd:string ;
+                sh:path nen2660:chemicalFormula ] .
+
+    nen2660:MatterPortion a sh:NodeShape ;
+        sh:property [ sh:class nen2660:QuantityValue ;
+                sh:maxCount 1 ;
+                sh:minCount 1 ;
+                sh:path nen2660:portion ] .
+
+    nen2660:Object a sh:NodeShape ;
+        sh:property [ sh:class nen2660:Object ;
+                sh:path nen2660:hasPart ] .
+
+    nen2660:PlannedEntity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:PlannedEntity ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:RealizedEntity ;
+                sh:path nen2660:isPlanFor ] .
+
+    nen2660:SpatialRegion a sh:NodeShape ;
+        sh:property [ sh:class nen2660:RealObject ;
+                sh:path nen2660:contains ],
+            [ sh:class [ a owl:Class ;
+                        owl:unionOf ( nen2660:SpatialRegion nen2660:Port ) ] ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:PhysicalObject ;
+                sh:path nen2660:isBoundBy ] .
+
+    nen2660:Activity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasBoundary ],
+            [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasInterior ],
+            [ sh:class nen2660:Activity ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:TemporalEntity ;
+                sh:path nen2660:hasPeriod ],
+            [ sh:class nen2660:Object ;
+                sh:path nen2660:transforms ] .
+
+    nen2660:Event a sh:NodeShape ;
+        sh:property [ sh:class nen2660:State ;
+                sh:path nen2660:begins ],
+            [ sh:class nen2660:State ;
+                sh:path nen2660:ends ],
+            [ sh:class nen2660:Event ;
+                sh:path nen2660:hasPart ] .
+
+    nen2660:RealObject a sh:NodeShape ;
+        sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
+                sh:path nen2660:consistsOf ],
+            [ sh:class [ a owl:Class ;
+                        owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
+                sh:path nen2660:hasPart ] .
+
+    nen2660:RealizedEntity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:RealizedEntity ;
+                sh:path nen2660:hasPart ] .
+
+    nen2660:TechnicalEntity a sh:NodeShape ;
+        sh:property [ sh:class nen2660:Entity ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:TechnicalEntity ;
+                sh:path nen2660:hasTechnicalPart ] .
+
+    nen2660:PhysicalObject a sh:NodeShape ;
+        sh:property [ sh:class nen2660:PhysicalObject ;
+                sh:path nen2660:isConnectedTo ],
+            [ sh:class nen2660:InformationObject ;
+                sh:path nen2660:isDescribedBy ],
+            [ sh:class nen2660:Interaction ;
+                sh:path nen2660:participatesIn ],
+            [ sh:class nen2660:Activity ;
+                sh:path nen2660:executes ] .
+
+    nen2660:State a sh:NodeShape ;
+        sh:property [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasBoundary ],
+            [ sh:class nen2660:GeometricEntity ;
+                sh:path nen2660:hasInterior ],
+            [ sh:class nen2660:State ;
+                sh:path nen2660:hasPart ],
+            [ sh:class nen2660:TemporalEntity ;
+                sh:path nen2660:hasPeriod ] .
+}
+
 <https://w3id.org/nen2660/skos/term> {
     <https://w3id.org/nen2660/skos/term> a skos:ConceptScheme ;
         owl:imports <http://qudt.org/schema/qudt>,
@@ -810,7 +1285,7 @@
 
     nen2660-term:QuantityValue a skos:Concept ;
         skos:broader nen2660-term:Objectification ;
-        skos:definition "The objectification of a value of a quantity (typically involving a quantitykind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en,
+        skos:definition "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en,
             "De objectivering van een waarde van een hoeveelheid (typisch met een grootheid en een eenheid) met een complexe waarde zoals een eenvoudige waarde sec gecombineerd met andere metadata of alleen een combinatie van eenvoudige waarden"@nl ;
         skos:prefLabel "Quantity value"@en,
             "Kwantiteitsoort"@nl .
@@ -1183,7 +1658,7 @@
 
     nen2660-term:PureSubstance a skos:Concept ;
         skos:broader nen2660-term:Matter ;
-        skos:definition "Matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en,
+        skos:definition "Chemical matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en,
             "Een chemische stof die een gelijke chemische samenstelling en herkenbare uniforme en isotrope eigenschappen heeft"@nl ;
         skos:prefLabel "Pure substance"@en,
             "Zuivere stof"@nl .
@@ -1270,480 +1745,5 @@
             "Een meta-concept met concepten als instanties zonder verdere attributen of relaties (alleen annotaties)"@nl ;
         skos:prefLabel "Enumeration type"@en,
             "Enumeratie type"@nl .
-}
-
-<https://w3id.org/nen2660/owl/def> {
-    nen2660:AbstractConcept a owl:Class .
-
-    nen2660:AggregationStateType a owl:Class ;
-        owl:oneOf ( nen2660:Solid nen2660:Liquid nen2660:Gas nen2660:Plasma ) .
-
-    nen2660:AllDisjointClasses_1 a owl:AllDisjointClasses ;
-        owl:members ( nen2660:PhysicalObject nen2660:InformationObject nen2660:Activity nen2660:Event nen2660:State ) .
-
-    nen2660:AllDisjointClasses_2 a owl:AllDisjointClasses ;
-        owl:members ( nen2660:RealObject nen2660:SpatialRegion ) .
-
-    nen2660:AllDisjointClasses_3 a owl:AllDisjointClasses ;
-        owl:members ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) .
-
-    nen2660:AllDisjointClasses_4 a owl:AllDisjointClasses ;
-        owl:members ( nen2660:PlannedEntity nen2660:RealizedEntity ) .
-
-    nen2660:AmountOfBulkMatter a owl:Class .
-
-    nen2660:ChemicalCompound a owl:Class .
-
-    nen2660:ChemicalElement a owl:Class .
-
-    nen2660:ConceptType a owl:Class .
-
-    nen2660:ConcreteConcept a owl:Class .
-
-    nen2660:DiscreteObject a owl:Class .
-
-    nen2660:EnumerationType a owl:Class .
-
-    nen2660:GeometricEntity a owl:Class .
-
-    nen2660:HeterogeneousMixture a owl:Class .
-
-    nen2660:HomogeneousMixture a owl:Class .
-
-    nen2660:Interaction a owl:Class .
-
-    nen2660:Objectification a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty rdf:value ] .
-
-    nen2660:PureSubstance a owl:Class .
-
-    nen2660:QualityValue a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty rdf:value ] .
-
-    nen2660:QuantityValue a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom [ a owl:Class ;
-                        owl:unionOf ( xsd:decimal xsd:float xsd:double ) ] ;
-                owl:onProperty rdf:value ] .
-
-    nen2660:RelationReference a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom xsd:anyURI ;
-                owl:onProperty rdf:value ] .
-
-    nen2660:Representation a owl:Class .
-
-    nen2660:Requirement a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:onClass xsd:string ;
-                owl:onProperty rdf:value ;
-                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
-    nen2660:RequirementSeverityType a owl:Class .
-
-    nen2660:RequirementSourceType a owl:Class .
-
-    nen2660:RequirementTopicType a owl:Class .
-
-    nen2660:TopConcept a owl:Class .
-
-    nen2660:TransferType a owl:Class ;
-        owl:oneOf ( nen2660:MaterialFlow nen2660:EnergyFlow nen2660:InformationFlow nen2660:Force ) .
-
-    nen2660:Type a owl:Class .
-
-    nen2660:VerificationMethodType a owl:Class .
-
-    nen2660:abbreviation a owl:AnnotationProperty .
-
-    nen2660:aggregationStateType a owl:ObjectProperty .
-
-    nen2660:begins a owl:ObjectProperty .
-
-    nen2660:chemicalFormula a owl:DatatypeProperty .
-
-    nen2660:connectsObject a owl:ObjectProperty ;
-        rdfs:domain [ a owl:Class ;
-                owl:unionOf ( nen2660:Connection nen2660:Interface ) ] .
-
-    nen2660:connectsPort a owl:ObjectProperty ;
-        rdfs:domain [ a owl:Class ;
-                owl:unionOf ( nen2660:Connection nen2660:Interface ) ] .
-
-    nen2660:consistsOf a owl:ObjectProperty ;
-        rdfs:domain [ a owl:Class ;
-                owl:unionOf ( nen2660:RealObject nen2660:Mixture ) ] ;
-        rdfs:range [ a owl:Class ;
-                owl:unionOf ( nen2660:Matter nen2660:MatterPortion ) ] .
-
-    nen2660:contains a owl:ObjectProperty .
-
-    nen2660:ends a owl:ObjectProperty .
-
-    nen2660:executes a owl:ObjectProperty .
-
-    nen2660:hasBoundary a owl:ObjectProperty .
-
-    nen2660:hasFunctionalPart a owl:ObjectProperty .
-
-    nen2660:hasInterior a owl:ObjectProperty .
-
-    nen2660:hasPartsGroup a owl:ObjectProperty .
-
-    nen2660:hasQuantityKind a owl:ObjectProperty .
-
-    nen2660:hasRequirement a owl:ObjectProperty .
-
-    nen2660:hasSolution a owl:ObjectProperty .
-
-    nen2660:hasState a owl:ObjectProperty .
-
-    nen2660:hasTechnicalPart a owl:ObjectProperty .
-
-    nen2660:hasTemporalEntity a owl:ObjectProperty .
-
-    nen2660:hasUnit a owl:ObjectProperty .
-
-    nen2660:isBoundBy a owl:ObjectProperty .
-
-    nen2660:isConnectedTo a owl:ObjectProperty .
-
-    nen2660:isDescribedBy a owl:ObjectProperty .
-
-    nen2660:isImplementedBy a owl:ObjectProperty .
-
-    nen2660:isPlanFor a owl:ObjectProperty .
-
-    nen2660:isRealizedBy a owl:ObjectProperty .
-
-    nen2660:overConnection a owl:ObjectProperty .
-
-    nen2660:overInterface a owl:ObjectProperty .
-
-    nen2660:participatesIn a owl:ObjectProperty .
-
-    nen2660:requirementSeverityType a owl:ObjectProperty .
-
-    nen2660:requirementSourceType a owl:ObjectProperty .
-
-    nen2660:requirementTopicType a owl:ObjectProperty .
-
-    nen2660:transferType a owl:ObjectProperty .
-
-    nen2660:transforms a owl:ObjectProperty .
-
-    nen2660:triggers a owl:ObjectProperty .
-
-    nen2660:verificationMethodType a owl:ObjectProperty .
-
-    <https://w3id.org/nen2660/owl/def> a owl:Ontology ;
-        owl:imports <http://qudt.org/schema/qudt>,
-            <http://qudt.org/vocab/quantitykind>,
-            <http://qudt.org/vocab/unit>,
-            <http://www.w3.org/2004/02/skos/core>,
-            <http://www.w3.org/2006/time>,
-            <http://www.w3.org/ns/shacl>,
-            <https://w3id.org/nen2660/rdfs/def> .
-
-    nen2660:FunctionalEntity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:Entity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:InformationObject a owl:Class .
-
-    nen2660:MatterPortion a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nen2660:portion ],
-            [ a owl:Restriction ;
-                owl:onClass nen2660:Matter ;
-                owl:onProperty rdf:value ;
-                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
-    nen2660:Mixture a owl:Class .
-
-    nen2660:Object a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:Object ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:PhysicalObject a owl:Class .
-
-    nen2660:TechnicalEntity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:Entity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:portion a owl:ObjectProperty .
-
-    nen2660:Activity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:Activity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:Connection a owl:Class .
-
-    nen2660:Entity a owl:Class .
-
-    nen2660:Event a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:Event ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:Interface a owl:Class .
-
-    nen2660:Matter a owl:Class .
-
-    nen2660:PlannedEntity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:PlannedEntity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:Port a owl:Class .
-
-    nen2660:RealizedEntity a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:RealizedEntity ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:SpatialRegion a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom [ a owl:Class ;
-                        owl:unionOf ( nen2660:SpatialRegion nen2660:Port ) ] ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:State a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom nen2660:State ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:RealObject a owl:Class ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:allValuesFrom [ a owl:Class ;
-                        owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
-                owl:onProperty nen2660:hasPart ] .
-
-    nen2660:hasPart a owl:ObjectProperty .
-}
-
-<https://w3id.org/nen2660/shacl/def> {
-    nen2660:AllDisjointClassesShape a sh:NodeShape ;
-        sh:property [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-                sh:qualifiedMaxCount 1 ;
-                sh:qualifiedValueShape [ sh:in ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) ] ],
-            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-                sh:qualifiedMaxCount 1 ;
-                sh:qualifiedValueShape [ sh:in ( nen2660:PlannedEntity nen2660:RealizedEntity ) ] ],
-            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-                sh:qualifiedMaxCount 1 ;
-                sh:qualifiedValueShape [ sh:in ( nen2660:PhysicalObject nen2660:InformationObject nen2660:State nen2660:Event nen2660:Activity ) ] ],
-            [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-                sh:qualifiedMaxCount 1 ;
-                sh:qualifiedValueShape [ sh:in ( nen2660:RealObject nen2660:SpatialRegion ) ] ] ;
-        sh:targetSubjectsOf rdf:type .
-
-    nen2660:Mixture a sh:NodeShape ;
-        sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
-                sh:path nen2660:consistsOf ] .
-
-    nen2660:Objectification a sh:NodeShape ;
-        sh:property [ sh:maxCount 1 ;
-                sh:path rdf:value ] .
-
-    nen2660:QualityValue a sh:NodeShape ;
-        sh:property [ sh:datatype xsd:string ;
-                sh:path rdf:value ] .
-
-    nen2660:RelationReference a sh:NodeShape ;
-        sh:property [ sh:datatype xsd:anyURI ;
-                sh:path rdf:value ] .
-
-    nen2660:TopConcept a sh:NodeShape ;
-        sh:property [ sh:datatype xsd:string ;
-                sh:path nen2660:abbreviation ],
-            [ sh:class nen2660:Requirement ;
-                sh:path nen2660:hasRequirement ],
-            [ sh:class nen2660:InformationObject ;
-                sh:path nen2660:isDescribedBy ] .
-
-    nen2660:hasQuantityKindShape a sh:NodeShape ;
-        sh:class qudt:QuantityKind ;
-        sh:targetObjectsOf nen2660:hasQuantityKind .
-
-    nen2660:hasUnitShape a sh:NodeShape ;
-        sh:class qudt:Unit ;
-        sh:targetObjectsOf nen2660:hasUnit .
-
-    <https://w3id.org/nen2660/shacl/def> a owl:Ontology ;
-        owl:imports <http://qudt.org/schema/qudt>,
-            <http://qudt.org/vocab/quantitykind>,
-            <http://qudt.org/vocab/unit>,
-            <http://www.w3.org/2004/02/skos/core>,
-            <http://www.w3.org/2006/time>,
-            <http://www.w3.org/ns/shacl>,
-            <https://w3id.org/nen2660/rdfs/def> .
-
-    nen2660:AggregationStateType a sh:NodeShape ;
-        sh:in ( nen2660:Solid nen2660:Liquid nen2660:Gas nen2660:Plasma ) .
-
-    nen2660:ConcreteConcept a sh:NodeShape ;
-        sh:property [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasBoundary ],
-            [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasInterior ],
-            [ sh:class nen2660:TemporalEntity ;
-                sh:path nen2660:hasTemporalEntity ],
-            [ sh:class nen2660:ConcreteConcept ;
-                sh:path nen2660:hasPart ],
-            [ sh:class rdfs:Container ;
-                sh:path nen2660:hasPartsGroup ] .
-
-    nen2660:Connection a sh:NodeShape ;
-        sh:property [ sh:class nen2660:PhysicalObject ;
-                sh:path nen2660:connectsObject ],
-            [ sh:class nen2660:Port ;
-                sh:path nen2660:connectsPort ] .
-
-    nen2660:Interaction a sh:NodeShape ;
-        sh:property [ sh:class nen2660:Connection ;
-                sh:path nen2660:overConnection ],
-            [ sh:class nen2660:Interface ;
-                sh:path nen2660:overInterface ],
-            [ sh:class nen2660:TransferType ;
-                sh:path nen2660:transferType ] .
-
-    nen2660:Interface a sh:NodeShape ;
-        sh:property [ sh:class nen2660:PhysicalObject ;
-                sh:path nen2660:connectsObject ],
-            [ sh:class nen2660:Port ;
-                sh:path nen2660:connectsPort ] .
-
-    nen2660:QuantityValue a sh:NodeShape ;
-        sh:property [ sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:float ] [ sh:datatype xsd:double ] ) ;
-                sh:path rdf:value ] .
-
-    nen2660:Requirement a sh:NodeShape ;
-        sh:property [ sh:datatype xsd:string ;
-                sh:maxCount 1 ;
-                sh:minCount 1 ;
-                sh:path rdf:value ],
-            [ sh:class nen2660:RequirementSeverityType ;
-                sh:path nen2660:requirementSeverityType ],
-            [ sh:class nen2660:RequirementSourceType ;
-                sh:path nen2660:requirementSourceType ],
-            [ sh:class nen2660:RequirementTopicType ;
-                sh:path nen2660:requirementTopicType ],
-            [ sh:class nen2660:VerificationMethodType ;
-                sh:path nen2660:verificationMethodType ] .
-
-    nen2660:TransferType a sh:NodeShape ;
-        sh:in ( nen2660:MaterialFlow nen2660:EnergyFlow nen2660:InformationFlow nen2660:Force ) .
-
-    nen2660:Entity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:State ;
-                sh:path nen2660:hasState ],
-            [ sh:class nen2660:Event ;
-                sh:path nen2660:triggers ] .
-
-    nen2660:FunctionalEntity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:Entity ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:FunctionalEntity ;
-                sh:path nen2660:hasFunctionalPart ],
-            [ sh:class nen2660:TechnicalEntity ;
-                sh:path nen2660:hasSolution ] .
-
-    nen2660:Matter a sh:NodeShape ;
-        sh:property [ sh:class nen2660:AggregationStateType ;
-                sh:path nen2660:aggregationStateType ],
-            [ sh:datatype xsd:string ;
-                sh:path nen2660:chemicalFormula ] .
-
-    nen2660:MatterPortion a sh:NodeShape ;
-        sh:property [ sh:class nen2660:QuantityValue ;
-                sh:maxCount 1 ;
-                sh:minCount 1 ;
-                sh:path nen2660:portion ] .
-
-    nen2660:Object a sh:NodeShape ;
-        sh:property [ sh:class nen2660:Object ;
-                sh:path nen2660:hasPart ] .
-
-    nen2660:PlannedEntity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:PlannedEntity ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:RealizedEntity ;
-                sh:path nen2660:isPlanFor ] .
-
-    nen2660:SpatialRegion a sh:NodeShape ;
-        sh:property [ sh:class nen2660:RealObject ;
-                sh:path nen2660:contains ],
-            [ sh:class [ a owl:Class ;
-                        owl:unionOf ( nen2660:SpatialRegion nen2660:Port ) ] ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:PhysicalObject ;
-                sh:path nen2660:isBoundBy ] .
-
-    nen2660:Activity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasBoundary ],
-            [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasInterior ],
-            [ sh:class nen2660:Activity ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:TemporalEntity ;
-                sh:path nen2660:hasPeriod ],
-            [ sh:class nen2660:Object ;
-                sh:path nen2660:transforms ] .
-
-    nen2660:Event a sh:NodeShape ;
-        sh:property [ sh:class nen2660:State ;
-                sh:path nen2660:begins ],
-            [ sh:class nen2660:State ;
-                sh:path nen2660:ends ],
-            [ sh:class nen2660:Event ;
-                sh:path nen2660:hasPart ] .
-
-    nen2660:RealObject a sh:NodeShape ;
-        sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
-                sh:path nen2660:consistsOf ],
-            [ sh:class [ a owl:Class ;
-                        owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
-                sh:path nen2660:hasPart ] .
-
-    nen2660:RealizedEntity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:RealizedEntity ;
-                sh:path nen2660:hasPart ] .
-
-    nen2660:TechnicalEntity a sh:NodeShape ;
-        sh:property [ sh:class nen2660:Entity ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:TechnicalEntity ;
-                sh:path nen2660:hasTechnicalPart ] .
-
-    nen2660:PhysicalObject a sh:NodeShape ;
-        sh:property [ sh:class nen2660:PhysicalObject ;
-                sh:path nen2660:isConnectedTo ],
-            [ sh:class nen2660:InformationObject ;
-                sh:path nen2660:isDescribedBy ],
-            [ sh:class nen2660:Interaction ;
-                sh:path nen2660:participatesIn ],
-            [ sh:class nen2660:Activity ;
-                sh:path nen2660:executes ] .
-
-    nen2660:State a sh:NodeShape ;
-        sh:property [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasBoundary ],
-            [ sh:class nen2660:GeometricEntity ;
-                sh:path nen2660:hasInterior ],
-            [ sh:class nen2660:State ;
-                sh:path nen2660:hasPart ],
-            [ sh:class nen2660:TemporalEntity ;
-                sh:path nen2660:hasPeriod ] .
 }
 
