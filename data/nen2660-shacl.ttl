@@ -300,10 +300,6 @@ nen2660:Requirement
       sh:path nen2660:requirementTopicType ;
       sh:class nen2660:RequirementTopicType ;
     ] ;
-  sh:property [
-      sh:path nen2660:verificationMethodType ;
-      sh:class nen2660:VerificationMethodType ;
-    ] ;
 .
 nen2660:SpatialRegion
   a sh:NodeShape ;

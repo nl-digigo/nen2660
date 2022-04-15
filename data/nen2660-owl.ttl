@@ -284,9 +284,6 @@ nen2660:TransferType
 nen2660:Type
   a owl:Class ;
 .
-nen2660:VerificationMethodType
-  a owl:Class ;
-.
 nen2660:abbreviation
   a owl:AnnotationProperty ;
 .
@@ -427,9 +424,6 @@ nen2660:transforms
   a owl:ObjectProperty ;
 .
 nen2660:triggers
-  a owl:ObjectProperty ;
-.
-nen2660:verificationMethodType
   a owl:ObjectProperty ;
 .
 nen2660:AllDisjointClasses_1

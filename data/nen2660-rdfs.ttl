@@ -410,13 +410,6 @@ nen2660:Type
   skos:definition "A meta-concept which instances are concepts (not individuals)"@en ;
   skos:prefLabel "Type"@en ;
 .
-nen2660:VerificationMethodType
-  a rdfs:Class ;
-  a nen2660:EnumerationType ;
-  rdfs:seeAlso nen2660-term:VerificationMethodType ;
-  skos:definition "The method by which a requirement is verified"@en ;
-  skos:prefLabel "Verification method type"@en ;
-.
 nen2660:abbreviation
   a rdf:Property ;
   rdfs:domain nen2660:TopConcept ;
@@ -720,12 +713,4 @@ nen2660:triggers
   rdfs:seeAlso nen2660-term:triggers ;
   skos:definition "The event triggert by an entity"@en ;
   skos:prefLabel "triggers"@en ;
-.
-nen2660:verificationMethodType
-  a rdf:Property ;
-  rdfs:domain nen2660:Requirement ;
-  rdfs:range nen2660:VerificationMethodType ;
-  rdfs:seeAlso nen2660-term:verificationMethodType ;
-  skos:definition "The possession of a verification method type by a requirement"@en ;
-  skos:prefLabel "verification method type"@en ;
 .

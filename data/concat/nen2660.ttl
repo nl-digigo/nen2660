@@ -430,9 +430,7 @@ nen2660:Requirement a rdfs:Class,
         [ sh:class nen2660:RequirementSourceType ;
             sh:path nen2660:requirementSourceType ],
         [ sh:class nen2660:RequirementTopicType ;
-            sh:path nen2660:requirementTopicType ],
-        [ sh:class nen2660:VerificationMethodType ;
-            sh:path nen2660:verificationMethodType ] .
+            sh:path nen2660:requirementTopicType ] .
 
 nen2660:RequirementSeverityType a rdfs:Class,
         owl:Class,
@@ -537,13 +535,6 @@ nen2660:Type a rdfs:Class,
     rdfs:subClassOf nen2660:AbstractConcept ;
     skos:definition "A meta-concept which instances are concepts (not individuals)"@en ;
     skos:prefLabel "Type"@en .
-
-nen2660:VerificationMethodType a rdfs:Class,
-        owl:Class,
-        nen2660:EnumerationType ;
-    rdfs:seeAlso nen2660-term:VerificationMethodType ;
-    skos:definition "The method by which a requirement is verified"@en ;
-    skos:prefLabel "Verification method type"@en .
 
 nen2660:AllDisjointClassesShape a sh:NodeShape ;
     sh:property [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
@@ -852,14 +843,6 @@ nen2660:triggers a rdf:Property,
     skos:definition "The event triggert by an entity"@en ;
     skos:prefLabel "triggers"@en .
 
-nen2660:verificationMethodType a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:domain nen2660:Requirement ;
-    rdfs:range nen2660:VerificationMethodType ;
-    rdfs:seeAlso nen2660-term:verificationMethodType ;
-    skos:definition "The possession of a verification method type by a requirement"@en ;
-    skos:prefLabel "verification method type"@en .
-
 nen2660-term:AmountOfBulkMatter a skos:Concept ;
     skos:broader nen2660-term:RealObject ;
     skos:definition "A real object that consists of a continuous amount of non-rigid matter, held together primarily by external forces (gravity or confinement)"@en,
@@ -1103,13 +1086,6 @@ nen2660-term:Unit a skos:Concept ;
     skos:prefLabel "Unit"@en,
         "Eenheid"@nl .
 
-nen2660-term:VerificationMethodType a skos:Concept ;
-    skos:broader nen2660-term:EnumerationType ;
-    skos:definition "The method by which a requirement is verified"@en,
-        "De methode waarmee een eis wordt geverifieerd"@nl ;
-    skos:prefLabel "Verification method type"@en,
-        "Verificatie methode type"@nl .
-
 nen2660-term:abbreviation a skos:Concept ;
     skos:broader skos:altLabel ;
     skos:definition "Acronym or initial word as special case of a name"@en,
@@ -1319,12 +1295,6 @@ nen2660-term:triggers a skos:Concept ;
     skos:prefLabel "triggers"@en,
         "triggert"@nl .
 
-nen2660-term:verificationMethodType a skos:Concept ;
-    skos:definition "The possession of a verification method type by a requirement"@en,
-        "Het hebben van een type verificatiemethode door een eis"@nl ;
-    skos:prefLabel "verification method type"@en,
-        "verificatie methode type"@nl .
-
 qudt:QuantityKind a nen2660:EnumerationType ;
     rdfs:seeAlso nen2660-term:QuantityKind ;
     skos:definition "Any observable property that can be measured and quantified numerically"@en ;
@@ -1461,7 +1431,7 @@ nen2660-term:RelationReference a skos:Concept ;
 nen2660-term:SpatialRegion a skos:Concept ;
     skos:broader nen2660-term:PhysicalObject ;
     skos:definition "A physical object that encloses a particular area such as a room, roadway and river, that is bounded by real objects or other spatial areas (e.g., by usage or convention) and that contains primarily liquid or gaseous amount of matter"@en,
-        "Een fysiek object dat een bepaald gebied omsluit zoals een vertrek, rijbaan en rivier, die wordt begrensd door reële objecten of andere ruimtelijke gebieden (bijvoorbeeld op basis van gebruik of conventie) en dat voornamelijk vloeibare of gasvormige hoeveelheid materie bevat"@nl ;
+        "Een fysiek object dat een bepaald gebied omsluit zoals een vertrek, rijbaan en rivier, en dat wordt begrensd door reële objecten of andere ruimtelijke gebieden (bijvoorbeeld op basis van gebruik of conventie) en dat voornamelijk vloeibare of gasvormige hoeveelheid materie bevat"@nl ;
     skos:prefLabel "Spatial region"@en,
         "Ruimtelijk gebied"@nl .
 
@@ -1598,6 +1568,13 @@ nen2660-term:TransferType a skos:Concept ;
     skos:prefLabel "Transfer type"@en,
         "Overdrachtstype"@nl .
 
+nen2660-term:EnumerationType a skos:Concept ;
+    skos:broader nen2660-term:Type ;
+    skos:definition "A meta-concept having concepts as instances having no further attributes or relations (annotations only)"@en,
+        "Een meta-concept met concepten als instanties zonder verdere attributen of relaties (alleen annotaties)"@nl ;
+    skos:prefLabel "Enumeration type"@en,
+        "Enumeratie type"@nl .
+
 nen2660-term:PhysicalObject a skos:Concept ;
     skos:broader nen2660-term:Object ;
     skos:definition "Object that exists or may exist within physical 4D space-time. A physical object forms a manifestation and a demarcation of matter and/or energy, and is (in)directly perceptible by the senses"@en,
@@ -1611,13 +1588,6 @@ nen2660-term:Entity a skos:Concept ;
         "Concept dat een manifestatie en een afbakening vormt in een concrete ruimte-tijd, en dat op ieder moment in de tijd een bepaalde toestand heeft. Een entiteit heeft een unieke identiteit die constant blijft gedurende de levenscyclus. De levenscyclus van een entiteit is opgebouwd uit de reeks van toestanden van die entiteit, die elkaar in de tijd opvolgen. Een entiteit is een object of een activiteit. Een object bestaat, een activiteit vindt plaats"@nl ;
     skos:prefLabel "Entity"@en,
         "Entiteit"@nl .
-
-nen2660-term:EnumerationType a skos:Concept ;
-    skos:broader nen2660-term:Type ;
-    skos:definition "A meta-concept having concepts as instances having no further attributes or relations (annotations only)"@en,
-        "Een meta-concept met concepten als instanties zonder verdere attributen of relaties (alleen annotaties)"@nl ;
-    skos:prefLabel "Enumeration type"@en,
-        "Enumeratie type"@nl .
 
 nen2660:hasPart a rdf:Property,
         owl:ObjectProperty ;
