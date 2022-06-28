@@ -1417,7 +1417,7 @@ nen2660-term:Activity a skos:Concept ;
     skos:definition "Entity that takes place or can take place in a concrete space-time. An activity transforms objects, and is executed by an object"@en,
         "Entiteit die plaatsvindt of kan plaatsvinden in een concrete ruimte-tijd. Een activiteit transformeert objecten, en wordt uitgevoerd door een object"@nl ;
     skos:prefLabel "Activity"@en,
-        "Aktiviteit"@nl .
+        "Activiteit"@nl .
 
 nen2660-term:RelationReference a skos:Concept ;
     skos:broader nen2660-term:Objectification ;
