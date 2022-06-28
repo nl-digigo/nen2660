@@ -501,6 +501,18 @@ nen2660-shacl.ttl
   ]</span> ) ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedMaxCount'>sh:qualifiedMaxCount</a> &quot;1&quot;^^xsd:integer ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedValueShape'>sh:qualifiedValueShape</a> <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#in'>sh:in</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#RealObject'>nen2660:RealObject</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#SpatialRegion'>nen2660:SpatialRegion</a> ) ;
+  ]</span> ;
+]</span></td>
+</tr>
+<tr>
+<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
+<td class='w-two-thirds overflow-auto'><span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> ( <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#zeroOrMorePath'>sh:zeroOrMorePath</a> <a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a> ;
+  ]</span> ) ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedMaxCount'>sh:qualifiedMaxCount</a> &quot;1&quot;^^xsd:integer ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedValueShape'>sh:qualifiedValueShape</a> <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#in'>sh:in</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#FunctionalEntity'>nen2660:FunctionalEntity</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#TechnicalEntity'>nen2660:TechnicalEntity</a> ) ;
   ]</span> ;
 ]</span></td>
@@ -526,18 +538,6 @@ nen2660-shacl.ttl
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedMaxCount'>sh:qualifiedMaxCount</a> &quot;1&quot;^^xsd:integer ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedValueShape'>sh:qualifiedValueShape</a> <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#in'>sh:in</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#PhysicalObject'>nen2660:PhysicalObject</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#InformationObject'>nen2660:InformationObject</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#State'>nen2660:State</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Event'>nen2660:Event</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Activity'>nen2660:Activity</a> ) ;
-  ]</span> ;
-]</span></td>
-</tr>
-<tr>
-<td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
-<td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> ( <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <span class='pre'>[
-    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#zeroOrMorePath'>sh:zeroOrMorePath</a> <a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a> ;
-  ]</span> ) ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedMaxCount'>sh:qualifiedMaxCount</a> &quot;1&quot;^^xsd:integer ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#qualifiedValueShape'>sh:qualifiedValueShape</a> <span class='pre'>[
-    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#in'>sh:in</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#RealObject'>nen2660:RealObject</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#SpatialRegion'>nen2660:SpatialRegion</a> ) ;
   ]</span> ;
 ]</span></td>
 </tr>
@@ -3838,12 +3838,12 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#or'>sh:or</a> ( <span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#consistsOf'>nen2660:consistsOf</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#xone'>sh:xone</a> ( <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> ;
   ]</span> <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#MatterPortion'>nen2660:MatterPortion</a> ;
   ]</span> ) ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#consistsOf'>nen2660:consistsOf</a> ;
 ]</span></td>
 </tr>
 </table></div><div id='Object' class='mv5'>
@@ -4776,14 +4776,14 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#or'>sh:or</a> ( <span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#value'>rdf:value</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#xone'>sh:xone</a> ( <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#datatype'>sh:datatype</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#decimal'>xsd:decimal</a> ;
   ]</span> <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#datatype'>sh:datatype</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#float'>xsd:float</a> ;
   ]</span> <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#datatype'>sh:datatype</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#double'>xsd:double</a> ;
   ]</span> ) ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#value'>rdf:value</a> ;
 ]</span></td>
 </tr>
 </table></div><div id='RealizedEntity' class='mv5'>
@@ -4961,22 +4961,23 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#or'>sh:or</a> ( <span class='pre'>[
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#consistsOf'>nen2660:consistsOf</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#xone'>sh:xone</a> ( <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Matter'>nen2660:Matter</a> ;
   ]</span> <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#MatterPortion'>nen2660:MatterPortion</a> ;
   ]</span> ) ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#consistsOf'>nen2660:consistsOf</a> ;
 ]</span></td>
 </tr>
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <span class='pre'>[
-    <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Class'>owl:Class</a> ;
-    <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#unionOf'>owl:unionOf</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#RealObject'>nen2660:RealObject</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Port'>nen2660:Port</a> ) ;
-  ]</span> ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#xone'>sh:xone</a> ( <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#RealObject'>nen2660:RealObject</a> ;
+  ]</span> <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Port'>nen2660:Port</a> ;
+  ]</span> ) ;
 ]</span></td>
 </tr>
 </table></div><div id='RelationReference' class='mv5'>
@@ -5703,11 +5704,12 @@ nen2660-shacl.ttl
 <tr>
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#property'>sh:property</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
-  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <span class='pre'>[
-    <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Class'>owl:Class</a> ;
-    <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#unionOf'>owl:unionOf</a> ( <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#SpatialRegion'>nen2660:SpatialRegion</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Port'>nen2660:Port</a> ) ;
-  ]</span> ;
   <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#path'>sh:path</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#hasPart'>nen2660:hasPart</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#xone'>sh:xone</a> ( <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#SpatialRegion'>nen2660:SpatialRegion</a> ;
+  ]</span> <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/ns/shacl#class'>sh:class</a> <a class='link dim underline-hover brand-dark-color' href='https://w3id.org/nen2660/def#Port'>nen2660:Port</a> ;
+  ]</span> ) ;
 ]</span></td>
 </tr>
 <tr>

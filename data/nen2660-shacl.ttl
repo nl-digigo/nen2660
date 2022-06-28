@@ -188,7 +188,7 @@ nen2660:Mixture
   a sh:NodeShape ;
   sh:property [
       sh:path nen2660:consistsOf ;
-      sh:or ( [ sh:class nen2660:Matter] [sh:class nen2660:MatterPortion ] ) ;
+      sh:xone ( [ sh:class nen2660:Matter] [sh:class nen2660:MatterPortion ] ) ;
     ] ;
 .
 nen2660:Object
@@ -246,24 +246,18 @@ nen2660:QuantityValue
   a sh:NodeShape ;
   sh:property [
       sh:path rdf:value ;
-      sh:or ( [ sh:datatype xsd:decimal ] [sh:datatype xsd:float] [ sh:datatype xsd:double ] );
+      sh:xone ( [ sh:datatype xsd:decimal ] [sh:datatype xsd:float] [ sh:datatype xsd:double ] );
     ] ;
 .
 nen2660:RealObject
   a sh:NodeShape ;
   sh:property [
       sh:path nen2660:consistsOf ;
-      sh:or ( [ sh:class nen2660:Matter] [sh:class nen2660:MatterPortion ] ) ;
+      sh:xone ( [ sh:class nen2660:Matter] [sh:class nen2660:MatterPortion ] ) ;
     ] ;
   sh:property [
       sh:path nen2660:hasPart ;
-      sh:class [
-          a owl:Class ;
-          owl:unionOf (
-              nen2660:RealObject
-              nen2660:Port
-            ) ;
-        ] ;
+      sh:xone ( [ sh:class nen2660:RealObject] [ sh:class nen2660:Port ] ) ;
     ] ;
 .
 nen2660:RealizedEntity
@@ -309,13 +303,7 @@ nen2660:SpatialRegion
     ] ;
   sh:property [
       sh:path nen2660:hasPart ;
-      sh:class [
-          a owl:Class ;
-          owl:unionOf (
-              nen2660:SpatialRegion
-              nen2660:Port
-            ) ;
-        ] ;
+      sh:xone ( [ sh:class nen2660:SpatialRegion] [ sh:class nen2660:Port ] ) ;
     ] ;
   sh:property [
       sh:path nen2660:isBoundBy ;

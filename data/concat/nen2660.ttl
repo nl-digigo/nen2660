@@ -259,8 +259,8 @@ nen2660:Mixture a rdfs:Class,
     rdfs:subClassOf nen2660:Matter ;
     skos:definition "The combination of two or more different pure substances without the molecules losing their identity"@en ;
     skos:prefLabel "Mixture"@en ;
-    sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
-            sh:path nen2660:consistsOf ] .
+    sh:property [ sh:path nen2660:consistsOf ;
+            sh:xone ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ] .
 
 nen2660:Object a rdfs:Class,
         owl:Class,
@@ -357,8 +357,8 @@ nen2660:QuantityValue a rdfs:Class,
         nen2660:Objectification ;
     skos:definition "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
     skos:prefLabel "Quantity value"@en ;
-    sh:property [ sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:float ] [ sh:datatype xsd:double ] ) ;
-            sh:path rdf:value ] .
+    sh:property [ sh:path rdf:value ;
+            sh:xone ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:float ] [ sh:datatype xsd:double ] ) ] .
 
 nen2660:RealObject a rdfs:Class,
         owl:Class,
@@ -371,11 +371,10 @@ nen2660:RealObject a rdfs:Class,
         nen2660:PhysicalObject ;
     skos:definition "physical object (rigid or non-rigid) that is (or can be) tangible and visible in reality, man-made or naturally occurring"@en ;
     skos:prefLabel "Real object"@en ;
-    sh:property [ sh:or ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ;
-            sh:path nen2660:consistsOf ],
-        [ sh:class [ a owl:Class ;
-                    owl:unionOf ( nen2660:RealObject nen2660:Port ) ] ;
-            sh:path nen2660:hasPart ] .
+    sh:property [ sh:path nen2660:consistsOf ;
+            sh:xone ( [ sh:class nen2660:Matter ] [ sh:class nen2660:MatterPortion ] ) ],
+        [ sh:path nen2660:hasPart ;
+            sh:xone ( [ sh:class nen2660:RealObject ] [ sh:class nen2660:Port ] ) ] .
 
 nen2660:RealizedEntity a rdfs:Class,
         owl:Class,
@@ -466,9 +465,8 @@ nen2660:SpatialRegion a rdfs:Class,
     skos:prefLabel "Spatial region"@en ;
     sh:property [ sh:class nen2660:RealObject ;
             sh:path nen2660:contains ],
-        [ sh:class [ a owl:Class ;
-                    owl:unionOf ( nen2660:SpatialRegion nen2660:Port ) ] ;
-            sh:path nen2660:hasPart ],
+        [ sh:path nen2660:hasPart ;
+            sh:xone ( [ sh:class nen2660:SpatialRegion ] [ sh:class nen2660:Port ] ) ],
         [ sh:class nen2660:PhysicalObject ;
             sh:path nen2660:isBoundBy ] .
 
@@ -539,16 +537,16 @@ nen2660:Type a rdfs:Class,
 nen2660:AllDisjointClassesShape a sh:NodeShape ;
     sh:property [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
             sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [ sh:in ( nen2660:RealObject nen2660:SpatialRegion ) ] ],
+        [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [ sh:in ( nen2660:FunctionalEntity nen2660:TechnicalEntity ) ] ],
         [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [ sh:in ( nen2660:PlannedEntity nen2660:RealizedEntity ) ] ],
         [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
             sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [ sh:in ( nen2660:PhysicalObject nen2660:InformationObject nen2660:State nen2660:Event nen2660:Activity ) ] ],
-        [ sh:path ( rdf:type [ sh:zeroOrMorePath rdfs:subClassOf ] ) ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [ sh:in ( nen2660:RealObject nen2660:SpatialRegion ) ] ] ;
+            sh:qualifiedValueShape [ sh:in ( nen2660:PhysicalObject nen2660:InformationObject nen2660:State nen2660:Event nen2660:Activity ) ] ] ;
     sh:targetSubjectsOf rdf:type .
 
 nen2660:AllDisjointClasses_1 a owl:AllDisjointClasses ;
