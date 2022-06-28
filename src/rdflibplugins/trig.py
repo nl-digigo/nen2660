@@ -3,7 +3,7 @@
 This prevents generation of `prefix ns1: <https:// ... >` etc. declarations in
 the TriG file header.
 """
-# COPYRIGHT 2021 Redmer Kronemeijer <redmer.kronemeijer@crow.nl>
+# COPYRIGHT 2022 Redmer Kronemeijer <redmer.kronemeijer@crow.nl>
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

@@ -1,6 +1,6 @@
 links1:
-  - label: Norm (in publicatie)
-    url: https://www.nen.nl/elasticsearch/?search=2660-2%3A2021
+  - label: Norm
+    url: https://www.nen.nl/nen-2660-2-2022-nl-291667
   - label: 'NEN'
     url: https://nen.nl
 links2:
@@ -9,7 +9,7 @@ links2:
   - label: 'CROW'
     url: https://crow.nl
   
-copyright_statement: "NEN 2660-2:2021"
+copyright_statement: "NEN 2660-2:2022"
 
 sosumi:
   - label: See source on GitHub

@@ -14,12 +14,12 @@ sortkey: 999
 
 The usage of different files and ontologies is described in
 <a href='#norm' class='link dim underline-hover blue'>
-NEN 2660-2:2021</a>.
+NEN 2660-2:2022</a>.
 This page provides:
 
 - <a href="{{ '#' | append: norm1.anchorid }}" class='link dim underline-hover blue b'>
 {{ site.data.downloads | where: "norminform", "normative" | size }}
-normative files</a>, that form the base of the NEN 2660-2:2021.
+normative files</a>, that form the base of the NEN 2660-2:2022.
 
 - <a href="{{ '#' | append: info1.anchorid }}" class='link dim underline-hover blue b'>
 {{ site.data.downloads | where: "norminform", "informative" | size }}
@@ -91,10 +91,10 @@ example files</a>, that demonstrate usage.
 
 ## Norm
 
-The norm NEN 2660 has not been published yet.
-It is available for review at
-<a href='{{ site.data.minimaal.links1[0].url }}' class='link dim underline-hover blue'>
-NEN Normontwerp</a>.
+The norm NEN 2660 is published in May 2022.
+It is available at
+<a href='https://www.nen.nl/nen-2660-2-2022-nl-291667' class='link dim underline-hover blue'>
+NEN Norm</a>.
 
 ---
 

@@ -1,5 +1,5 @@
 title	sortkey	norminform	mime	desc	url	anchorid	namespace	ontology	type
-Terms (SKOS)	a	normative	text/turtle	Defines the terms from NEN 2660-2:2021 as <code>skos:Concept</code>s.	/data/nen2660-skos.ttl	skos	nen2660-term:	https://w3id.org/nen2660/skos/term	skos:ConceptScheme
+Terms (SKOS)	a	normative	text/turtle	Defines the terms from NEN 2660-2:2022 as <code>skos:Concept</code>s.	/data/nen2660-skos.ttl	skos	nen2660-term:	https://w3id.org/nen2660/skos/term	skos:ConceptScheme
 Classes and Properties (RDFS)	b	normative	text/turtle	Defines RDFS classes and properties for each SKOS term.	/data/nen2660-rdfs.ttl	rdfs	nen2660:	https://w3id.org/nen2660/rdfs/def	owl:Ontology
 Classes and Properties (OWL)	c	normative	text/turtle	Defines OWL class and property types for the definitions in the RDFS file.	/data/nen2660-owl.ttl	owl	nen2660:	https://w3id.org/nen2660/owl/def	owl:Ontology
 Shapes (SHACL)	d	normative	text/turtle	Defines SHACL shapes for the classes and properties in the RDFS file.	/data/nen2660-shacl.ttl	shacl	nen2660:	https://w3id.org/nen2660/shacl/def	owl:Ontology
