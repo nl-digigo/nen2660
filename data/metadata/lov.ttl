@@ -22,20 +22,20 @@
                             owl:versionInfo                 "2022" ;
                             rdfs:comment                    "Initial version of the published NEN 2660-2 ontology" ;
                             dc:rights                       "Copyright © 2022 Stichting Koninklijk Nederlands Normalisatie Instituut" ;
-                            dc:publisher                    <www.nen.nl> ;
-                            dc:contributor                  <www.crow.nl> ;
+                            dc:publisher                    <https://www.nen.nl> ;
+                            dc:contributor                  <https://www.crow.nl> ;
                             .
 
-<www.nen.nl>    a   foaf:Organization ;
+<https://www.nen.nl>    a   foaf:Organization ;
                 rdfs:label "Nederlands Normalisatie Instituut"@nl .
-<www.crow.nl>   a   foaf:Organization ;
+<https://www.crow.nl>   a   foaf:Organization ;
                 rdfs:label "Stichting CROW"@nl .
 
 nen2660:AbstractConcept vs:term_status "stable"@en;
   rdfs:isDefinedBy <https://w3id.org/nen2660/>;
   rdfs:comment "Concept that forms a manifestation and demarcation in an abstract space. An abstract concept has no life cycle"@en .
 
-nen2660-term:AbstractConcept vs:term_status "stable"@en;
+nen2660-term:AbstractConcept vs:term_status "stable";
   rdfs:isDefinedBy <https://w3id.org/nen2660/>;
   rdfs:comment "Concept that forms a manifestation and demarcation in an abstract space. An abstract concept has no life cycle"@en,
     "Concept dat een manifestatie en een afbakening vormt in een abstracte ruimte. Een abstract concept heeft geen levenscyclus"@nl .
