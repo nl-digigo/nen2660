@@ -18,7 +18,7 @@ prefix nen2660-term: <https://w3id.org/nen2660/term#>
                                                             "NEN 2660-2:2022 'Regels voor informatiemodellering van de gebouwde omgeving - Deel 2: Praktische configuratie, extensie en implementatie van NEN 2660-1'"@nl ;
                             rdfs:label                      "NEN 2660-2:2022 'Rules for information modelling of the built environment - Part 2: Practical configuration, extension and implementation of NEN 2660-1''"@en , 
                                                             "NEN 2660-2:2022 'Regels voor informatiemodellering van de gebouwde omgeving - Deel 2: Praktische configuratie, extensie en implementatie van NEN 2660-1'"@nl ;
-                            dc:description                  "Ontology which is a normative part of the Dutch NEN 2660-2 standard"@nl ;                    
+                            dc:description                  "Ontology which is a normative part of the Dutch NEN 2660-2 standard"@en ;                    
                             dc:issued                       "2022-05-01"^^xsd:date ;
                             dc:modified                     "2022-05-01"^^xsd:date ;
                             owl:versionInfo                 "2022" ;
