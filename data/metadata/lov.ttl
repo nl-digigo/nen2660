@@ -1,0 +1,859 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:     <http://purl.org/dc/terms/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix cc:     <http://creativecommons.org/ns#> .
+@prefix voaf:   <http://purl.org/vocommons/voaf> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/nen2660/> a owl:Ontology , voaf:Vocabulary ;
+                            vann:preferredNamespacePrefix   "nen2660" ;
+                            vann:preferredNamespaceUri      "https://w3id.org/nen2660/def#" ;
+                            dc:title                        "NEN 2660-2:2022 'Rules for information modelling of the built environment - Part 2: Practical configuration, extension and implementation of NEN 2660-1''"@en , 
+                                                            "NEN 2660-2:2022 'Regels voor informatiemodellering van de gebouwde omgeving - Deel 2: Praktische configuratie, extensie en implementatie van NEN 2660-1'"@nl ;
+                            rdfs:label                      "NEN 2660-2:2022 'Rules for information modelling of the built environment - Part 2: Practical configuration, extension and implementation of NEN 2660-1''"@en , 
+                                                            "NEN 2660-2:2022 'Regels voor informatiemodellering van de gebouwde omgeving - Deel 2: Praktische configuratie, extensie en implementatie van NEN 2660-1'"@nl ;
+                            dc:description                  "Ontology which is a normative part of the Dutch NEN 2660-2 standard"@nl ;                    
+                            dc:issued                       "2022-05-01"^^xsd:date ;
+                            dc:modified                     "2022-05-01"^^xsd:date ;
+                            owl:versionInfo                 "2022" ;
+                            rdfs:comment                    "Initial version of the published NEN 2660-2 ontology" ;
+                            dc:rights                       "Copyright © 2022 Stichting Koninklijk Nederlands Normalisatie Instituut" ;
+                            dc:publisher                    <https://www.nen.nl> ;
+                            dc:contributor                  <https://www.crow.nl> ;
+                            .
+
+<https://www.nen.nl>    a   foaf:Organization ;
+                rdfs:label "Nederlands Normalisatie Instituut"@nl .
+<https://www.crow.nl>   a   foaf:Organization ;
+                rdfs:label "Stichting CROW"@nl .
+
+nen2660:AbstractConcept vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Concept that forms a manifestation and demarcation in an abstract space. An abstract concept has no life cycle"@en .
+
+nen2660-term:AbstractConcept vs:term_status "stable";
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Concept that forms a manifestation and demarcation in an abstract space. An abstract concept has no life cycle"@en,
+    "Concept dat een manifestatie en een afbakening vormt in een abstracte ruimte. Een abstract concept heeft geen levenscyclus"@nl .
+
+nen2660:TopConcept vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The most generic concept"@en .
+
+nen2660:Activity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Entity that takes place or can take place in a concrete space-time. An activity transforms objects, and is executed by an object"@en .
+
+nen2660-term:Activity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Entity that takes place or can take place in a concrete space-time. An activity transforms objects, and is executed by an object"@en,
+    "Entiteit die plaatsvindt of kan plaatsvinden in een concrete ruimte-tijd. Een activiteit transformeert objecten, en wordt uitgevoerd door een object"@nl .
+
+nen2660:hasPart vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A decomposition (hasPart) relation between concrete concepts"@en .
+
+nen2660:Entity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Concept that forms a manifestation and a demarcation in a concrete space-time, and which has a certain state at any moment in time. An entity has a unique identity that remains constant throughout its life cycle. The life cycle of an entity is made up of the sequence of states of that entity, which follow each other in time. An entity is an object or an activity. An object exists, an activity takes place"@en .
+
+nen2660:GeometricEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Named concept, which forms an actual or virtual demarcation in a concrete (physical, three-dimensional) space, which we experience in reality"@en .
+
+nen2660:hasBoundary vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The geometric entity representing the boundary of a concrete concept"@en .
+
+nen2660:hasInterior vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The geometric entity representing the interior of a concrete concept"@en .
+
+nen2660:Object vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Entity that exists or can exist within a concrete space-time. An object executes an activity, and is transformed by an activity"@en .
+
+nen2660:transforms vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The object transformed by an activity"@en .
+
+nen2660:AggregationStateType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "One of the four fundamental states of matter being a solid, liquid, gas or plasma"@en .
+
+nen2660:EnumerationType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A meta-concept having concepts as instances having no further attributes or relations (annotations only)"@en .
+
+nen2660-term:AggregationStateType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "One of the four fundamental states of matter being a solid, liquid, gas or plasma"@en,
+    "Een van de vier fundamentele toestanden van materie zijnde een vaste stof, vloeistof, gas of plasma"@nl .
+
+nen2660:Solid vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"@en .
+
+nen2660:Liquid vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure"@en .
+
+nen2660:Gas vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"@en .
+
+nen2660:Plasma vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A phase in which the particles of a gaseous substance are ionised"@en .
+
+nen2660:AmountOfBulkMatter vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A real object that consists of a continuous amount of non-rigid matter, held together primarily by external forces (gravity or confinement)"@en .
+
+nen2660-term:AmountOfBulkMatter vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A real object that consists of a continuous amount of non-rigid matter, held together primarily by external forces (gravity or confinement)"@en,
+    "Een reëel object dat bestaat uit een aaneengesloten hoeveelheid niet-vormvaste materie, primair bijeengehouden door externe krachten (zwaartekracht of opsluiting)"@nl .
+
+nen2660:RealObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "physical object (rigid or non-rigid) that is (or can be) tangible and visible in reality, man-made or naturally occurring"@en .
+
+nen2660:ChemicalCompound vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical compound, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en .
+
+nen2660:PureSubstance vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Chemical matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en .
+
+nen2660:ChemicalElement vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"@en .
+
+nen2660-term:ChemicalElement vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"@en,
+    "Zuivere stof die is opgebouwd uit atomen met hetzelfde atoomnummer. Een chemisch element kan niet worden ontleed door middel van chemische reacties"@nl .
+
+nen2660:ConceptType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A meta-concept having concepts as instances that can have attributes or relations"@en .
+
+nen2660-term:ConceptType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A meta-concept having concepts as instances that can have attributes or relations"@en,
+    "Een meta-concept met concepten als instanties die attributen of relaties kunnen hebben"@nl .
+
+nen2660:Type vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A meta-concept which instances are concepts (not individuals)"@en .
+
+nen2660:ConcreteConcept vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Concept that forms a manifestation and a demarcation in a concrete space-time. A concrete concept has a life cycle"@en .
+
+nen2660-term:ConcreteConcept vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Concept that forms a manifestation and a demarcation in a concrete space-time. A concrete concept has a life cycle"@en,
+    "Concept dat een manifestatie en een afbakening vormt in een concrete ruimte-tijd. Een concreet concept heeft een levenscyclus"@nl .
+
+nen2660:hasTemporalEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The abstract temporal entity representing a concrete concept in time"@en .
+
+nen2660:hasPartsGroup vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of an group of, potentially implicit, parts"@en .
+
+nen2660:Connection vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A physical object (real object or spatial area) that connects two other physical objects and over which interaction takes place, namely the transfer of matter, energy, information or forces"@en .
+
+nen2660-term:Connection vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A physical object (real object or spatial area) that connects two other physical objects and over which interaction takes place, namely the transfer of matter, energy, information or forces"@en,
+    "Een fysiek object (reëel object of ruimtelijk gebied) dat twee andere fysieke objecten verbindt en waarover interactie plaatsvindt namelijk de overdracht van materie, energie, informatie of krachten"@nl .
+
+nen2660:PhysicalObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Object that exists or may exist within physical 4D space-time. A physical object forms a manifestation and a demarcation of matter and/or energy, and is (in)directly perceptible by the senses"@en .
+
+nen2660:connectsObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The physical objects connected by a connection or interface"@en .
+
+nen2660:Port vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A physical or logical point of interaction as part of a physical object where, through a connection or interface, an interaction can take place"@en .
+
+nen2660:connectsPort vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The ports (as part of physical objects) connected by a connection or interface"@en .
+
+nen2660:DiscreteObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity or electromagnetic force)"@en .
+
+nen2660-term:DiscreteObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity or electromagnetic force)"@en,
+    "Een reëel object dat bestaat uit een aaneengesloten hoeveelheid vormvaste materie, primair bijeengehouden door interne krachten (zwaartekracht of elektromagnetische kracht)"@nl .
+
+nen2660-term:Entity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Concept that forms a manifestation and a demarcation in a concrete space-time, and which has a certain state at any moment in time. An entity has a unique identity that remains constant throughout its life cycle. The life cycle of an entity is made up of the sequence of states of that entity, which follow each other in time. An entity is an object or an activity. An object exists, an activity takes place"@en,
+    "Concept dat een manifestatie en een afbakening vormt in een concrete ruimte-tijd, en dat op ieder moment in de tijd een bepaalde toestand heeft. Een entiteit heeft een unieke identiteit die constant blijft gedurende de levenscyclus. De levenscyclus van een entiteit is opgebouwd uit de reeks van toestanden van die entiteit, die elkaar in de tijd opvolgen. Een entiteit is een object of een activiteit. Een object bestaat, een activiteit vindt plaats"@nl .
+
+nen2660:State vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Temporal part of an entity during a period between two events. A state is characterized by the properties and relations of the entity"@en .
+
+nen2660:hasState vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The state of an entity in a certain point or period of time"@en .
+
+nen2660:Event vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Transition between two successive states of an entity (object or activity). An event is triggered in a state"@en .
+
+nen2660:triggers vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The event triggert by an entity"@en .
+
+nen2660-term:EnumerationType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A meta-concept having concepts as instances having no further attributes or relations (annotations only)"@en,
+    "Een meta-concept met concepten als instanties zonder verdere attributen of relaties (alleen annotaties)"@nl .
+
+nen2660-term:Event vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Transition between two successive states of an entity (object or activity). An event is triggered in a state"@en,
+    "Overgang tussen twee opeenvolgende toestanden van een entiteit (object of activiteit). Een gebeurtenis wordt getriggerd in een toestand"@nl .
+
+nen2660:begins vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The state that is started by an event"@en .
+
+nen2660:ends vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The state that is ended by an event"@en .
+
+nen2660:FunctionalEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An entity involving the external behavior where the output contributes to stakeholder objectives implemented/played by one or more technical entities"@en .
+
+nen2660-term:FunctionalEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An entity involving the external behavior where the output contributes to stakeholder objectives implemented/played by one or more technical entities"@en,
+    "Een entiteit waarbij het gaat om het externe gedrag waarbij de uitvoer bijdraagt aan doelstellingen van belanghebbenden geïmplementeerd/gespeeld door een of meer technische entiteiten"@nl .
+
+nen2660:hasFunctionalPart vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The hasPart relation of a functional nature"@en .
+
+nen2660:TechnicalEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An entity concerned with technical properties and relations that implements or plays functional entities"@en .
+
+nen2660:hasSolution vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A technical entity that is a potential solution for a functional entity"@en .
+
+nen2660-term:GeometricEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Named concept, which forms an actual or virtual demarcation in a concrete (physical, three-dimensional) space, which we experience in reality"@en,
+    "Benoemd concept, dat een daadwerkelijke of virtuele afbakening vormt in een concrete (fysieke, driedimensionale) ruimte, die we in de werkelijkheid ervaren"@nl .
+
+nen2660:Representation vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "That which represents something else"@en .
+
+nen2660:HeterogeneousMixture vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A mixture that is separated into different regions or phases that have different compositions or properties"@en .
+
+nen2660-term:HeterogeneousMixture vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A mixture that is separated into different regions or phases that have different compositions or properties"@en,
+    "Een mengsel dat is opgedeeld in verschillende regio's of fasen met verschillende samenstellingen of eigenschappen"@nl .
+
+nen2660:Mixture vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The combination of two or more different pure substances without the molecules losing their identity"@en .
+
+nen2660:HomogeneousMixture vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A mixture that is uniform throughout, and has only one phase"@en .
+
+nen2660-term:HomogeneousMixture vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A mixture that is uniform throughout, and has only one phase"@en, "Een mengsel dat overal uniform is en maar 1 fase heeft"@nl .
+
+nen2660:InformationObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Object which describes a thing in reality"@en .
+
+nen2660-term:InformationObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Object which describes a thing in reality"@en, "Object dat een beschrijving vormt van een ding in de werkelijkheid"@nl .
+
+nen2660:Interaction vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The activity being a combination of sub-activities performed by physical objects between which a transfer of matter, information, energy or force takes place, typically over a connection or interface (directly or through ports)"@en .
+
+nen2660-term:Interaction vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The activity being a combination of sub-activities performed by physical objects between which a transfer of matter, information, energy or force takes place, typically over a connection or interface (directly or through ports)"@en,
+    "De activiteit zijnde een combinatie van subactiviteiten uitgevoerd door fysieke objecten waartussen een overdracht van materie, informatie, energie of kracht plaatsvindt, typisch over een verbinding of raakvlak (direct of via poorten)"@nl .
+
+nen2660:overConnection vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The connection over which an interaction between physical objects takes place"@en .
+
+nen2660:Interface vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A spatial object, typically a thin 2D physical space (but also 0D or 1D) that connects two physical objects or ports of physical objects through which a static or dynamic interaction or interaction between those elements can take place"@en .
+
+nen2660:overInterface vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The interface over which an interaction between physical objects takes place"@en .
+
+nen2660:TransferType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The type of thing being transferred, here: material, information, energy or force"@en .
+
+nen2660:transferType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a transfer type by an interaction"@en .
+
+nen2660-term:Interface vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A spatial object, typically a thin 2D physical space (but also 0D or 1D) that connects two physical objects or ports of physical objects through which a static or dynamic interaction or interaction between those elements can take place"@en,
+    "Een ruimtelijk object, typisch een dunne 2D fysieke ruimte (maar 0D of 1D kan ook) dat de verbinding legt tussen twee fysieke objecten of poorten van fysieke objecten waarlangs een statische of dynamische wisselwerking of interactie tussen die elementen kan plaatsvinden"@nl .
+
+nen2660:SpatialRegion vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A physical object that encloses a particular area such as a room, roadway and river, that is bounded by real objects or other spatial areas (e.g., by usage or convention) and that contains primarily liquid or gaseous amount of matter"@en .
+
+nen2660:Matter vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A pure chemical substance, chemical compound or mixture from which real objects are made"@en .
+
+nen2660-term:Matter vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A pure chemical substance, chemical compound or mixture from which real objects are made"@en,
+    "Een pure chemische stof, chemische verbinding of mengsel waaruit reële objecten zijn gemaakt"@nl .
+
+nen2660:aggregationStateType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of an aggregation state type"@en .
+
+nen2660:chemicalFormula vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of information about the chemical proportions of atoms that constitute a particular chemical compound"@en .
+
+nen2660:MatterPortion vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An objectified relation reference for the consists of relation"@en .
+
+nen2660-term:MatterPortion vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An objectified relation reference for the consists of relation"@en,
+    "Een geobjectiveerde relatiereferentie voor de bestaat uit relatie"@nl .
+
+nen2660:portion vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The relative portion of a matter portion"@en .
+
+nen2660:RelationReference vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relation)"@en .
+
+nen2660:QuantityValue vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en .
+
+nen2660-term:Mixture vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The combination of two or more different pure substances without the molecules losing their identity"@en,
+    "De combinatie van twee of meer verschillende zuivere stoffen zonder dat daarbij de moleculen hun identiteit verliezen"@nl .
+
+nen2660:consistsOf vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The matter a real object or mixture is made of"@en .
+
+nen2660-term:Object vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Entity that exists or can exist within a concrete space-time. An object executes an activity, and is transformed by an activity"@en,
+    "Entiteit die bestaat of kan bestaan binnen een concrete ruimte-tijd. Een object voert een activiteit uit, en wordt getransformeerd door een activiteit"@nl .
+
+nen2660:Objectification vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An attribute (quality or quantity) or relation represented as an individual defined by a concept"@en .
+
+nen2660-term:Objectification vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An attribute (quality or quantity) or relation represented as an individual defined by a concept"@en,
+    "Een attribuut (kwaliteit of kwantiteit) of relatie voorgesteld als een individu gedefinieerd door een concept"@nl .
+
+nen2660-term:PhysicalObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Object that exists or may exist within physical 4D space-time. A physical object forms a manifestation and a demarcation of matter and/or energy, and is (in)directly perceptible by the senses"@en,
+    "Object dat bestaat of kan bestaan binnen de fysieke 4D ruimte-tijd. Een fysiek object vormt een manifestatie en een afbakening van materie en/of energie, en is (in)direct waarneembaar door de zintuigen"@nl .
+
+nen2660:isConnectedTo vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The topological relationship between physical objects"@en .
+
+nen2660:isDescribedBy vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The information object that describes something"@en .
+
+nen2660:participatesIn vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The interaction a physical object participates in"@en .
+
+nen2660:executes vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The activity executed by a physical object"@en .
+
+nen2660:PlannedEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An entity that does not yet exist in physical reality, but which exists in mental or conceptual reality"@en .
+
+nen2660-term:PlannedEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An entity that does not yet exist in physical reality, but which exists in mental or conceptual reality"@en,
+    "Een entiteit die nog niet bestaat in de fysieke werkelijkheid, maar die in de mentale of conceptuele werkelijkheid voorkomt"@nl .
+
+nen2660:RealizedEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An entity that exists or has existed in the physical reality"@en .
+
+nen2660:isPlanFor vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A potentially realized entity according to this planned entity"@en .
+
+nen2660-term:Port vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A physical or logical point of interaction as part of a physical object where, through a connection or interface, an interaction can take place"@en,
+    "Een fysiek of logisch interactiepunt als deel van een fysiek object waar, via een verbinding of raakvlak, een interactie kan plaatsvinden"@nl .
+
+nen2660-term:PureSubstance vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Chemical matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en,
+    "Een chemische stof die een gelijke chemische samenstelling en herkenbare uniforme en isotrope eigenschappen heeft"@nl .
+
+nen2660:QualityValue vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en .
+
+nen2660-term:QualityValue vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en,
+    "De objectivering van een waarde van een kwaliteit met een complexe waarde zoals een eenvoudige waarde sec gecombineerd met andere metadata of alleen een combinatie van eenvoudige waarden"@nl .
+
+nen2660-term:QuantityValue vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en,
+    "De objectivering van een waarde van een hoeveelheid (typisch met een grootheid en een eenheid) met een complexe waarde zoals een eenvoudige waarde sec gecombineerd met andere metadata of alleen een combinatie van eenvoudige waarden"@nl .
+
+nen2660-term:RealObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "physical object (rigid or non-rigid) that is (or can be) tangible and visible in reality, man-made or naturally occurring"@en,
+    "Een fysiek object (vormvast of niet-vormvast) dat in de werkelijkheid tastbaar en zichtbaar is (of kan zijn), door de mens gemaakt of natuurlijk ontstaan"@nl .
+
+nen2660-term:RealizedEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An entity that exists or has existed in the physical reality"@en, "Een entiteit die bestaat of heeft bestaan in de fysieke werkelijkheid"@nl .
+
+nen2660-term:RelationReference vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relation)"@en,
+    "De objectivering van een referentie voor een relatie met een complexe waarde zoals een simpele referentie sec gecombineerd met andere metadata of alleen een combinatie van simpele referenties (n-ary relaties)"@nl .
+
+nen2660-term:Representation vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "That which represents something else"@en, "Dat wat iets anders vertegenwoordigt"@nl .
+
+nen2660:Requirement vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A rule that should hold for something, defined via its attributes or relations" .
+
+nen2660-term:Requirement vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A rule that should hold for something, defined via its attributes or relations"@en,
+    "Een regel die ergens voor moet gelden, gedefinieerd via zijn attributen of relaties"@nl .
+
+nen2660:RequirementSeverityType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The seriousness of a requirement like demanded or wished"@en .
+
+nen2660:requirementSeverityType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a severity type by a requirement"@en .
+
+nen2660:RequirementSourceType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"@en .
+
+nen2660:requirementSourceType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a source type by a requirement"@en .
+
+nen2660:RequirementTopicType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The entity aspect a requirement applies to"@en .
+
+nen2660:requirementTopicType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a topic type by a requirement"@en .
+
+nen2660-term:RequirementSeverityType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The seriousness of a requirement like demanded or wished"@en, "De ernst van een eis zoals gevraagd of gewenst"@nl .
+
+nen2660-term:RequirementSourceType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"@en,
+    "Het type bron waaruit een behoefte voortkomt zoals een klant, per definitie, aanbevolen door de sector of vereist door wet/regelgeving"@nl .
+
+nen2660-term:RequirementTopicType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The entity aspect a requirement applies to"@en, "Het entiteitsaspect waarop een eis van toepassing is"@nl .
+
+nen2660-term:SpatialRegion vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A physical object that encloses a particular area such as a room, roadway and river, that is bounded by real objects or other spatial areas (e.g., by usage or convention) and that contains primarily liquid or gaseous amount of matter"@en,
+    "Een fysiek object dat een bepaald gebied omsluit zoals een vertrek, rijbaan en rivier, en dat wordt begrensd door reële objecten of andere ruimtelijke gebieden (bijvoorbeeld op basis van gebruik of conventie) en dat voornamelijk vloeibare of gasvormige hoeveelheid materie bevat"@nl .
+
+nen2660:contains vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en .
+
+nen2660:isBoundBy vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The physical object that bounds a spatial region"@en .
+
+nen2660-term:State vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Temporal part of an entity during a period between two events. A state is characterized by the properties and relations of the entity"@en,
+    "Temporeel deel van een entiteit gedurende een periode tussen twee gebeurtenissen. Een toestand wordt gekenmerkt door de eigenschappen en relaties van de entiteit"@nl .
+
+nen2660-term:TechnicalEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "An entity concerned with technical properties and relations that implements or plays functional entities"@en,
+    "Een entiteit waarbij het gaat om technische eigenschappen en relaties die functionele entiteiten implementeert of speelt"@nl .
+
+nen2660:hasTechnicalPart vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A hasPart relation of a technical nature"@en .
+
+nen2660-term:TopConcept vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The most generic concept"@en, "Het meest generieke concept"@nl .
+
+nen2660:abbreviation vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Acronym or initial word as special case of an external name"@en .
+
+nen2660:hasRequirement vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The (unstructured) requirement for something"@en .
+
+nen2660-term:TransferType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The type of thing being transferred, here: material, information, energy or force"@en,
+    "Het soort ding dat wordt overgedragen, hier: materiaal, informatie, energie of kracht"@nl .
+
+nen2660:MaterialFlow vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The movement of an amount of material"@en .
+
+nen2660:EnergyFlow vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The movement of an amount of energy (as capacity to do work)"@en .
+
+nen2660:InformationFlow vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The movement of information represented in some medium"@en .
+
+nen2660:Force vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Physical quantity which, when exerted on a body, causes tension or pressure to arise therein, or which causes the body to change motion, accelerate"@en .
+
+nen2660-term:Type vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A meta-concept which instances are concepts (not individuals)"@en, "Een meta-concept waarvan instanties concepten zijn (geen individuen)"@nl .
+
+nen2660:AllDisjointClassesShape vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+nen2660:AllDisjointClasses_1 vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+nen2660:AllDisjointClasses_2 vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+nen2660:AllDisjointClasses_3 vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+nen2660:AllDisjointClasses_4 vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+nen2660:hasQuantityKindShape vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+nen2660:hasQuantityKind vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a quantity kind"@en .
+
+nen2660:hasUnitShape vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+nen2660:hasUnit vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a unit"@en .
+
+nen2660:isImplementedBy vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The technical entity that implements a functional entity"@en .
+
+nen2660-term:isImplementedBy vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The technical entity that implements a functional entity"@en, "De technische entiteit die een functionele entiteit implementeert"@nl .
+
+nen2660:isRealizedBy vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The realized entity that realizes a planned entity"@en .
+
+nen2660-term:isRealizedBy vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The realized entity that realizes a planned entity"@en, "De gerealiseerde entiteit die een geplande entiteit realiseert"@nl .
+
+<https://w3id.org/nen2660/owl/def> vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+<https://w3id.org/nen2660/rdfs/def> vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+<https://w3id.org/nen2660/shacl/def> vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+<https://w3id.org/nen2660/skos/term> vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/> .
+
+nen2660-term:ChemicalCompound vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical compound, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en,
+    "Zuivere stof bestaande uit twee of meer chemische elementen die een chemische binding met elkaar hebben. In een chemische verbinding komen de elementen in een vaste verhouding voor. Een verbinding kan worden ontleed in eenvoudigere stoffen door middel van chemische reacties"@nl .
+
+nen2660-term:hasPartsGroup vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of an group of, potentially implicit, parts"@en, "Het hebben van een groep, eventueel impliciete, onderdelen"@nl .
+
+nen2660-term:TemporalEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A temporal interval or instant"@en, "Een tijdsinterval of -moment"@nl .
+
+nen2660-term:abbreviation vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Acronym or initial word as special case of a name"@en, "Acroniem of eerste woord als speciaal geval van een naam"@nl .
+
+nen2660-term:aggregationStateType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of an aggregation state type"@en, "Het hebben van een aggregatietoestandtype"@nl .
+
+nen2660-term:begins vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The state that is started by an event"@en, "De toestand die gestart wordt door een gebeurtenis"@nl .
+
+nen2660-term:chemicalFormula vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of information about the chemical proportions of atoms that constitute a particular chemical compound"@en,
+    "Het hebben van informatie over de chemische verhoudingen van atomen die een bepaalde chemische verbinding vormen"@nl .
+
+nen2660-term:contains vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en,
+    "De reële objecten die zich in een ruimtelijk gebied bevinden, meestal de gasvormige hoeveelheid bulkmaterie die in dat gebied aanwezig is"@nl .
+
+nen2660-term:ends vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The state that is ended by an event"@en, "De toestand die wordt beëindigd door een gebeurtenis"@nl .
+
+nen2660-term:executes vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The activity executed by a physical object"@en, "De activiteit uitgevoerd door een fysiek object"@nl .
+
+nen2660-term:hasFunctionalPart vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The hasPart relation of a functional nature"@en, "De heeftDeel relatie van functionele aard"@nl .
+
+nen2660-term:hasPart vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A decomposition (hasPart) relation between concrete concepts"@en, "Een decompositie (heeftDeel) relatie tussen concrete concepten"@nl .
+
+nen2660-term:hasQuantityKind vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a quantity kind"@en, "Het hebben van een grootheid"@nl .
+
+nen2660-term:hasRequirement vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The (unstructured) requirement for something"@en, "De (ongestructureerde) eis aan iets"@nl .
+
+nen2660-term:hasState vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The state of an entity in a certain point or period of time"@en, "De toestand van een entiteit op een bepaald tijdstip of in een bepaalde periode"@nl .
+
+nen2660-term:hasTechnicalPart vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A hasPart relation of a technical nature"@en, "Een heeftDeel relatie van technische aard"@nl .
+
+nen2660-term:hasTemporalEntity vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The abstract temporal entity representing a concrete concept in time"@en,
+    "De abstracte temporele entiteit die een concreet concept in de tijd vertegenwoordigt"@nl .
+
+nen2660-term:hasUnit vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a unit"@en, "Het hebben van een eenheid"@nl .
+
+nen2660-term:isBoundBy vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The physical object that bounds a spatial region"@en, "Het fysieke object dat een ruimtelijk gebied begrensd"@nl .
+
+nen2660-term:isConnectedTo vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The topological relation between physical objects"@en, "De topologische relatie tussen fysieke objecten"@nl .
+
+nen2660-term:overConnection vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The connection over which an interaction between physical objects takes place"@en,
+    "De verbinding waarover een interactie tussen fysieke objecten plaatsvindt"@nl .
+
+nen2660-term:overInterface vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The interface over which an interaction between physical objects takes place"@en,
+    "Het raakvlak waarover een interactie tussen fysieke objecten plaatsvindt"@nl .
+
+nen2660-term:participatesIn vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The interaction a physical object participates in"@en, "De interactie waaraan een fysiek object deelneemt"@nl .
+
+nen2660-term:requirementSeverityType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a severity type by a requirement"@en, "Het hebben van een ernsttype door een eis"@nl .
+
+nen2660-term:requirementSourceType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a source type by a requirement"@en, "Het hebben van een brontype door een eis"@nl .
+
+nen2660-term:requirementTopicType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a topic type by a requirement"@en, "Het hebben van een onderwerptype door een eis"@nl .
+
+nen2660-term:transferType vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The possession of a transfer type by an interaction"@en, "Het hebben van een overdrachtstype door een interactie"@nl .
+
+nen2660-term:transforms vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The object transformed by an activity"@en, "Het object getransformeerd door een activiteit"@nl .
+
+nen2660-term:triggers vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The event triggert by an entity"@en, "De gebeurtenis getriggerd door een entiteit"@nl .
+
+nen2660-term:EnergyFlow vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The movement of an amount of energy (as capacity to do work)"@en, "De beweging van een hoeveelheid energie (als capaciteit om arbeid te verrichten)"@nl .
+
+nen2660-term:Force vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Physical quantity which, when exerted on a body, causes tension or pressure to arise therein, or which causes the body to change motion, accelerate"@en,
+    "Natuurkundige grootheid die, uitgeoefend op een lichaam, daarin een spanning of druk doet ontstaan, of die het lichaam van beweging doet veranderen, doet versnellen"@nl .
+
+nen2660-term:Gas vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"@en,
+    "Materie in een tussentoestand tussen vloeistof en plasma die alleen kan worden ingesloten als deze volledig is omgeven door een vaste stof (of in een bel van vloeistof) (of bij elkaar wordt gehouden door zwaartekracht); het kan condenseren tot een vloeistof, of kan (zelden) direct een vaste stof worden door afzetting"@nl .
+
+nen2660-term:InformationFlow vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The movement of information represented in some medium"@en, "De beweging van informatie weergegeven in een of ander medium"@nl .
+
+nen2660-term:Liquid vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure"@en,
+    "Een vloeistof is een bijna onsamendrukbare vloeistof die zich aanpast aan de vorm van de houder, maar een (bijna) constant volume behoudt, onafhankelijk van de druk"@nl .
+
+nen2660-term:MaterialFlow vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The movement of an amount of material"@en, "De beweging van een hoeveelheid materiaal"@nl .
+
+nen2660-term:Plasma vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A phase in which the particles of a gaseous substance are ionised"@en,
+    "Een fase waarin de deeltjes van een gasvormige stof geïoniseerd zijn"@nl .
+
+nen2660-term:QuantityKind vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Any observable property that can be measured and quantified numerically"@en,
+    "Elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd"@nl .
+
+nen2660-term:Solid vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"@en,
+    "Materie die kan worden opgepakt of vastgehouden, een textuur heeft en meestal stevig is. In tegenstelling tot een vloeistof, gas of plasma"@nl .
+
+nen2660-term:Unit vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A particular quantity value that has been chosen as a scale for measuring other quantities the same kind"@en,
+    "Een bepaalde hoeveelheidswaarde die is gekozen als schaal voor het meten van andere hoeveelheden van dezelfde soort"@nl .
+
+nen2660-term:connectsObject vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The physical objects connected by a connection or interface"@en, "De fysieke objecten verbonden door een verbinding of raakvlak"@nl .
+
+nen2660-term:connectsPort vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The ports (as part of physical objects) connected by a connection or interface"@en,
+    "De poorten (als onderdeel van fysieke objecten) verbonden door een verbinding of interface"@nl .
+
+nen2660-term:consistsOf vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The matter a real object or mixture is made of"@en, "De materie waarvan een reëel object of mengsel is gemaakt"@nl .
+
+nen2660-term:hasBoundary vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The geometric entity representing the boundary of a concrete concept"@en,
+    "De geometrische entiteit die de grens van een concreet concept vertegenwoordigt"@nl .
+
+nen2660-term:hasInterior vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The geometric entity representing the interior of a concrete concept"@en,
+    "De geometrische entiteit die het inwendige van een concreet concept vertegenwoordigt"@nl .
+
+nen2660-term:isDescribedBy vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The information object that describes something"@en, "Het informatie object dat iets beschrijft"@nl .
+
+nen2660-term:hasSolution vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A technical entity that is a potential solution for a functional entity"@en,
+    "Een technische entiteit die een mogelijke oplossing is voor een functionele entiteit"@nl .
+
+nen2660-term:isPlanFor vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "A potentially realized entity according to this planned entity"@en,
+    "Een potentieel gerealiseerde entiteit volgens deze geplande entiteit"@nl .
+
+nen2660-term:portion vs:term_status "stable"@en;
+  rdfs:isDefinedBy <https://w3id.org/nen2660/>;
+  rdfs:comment "The relative portion of a matter portion"@en, "Het relatieve deel van een materiedeel"@nl .
