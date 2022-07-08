@@ -18,7 +18,7 @@ NEN 2660-2:2022</a>.
 {% unless p.url == page.url %}
 {% unless p.dont_render %}
 {% if p.title %}
-<h3 class='f5 dib mb3'>
+<h3 class='f5 db mb4'>
 <a
   class="link"
   href="{{ site.baseurl }}{{p.url | remove: '.html'}}">
