@@ -30,6 +30,15 @@ For dynamic integration, exploration and queries, [Stichting CROW][crow] provide
       method: "GET"
     }
   });
+  const tab = yasgui.getTab();
+  tab.setQuery(`
+SELECT
+  ?subj ?pred ?obj
+WHERE {
+  ?subj ?pred ?obj .
+}
+LIMIT 25
+`);
   const yasqe = yasgui.getTab().yasqe;
   yasqe.addPrefixes({
     "nen2660":"https://w3id.org/nen2660/def#",
