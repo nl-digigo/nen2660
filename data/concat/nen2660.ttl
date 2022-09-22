@@ -33,7 +33,7 @@ nen2660:Activity a rdfs:Class,
             sh:path nen2660:hasInterior ],
         [ sh:class nen2660:Activity ;
             sh:path nen2660:hasPart ],
-        [ sh:class nen2660:TemporalEntity ;
+        [ sh:class time:TemporalEntity ;
             sh:path nen2660:hasPeriod ],
         [ sh:class nen2660:Object ;
             sh:path nen2660:transforms ] .
@@ -87,7 +87,7 @@ nen2660:ConcreteConcept a rdfs:Class,
             sh:path nen2660:hasBoundary ],
         [ sh:class nen2660:GeometricEntity ;
             sh:path nen2660:hasInterior ],
-        [ sh:class nen2660:TemporalEntity ;
+        [ sh:class time:TemporalEntity ;
             sh:path nen2660:hasTemporalEntity ],
         [ sh:class nen2660:ConcreteConcept ;
             sh:path nen2660:hasPart ],
@@ -486,7 +486,7 @@ nen2660:State a rdfs:Class,
             sh:path nen2660:hasInterior ],
         [ sh:class nen2660:State ;
             sh:path nen2660:hasPart ],
-        [ sh:class nen2660:TemporalEntity ;
+        [ sh:class time:TemporalEntity ;
             sh:path nen2660:hasPeriod ] .
 
 nen2660:TechnicalEntity a rdfs:Class,
@@ -626,11 +626,6 @@ nen2660-term:hasPartsGroup a skos:Concept ;
         "Het hebben van een groep, eventueel impliciete, onderdelen"@nl ;
     skos:prefLabel "has parts group"@en,
         "heeft delen groep"@nl .
-
-time:TemporalEntity rdfs:seeAlso nen2660-term:TemporalEntity ;
-    rdfs:subClassOf nen2660:Representation ;
-    skos:definition "A temporal interval or instant"@en ;
-    skos:prefLabel "Temporal entity"@en .
 
 nen2660:abbreviation a rdf:Property,
         owl:AnnotationProperty ;
@@ -1525,6 +1520,11 @@ nen2660-term:Type a skos:Concept ;
         "Een meta-concept waarvan instanties concepten zijn (geen individuen)"@nl ;
     skos:prefLabel "Type"@en,
         "Type"@nl .
+
+time:TemporalEntity rdfs:seeAlso nen2660-term:TemporalEntity ;
+    rdfs:subClassOf nen2660:Representation ;
+    skos:definition "A temporal interval or instant"@en ;
+    skos:prefLabel "Temporal entity"@en .
 
 nen2660-term:ConcreteConcept a skos:Concept ;
     skos:broader nen2660-term:TopConcept ;

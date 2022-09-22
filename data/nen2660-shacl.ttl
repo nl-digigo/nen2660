@@ -47,7 +47,7 @@ nen2660:Activity
     ] ;
   sh:property [
       sh:path nen2660:hasPeriod ;
-      sh:class nen2660:TemporalEntity ;
+      sh:class time:TemporalEntity ;
     ] ;
   sh:property [
       sh:path nen2660:transforms ;
@@ -75,7 +75,7 @@ nen2660:ConcreteConcept
     ] ;
   sh:property [
       sh:path nen2660:hasTemporalEntity ;
-      sh:class nen2660:TemporalEntity ;
+      sh:class time:TemporalEntity ;
     ] ;
   sh:property [
       sh:path nen2660:hasPart ;
@@ -326,7 +326,7 @@ nen2660:State
     ] ;
   sh:property [
       sh:path nen2660:hasPeriod ;
-      sh:class nen2660:TemporalEntity ;
+      sh:class time:TemporalEntity ;
     ] ;
 .
 nen2660:TechnicalEntity
