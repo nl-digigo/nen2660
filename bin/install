@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+poetry install
+poetry run python bin/static-page.py
+poetry run python bin/gen-trig.py
