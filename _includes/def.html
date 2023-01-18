@@ -4660,7 +4660,10 @@ nen2660-owl.ttl
 <td class='w-third'><a class='link dim underline-hover black' href='http://www.w3.org/2000/01/rdf-schema#subClassOf'>rdfs:subClassOf</a></td>
 <td class='w-two-thirds overflow-auto'><span class='pre'>[
   <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Restriction'>owl:Restriction</a> ;
-  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#allValuesFrom'>owl:allValuesFrom</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#string'>xsd:string</a> ;
+  <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#allValuesFrom'>owl:allValuesFrom</a> <span class='pre'>[
+    <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Class'>owl:Class</a> ;
+    <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#unionOf'>owl:unionOf</a> ( <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#string'>xsd:string</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#boolean'>xsd:boolean</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#anyURI'>xsd:anyURI</a> ) ;
+  ]</span> ;
   <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onProperty'>owl:onProperty</a> <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#value'>rdf:value</a> ;
 ]</span></td>
 </tr>
@@ -4750,7 +4753,7 @@ nen2660-owl.ttl
   <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Restriction'>owl:Restriction</a> ;
   <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#allValuesFrom'>owl:allValuesFrom</a> <span class='pre'>[
     <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#type'>rdf:type</a> <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#Class'>owl:Class</a> ;
-    <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#unionOf'>owl:unionOf</a> ( <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#decimal'>xsd:decimal</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#float'>xsd:float</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#double'>xsd:double</a> ) ;
+    <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#unionOf'>owl:unionOf</a> ( <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#decimal'>xsd:decimal</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#float'>xsd:float</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#double'>xsd:double</a> <a class='link dim underline-hover black' href='http://www.w3.org/2001/XMLSchema#integer'>xsd:integer</a> ) ;
   ]</span> ;
   <a class='link dim underline-hover black' href='http://www.w3.org/2002/07/owl#onProperty'>owl:onProperty</a> <a class='link dim underline-hover black' href='http://www.w3.org/1999/02/22-rdf-syntax-ns#value'>rdf:value</a> ;
 ]</span></td>

@@ -6,7 +6,6 @@
 # imports: http://www.w3.org/2006/time
 # imports: http://www.w3.org/ns/shacl
 # imports: https://w3id.org/nen2660/rdfs/def
-# prefix: nen2660
 
 @prefix nen2660: <https://w3id.org/nen2660/def#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -19,17 +18,6 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://w3id.org/nen2660/owl/def>
-  a owl:Ontology ;
-  owl:imports <http://qudt.org/schema/qudt> ;
-  owl:imports <http://qudt.org/vocab/quantitykind> ;
-  owl:imports <http://qudt.org/vocab/unit> ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:imports <http://www.w3.org/2006/time> ;
-  owl:imports <http://www.w3.org/ns/shacl> ;
-  owl:imports <https://w3id.org/nen2660/rdfs/def> ;
-.
 
 nen2660:AbstractConcept
   a owl:Class ;
@@ -49,6 +37,37 @@ nen2660:AggregationStateType
       nen2660:Liquid
       nen2660:Gas
       nen2660:Plasma
+    ) ;
+.
+nen2660:AllDisjointClasses_1
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:PhysicalObject
+      nen2660:InformationObject
+      nen2660:Activity
+      nen2660:Event
+      nen2660:State
+    ) ;
+.
+nen2660:AllDisjointClasses_2
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:RealObject
+      nen2660:SpatialRegion
+    ) ;
+.
+nen2660:AllDisjointClasses_3
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:FunctionalEntity
+      nen2660:TechnicalEntity
+    ) ;
+.
+nen2660:AllDisjointClasses_4
+  a owl:AllDisjointClasses ;
+  owl:members (
+      nen2660:PlannedEntity
+      nen2660:RealizedEntity
     ) ;
 .
 nen2660:AmountOfBulkMatter
@@ -169,7 +188,14 @@ nen2660:QualityValue
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
+      owl:allValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+            xsd:string
+            xsd:boolean
+            xsd:anyURI
+          ) ;
+        ] ;
       owl:onProperty rdf:value ;
     ] ;
 .
@@ -183,6 +209,7 @@ nen2660:QuantityValue
               xsd:decimal
               xsd:float
               xsd:double
+              xsd:integer
             ) ;
         ] ;
       owl:onProperty rdf:value ;
@@ -339,6 +366,9 @@ nen2660:contains
 nen2660:ends
   a owl:ObjectProperty ;
 .
+nen2660:executes
+  a owl:ObjectProperty ;
+.
 nen2660:hasBoundary
   a owl:ObjectProperty ;
 .
@@ -402,9 +432,6 @@ nen2660:overInterface
 nen2660:participatesIn
   a owl:ObjectProperty ;
 .
-nen2660:executes
-  a owl:ObjectProperty ;
-.
 nen2660:portion
   a owl:ObjectProperty ;
 .
@@ -426,34 +453,13 @@ nen2660:transforms
 nen2660:triggers
   a owl:ObjectProperty ;
 .
-nen2660:AllDisjointClasses_1
-  a owl:AllDisjointClasses ;
-  owl:members (
-      nen2660:PhysicalObject
-      nen2660:InformationObject
-      nen2660:Activity
-      nen2660:Event
-      nen2660:State
-    ) ;
-.
-nen2660:AllDisjointClasses_2
-  a owl:AllDisjointClasses ;
-  owl:members (
-      nen2660:RealObject
-      nen2660:SpatialRegion
-    ) ;
-.
-nen2660:AllDisjointClasses_3
-  a owl:AllDisjointClasses ;
-  owl:members (
-      nen2660:FunctionalEntity
-      nen2660:TechnicalEntity
-    ) ;
-.
-nen2660:AllDisjointClasses_4
-  a owl:AllDisjointClasses ;
-  owl:members (
-      nen2660:PlannedEntity
-      nen2660:RealizedEntity
-    ) ;
+<https://w3id.org/nen2660/owl/def>
+  a owl:Ontology ;
+  owl:imports <http://qudt.org/schema/qudt> ;
+  owl:imports <http://qudt.org/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/vocab/unit> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/ns/shacl> ;
+  owl:imports <https://w3id.org/nen2660/rdfs/def> ;
 .

@@ -338,7 +338,8 @@ nen2660:QualityValue a rdfs:Class,
         sh:NodeShape ;
     rdfs:seeAlso nen2660-term:QualityValue ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( xsd:string xsd:boolean xsd:anyURI ) ] ;
             owl:onProperty rdf:value ],
         nen2660:Objectification ;
     skos:definition "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
@@ -352,7 +353,7 @@ nen2660:QuantityValue a rdfs:Class,
     rdfs:seeAlso nen2660-term:QuantityValue ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( xsd:decimal xsd:float xsd:double ) ] ;
+                    owl:unionOf ( xsd:decimal xsd:float xsd:double xsd:integer ) ] ;
             owl:onProperty rdf:value ],
         nen2660:Objectification ;
     skos:definition "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
