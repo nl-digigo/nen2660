@@ -589,31 +589,22 @@ nen2660:isRealizedBy a rdf:Property,
     skos:prefLabel "is realized by"@en .
 
 <https://w3id.org/nen2660/owl/def> a owl:Ontology ;
-    owl:imports <http://qudt.org/schema/qudt>,
-        <http://qudt.org/vocab/quantitykind>,
-        <http://qudt.org/vocab/unit>,
+    owl:imports <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/2.1/vocab/quantitykind>,
+        <http://qudt.org/2.1/vocab/unit>,
         <http://www.w3.org/2004/02/skos/core>,
         <http://www.w3.org/2006/time>,
         <http://www.w3.org/ns/shacl>,
         <https://w3id.org/nen2660/rdfs/def> .
 
 <https://w3id.org/nen2660/shacl/def> a owl:Ontology ;
-    owl:imports <http://qudt.org/schema/qudt>,
-        <http://qudt.org/vocab/quantitykind>,
-        <http://qudt.org/vocab/unit>,
+    owl:imports <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/2.1/vocab/quantitykind>,
+        <http://qudt.org/2.1/vocab/unit>,
         <http://www.w3.org/2004/02/skos/core>,
         <http://www.w3.org/2006/time>,
         <http://www.w3.org/ns/shacl>,
         <https://w3id.org/nen2660/rdfs/def> .
-
-<https://w3id.org/nen2660/skos/term> a skos:ConceptScheme ;
-    owl:imports <http://qudt.org/schema/qudt>,
-        <http://qudt.org/vocab/quantitykind>,
-        <http://qudt.org/vocab/unit>,
-        <http://www.w3.org/2004/02/skos/core>,
-        <http://www.w3.org/2006/time>,
-        <http://www.w3.org/ns/shacl> ;
-    skos:hasTopConcept nen2660-term:TopConcept .
 
 nen2660-term:ChemicalCompound a skos:Concept ;
     skos:broader nen2660-term:PureSubstance ;
@@ -836,6 +827,15 @@ nen2660:triggers a rdf:Property,
     rdfs:seeAlso nen2660-term:triggers ;
     skos:definition "The event triggert by an entity"@en ;
     skos:prefLabel "triggers"@en .
+
+<https://w3id.org/nen2660/skos/term> a skos:ConceptScheme ;
+    owl:imports <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/2.1/vocab/quantitykind>,
+        <http://qudt.org/2.1/vocab/unit>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/ns/shacl> ;
+    skos:hasTopConcept nen2660-term:TopConcept .
 
 nen2660-term:AmountOfBulkMatter a skos:Concept ;
     skos:broader nen2660-term:RealObject ;
@@ -1401,12 +1401,13 @@ nen2660:portion a rdf:Property,
     nen2660:hasQuantityKind quantitykind:DimensionlessRatio .
 
 <https://w3id.org/nen2660/rdfs/def> a owl:Ontology ;
-    owl:imports <http://qudt.org/schema/qudt>,
-        <http://qudt.org/vocab/quantitykind>,
-        <http://qudt.org/vocab/unit>,
+    owl:imports <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/2.1/vocab/quantitykind>,
+        <http://qudt.org/2.1/vocab/unit>,
         <http://www.w3.org/2004/02/skos/core>,
         <http://www.w3.org/2006/time>,
-        <http://www.w3.org/ns/shacl> .
+        <http://www.w3.org/ns/shacl>,
+        <https://w3id.org/nen2660/skos/term> .
 
 nen2660-term:Activity a skos:Concept ;
     skos:broader nen2660-term:Entity ;

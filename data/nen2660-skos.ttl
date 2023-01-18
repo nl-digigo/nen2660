@@ -1,7 +1,7 @@
 # baseURI: https://w3id.org/nen2660/skos/term
-# imports: http://qudt.org/schema/qudt
-# imports: http://qudt.org/vocab/quantitykind
-# imports: http://qudt.org/vocab/unit
+# imports: http://qudt.org/2.1/schema/qudt
+# imports: http://qudt.org/2.1/vocab/quantitykind
+# imports: http://qudt.org/2.1/vocab/unit
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/2006/time
 # imports: http://www.w3.org/ns/shacl
@@ -21,9 +21,9 @@
 
 <https://w3id.org/nen2660/skos/term>
   a skos:ConceptScheme ;
-  owl:imports <http://qudt.org/schema/qudt> ;
-  owl:imports <http://qudt.org/vocab/quantitykind> ;
-  owl:imports <http://qudt.org/vocab/unit> ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://qudt.org/2.1/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/2.1/vocab/unit> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/2006/time> ;
   owl:imports <http://www.w3.org/ns/shacl> ;

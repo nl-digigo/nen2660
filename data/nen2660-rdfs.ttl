@@ -1,10 +1,11 @@
 # baseURI: https://w3id.org/nen2660/rdfs/def
-# imports: http://qudt.org/schema/qudt
-# imports: http://qudt.org/vocab/quantitykind
-# imports: http://qudt.org/vocab/unit
+# imports: http://qudt.org/2.1/schema/qudt
+# imports: http://qudt.org/2.1/vocab/quantitykind
+# imports: http://qudt.org/2.1/vocab/unit
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/2006/time
 # imports: http://www.w3.org/ns/shacl
+# imports: https://w3id.org/nen2660/skos/term
 # prefix: nen2660
 
 @prefix nen2660: <https://w3id.org/nen2660/def#> .
@@ -40,12 +41,13 @@ time:TemporalEntity
 .
 <https://w3id.org/nen2660/rdfs/def>
   a owl:Ontology ;
-  owl:imports <http://qudt.org/schema/qudt> ;
-  owl:imports <http://qudt.org/vocab/quantitykind> ;
-  owl:imports <http://qudt.org/vocab/unit> ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://qudt.org/2.1/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/2.1/vocab/unit> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/2006/time> ;
   owl:imports <http://www.w3.org/ns/shacl> ;
+  owl:imports <https://w3id.org/nen2660/skos/term> ;
 .
 nen2660:AbstractConcept
   a rdfs:Class ;
