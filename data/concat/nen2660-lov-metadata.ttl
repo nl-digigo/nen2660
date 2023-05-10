@@ -748,28 +748,6 @@ nen2660:isRealizedBy a rdf:Property,
     skos:definition "The realized entity that realizes a planned entity"@en ;
     skos:prefLabel "is realized by"@en .
 
-<https://w3id.org/nen2660/owl/def> a owl:Ontology ;
-    rdfs:isDefinedBy <https://w3id.org/nen2660/> ;
-    owl:imports <http://qudt.org/2.1/schema/qudt>,
-        <http://qudt.org/2.1/vocab/quantitykind>,
-        <http://qudt.org/2.1/vocab/unit>,
-        <http://www.w3.org/2004/02/skos/core>,
-        <http://www.w3.org/2006/time>,
-        <http://www.w3.org/ns/shacl>,
-        <https://w3id.org/nen2660/rdfs/def> ;
-    vs:term_status "stable" .
-
-<https://w3id.org/nen2660/shacl/def> a owl:Ontology ;
-    rdfs:isDefinedBy <https://w3id.org/nen2660/> ;
-    owl:imports <http://qudt.org/2.1/schema/qudt>,
-        <http://qudt.org/2.1/vocab/quantitykind>,
-        <http://qudt.org/2.1/vocab/unit>,
-        <http://www.w3.org/2004/02/skos/core>,
-        <http://www.w3.org/2006/time>,
-        <http://www.w3.org/ns/shacl>,
-        <https://w3id.org/nen2660/rdfs/def> ;
-    vs:term_status "stable" .
-
 nen2660-term:ChemicalCompound a skos:Concept ;
     rdfs:comment "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical compound, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en,
         "Zuivere stof bestaande uit twee of meer chemische elementen die een chemische binding met elkaar hebben. In een chemische verbinding komen de elementen in een vaste verhouding voor. Een verbinding kan worden ontleed in eenvoudigere stoffen door middel van chemische reacties"@nl ;
@@ -1978,17 +1956,6 @@ nen2660:portion a rdf:Property,
     skos:definition "The relative portion of a matter portion"@en ;
     skos:prefLabel "portion"@en ;
     nen2660:hasQuantityKind quantitykind:DimensionlessRatio .
-
-<https://w3id.org/nen2660/rdfs/def> a owl:Ontology ;
-    rdfs:isDefinedBy <https://w3id.org/nen2660/> ;
-    owl:imports <http://qudt.org/2.1/schema/qudt>,
-        <http://qudt.org/2.1/vocab/quantitykind>,
-        <http://qudt.org/2.1/vocab/unit>,
-        <http://www.w3.org/2004/02/skos/core>,
-        <http://www.w3.org/2006/time>,
-        <http://www.w3.org/ns/shacl>,
-        <https://w3id.org/nen2660/skos/term> ;
-    vs:term_status "stable" .
 
 nen2660-term:Activity a skos:Concept ;
     rdfs:comment "Entity that takes place or can take place in a concrete space-time. An activity transforms objects, and is executed by an object"@en,
