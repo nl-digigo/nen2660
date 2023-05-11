@@ -2255,6 +2255,7 @@ nen2660:hasPart a rdf:Property,
     dc:issued "2022-05-01"^^xsd:date ;
     dc:modified "2022-05-01"^^xsd:date ;
     dc:publisher <https://www.nen.nl> ;
+    dc:creator <https://www.nen.nl> ;
     dc:rights "Copyright © 2022 Stichting Koninklijk Nederlands Normalisatie Instituut" ;
     dc:title "NEN 2660-2:2022 'Rules for information modelling of the built environment - Part 2: Practical configuration, extension and implementation of NEN 2660-1''"@en,
         "NEN 2660-2:2022 'Regels voor informatiemodellering van de gebouwde omgeving - Deel 2: Praktische configuratie, extensie en implementatie van NEN 2660-1'"@nl ;
