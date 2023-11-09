@@ -37,4 +37,4 @@ NEN 2660-2:2022</a>.
 
 You may discuss implementation and usage on GitHub at 
 <a href='{{ site.repo }}/discussions/' class='link'>
-bimloket/nen2660</a>.
+nl-digigo/nen2660</a>.

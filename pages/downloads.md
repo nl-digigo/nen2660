@@ -99,8 +99,8 @@ NEN Norm</a>.
 ---
 
 Hosting provided by
-<a href='https://bimloket.nl' class='link dim underline-hover blue'>
-BIM Loket</a>.  
+<a href='https://digigo.nu' class='link dim underline-hover blue'>
+DigiGo</a>.  
 Publication website by
 <a href='https://crow.nl' class='link dim underline-hover blue'>
 CROW</a>.

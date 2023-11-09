@@ -5,7 +5,7 @@ title: NEN 2660
 description: NEN 2660 – Rules for information modelling of the built environment
 lang: en
 timezone: Europe/Amsterdam
-repo: https://github.com/bimloket/nen2660
+repo: https://github.com/nl-digigo/nen2660
 
 minimaal:
   nested_links: false

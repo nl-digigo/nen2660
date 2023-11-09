@@ -1,16 +1,16 @@
 links1:
   - label: Norm
     url: https://www.nen.nl/nen-2660-2-2022-nl-291667
-  - label: 'NEN'
+  - label: "NEN"
     url: https://nen.nl
 links2:
-  - label: 'BIM Loket'
-    url: https://bimloket.nl
-  - label: 'CROW'
+  - label: "DigiGo"
+    url: https://digigo.nu/
+  - label: "CROW"
     url: https://crow.nl
-  
+
 copyright_statement: "NEN 2660-2:2022"
 
 sosumi:
   - label: See source on GitHub
-    url: https://github.com/bimloket/nen2660/
+    url: https://github.com/nl-digio/nen2660/
