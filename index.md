@@ -33,6 +33,15 @@ NEN 2660-2:2022</a>.
 
 {% endfor %}
 
+<h3 class='f5 db mb4'>
+<a
+  class="link"
+  href="https://sml.ontology-viewer.com/">
+  <span class='db black mb2'>Viewer</span>
+  <span class='dim underline-hover brand-dark-color f3'>SML Ontology viewer</span>
+</a>
+</h3>
+
 ***
 
 You may discuss implementation and usage on GitHub at 
