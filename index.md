@@ -36,9 +36,9 @@ NEN 2660-2:2022</a>.
 <h3 class='f5 db mb4'>
 <a
   class="link"
-  href="https://sml.ontology-viewer.com/">
+  href="https://nen2660.ontology-viewer.com/">
   <span class='db black mb2'>Viewer</span>
-  <span class='dim underline-hover brand-dark-color f3'>SML Ontology viewer</span>
+  <span class='dim underline-hover brand-dark-color f3'>NEN2660-2 Ontology viewer</span>
 </a>
 </h3>
 
